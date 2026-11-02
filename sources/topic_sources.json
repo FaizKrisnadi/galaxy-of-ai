@@ -1,10 +1,10 @@
 {
  "built": "2026-11-02",
  "counts": {
-  "records_total": 193,
-  "records_mapped": 193,
-  "topic_record_links": 473,
-  "read_mapped": 334,
+  "records_total": 221,
+  "records_mapped": 221,
+  "topic_record_links": 576,
+  "read_mapped": 437,
   "indexed_only_mapped": 139,
   "topics_total": 36,
   "topics_with_records": 36,
@@ -651,6 +651,54 @@
   ],
   "infrastructure/centres": [
    {
+    "id": "imda-dcb-2023",
+    "title": "Singapore's Digital Connectivity Blueprint",
+    "url": "https://www.imda.gov.sg/-/media/imda/files/programme/digital-connectivity-blueprint/digital-connectivity-blueprint-report.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Infocomm Media Development Authority (IMDA), Singapore"
+   },
+   {
+    "id": "loudoun-land-use-2025",
+    "title": "Data Centers: Land Use Considerations",
+    "url": "https://www.loudoun.gov/6410/Land-Use-Considerations",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Loudoun County, Virginia"
+   },
+   {
+    "id": "fairfax-data-centers-2026",
+    "title": "Data Centers",
+    "url": "https://www.fairfaxcounty.gov/topics/data-centers",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Fairfax County, Virginia"
+   },
+   {
+    "id": "jland-ibtec-2025",
+    "title": "JLG Unveils IBTEC To Move Malaysia Up The Industrial Value-Chain",
+    "url": "https://www.jlandgroup.com.my/wp-content/uploads/2026/07/20251205_StarProperty_JLG-Unveils-IBTEC-To-Move-Malaysia-Up-The-Industrial-Value-Chain.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "JLand Group (hosting a StarProperty article)"
+   },
+   {
+    "id": "edb-jtc-jurong-island-2025",
+    "title": "Jurong Island to host Singapore's largest green data centre park; 10 per cent of land set aside for new energies",
+    "url": "https://www.edb.gov.sg/en/news-and-insights/jurong-island-to-host-singapores-largest-green-data-centre-park-10-per-cent-of-land-set-aside-for-new-energies",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "JTC Corporation and Economic Development Board (Singapore)"
+   },
+   {
+    "id": "hines-powered-land-2025",
+    "title": "Powered Land: Power Play, The Emerging Powered Land Opportunity",
+    "url": "https://www.hines.com/powered-land/power-play-full-report",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Hines"
+   },
+   {
     "id": "unu-inweh-ai-water-2026",
     "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
     "url": "https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf",
@@ -1275,6 +1323,118 @@
   ],
   "infrastructure/land": [
    {
+    "id": "uk-dsit-aigz-2025",
+    "title": "Delivering AI Growth Zones",
+    "url": "https://www.gov.uk/government/publications/delivering-ai-growth-zones/delivering-ai-growth-zones",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Science, Innovation and Technology (DSIT)"
+   },
+   {
+    "id": "loudoun-land-use-2025",
+    "title": "Data Centers: Land Use Considerations",
+    "url": "https://www.loudoun.gov/6410/Land-Use-Considerations",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Loudoun County, Virginia"
+   },
+   {
+    "id": "cbre-netherlands-land-2023",
+    "title": "Demand for AI and data processing is growing exponentially: which role does the Netherlands want in the European data centre market and how much can it take on?",
+    "url": "https://www.cbre.co.uk/insights/viewpoints/demand-for-ai-and-data-processing-is-growing-exponentially",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "CBRE"
+   },
+   {
+    "id": "cru-leu-connection-policy-2025",
+    "title": "Large Energy Users Connection Policy",
+    "url": "https://cruie-live-96ca64acab2247eca8a850a7e54b-5b34f62.divio-media.com/documents/CRU2025236_Large_Energy_User_connection_policy_decision_paper.pdf?utm_source=chatgpt.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Commission for Regulation of Utilities (Ireland)"
+   },
+   {
+    "id": "jlarc-data-centers-virginia-2024",
+    "title": "Data Centers in Virginia, 2024",
+    "url": "https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf?ref=yacnews.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Virginia Joint Legislative Audit and Review Commission (JLARC)"
+   },
+   {
+    "id": "pwc-digital-gateway-2026",
+    "title": "PW Digital Gateway",
+    "url": "https://www.pwcva.gov/department/planning-office/pw-digital-gateway",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Prince William County, Virginia"
+   },
+   {
+    "id": "fairfax-data-centers-2026",
+    "title": "Data Centers",
+    "url": "https://www.fairfaxcounty.gov/topics/data-centers",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Fairfax County, Virginia"
+   },
+   {
+    "id": "noord-holland-datacenterstrategie-2025",
+    "title": "Statenvoordracht Datacenterstrategie 2025-2027",
+    "url": "https://noordholland.bestuurlijkeinformatie.nl/Document/View/f12ad536-0299-46ca-8bbe-7222d305cb47",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Province of Noord-Holland (Provinciale Staten)"
+   },
+   {
+    "id": "amsterdam-vestigingsbeleid-2023",
+    "title": "Vestigingsbeleid datacenters gemeente Amsterdam 2020-2030 (eerste herziening)",
+    "url": "https://odnzkg.nl/wp-content/uploads/2026/07/Vestigingsbeleid-datacenters-2020-2030-Amsterdam-Duurzaam-Digitaal-eerste-herziening.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Gemeente Amsterdam (policy hosted by Omgevingsdienst Noordzeekanaalgebied)"
+   },
+   {
+    "id": "virginia-hb153-site-assessment-2026",
+    "title": "Data centers; site assessment, sound profile of the high energy use facility (HB 153 / SB 94)",
+    "url": "https://dls.virginia.gov/commissions/eur/files/Energy_Legislation_Virginia_2026_CEUR_Summary.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Virginia Commission on Electric Utility Regulation"
+   },
+   {
+    "id": "virginia-court-digital-gateway-2026",
+    "title": "Board of County Supervisors of Prince William County v. Oak Valley Homeowners Association, Inc., et al.",
+    "url": "https://law.justia.com/cases/virginia/court-of-appeals-published/2026/1590-25-4.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Court of Appeals of Virginia"
+   },
+   {
+    "id": "jland-ibtec-2025",
+    "title": "JLG Unveils IBTEC To Move Malaysia Up The Industrial Value-Chain",
+    "url": "https://www.jlandgroup.com.my/wp-content/uploads/2026/07/20251205_StarProperty_JLG-Unveils-IBTEC-To-Move-Malaysia-Up-The-Industrial-Value-Chain.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "JLand Group (hosting a StarProperty article)"
+   },
+   {
+    "id": "edb-jtc-jurong-island-2025",
+    "title": "Jurong Island to host Singapore's largest green data centre park; 10 per cent of land set aside for new energies",
+    "url": "https://www.edb.gov.sg/en/news-and-insights/jurong-island-to-host-singapores-largest-green-data-centre-park-10-per-cent-of-land-set-aside-for-new-energies",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "JTC Corporation and Economic Development Board (Singapore)"
+   },
+   {
+    "id": "hines-powered-land-2025",
+    "title": "Powered Land: Power Play, The Emerging Powered Land Opportunity",
+    "url": "https://www.hines.com/powered-land/power-play-full-report",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Hines"
+   },
+   {
     "id": "iseas-malaysia-dc",
     "title": "Data Centres, Energy Demand and Sustainability: Can Malaysia Strike the Right Balance?",
     "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo",
@@ -1308,6 +1468,30 @@
    }
   ],
   "infrastructure/grids": [
+   {
+    "id": "uk-dsit-aigz-2025",
+    "title": "Delivering AI Growth Zones",
+    "url": "https://www.gov.uk/government/publications/delivering-ai-growth-zones/delivering-ai-growth-zones",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Science, Innovation and Technology (DSIT)"
+   },
+   {
+    "id": "cru-leu-connection-policy-2025",
+    "title": "Large Energy Users Connection Policy",
+    "url": "https://cruie-live-96ca64acab2247eca8a850a7e54b-5b34f62.divio-media.com/documents/CRU2025236_Large_Energy_User_connection_policy_decision_paper.pdf?utm_source=chatgpt.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Commission for Regulation of Utilities (Ireland)"
+   },
+   {
+    "id": "amsterdam-vestigingsbeleid-2023",
+    "title": "Vestigingsbeleid datacenters gemeente Amsterdam 2020-2030 (eerste herziening)",
+    "url": "https://odnzkg.nl/wp-content/uploads/2026/07/Vestigingsbeleid-datacenters-2020-2030-Amsterdam-Duurzaam-Digitaal-eerste-herziening.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Gemeente Amsterdam (policy hosted by Omgevingsdienst Noordzeekanaalgebied)"
+   },
    {
     "id": "iea-grids-transitions-2023",
     "title": "Electricity Grids and Secure Energy Transitions",
@@ -1521,6 +1705,118 @@
   ],
   "infrastructure/connectivity": [
    {
+    "id": "isoc-ixp-policy-2026",
+    "title": "Internet Exchange Points and Local Interconnection Ecosystems",
+    "url": "https://www.internetsociety.org/wp-content/uploads/2026/10/Internet-Exchange-Points-and-Local-Interconnection-Ecosystems-Policy-Brief_EN.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Society (ISOC)"
+   },
+   {
+    "id": "isoc-peering-cost-2026",
+    "title": "Dissecting the Cost of Peering",
+    "url": "https://www.internetsociety.org/resources/doc/2026/dissecting-the-cost-of-peering/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Society (ISOC)"
+   },
+   {
+    "id": "isoc-community-ixps-2025",
+    "title": "Community-Driven IXPs",
+    "url": "https://www.internetsociety.org/resources/doc/2025/community-driven-ixps/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Society (ISOC)"
+   },
+   {
+    "id": "gsma-smic-2025",
+    "title": "State of Mobile Internet Connectivity 2025",
+    "url": "https://www.gsma.com/newsroom/press-release/gsma-calls-for-renewed-focus-on-closing-the-usage-gap-as-more-than-3-billion-people-remain-offline-despite-available-mobile-internet-services/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA"
+   },
+   {
+    "id": "gsma-wrc23-2023",
+    "title": "GSMA hails groundbreaking spectrum decisions at WRC-23",
+    "url": "https://gsma.com/newsroom/press-release/gsma-hails-groundbreaking-spectrum-decisions-at-wrc-23/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA"
+   },
+   {
+    "id": "setkab-palapa-ring-2019",
+    "title": "Communications Ministry Tells Operators to Provide Signal Availability",
+    "url": "https://setkab.go.id/en/communications-ministry-tells-operators-to-provide-signal-availability/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Secretariat of Cabinet of the Republic of Indonesia (Setkab)"
+   },
+   {
+    "id": "imda-dcb-2023",
+    "title": "Singapore's Digital Connectivity Blueprint",
+    "url": "https://www.imda.gov.sg/-/media/imda/files/programme/digital-connectivity-blueprint/digital-connectivity-blueprint-report.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Infocomm Media Development Authority (IMDA), Singapore"
+   },
+   {
+    "id": "itu-iab-cables-2026",
+    "title": "International Advisory Body on Submarine Cable Resilience: Report of the Working Groups",
+    "url": "https://www.itu.int/digital-resilience/submarine-cables/wp-content/uploads/sites/2/2026/07/IAB-Publication-2026.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Telecommunication Union (ITU) and International Cable Protection Committee (ICPC)"
+   },
+   {
+    "id": "ec-gia-2024",
+    "title": "Gigabit Infrastructure Act",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/gigabit-infrastructure-act",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission"
+   },
+   {
+    "id": "ntia-bead-notice-2026",
+    "title": "Broadband Equity, Access, and Deployment (BEAD) Program: BEAD Supplemental Deployment Policy Notice",
+    "url": "https://broadbandusa.ntia.gov/funding-programs/broadband-equity-access-and-deployment-bead-program/BEAD_Supplemental_Deployment_Policy_Notice",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Telecommunications and Information Administration (NTIA), United States"
+   },
+   {
+    "id": "accessnow-shutdowns-2024",
+    "title": "Emboldened offenders, endangered communities: internet shutdowns in 2024",
+    "url": "https://www.accessnow.org/press-release/keepiton-internet-shutdowns-2024-en/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Access Now"
+   },
+   {
+    "id": "apc-community-networks-2025",
+    "title": "Meaningful connectivity: What creates a successful community network?",
+    "url": "https://www.apc.org/en/blog/meaningful-connectivity-what-creates-successful-community-network",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Association for Progressive Communications (APC)"
+   },
+   {
+    "id": "cloudflare-radar-2024",
+    "title": "Cloudflare Radar 2024 Year in Review",
+    "url": "https://radar.cloudflare.com/year-in-review/2024",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Cloudflare"
+   },
+   {
+    "id": "opensignal-palapa-2020",
+    "title": "Palapa Ring has successfully improved mobile connectivity in remote Indonesian islands",
+    "url": "https://insights.opensignal.com/2020/11/26/palapa-ring-has-successfully-improved-mobile-connectivity-in-remote-indonesian-islands",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Opensignal"
+   },
+   {
     "id": "itu-facts-figures-2025",
     "title": "Facts and Figures 2025",
     "url": "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx",
@@ -1594,6 +1890,46 @@
    }
   ],
   "economics/investment": [
+   {
+    "id": "isoc-peering-cost-2026",
+    "title": "Dissecting the Cost of Peering",
+    "url": "https://www.internetsociety.org/resources/doc/2026/dissecting-the-cost-of-peering/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Society (ISOC)"
+   },
+   {
+    "id": "uk-dsit-aigz-2025",
+    "title": "Delivering AI Growth Zones",
+    "url": "https://www.gov.uk/government/publications/delivering-ai-growth-zones/delivering-ai-growth-zones",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Science, Innovation and Technology (DSIT)"
+   },
+   {
+    "id": "cbre-netherlands-land-2023",
+    "title": "Demand for AI and data processing is growing exponentially: which role does the Netherlands want in the European data centre market and how much can it take on?",
+    "url": "https://www.cbre.co.uk/insights/viewpoints/demand-for-ai-and-data-processing-is-growing-exponentially",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "CBRE"
+   },
+   {
+    "id": "jland-ibtec-2025",
+    "title": "JLG Unveils IBTEC To Move Malaysia Up The Industrial Value-Chain",
+    "url": "https://www.jlandgroup.com.my/wp-content/uploads/2026/07/20251205_StarProperty_JLG-Unveils-IBTEC-To-Move-Malaysia-Up-The-Industrial-Value-Chain.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "JLand Group (hosting a StarProperty article)"
+   },
+   {
+    "id": "hines-powered-land-2025",
+    "title": "Powered Land: Power Play, The Emerging Powered Land Opportunity",
+    "url": "https://www.hines.com/powered-land/power-play-full-report",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Hines"
+   },
    {
     "id": "iea-grids-transitions-2023",
     "title": "Electricity Grids and Secure Energy Transitions",
@@ -2019,6 +2355,70 @@
   ],
   "economics/evidence": [
    {
+    "id": "isoc-ixp-policy-2026",
+    "title": "Internet Exchange Points and Local Interconnection Ecosystems",
+    "url": "https://www.internetsociety.org/wp-content/uploads/2026/10/Internet-Exchange-Points-and-Local-Interconnection-Ecosystems-Policy-Brief_EN.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Society (ISOC)"
+   },
+   {
+    "id": "isoc-peering-cost-2026",
+    "title": "Dissecting the Cost of Peering",
+    "url": "https://www.internetsociety.org/resources/doc/2026/dissecting-the-cost-of-peering/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Society (ISOC)"
+   },
+   {
+    "id": "isoc-community-ixps-2025",
+    "title": "Community-Driven IXPs",
+    "url": "https://www.internetsociety.org/resources/doc/2025/community-driven-ixps/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Society (ISOC)"
+   },
+   {
+    "id": "gsma-smic-2025",
+    "title": "State of Mobile Internet Connectivity 2025",
+    "url": "https://www.gsma.com/newsroom/press-release/gsma-calls-for-renewed-focus-on-closing-the-usage-gap-as-more-than-3-billion-people-remain-offline-despite-available-mobile-internet-services/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA"
+   },
+   {
+    "id": "cloudflare-radar-2024",
+    "title": "Cloudflare Radar 2024 Year in Review",
+    "url": "https://radar.cloudflare.com/year-in-review/2024",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Cloudflare"
+   },
+   {
+    "id": "opensignal-palapa-2020",
+    "title": "Palapa Ring has successfully improved mobile connectivity in remote Indonesian islands",
+    "url": "https://insights.opensignal.com/2020/11/26/palapa-ring-has-successfully-improved-mobile-connectivity-in-remote-indonesian-islands",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Opensignal"
+   },
+   {
+    "id": "jlarc-data-centers-virginia-2024",
+    "title": "Data Centers in Virginia, 2024",
+    "url": "https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf?ref=yacnews.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Virginia Joint Legislative Audit and Review Commission (JLARC)"
+   },
+   {
+    "id": "hines-powered-land-2025",
+    "title": "Powered Land: Power Play, The Emerging Powered Land Opportunity",
+    "url": "https://www.hines.com/powered-land/power-play-full-report",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Hines"
+   },
+   {
     "id": "lbnl-us-water-2024",
     "title": "2024 United States Data Center Energy Usage Report",
     "url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf",
@@ -2321,6 +2721,70 @@
   ],
   "society/participation": [
    {
+    "id": "isoc-community-ixps-2025",
+    "title": "Community-Driven IXPs",
+    "url": "https://www.internetsociety.org/resources/doc/2025/community-driven-ixps/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Society (ISOC)"
+   },
+   {
+    "id": "gsma-smic-2025",
+    "title": "State of Mobile Internet Connectivity 2025",
+    "url": "https://www.gsma.com/newsroom/press-release/gsma-calls-for-renewed-focus-on-closing-the-usage-gap-as-more-than-3-billion-people-remain-offline-despite-available-mobile-internet-services/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA"
+   },
+   {
+    "id": "setkab-palapa-ring-2019",
+    "title": "Communications Ministry Tells Operators to Provide Signal Availability",
+    "url": "https://setkab.go.id/en/communications-ministry-tells-operators-to-provide-signal-availability/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Secretariat of Cabinet of the Republic of Indonesia (Setkab)"
+   },
+   {
+    "id": "apc-community-networks-2025",
+    "title": "Meaningful connectivity: What creates a successful community network?",
+    "url": "https://www.apc.org/en/blog/meaningful-connectivity-what-creates-successful-community-network",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Association for Progressive Communications (APC)"
+   },
+   {
+    "id": "opensignal-palapa-2020",
+    "title": "Palapa Ring has successfully improved mobile connectivity in remote Indonesian islands",
+    "url": "https://insights.opensignal.com/2020/11/26/palapa-ring-has-successfully-improved-mobile-connectivity-in-remote-indonesian-islands",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Opensignal"
+   },
+   {
+    "id": "jlarc-data-centers-virginia-2024",
+    "title": "Data Centers in Virginia, 2024",
+    "url": "https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf?ref=yacnews.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Virginia Joint Legislative Audit and Review Commission (JLARC)"
+   },
+   {
+    "id": "pwc-digital-gateway-2026",
+    "title": "PW Digital Gateway",
+    "url": "https://www.pwcva.gov/department/planning-office/pw-digital-gateway",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Prince William County, Virginia"
+   },
+   {
+    "id": "virginia-court-digital-gateway-2026",
+    "title": "Board of County Supervisors of Prince William County v. Oak Valley Homeowners Association, Inc., et al.",
+    "url": "https://law.justia.com/cases/virginia/court-of-appeals-published/2026/1590-25-4.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Court of Appeals of Virginia"
+   },
+   {
     "id": "duke-water-community-trust",
     "title": "Water Use and Community Trust: Key Components of Data Centers' Social License to Operate",
     "url": "https://deeptech.duke.edu/sites/default/files/Water-Use-and-Community-Trust-Paper_May7.pdf",
@@ -2524,6 +2988,126 @@
    }
   ],
   "governance/rules": [
+   {
+    "id": "isoc-ixp-policy-2026",
+    "title": "Internet Exchange Points and Local Interconnection Ecosystems",
+    "url": "https://www.internetsociety.org/wp-content/uploads/2026/10/Internet-Exchange-Points-and-Local-Interconnection-Ecosystems-Policy-Brief_EN.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Society (ISOC)"
+   },
+   {
+    "id": "gsma-wrc23-2023",
+    "title": "GSMA hails groundbreaking spectrum decisions at WRC-23",
+    "url": "https://gsma.com/newsroom/press-release/gsma-hails-groundbreaking-spectrum-decisions-at-wrc-23/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA"
+   },
+   {
+    "id": "ec-gia-2024",
+    "title": "Gigabit Infrastructure Act",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/gigabit-infrastructure-act",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission"
+   },
+   {
+    "id": "apc-community-networks-2025",
+    "title": "Meaningful connectivity: What creates a successful community network?",
+    "url": "https://www.apc.org/en/blog/meaningful-connectivity-what-creates-successful-community-network",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Association for Progressive Communications (APC)"
+   },
+   {
+    "id": "uk-dsit-aigz-2025",
+    "title": "Delivering AI Growth Zones",
+    "url": "https://www.gov.uk/government/publications/delivering-ai-growth-zones/delivering-ai-growth-zones",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Science, Innovation and Technology (DSIT)"
+   },
+   {
+    "id": "loudoun-land-use-2025",
+    "title": "Data Centers: Land Use Considerations",
+    "url": "https://www.loudoun.gov/6410/Land-Use-Considerations",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Loudoun County, Virginia"
+   },
+   {
+    "id": "cbre-netherlands-land-2023",
+    "title": "Demand for AI and data processing is growing exponentially: which role does the Netherlands want in the European data centre market and how much can it take on?",
+    "url": "https://www.cbre.co.uk/insights/viewpoints/demand-for-ai-and-data-processing-is-growing-exponentially",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "CBRE"
+   },
+   {
+    "id": "cru-leu-connection-policy-2025",
+    "title": "Large Energy Users Connection Policy",
+    "url": "https://cruie-live-96ca64acab2247eca8a850a7e54b-5b34f62.divio-media.com/documents/CRU2025236_Large_Energy_User_connection_policy_decision_paper.pdf?utm_source=chatgpt.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Commission for Regulation of Utilities (Ireland)"
+   },
+   {
+    "id": "jlarc-data-centers-virginia-2024",
+    "title": "Data Centers in Virginia, 2024",
+    "url": "https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf?ref=yacnews.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Virginia Joint Legislative Audit and Review Commission (JLARC)"
+   },
+   {
+    "id": "pwc-digital-gateway-2026",
+    "title": "PW Digital Gateway",
+    "url": "https://www.pwcva.gov/department/planning-office/pw-digital-gateway",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Prince William County, Virginia"
+   },
+   {
+    "id": "fairfax-data-centers-2026",
+    "title": "Data Centers",
+    "url": "https://www.fairfaxcounty.gov/topics/data-centers",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Fairfax County, Virginia"
+   },
+   {
+    "id": "noord-holland-datacenterstrategie-2025",
+    "title": "Statenvoordracht Datacenterstrategie 2025-2027",
+    "url": "https://noordholland.bestuurlijkeinformatie.nl/Document/View/f12ad536-0299-46ca-8bbe-7222d305cb47",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Province of Noord-Holland (Provinciale Staten)"
+   },
+   {
+    "id": "amsterdam-vestigingsbeleid-2023",
+    "title": "Vestigingsbeleid datacenters gemeente Amsterdam 2020-2030 (eerste herziening)",
+    "url": "https://odnzkg.nl/wp-content/uploads/2026/07/Vestigingsbeleid-datacenters-2020-2030-Amsterdam-Duurzaam-Digitaal-eerste-herziening.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Gemeente Amsterdam (policy hosted by Omgevingsdienst Noordzeekanaalgebied)"
+   },
+   {
+    "id": "virginia-hb153-site-assessment-2026",
+    "title": "Data centers; site assessment, sound profile of the high energy use facility (HB 153 / SB 94)",
+    "url": "https://dls.virginia.gov/commissions/eur/files/Energy_Legislation_Virginia_2026_CEUR_Summary.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Virginia Commission on Electric Utility Regulation"
+   },
+   {
+    "id": "virginia-court-digital-gateway-2026",
+    "title": "Board of County Supervisors of Prince William County v. Oak Valley Homeowners Association, Inc., et al.",
+    "url": "https://law.justia.com/cases/virginia/court-of-appeals-published/2026/1590-25-4.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Court of Appeals of Virginia"
+   },
    {
     "id": "postnote-762-water",
     "title": "What are data centres and how sustainable are they?",
@@ -2799,6 +3383,14 @@
   ],
   "governance/procurement": [
    {
+    "id": "ntia-bead-notice-2026",
+    "title": "Broadband Equity, Access, and Deployment (BEAD) Program: BEAD Supplemental Deployment Policy Notice",
+    "url": "https://broadbandusa.ntia.gov/funding-programs/broadband-equity-access-and-deployment-bead-program/BEAD_Supplemental_Deployment_Policy_Notice",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Telecommunications and Information Administration (NTIA), United States"
+   },
+   {
     "id": "govtech-cloud-first",
     "title": "Doubling down on cloud to deliver better government services",
     "url": "https://www.tech.gov.sg/technews/doubling-down-on-cloud-to-deliver-better-government-services",
@@ -2896,6 +3488,38 @@
    }
   ],
   "governance/oversight": [
+   {
+    "id": "itu-iab-cables-2026",
+    "title": "International Advisory Body on Submarine Cable Resilience: Report of the Working Groups",
+    "url": "https://www.itu.int/digital-resilience/submarine-cables/wp-content/uploads/sites/2/2026/07/IAB-Publication-2026.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Telecommunication Union (ITU) and International Cable Protection Committee (ICPC)"
+   },
+   {
+    "id": "accessnow-shutdowns-2024",
+    "title": "Emboldened offenders, endangered communities: internet shutdowns in 2024",
+    "url": "https://www.accessnow.org/press-release/keepiton-internet-shutdowns-2024-en/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Access Now"
+   },
+   {
+    "id": "cloudflare-radar-2024",
+    "title": "Cloudflare Radar 2024 Year in Review",
+    "url": "https://radar.cloudflare.com/year-in-review/2024",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Cloudflare"
+   },
+   {
+    "id": "virginia-court-digital-gateway-2026",
+    "title": "Board of County Supervisors of Prince William County v. Oak Valley Homeowners Association, Inc., et al.",
+    "url": "https://law.justia.com/cases/virginia/court-of-appeals-published/2026/1590-25-4.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Court of Appeals of Virginia"
+   },
    {
     "id": "devries-gao-patterns-2025",
     "title": "The carbon and water footprints of data centers and what this could mean for artificial intelligence",
@@ -3201,6 +3825,46 @@
   ],
   "politics/international": [
    {
+    "id": "gsma-wrc23-2023",
+    "title": "GSMA hails groundbreaking spectrum decisions at WRC-23",
+    "url": "https://gsma.com/newsroom/press-release/gsma-hails-groundbreaking-spectrum-decisions-at-wrc-23/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA"
+   },
+   {
+    "id": "itu-iab-cables-2026",
+    "title": "International Advisory Body on Submarine Cable Resilience: Report of the Working Groups",
+    "url": "https://www.itu.int/digital-resilience/submarine-cables/wp-content/uploads/sites/2/2026/07/IAB-Publication-2026.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Telecommunication Union (ITU) and International Cable Protection Committee (ICPC)"
+   },
+   {
+    "id": "ec-gia-2024",
+    "title": "Gigabit Infrastructure Act",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/gigabit-infrastructure-act",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission"
+   },
+   {
+    "id": "accessnow-shutdowns-2024",
+    "title": "Emboldened offenders, endangered communities: internet shutdowns in 2024",
+    "url": "https://www.accessnow.org/press-release/keepiton-internet-shutdowns-2024-en/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Access Now"
+   },
+   {
+    "id": "jland-ibtec-2025",
+    "title": "JLG Unveils IBTEC To Move Malaysia Up The Industrial Value-Chain",
+    "url": "https://www.jlandgroup.com.my/wp-content/uploads/2026/07/20251205_StarProperty_JLG-Unveils-IBTEC-To-Move-Malaysia-Up-The-Industrial-Value-Chain.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "JLand Group (hosting a StarProperty article)"
+   },
+   {
     "id": "unu-inweh-ai-water-2026",
     "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
     "url": "https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf",
@@ -3362,6 +4026,118 @@
    }
   ],
   "politics/national": [
+   {
+    "id": "setkab-palapa-ring-2019",
+    "title": "Communications Ministry Tells Operators to Provide Signal Availability",
+    "url": "https://setkab.go.id/en/communications-ministry-tells-operators-to-provide-signal-availability/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Secretariat of Cabinet of the Republic of Indonesia (Setkab)"
+   },
+   {
+    "id": "imda-dcb-2023",
+    "title": "Singapore's Digital Connectivity Blueprint",
+    "url": "https://www.imda.gov.sg/-/media/imda/files/programme/digital-connectivity-blueprint/digital-connectivity-blueprint-report.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Infocomm Media Development Authority (IMDA), Singapore"
+   },
+   {
+    "id": "ntia-bead-notice-2026",
+    "title": "Broadband Equity, Access, and Deployment (BEAD) Program: BEAD Supplemental Deployment Policy Notice",
+    "url": "https://broadbandusa.ntia.gov/funding-programs/broadband-equity-access-and-deployment-bead-program/BEAD_Supplemental_Deployment_Policy_Notice",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Telecommunications and Information Administration (NTIA), United States"
+   },
+   {
+    "id": "uk-dsit-aigz-2025",
+    "title": "Delivering AI Growth Zones",
+    "url": "https://www.gov.uk/government/publications/delivering-ai-growth-zones/delivering-ai-growth-zones",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Science, Innovation and Technology (DSIT)"
+   },
+   {
+    "id": "loudoun-land-use-2025",
+    "title": "Data Centers: Land Use Considerations",
+    "url": "https://www.loudoun.gov/6410/Land-Use-Considerations",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Loudoun County, Virginia"
+   },
+   {
+    "id": "cbre-netherlands-land-2023",
+    "title": "Demand for AI and data processing is growing exponentially: which role does the Netherlands want in the European data centre market and how much can it take on?",
+    "url": "https://www.cbre.co.uk/insights/viewpoints/demand-for-ai-and-data-processing-is-growing-exponentially",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "CBRE"
+   },
+   {
+    "id": "cru-leu-connection-policy-2025",
+    "title": "Large Energy Users Connection Policy",
+    "url": "https://cruie-live-96ca64acab2247eca8a850a7e54b-5b34f62.divio-media.com/documents/CRU2025236_Large_Energy_User_connection_policy_decision_paper.pdf?utm_source=chatgpt.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Commission for Regulation of Utilities (Ireland)"
+   },
+   {
+    "id": "jlarc-data-centers-virginia-2024",
+    "title": "Data Centers in Virginia, 2024",
+    "url": "https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf?ref=yacnews.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Virginia Joint Legislative Audit and Review Commission (JLARC)"
+   },
+   {
+    "id": "pwc-digital-gateway-2026",
+    "title": "PW Digital Gateway",
+    "url": "https://www.pwcva.gov/department/planning-office/pw-digital-gateway",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Prince William County, Virginia"
+   },
+   {
+    "id": "fairfax-data-centers-2026",
+    "title": "Data Centers",
+    "url": "https://www.fairfaxcounty.gov/topics/data-centers",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Fairfax County, Virginia"
+   },
+   {
+    "id": "noord-holland-datacenterstrategie-2025",
+    "title": "Statenvoordracht Datacenterstrategie 2025-2027",
+    "url": "https://noordholland.bestuurlijkeinformatie.nl/Document/View/f12ad536-0299-46ca-8bbe-7222d305cb47",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Province of Noord-Holland (Provinciale Staten)"
+   },
+   {
+    "id": "amsterdam-vestigingsbeleid-2023",
+    "title": "Vestigingsbeleid datacenters gemeente Amsterdam 2020-2030 (eerste herziening)",
+    "url": "https://odnzkg.nl/wp-content/uploads/2026/07/Vestigingsbeleid-datacenters-2020-2030-Amsterdam-Duurzaam-Digitaal-eerste-herziening.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Gemeente Amsterdam (policy hosted by Omgevingsdienst Noordzeekanaalgebied)"
+   },
+   {
+    "id": "virginia-hb153-site-assessment-2026",
+    "title": "Data centers; site assessment, sound profile of the high energy use facility (HB 153 / SB 94)",
+    "url": "https://dls.virginia.gov/commissions/eur/files/Energy_Legislation_Virginia_2026_CEUR_Summary.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Virginia Commission on Electric Utility Regulation"
+   },
+   {
+    "id": "edb-jtc-jurong-island-2025",
+    "title": "Jurong Island to host Singapore's largest green data centre park; 10 per cent of land set aside for new energies",
+    "url": "https://www.edb.gov.sg/en/news-and-insights/jurong-island-to-host-singapores-largest-green-data-centre-park-10-per-cent-of-land-set-aside-for-new-energies",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "JTC Corporation and Economic Development Board (Singapore)"
+   },
    {
     "id": "lbnl-us-water-2024",
     "title": "2024 United States Data Center Energy Usage Report",
@@ -3617,6 +4393,38 @@
   ],
   "environment/energy": [
    {
+    "id": "cru-leu-connection-policy-2025",
+    "title": "Large Energy Users Connection Policy",
+    "url": "https://cruie-live-96ca64acab2247eca8a850a7e54b-5b34f62.divio-media.com/documents/CRU2025236_Large_Energy_User_connection_policy_decision_paper.pdf?utm_source=chatgpt.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Commission for Regulation of Utilities (Ireland)"
+   },
+   {
+    "id": "noord-holland-datacenterstrategie-2025",
+    "title": "Statenvoordracht Datacenterstrategie 2025-2027",
+    "url": "https://noordholland.bestuurlijkeinformatie.nl/Document/View/f12ad536-0299-46ca-8bbe-7222d305cb47",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Province of Noord-Holland (Provinciale Staten)"
+   },
+   {
+    "id": "amsterdam-vestigingsbeleid-2023",
+    "title": "Vestigingsbeleid datacenters gemeente Amsterdam 2020-2030 (eerste herziening)",
+    "url": "https://odnzkg.nl/wp-content/uploads/2026/07/Vestigingsbeleid-datacenters-2020-2030-Amsterdam-Duurzaam-Digitaal-eerste-herziening.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Gemeente Amsterdam (policy hosted by Omgevingsdienst Noordzeekanaalgebied)"
+   },
+   {
+    "id": "edb-jtc-jurong-island-2025",
+    "title": "Jurong Island to host Singapore's largest green data centre park; 10 per cent of land set aside for new energies",
+    "url": "https://www.edb.gov.sg/en/news-and-insights/jurong-island-to-host-singapores-largest-green-data-centre-park-10-per-cent-of-land-set-aside-for-new-energies",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "JTC Corporation and Economic Development Board (Singapore)"
+   },
+   {
     "id": "unu-inweh-ai-water-2026",
     "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
     "url": "https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf",
@@ -3739,6 +4547,14 @@
   ],
   "environment/goals": [
    {
+    "id": "edb-jtc-jurong-island-2025",
+    "title": "Jurong Island to host Singapore's largest green data centre park; 10 per cent of land set aside for new energies",
+    "url": "https://www.edb.gov.sg/en/news-and-insights/jurong-island-to-host-singapores-largest-green-data-centre-park-10-per-cent-of-land-set-aside-for-new-energies",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "JTC Corporation and Economic Development Board (Singapore)"
+   },
+   {
     "id": "microsoft-water-2026",
     "title": "Inside Microsoft's two-decade push to cut water intensity while scaling for growth",
     "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
@@ -3820,6 +4636,14 @@
    }
   ],
   "environment/resources": [
+   {
+    "id": "virginia-hb153-site-assessment-2026",
+    "title": "Data centers; site assessment, sound profile of the high energy use facility (HB 153 / SB 94)",
+    "url": "https://dls.virginia.gov/commissions/eur/files/Energy_Legislation_Virginia_2026_CEUR_Summary.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Virginia Commission on Electric Utility Regulation"
+   },
    {
     "id": "unu-inweh-ai-water-2026",
     "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
