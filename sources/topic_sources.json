@@ -1,10 +1,10 @@
 {
  "built": "2026-11-02",
  "counts": {
-  "records_total": 147,
-  "records_mapped": 147,
-  "topic_record_links": 322,
-  "read_mapped": 183,
+  "records_total": 193,
+  "records_mapped": 193,
+  "topic_record_links": 473,
+  "read_mapped": 334,
   "indexed_only_mapped": 139,
   "topics_total": 36,
   "topics_with_records": 36,
@@ -243,6 +243,14 @@
   ],
   "how/inference": [
    {
+    "id": "google-gemini-inference-water",
+    "title": "Measuring the environmental impact of AI inference",
+    "url": "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google Cloud"
+   },
+   {
     "id": "epoch-chatgpt-usage",
     "title": "ChatGPT usage (YouGov panel metadata)",
     "url": "https://epoch.ai/data/chatgpt-usage",
@@ -252,6 +260,14 @@
    }
   ],
   "how/evaluation": [
+   {
+    "id": "google-gemini-inference-water",
+    "title": "Measuring the environmental impact of AI inference",
+    "url": "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google Cloud"
+   },
    {
     "id": "hai-ai-index-2026",
     "title": "AI Index Report 2026",
@@ -635,6 +651,118 @@
   ],
   "infrastructure/centres": [
    {
+    "id": "unu-inweh-ai-water-2026",
+    "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
+    "url": "https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United Nations University Institute for Water, Environment and Health (UNU-INWEH)"
+   },
+   {
+    "id": "iea-energy-ai-water",
+    "title": "Energy and AI, Box 5.4: Water use by data centres",
+    "url": "https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "lbnl-us-water-2024",
+    "title": "2024 United States Data Center Energy Usage Report",
+    "url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Lawrence Berkeley National Laboratory, US Department of Energy"
+   },
+   {
+    "id": "li-making-ai-less-thirsty",
+    "title": "Making AI Less 'Thirsty': Uncovering and Addressing the Secret Water Footprint of AI Models",
+    "url": "https://arxiv.org/abs/2304.03271v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Riverside; University of Texas at Arlington"
+   },
+   {
+    "id": "devries-gao-patterns-2025",
+    "title": "The carbon and water footprints of data centers and what this could mean for artificial intelligence",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12827721/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Patterns (Cell Press)"
+   },
+   {
+    "id": "postnote-762-water",
+    "title": "What are data centres and how sustainable are they?",
+    "url": "https://researchbriefings.files.parliament.uk/documents/POST-PN-0762/POST-PN-0762.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Parliamentary Office of Science and Technology (POST), UK Parliament"
+   },
+   {
+    "id": "microsoft-water-2026",
+    "title": "Inside Microsoft's two-decade push to cut water intensity while scaling for growth",
+    "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Microsoft (Official Microsoft Blog)"
+   },
+   {
+    "id": "google-env-report-2026",
+    "title": "Read Google's 2026 Environmental Report",
+    "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/2026-environmental-report/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google (blog post on the 11th Environmental Report, 2025 performance)"
+   },
+   {
+    "id": "aws-sea-water-2026",
+    "title": "AWS Wins All 3 Singapore PUB Water Awards 2026",
+    "url": "https://www.aboutamazon.sg/news/sustainability/amazons-data-centre-water-stewardship-in-southeast-asia-aws-wins-all-three-singapore-pub-water-awards-for-2026",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon / AWS"
+   },
+   {
+    "id": "meta-water-stewardship",
+    "title": "Water",
+    "url": "https://sustainability.atmeta.com/water/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Meta (sustainability page)"
+   },
+   {
+    "id": "harc-thirsty-data-texas-2026",
+    "title": "Thirsty Data and the Lone Star State: The Impact of Data Center Growth on Texas' Water Supply",
+    "url": "https://harcresearch.org/wp-content/uploads/2026/01/Thirsty-Data-Water-Use-and-The-Projected-Data-Center-Boom-in-Texas.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Houston Advanced Research Center (HARC)"
+   },
+   {
+    "id": "duke-water-community-trust",
+    "title": "Water Use and Community Trust: Key Components of Data Centers' Social License to Operate",
+    "url": "https://deeptech.duke.edu/sites/default/files/Water-Use-and-Community-Trust-Paper_May7.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Deep Tech, Duke University"
+   },
+   {
+    "id": "ofgem-data-centre-reforms-2026",
+    "title": "Proposed data centre connection reforms",
+    "url": "https://www.ofgem.gov.uk/consultation/proposed-data-centre-connection-reforms",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ofgem (Office of Gas and Electricity Markets, UK)"
+   },
+   {
+    "id": "desnz-strategic-demand-connections-2026",
+    "title": "Accelerating electricity network connections for strategic demand",
+    "url": "https://www.gov.uk/government/consultations/accelerating-electricity-network-connections-for-strategic-demand/accelerating-electricity-network-connections-for-strategic-demand-accessible-webpage",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Energy Security and Net Zero"
+   },
+   {
     "id": "ainow-landscape-2025",
     "title": "Artificial Power: 2025 Landscape Report",
     "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
@@ -733,6 +861,78 @@
   ],
   "infrastructure/electricity": [
    {
+    "id": "unu-inweh-ai-water-2026",
+    "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
+    "url": "https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United Nations University Institute for Water, Environment and Health (UNU-INWEH)"
+   },
+   {
+    "id": "lbnl-us-water-2024",
+    "title": "2024 United States Data Center Energy Usage Report",
+    "url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Lawrence Berkeley National Laboratory, US Department of Energy"
+   },
+   {
+    "id": "harc-thirsty-data-texas-2026",
+    "title": "Thirsty Data and the Lone Star State: The Impact of Data Center Growth on Texas' Water Supply",
+    "url": "https://harcresearch.org/wp-content/uploads/2026/01/Thirsty-Data-Water-Use-and-The-Projected-Data-Center-Boom-in-Texas.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Houston Advanced Research Center (HARC)"
+   },
+   {
+    "id": "iea-grids-transitions-2023",
+    "title": "Electricity Grids and Secure Energy Transitions",
+    "url": "https://www.iea.org/reports/electricity-grids-and-secure-energy-transitions/executive-summary",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "lbl-queued-up-2026",
+    "title": "Queued Up: 2026 Edition, Characteristics of Power Plants Seeking Transmission Interconnection As of the End of 2025",
+    "url": "https://emp.lbl.gov/publications/queued-2026-edition-characteristics",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Lawrence Berkeley National Laboratory, US Department of Energy"
+   },
+   {
+    "id": "doe-transmission-needs-2023",
+    "title": "National Transmission Needs Study (United States fact sheet)",
+    "url": "https://www.energy.gov/sites/default/files/2023-10/DOE_GDO_Needs_Study_Fact_Sheet_United_States.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Department of Energy, Grid Deployment Office"
+   },
+   {
+    "id": "iea-electricity-2026-grids",
+    "title": "Grids (Electricity 2026 chapter)",
+    "url": "https://www.iea.org/reports/electricity-2026/grids",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "nerc-ltra-2025-webinar",
+    "title": "2025 Long-Term Reliability Assessment: Industry Webinar (19 February 2026)",
+    "url": "https://int.nerc.com/globalassets/programs/rapa/ra/2025_ltra_industry_webinar.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "North American Electric Reliability Corporation (NERC)"
+   },
+   {
+    "id": "neso-beyond-2030-update-2026",
+    "title": "The future for Great Britain's electricity infrastructure for the 2030s and beyond (Beyond 2030 Update)",
+    "url": "https://www.neso.energy/news/future-great-britains-electricity-infrastructure-2030s-and-beyond",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Energy System Operator (NESO, Great Britain)"
+   },
+   {
     "id": "iseas-malaysia-dc",
     "title": "Data Centres, Energy Demand and Sustainability: Can Malaysia Strike the Right Balance?",
     "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo",
@@ -815,6 +1015,118 @@
   ],
   "infrastructure/water": [
    {
+    "id": "unu-inweh-ai-water-2026",
+    "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
+    "url": "https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United Nations University Institute for Water, Environment and Health (UNU-INWEH)"
+   },
+   {
+    "id": "iea-energy-ai-water",
+    "title": "Energy and AI, Box 5.4: Water use by data centres",
+    "url": "https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "lbnl-us-water-2024",
+    "title": "2024 United States Data Center Energy Usage Report",
+    "url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Lawrence Berkeley National Laboratory, US Department of Energy"
+   },
+   {
+    "id": "li-making-ai-less-thirsty",
+    "title": "Making AI Less 'Thirsty': Uncovering and Addressing the Secret Water Footprint of AI Models",
+    "url": "https://arxiv.org/abs/2304.03271v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Riverside; University of Texas at Arlington"
+   },
+   {
+    "id": "devries-gao-patterns-2025",
+    "title": "The carbon and water footprints of data centers and what this could mean for artificial intelligence",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12827721/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Patterns (Cell Press)"
+   },
+   {
+    "id": "postnote-762-water",
+    "title": "What are data centres and how sustainable are they?",
+    "url": "https://researchbriefings.files.parliament.uk/documents/POST-PN-0762/POST-PN-0762.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Parliamentary Office of Science and Technology (POST), UK Parliament"
+   },
+   {
+    "id": "microsoft-water-2026",
+    "title": "Inside Microsoft's two-decade push to cut water intensity while scaling for growth",
+    "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Microsoft (Official Microsoft Blog)"
+   },
+   {
+    "id": "google-env-report-2026",
+    "title": "Read Google's 2026 Environmental Report",
+    "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/2026-environmental-report/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google (blog post on the 11th Environmental Report, 2025 performance)"
+   },
+   {
+    "id": "google-gemini-inference-water",
+    "title": "Measuring the environmental impact of AI inference",
+    "url": "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google Cloud"
+   },
+   {
+    "id": "aws-sea-water-2026",
+    "title": "AWS Wins All 3 Singapore PUB Water Awards 2026",
+    "url": "https://www.aboutamazon.sg/news/sustainability/amazons-data-centre-water-stewardship-in-southeast-asia-aws-wins-all-three-singapore-pub-water-awards-for-2026",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon / AWS"
+   },
+   {
+    "id": "clee-california-water-2026",
+    "title": "Regulating Data Center Water Use in California",
+    "url": "https://clee.berkeley.edu/publications/regulating-data-center-water-use-in-california/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Law, Energy & the Environment (CLEE), UC Berkeley School of Law"
+   },
+   {
+    "id": "meta-water-stewardship",
+    "title": "Water",
+    "url": "https://sustainability.atmeta.com/water/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Meta (sustainability page)"
+   },
+   {
+    "id": "harc-thirsty-data-texas-2026",
+    "title": "Thirsty Data and the Lone Star State: The Impact of Data Center Growth on Texas' Water Supply",
+    "url": "https://harcresearch.org/wp-content/uploads/2026/01/Thirsty-Data-Water-Use-and-The-Projected-Data-Center-Boom-in-Texas.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Houston Advanced Research Center (HARC)"
+   },
+   {
+    "id": "duke-water-community-trust",
+    "title": "Water Use and Community Trust: Key Components of Data Centers' Social License to Operate",
+    "url": "https://deeptech.duke.edu/sites/default/files/Water-Use-and-Community-Trust-Paper_May7.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Deep Tech, Duke University"
+   },
+   {
     "id": "katadata-batam",
     "title": "A Digital Boom in a Thirsty City (Batam)",
     "url": "https://katadata.co.id/data-center-batam/en",
@@ -832,6 +1144,54 @@
    }
   ],
   "infrastructure/chips": [
+   {
+    "id": "iea-energy-ai-water",
+    "title": "Energy and AI, Box 5.4: Water use by data centres",
+    "url": "https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "sia-state-2025",
+    "title": "2025 State of the U.S. Semiconductor Industry",
+    "url": "https://www.semiconductors.org/2025-state-of-the-u-s-semiconductor-industry/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Semiconductor Industry Association (industry association)"
+   },
+   {
+    "id": "tsmc-cowos",
+    "title": "CoWoS",
+    "url": "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)"
+   },
+   {
+    "id": "cset-reshoring-packaging",
+    "title": "Re-Shoring Advanced Semiconductor Packaging",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Re-Shoring-Advanced-Semiconductor-Packaging.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
+   {
+    "id": "eto-semiconductor-dataset",
+    "title": "Semiconductor Supply Chain Dataset (September 2026 release)",
+    "url": "https://eto.tech/dataset-docs/chipexplorer",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Emerging Technology Observatory (ETO), Georgetown University"
+   },
+   {
+    "id": "cset-semiconductor-supply-chain",
+    "title": "The Semiconductor Supply Chain: Assessing National Competitiveness",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/The-Semiconductor-Supply-Chain-Issue-Brief-1.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
    {
     "id": "oxford-martin-cloud-governance",
     "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
@@ -949,6 +1309,118 @@
   ],
   "infrastructure/grids": [
    {
+    "id": "iea-grids-transitions-2023",
+    "title": "Electricity Grids and Secure Energy Transitions",
+    "url": "https://www.iea.org/reports/electricity-grids-and-secure-energy-transitions/executive-summary",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "lbl-queued-up-2026",
+    "title": "Queued Up: 2026 Edition, Characteristics of Power Plants Seeking Transmission Interconnection As of the End of 2025",
+    "url": "https://emp.lbl.gov/publications/queued-2026-edition-characteristics",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Lawrence Berkeley National Laboratory, US Department of Energy"
+   },
+   {
+    "id": "ofgem-data-centre-reforms-2026",
+    "title": "Proposed data centre connection reforms",
+    "url": "https://www.ofgem.gov.uk/consultation/proposed-data-centre-connection-reforms",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ofgem (Office of Gas and Electricity Markets, UK)"
+   },
+   {
+    "id": "iea-asean-power-grid-financing-2026",
+    "title": "Financing the ASEAN Power Grid",
+    "url": "https://iea.blob.core.windows.net/assets/ae91a87e-275b-48b8-81b9-2eacadc8d28b/FinancingtheASEANPowerGrid.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "doe-transmission-needs-2023",
+    "title": "National Transmission Needs Study (United States fact sheet)",
+    "url": "https://www.energy.gov/sites/default/files/2023-10/DOE_GDO_Needs_Study_Fact_Sheet_United_States.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Department of Energy, Grid Deployment Office"
+   },
+   {
+    "id": "desnz-strategic-demand-connections-2026",
+    "title": "Accelerating electricity network connections for strategic demand",
+    "url": "https://www.gov.uk/government/consultations/accelerating-electricity-network-connections-for-strategic-demand/accelerating-electricity-network-connections-for-strategic-demand-accessible-webpage",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Energy Security and Net Zero"
+   },
+   {
+    "id": "ferc-order-2023-explainer",
+    "title": "Explainer on the Interconnection Final Rule (Order No. 2023)",
+    "url": "https://www.ferc.gov/explainer-interconnection-final-rule",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Federal Energy Regulatory Commission (FERC, US)"
+   },
+   {
+    "id": "iea-electricity-2026-grids",
+    "title": "Grids (Electricity 2026 chapter)",
+    "url": "https://www.iea.org/reports/electricity-2026/grids",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "doe-grid-supply-chain-2026",
+    "title": "Strengthening America's Grid Supply Chain",
+    "url": "https://www.energy.gov/oe/articles/strengthening-americas-grid-supply-chain",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Department of Energy, Office of Electricity"
+   },
+   {
+    "id": "crs-distribution-transformers-2026",
+    "title": "Electricity Distribution Transformers: Supply, Tariffs, and Policy Options",
+    "url": "https://www.everycrsreport.com/files/2026-04-23_R48933_7b9be639e3196e5282d3817519df9f1ed2778302.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Congressional Research Service (US Congress)"
+   },
+   {
+    "id": "eprs-eu-grids-2025",
+    "title": "EU electricity grids",
+    "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2025/772854/EPRS_BRI(2025)772854_EN.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Parliamentary Research Service (EPRS)"
+   },
+   {
+    "id": "nerc-ltra-2025-webinar",
+    "title": "2025 Long-Term Reliability Assessment: Industry Webinar (19 February 2026)",
+    "url": "https://int.nerc.com/globalassets/programs/rapa/ra/2025_ltra_industry_webinar.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "North American Electric Reliability Corporation (NERC)"
+   },
+   {
+    "id": "neso-beyond-2030-update-2026",
+    "title": "The future for Great Britain's electricity infrastructure for the 2030s and beyond (Beyond 2030 Update)",
+    "url": "https://www.neso.energy/news/future-great-britains-electricity-infrastructure-2030s-and-beyond",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Energy System Operator (NESO, Great Britain)"
+   },
+   {
+    "id": "philippines-asean-power-grid-2026",
+    "title": "PH Secures ASEAN Power Grid Consensus, Advances 2026 Priority Economic Deliverables and Japan Partnerships",
+    "url": "https://doe.gov.ph/ph-secures-asean-power-grid-consensus-advances-2026-priority-economic-deliverables-and-japan-partnership",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Philippines Department of Energy (2026 ASEAN Chairship)"
+   },
+   {
     "id": "pursiainen-critical-infrastructure",
     "title": "EU Governance of Critical Infrastructure: Resilience and Artificial Intelligence as Policy Challenges",
     "url": "https://doi.org/10.1007/s41125-026-00115-w",
@@ -966,6 +1438,62 @@
    }
   ],
   "infrastructure/cloud": [
+   {
+    "id": "nist-cloud-definition",
+    "title": "The NIST Definition of Cloud Computing",
+    "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "National Institute of Standards and Technology (US)"
+   },
+   {
+    "id": "eurohpc-ai-factories",
+    "title": "AI Factories",
+    "url": "https://www.eurohpc-ju.europa.eu/ai-factories_en",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European High Performance Computing Joint Undertaking (EuroHPC JU)"
+   },
+   {
+    "id": "oecd-cloud-competition",
+    "title": "Competition in the provision of cloud computing services",
+    "url": "https://www.oecd.org/en/publications/2025/05/competition-in-the-provision-of-cloud-computing-services_f42582ad.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "govtech-cloud-first",
+    "title": "Doubling down on cloud to deliver better government services",
+    "url": "https://www.tech.gov.sg/technews/doubling-down-on-cloud-to-deliver-better-government-services",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Government Technology Agency of Singapore (GovTech Singapore)"
+   },
+   {
+    "id": "oecd-public-cloud-compute",
+    "title": "Measuring domestic public cloud compute availability for artificial intelligence",
+    "url": "https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "aws-dedicated-local-zones",
+    "title": "Meet digital sovereignty needs with AWS Dedicated Local Zones expanded services",
+    "url": "https://aws.amazon.com/blogs/security/meet-digital-sovereignty-needs-with-aws-dedicated-local-zones-expanded-services/?utm_source=securityblogs-xyz",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon Web Services (AWS)"
+   },
+   {
+    "id": "singapore-nais-compute-2026",
+    "title": "Update to Singapore's National AI Strategy: Refreshed Priorities to Harness AI for the Public Good (Factsheet)",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ministry of Digital Development and Information, Singapore"
+   },
    {
     "id": "cma-cloud-services-mi",
     "title": "Cloud services market investigation — final decision (adverse effects on competition; SMS recommendation)",
@@ -993,6 +1521,54 @@
   ],
   "infrastructure/connectivity": [
    {
+    "id": "itu-facts-figures-2025",
+    "title": "Facts and Figures 2025",
+    "url": "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Telecommunication Union (ITU, UN agency)"
+   },
+   {
+    "id": "icann-isoc-igf-footprints",
+    "title": "Footprints of 20 Years of the Internet Governance Forum",
+    "url": "https://www.internetsociety.org/news/press-releases/2025/what-held-the-internet-together-for-20-years-and-why-its-now-at-risk/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Corporation for Assigned Names and Numbers (ICANN) and Internet Society (ISOC)"
+   },
+   {
+    "id": "telegeography-submarine-cables",
+    "title": "How Many Submarine Cables Are There, Anyway?",
+    "url": "https://resources.telegeography.com/how-many-submarine-cables-are-there-anyway?hs_amp=true",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "TeleGeography (telecom research firm)"
+   },
+   {
+    "id": "gsma-mobile-economy-apac-2025",
+    "title": "Mobile Economy Asia Pacific 2025",
+    "url": "https://www.gsma.com/newsroom/all-documents/asia-pacifics-mobile-sector-adds-950-billion-to-gdp-on-track-to-reach-1-4-trillion-by-2030-gsma-report-reveals/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA (mobile industry association)"
+   },
+   {
+    "id": "worldbank-digital-exclusion",
+    "title": "The Geography of Digital Exclusion in Low- and Middle-Income Countries: Access, Use, and Gender Gaps",
+    "url": "https://documents.worldbank.org/curated/en/099033126143097016/pdf/P506842-871c2940-d708-4ef5-bf78-a7617d0547a2.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "World Bank"
+   },
+   {
+    "id": "broadband-state-2024",
+    "title": "The State of Broadband 2024: Leveraging AI for Universal Connectivity",
+    "url": "https://broadbandcommission.net/broadband-commission-assesses-ai-and-the-digital-divides/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Broadband Commission for Sustainable Development (ITU and UNESCO)"
+   },
+   {
     "id": "tfgi-digital-sustainability",
     "title": "Digital Sustainability: Southeast Asia's Next Frontier (executive summary)",
     "url": "https://techforgoodinstitute.org/downloads/22867/20801/Executive-Summary_Digital-Sustainability-Southeast-Asias-Next-Frontier.pdf",
@@ -1018,6 +1594,86 @@
    }
   ],
   "economics/investment": [
+   {
+    "id": "iea-grids-transitions-2023",
+    "title": "Electricity Grids and Secure Energy Transitions",
+    "url": "https://www.iea.org/reports/electricity-grids-and-secure-energy-transitions/executive-summary",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "iea-asean-power-grid-financing-2026",
+    "title": "Financing the ASEAN Power Grid",
+    "url": "https://iea.blob.core.windows.net/assets/ae91a87e-275b-48b8-81b9-2eacadc8d28b/FinancingtheASEANPowerGrid.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "iea-electricity-2026-grids",
+    "title": "Grids (Electricity 2026 chapter)",
+    "url": "https://www.iea.org/reports/electricity-2026/grids",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "doe-grid-supply-chain-2026",
+    "title": "Strengthening America's Grid Supply Chain",
+    "url": "https://www.energy.gov/oe/articles/strengthening-americas-grid-supply-chain",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Department of Energy, Office of Electricity"
+   },
+   {
+    "id": "crs-distribution-transformers-2026",
+    "title": "Electricity Distribution Transformers: Supply, Tariffs, and Policy Options",
+    "url": "https://www.everycrsreport.com/files/2026-04-23_R48933_7b9be639e3196e5282d3817519df9f1ed2778302.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Congressional Research Service (US Congress)"
+   },
+   {
+    "id": "eprs-eu-grids-2025",
+    "title": "EU electricity grids",
+    "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2025/772854/EPRS_BRI(2025)772854_EN.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Parliamentary Research Service (EPRS)"
+   },
+   {
+    "id": "neso-beyond-2030-update-2026",
+    "title": "The future for Great Britain's electricity infrastructure for the 2030s and beyond (Beyond 2030 Update)",
+    "url": "https://www.neso.energy/news/future-great-britains-electricity-infrastructure-2030s-and-beyond",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Energy System Operator (NESO, Great Britain)"
+   },
+   {
+    "id": "sia-state-2025",
+    "title": "2025 State of the U.S. Semiconductor Industry",
+    "url": "https://www.semiconductors.org/2025-state-of-the-u-s-semiconductor-industry/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Semiconductor Industry Association (industry association)"
+   },
+   {
+    "id": "gsma-mobile-economy-apac-2025",
+    "title": "Mobile Economy Asia Pacific 2025",
+    "url": "https://www.gsma.com/newsroom/all-documents/asia-pacifics-mobile-sector-adds-950-billion-to-gdp-on-track-to-reach-1-4-trillion-by-2030-gsma-report-reveals/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA (mobile industry association)"
+   },
+   {
+    "id": "cset-reshoring-packaging",
+    "title": "Re-Shoring Advanced Semiconductor Packaging",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Re-Shoring-Advanced-Semiconductor-Packaging.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
    {
     "id": "ainow-landscape-2025",
     "title": "Artificial Power: 2025 Landscape Report",
@@ -1225,6 +1881,22 @@
   ],
   "economics/ownership": [
    {
+    "id": "oecd-cloud-competition",
+    "title": "Competition in the provision of cloud computing services",
+    "url": "https://www.oecd.org/en/publications/2025/05/competition-in-the-provision-of-cloud-computing-services_f42582ad.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "cset-semiconductor-supply-chain",
+    "title": "The Semiconductor Supply Chain: Assessing National Competitiveness",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/The-Semiconductor-Supply-Chain-Issue-Brief-1.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
+   {
     "id": "ainow-landscape-2025",
     "title": "Artificial Power: 2025 Landscape Report",
     "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
@@ -1347,6 +2019,70 @@
   ],
   "economics/evidence": [
    {
+    "id": "lbnl-us-water-2024",
+    "title": "2024 United States Data Center Energy Usage Report",
+    "url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Lawrence Berkeley National Laboratory, US Department of Energy"
+   },
+   {
+    "id": "li-making-ai-less-thirsty",
+    "title": "Making AI Less 'Thirsty': Uncovering and Addressing the Secret Water Footprint of AI Models",
+    "url": "https://arxiv.org/abs/2304.03271v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Riverside; University of Texas at Arlington"
+   },
+   {
+    "id": "devries-gao-patterns-2025",
+    "title": "The carbon and water footprints of data centers and what this could mean for artificial intelligence",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12827721/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Patterns (Cell Press)"
+   },
+   {
+    "id": "lbl-queued-up-2026",
+    "title": "Queued Up: 2026 Edition, Characteristics of Power Plants Seeking Transmission Interconnection As of the End of 2025",
+    "url": "https://emp.lbl.gov/publications/queued-2026-edition-characteristics",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Lawrence Berkeley National Laboratory, US Department of Energy"
+   },
+   {
+    "id": "itu-facts-figures-2025",
+    "title": "Facts and Figures 2025",
+    "url": "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Telecommunication Union (ITU, UN agency)"
+   },
+   {
+    "id": "oecd-public-cloud-compute",
+    "title": "Measuring domestic public cloud compute availability for artificial intelligence",
+    "url": "https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "eto-semiconductor-dataset",
+    "title": "Semiconductor Supply Chain Dataset (September 2026 release)",
+    "url": "https://eto.tech/dataset-docs/chipexplorer",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Emerging Technology Observatory (ETO), Georgetown University"
+   },
+   {
+    "id": "worldbank-digital-exclusion",
+    "title": "The Geography of Digital Exclusion in Low- and Middle-Income Countries: Access, Use, and Gender Gaps",
+    "url": "https://documents.worldbank.org/curated/en/099033126143097016/pdf/P506842-871c2940-d708-4ef5-bf78-a7617d0547a2.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "World Bank"
+   },
+   {
     "id": "stanford-canaries",
     "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence",
     "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
@@ -1396,6 +2132,14 @@
    }
   ],
   "society/attitudes": [
+   {
+    "id": "postnote-762-water",
+    "title": "What are data centres and how sustainable are they?",
+    "url": "https://researchbriefings.files.parliament.uk/documents/POST-PN-0762/POST-PN-0762.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Parliamentary Office of Science and Technology (POST), UK Parliament"
+   },
    {
     "id": "flanders-conditional-values",
     "title": "Conditional Values: The Contingent Foundations of Attitudes toward Artificial Intelligence",
@@ -1577,6 +2321,46 @@
   ],
   "society/participation": [
    {
+    "id": "duke-water-community-trust",
+    "title": "Water Use and Community Trust: Key Components of Data Centers' Social License to Operate",
+    "url": "https://deeptech.duke.edu/sites/default/files/Water-Use-and-Community-Trust-Paper_May7.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Deep Tech, Duke University"
+   },
+   {
+    "id": "itu-facts-figures-2025",
+    "title": "Facts and Figures 2025",
+    "url": "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Telecommunication Union (ITU, UN agency)"
+   },
+   {
+    "id": "gsma-mobile-economy-apac-2025",
+    "title": "Mobile Economy Asia Pacific 2025",
+    "url": "https://www.gsma.com/newsroom/all-documents/asia-pacifics-mobile-sector-adds-950-billion-to-gdp-on-track-to-reach-1-4-trillion-by-2030-gsma-report-reveals/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA (mobile industry association)"
+   },
+   {
+    "id": "worldbank-digital-exclusion",
+    "title": "The Geography of Digital Exclusion in Low- and Middle-Income Countries: Access, Use, and Gender Gaps",
+    "url": "https://documents.worldbank.org/curated/en/099033126143097016/pdf/P506842-871c2940-d708-4ef5-bf78-a7617d0547a2.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "World Bank"
+   },
+   {
+    "id": "broadband-state-2024",
+    "title": "The State of Broadband 2024: Leveraging AI for Universal Connectivity",
+    "url": "https://broadbandcommission.net/broadband-commission-assesses-ai-and-the-digital-divides/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Broadband Commission for Sustainable Development (ITU and UNESCO)"
+   },
+   {
     "id": "cmu-state-local-ai-guide",
     "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale",
     "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf",
@@ -1650,6 +2434,14 @@
    }
   ],
   "society/trust": [
+   {
+    "id": "duke-water-community-trust",
+    "title": "Water Use and Community Trust: Key Components of Data Centers' Social License to Operate",
+    "url": "https://deeptech.duke.edu/sites/default/files/Water-Use-and-Community-Trust-Paper_May7.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Deep Tech, Duke University"
+   },
    {
     "id": "vector-agentic-worm",
     "title": "AI Agents Enable Adaptive Computer Worms",
@@ -1732,6 +2524,94 @@
    }
   ],
   "governance/rules": [
+   {
+    "id": "postnote-762-water",
+    "title": "What are data centres and how sustainable are they?",
+    "url": "https://researchbriefings.files.parliament.uk/documents/POST-PN-0762/POST-PN-0762.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Parliamentary Office of Science and Technology (POST), UK Parliament"
+   },
+   {
+    "id": "clee-california-water-2026",
+    "title": "Regulating Data Center Water Use in California",
+    "url": "https://clee.berkeley.edu/publications/regulating-data-center-water-use-in-california/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Law, Energy & the Environment (CLEE), UC Berkeley School of Law"
+   },
+   {
+    "id": "harc-thirsty-data-texas-2026",
+    "title": "Thirsty Data and the Lone Star State: The Impact of Data Center Growth on Texas' Water Supply",
+    "url": "https://harcresearch.org/wp-content/uploads/2026/01/Thirsty-Data-Water-Use-and-The-Projected-Data-Center-Boom-in-Texas.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Houston Advanced Research Center (HARC)"
+   },
+   {
+    "id": "ofgem-data-centre-reforms-2026",
+    "title": "Proposed data centre connection reforms",
+    "url": "https://www.ofgem.gov.uk/consultation/proposed-data-centre-connection-reforms",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ofgem (Office of Gas and Electricity Markets, UK)"
+   },
+   {
+    "id": "desnz-strategic-demand-connections-2026",
+    "title": "Accelerating electricity network connections for strategic demand",
+    "url": "https://www.gov.uk/government/consultations/accelerating-electricity-network-connections-for-strategic-demand/accelerating-electricity-network-connections-for-strategic-demand-accessible-webpage",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Energy Security and Net Zero"
+   },
+   {
+    "id": "ferc-order-2023-explainer",
+    "title": "Explainer on the Interconnection Final Rule (Order No. 2023)",
+    "url": "https://www.ferc.gov/explainer-interconnection-final-rule",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Federal Energy Regulatory Commission (FERC, US)"
+   },
+   {
+    "id": "iea-electricity-2026-grids",
+    "title": "Grids (Electricity 2026 chapter)",
+    "url": "https://www.iea.org/reports/electricity-2026/grids",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "crs-distribution-transformers-2026",
+    "title": "Electricity Distribution Transformers: Supply, Tariffs, and Policy Options",
+    "url": "https://www.everycrsreport.com/files/2026-04-23_R48933_7b9be639e3196e5282d3817519df9f1ed2778302.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Congressional Research Service (US Congress)"
+   },
+   {
+    "id": "eprs-eu-grids-2025",
+    "title": "EU electricity grids",
+    "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2025/772854/EPRS_BRI(2025)772854_EN.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Parliamentary Research Service (EPRS)"
+   },
+   {
+    "id": "oecd-cloud-competition",
+    "title": "Competition in the provision of cloud computing services",
+    "url": "https://www.oecd.org/en/publications/2025/05/competition-in-the-provision-of-cloud-computing-services_f42582ad.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "icann-isoc-igf-footprints",
+    "title": "Footprints of 20 Years of the Internet Governance Forum",
+    "url": "https://www.internetsociety.org/news/press-releases/2025/what-held-the-internet-together-for-20-years-and-why-its-now-at-risk/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Corporation for Assigned Names and Numbers (ICANN) and Internet Society (ISOC)"
+   },
    {
     "id": "hai-ai-index-2026",
     "title": "AI Index Report 2026",
@@ -1919,6 +2799,22 @@
   ],
   "governance/procurement": [
    {
+    "id": "govtech-cloud-first",
+    "title": "Doubling down on cloud to deliver better government services",
+    "url": "https://www.tech.gov.sg/technews/doubling-down-on-cloud-to-deliver-better-government-services",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Government Technology Agency of Singapore (GovTech Singapore)"
+   },
+   {
+    "id": "aws-dedicated-local-zones",
+    "title": "Meet digital sovereignty needs with AWS Dedicated Local Zones expanded services",
+    "url": "https://aws.amazon.com/blogs/security/meet-digital-sovereignty-needs-with-aws-dedicated-local-zones-expanded-services/?utm_source=securityblogs-xyz",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon Web Services (AWS)"
+   },
+   {
     "id": "cmu-state-local-ai-guide",
     "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale",
     "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf",
@@ -2000,6 +2896,30 @@
    }
   ],
   "governance/oversight": [
+   {
+    "id": "devries-gao-patterns-2025",
+    "title": "The carbon and water footprints of data centers and what this could mean for artificial intelligence",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12827721/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Patterns (Cell Press)"
+   },
+   {
+    "id": "duke-water-community-trust",
+    "title": "Water Use and Community Trust: Key Components of Data Centers' Social License to Operate",
+    "url": "https://deeptech.duke.edu/sites/default/files/Water-Use-and-Community-Trust-Paper_May7.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Deep Tech, Duke University"
+   },
+   {
+    "id": "nerc-ltra-2025-webinar",
+    "title": "2025 Long-Term Reliability Assessment: Industry Webinar (19 February 2026)",
+    "url": "https://int.nerc.com/globalassets/programs/rapa/ra/2025_ltra_industry_webinar.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "North American Electric Reliability Corporation (NERC)"
+   },
    {
     "id": "aegis-postmarket",
     "title": "AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks",
@@ -2147,6 +3067,14 @@
   ],
   "governance/standards": [
    {
+    "id": "nist-cloud-definition",
+    "title": "The NIST Definition of Cloud Computing",
+    "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "National Institute of Standards and Technology (US)"
+   },
+   {
     "id": "hoch-mugge-brussels",
     "title": "EU Influence in Global AI Governance and its Limits",
     "url": "https://doi.org/10.1007/s44206-026-00284-0",
@@ -2273,6 +3201,70 @@
   ],
   "politics/international": [
    {
+    "id": "unu-inweh-ai-water-2026",
+    "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
+    "url": "https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United Nations University Institute for Water, Environment and Health (UNU-INWEH)"
+   },
+   {
+    "id": "aws-sea-water-2026",
+    "title": "AWS Wins All 3 Singapore PUB Water Awards 2026",
+    "url": "https://www.aboutamazon.sg/news/sustainability/amazons-data-centre-water-stewardship-in-southeast-asia-aws-wins-all-three-singapore-pub-water-awards-for-2026",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon / AWS"
+   },
+   {
+    "id": "iea-asean-power-grid-financing-2026",
+    "title": "Financing the ASEAN Power Grid",
+    "url": "https://iea.blob.core.windows.net/assets/ae91a87e-275b-48b8-81b9-2eacadc8d28b/FinancingtheASEANPowerGrid.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "eprs-eu-grids-2025",
+    "title": "EU electricity grids",
+    "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2025/772854/EPRS_BRI(2025)772854_EN.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Parliamentary Research Service (EPRS)"
+   },
+   {
+    "id": "philippines-asean-power-grid-2026",
+    "title": "PH Secures ASEAN Power Grid Consensus, Advances 2026 Priority Economic Deliverables and Japan Partnerships",
+    "url": "https://doe.gov.ph/ph-secures-asean-power-grid-consensus-advances-2026-priority-economic-deliverables-and-japan-partnership",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Philippines Department of Energy (2026 ASEAN Chairship)"
+   },
+   {
+    "id": "eurohpc-ai-factories",
+    "title": "AI Factories",
+    "url": "https://www.eurohpc-ju.europa.eu/ai-factories_en",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European High Performance Computing Joint Undertaking (EuroHPC JU)"
+   },
+   {
+    "id": "icann-isoc-igf-footprints",
+    "title": "Footprints of 20 Years of the Internet Governance Forum",
+    "url": "https://www.internetsociety.org/news/press-releases/2025/what-held-the-internet-together-for-20-years-and-why-its-now-at-risk/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Corporation for Assigned Names and Numbers (ICANN) and Internet Society (ISOC)"
+   },
+   {
+    "id": "oecd-public-cloud-compute",
+    "title": "Measuring domestic public cloud compute availability for artificial intelligence",
+    "url": "https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
     "id": "ainow-landscape-2025",
     "title": "Artificial Power: 2025 Landscape Report",
     "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
@@ -2370,6 +3362,94 @@
    }
   ],
   "politics/national": [
+   {
+    "id": "lbnl-us-water-2024",
+    "title": "2024 United States Data Center Energy Usage Report",
+    "url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Lawrence Berkeley National Laboratory, US Department of Energy"
+   },
+   {
+    "id": "postnote-762-water",
+    "title": "What are data centres and how sustainable are they?",
+    "url": "https://researchbriefings.files.parliament.uk/documents/POST-PN-0762/POST-PN-0762.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Parliamentary Office of Science and Technology (POST), UK Parliament"
+   },
+   {
+    "id": "clee-california-water-2026",
+    "title": "Regulating Data Center Water Use in California",
+    "url": "https://clee.berkeley.edu/publications/regulating-data-center-water-use-in-california/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Law, Energy & the Environment (CLEE), UC Berkeley School of Law"
+   },
+   {
+    "id": "harc-thirsty-data-texas-2026",
+    "title": "Thirsty Data and the Lone Star State: The Impact of Data Center Growth on Texas' Water Supply",
+    "url": "https://harcresearch.org/wp-content/uploads/2026/01/Thirsty-Data-Water-Use-and-The-Projected-Data-Center-Boom-in-Texas.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Houston Advanced Research Center (HARC)"
+   },
+   {
+    "id": "doe-transmission-needs-2023",
+    "title": "National Transmission Needs Study (United States fact sheet)",
+    "url": "https://www.energy.gov/sites/default/files/2023-10/DOE_GDO_Needs_Study_Fact_Sheet_United_States.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Department of Energy, Grid Deployment Office"
+   },
+   {
+    "id": "desnz-strategic-demand-connections-2026",
+    "title": "Accelerating electricity network connections for strategic demand",
+    "url": "https://www.gov.uk/government/consultations/accelerating-electricity-network-connections-for-strategic-demand/accelerating-electricity-network-connections-for-strategic-demand-accessible-webpage",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Energy Security and Net Zero"
+   },
+   {
+    "id": "doe-grid-supply-chain-2026",
+    "title": "Strengthening America's Grid Supply Chain",
+    "url": "https://www.energy.gov/oe/articles/strengthening-americas-grid-supply-chain",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Department of Energy, Office of Electricity"
+   },
+   {
+    "id": "crs-distribution-transformers-2026",
+    "title": "Electricity Distribution Transformers: Supply, Tariffs, and Policy Options",
+    "url": "https://www.everycrsreport.com/files/2026-04-23_R48933_7b9be639e3196e5282d3817519df9f1ed2778302.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Congressional Research Service (US Congress)"
+   },
+   {
+    "id": "neso-beyond-2030-update-2026",
+    "title": "The future for Great Britain's electricity infrastructure for the 2030s and beyond (Beyond 2030 Update)",
+    "url": "https://www.neso.energy/news/future-great-britains-electricity-infrastructure-2030s-and-beyond",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Energy System Operator (NESO, Great Britain)"
+   },
+   {
+    "id": "aws-dedicated-local-zones",
+    "title": "Meet digital sovereignty needs with AWS Dedicated Local Zones expanded services",
+    "url": "https://aws.amazon.com/blogs/security/meet-digital-sovereignty-needs-with-aws-dedicated-local-zones-expanded-services/?utm_source=securityblogs-xyz",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon Web Services (AWS)"
+   },
+   {
+    "id": "singapore-nais-compute-2026",
+    "title": "Update to Singapore's National AI Strategy: Refreshed Priorities to Harness AI for the Public Good (Factsheet)",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ministry of Digital Development and Information, Singapore"
+   },
    {
     "id": "wadipalapa-indonesia-ai-policy",
     "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia",
@@ -2469,6 +3549,38 @@
   ],
   "politics/chips": [
    {
+    "id": "sia-state-2025",
+    "title": "2025 State of the U.S. Semiconductor Industry",
+    "url": "https://www.semiconductors.org/2025-state-of-the-u-s-semiconductor-industry/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Semiconductor Industry Association (industry association)"
+   },
+   {
+    "id": "cset-reshoring-packaging",
+    "title": "Re-Shoring Advanced Semiconductor Packaging",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Re-Shoring-Advanced-Semiconductor-Packaging.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
+   {
+    "id": "eto-semiconductor-dataset",
+    "title": "Semiconductor Supply Chain Dataset (September 2026 release)",
+    "url": "https://eto.tech/dataset-docs/chipexplorer",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Emerging Technology Observatory (ETO), Georgetown University"
+   },
+   {
+    "id": "cset-semiconductor-supply-chain",
+    "title": "The Semiconductor Supply Chain: Assessing National Competitiveness",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/The-Semiconductor-Supply-Chain-Issue-Brief-1.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
+   {
     "id": "cset-tracking-chips",
     "title": "Tracking AI Chips",
     "url": "https://cset.georgetown.edu/publication/tracking-ai-chips/",
@@ -2504,6 +3616,30 @@
    }
   ],
   "environment/energy": [
+   {
+    "id": "unu-inweh-ai-water-2026",
+    "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
+    "url": "https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United Nations University Institute for Water, Environment and Health (UNU-INWEH)"
+   },
+   {
+    "id": "iea-energy-ai-water",
+    "title": "Energy and AI, Box 5.4: Water use by data centres",
+    "url": "https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
+   {
+    "id": "iea-grids-transitions-2023",
+    "title": "Electricity Grids and Secure Energy Transitions",
+    "url": "https://www.iea.org/reports/electricity-grids-and-secure-energy-transitions/executive-summary",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency (IEA)"
+   },
    {
     "id": "isis-ai-climate",
     "title": "AI and Climate Considerations",
@@ -2603,6 +3739,54 @@
   ],
   "environment/goals": [
    {
+    "id": "microsoft-water-2026",
+    "title": "Inside Microsoft's two-decade push to cut water intensity while scaling for growth",
+    "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Microsoft (Official Microsoft Blog)"
+   },
+   {
+    "id": "google-env-report-2026",
+    "title": "Read Google's 2026 Environmental Report",
+    "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/2026-environmental-report/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google (blog post on the 11th Environmental Report, 2025 performance)"
+   },
+   {
+    "id": "google-gemini-inference-water",
+    "title": "Measuring the environmental impact of AI inference",
+    "url": "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google Cloud"
+   },
+   {
+    "id": "aws-sea-water-2026",
+    "title": "AWS Wins All 3 Singapore PUB Water Awards 2026",
+    "url": "https://www.aboutamazon.sg/news/sustainability/amazons-data-centre-water-stewardship-in-southeast-asia-aws-wins-all-three-singapore-pub-water-awards-for-2026",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon / AWS"
+   },
+   {
+    "id": "meta-water-stewardship",
+    "title": "Water",
+    "url": "https://sustainability.atmeta.com/water/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Meta (sustainability page)"
+   },
+   {
+    "id": "singapore-nais-compute-2026",
+    "title": "Update to Singapore's National AI Strategy: Refreshed Priorities to Harness AI for the Public Good (Factsheet)",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ministry of Digital Development and Information, Singapore"
+   },
+   {
     "id": "isis-ai-climate",
     "title": "AI and Climate Considerations",
     "url": "https://www.cert.isis.org.my/publications/ai-and-climate-considerations/",
@@ -2636,6 +3820,30 @@
    }
   ],
   "environment/resources": [
+   {
+    "id": "unu-inweh-ai-water-2026",
+    "title": "Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints",
+    "url": "https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United Nations University Institute for Water, Environment and Health (UNU-INWEH)"
+   },
+   {
+    "id": "li-making-ai-less-thirsty",
+    "title": "Making AI Less 'Thirsty': Uncovering and Addressing the Secret Water Footprint of AI Models",
+    "url": "https://arxiv.org/abs/2304.03271v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Riverside; University of Texas at Arlington"
+   },
+   {
+    "id": "harc-thirsty-data-texas-2026",
+    "title": "Thirsty Data and the Lone Star State: The Impact of Data Center Growth on Texas' Water Supply",
+    "url": "https://harcresearch.org/wp-content/uploads/2026/01/Thirsty-Data-Water-Use-and-The-Projected-Data-Center-Boom-in-Texas.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Houston Advanced Research Center (HARC)"
+   },
    {
     "id": "katadata-batam",
     "title": "A Digital Boom in a Thirsty City (Batam)",
