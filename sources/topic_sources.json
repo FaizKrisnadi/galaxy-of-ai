@@ -1,10 +1,10 @@
 {
  "built": "2026-11-02",
  "counts": {
-  "records_total": 147,
-  "records_mapped": 147,
-  "topic_record_links": 322,
-  "read_mapped": 183,
+  "records_total": 165,
+  "records_mapped": 165,
+  "topic_record_links": 368,
+  "read_mapped": 229,
   "indexed_only_mapped": 139,
   "topics_total": 36,
   "topics_with_records": 36,
@@ -833,6 +833,46 @@
   ],
   "infrastructure/chips": [
    {
+    "id": "sia-state-2025",
+    "title": "2025 State of the U.S. Semiconductor Industry",
+    "url": "https://www.semiconductors.org/2025-state-of-the-u-s-semiconductor-industry/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Semiconductor Industry Association (industry association)"
+   },
+   {
+    "id": "tsmc-cowos",
+    "title": "CoWoS",
+    "url": "https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)"
+   },
+   {
+    "id": "cset-reshoring-packaging",
+    "title": "Re-Shoring Advanced Semiconductor Packaging",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Re-Shoring-Advanced-Semiconductor-Packaging.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
+   {
+    "id": "eto-semiconductor-dataset",
+    "title": "Semiconductor Supply Chain Dataset (September 2026 release)",
+    "url": "https://eto.tech/dataset-docs/chipexplorer",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Emerging Technology Observatory (ETO), Georgetown University"
+   },
+   {
+    "id": "cset-semiconductor-supply-chain",
+    "title": "The Semiconductor Supply Chain: Assessing National Competitiveness",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/The-Semiconductor-Supply-Chain-Issue-Brief-1.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
+   {
     "id": "oxford-martin-cloud-governance",
     "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
     "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation",
@@ -967,6 +1007,62 @@
   ],
   "infrastructure/cloud": [
    {
+    "id": "nist-cloud-definition",
+    "title": "The NIST Definition of Cloud Computing",
+    "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "National Institute of Standards and Technology (US)"
+   },
+   {
+    "id": "eurohpc-ai-factories",
+    "title": "AI Factories",
+    "url": "https://www.eurohpc-ju.europa.eu/ai-factories_en",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European High Performance Computing Joint Undertaking (EuroHPC JU)"
+   },
+   {
+    "id": "oecd-cloud-competition",
+    "title": "Competition in the provision of cloud computing services",
+    "url": "https://www.oecd.org/en/publications/2025/05/competition-in-the-provision-of-cloud-computing-services_f42582ad.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "govtech-cloud-first",
+    "title": "Doubling down on cloud to deliver better government services",
+    "url": "https://www.tech.gov.sg/technews/doubling-down-on-cloud-to-deliver-better-government-services",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Government Technology Agency of Singapore (GovTech Singapore)"
+   },
+   {
+    "id": "oecd-public-cloud-compute",
+    "title": "Measuring domestic public cloud compute availability for artificial intelligence",
+    "url": "https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "aws-dedicated-local-zones",
+    "title": "Meet digital sovereignty needs with AWS Dedicated Local Zones expanded services",
+    "url": "https://aws.amazon.com/blogs/security/meet-digital-sovereignty-needs-with-aws-dedicated-local-zones-expanded-services/?utm_source=securityblogs-xyz",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon Web Services (AWS)"
+   },
+   {
+    "id": "singapore-nais-compute-2026",
+    "title": "Update to Singapore's National AI Strategy: Refreshed Priorities to Harness AI for the Public Good (Factsheet)",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ministry of Digital Development and Information, Singapore"
+   },
+   {
     "id": "cma-cloud-services-mi",
     "title": "Cloud services market investigation — final decision (adverse effects on competition; SMS recommendation)",
     "url": "https://www.gov.uk/cma-cases/cloud-services-market-investigation",
@@ -993,6 +1089,54 @@
   ],
   "infrastructure/connectivity": [
    {
+    "id": "itu-facts-figures-2025",
+    "title": "Facts and Figures 2025",
+    "url": "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Telecommunication Union (ITU, UN agency)"
+   },
+   {
+    "id": "icann-isoc-igf-footprints",
+    "title": "Footprints of 20 Years of the Internet Governance Forum",
+    "url": "https://www.internetsociety.org/news/press-releases/2025/what-held-the-internet-together-for-20-years-and-why-its-now-at-risk/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Corporation for Assigned Names and Numbers (ICANN) and Internet Society (ISOC)"
+   },
+   {
+    "id": "telegeography-submarine-cables",
+    "title": "How Many Submarine Cables Are There, Anyway?",
+    "url": "https://resources.telegeography.com/how-many-submarine-cables-are-there-anyway?hs_amp=true",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "TeleGeography (telecom research firm)"
+   },
+   {
+    "id": "gsma-mobile-economy-apac-2025",
+    "title": "Mobile Economy Asia Pacific 2025",
+    "url": "https://www.gsma.com/newsroom/all-documents/asia-pacifics-mobile-sector-adds-950-billion-to-gdp-on-track-to-reach-1-4-trillion-by-2030-gsma-report-reveals/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA (mobile industry association)"
+   },
+   {
+    "id": "worldbank-digital-exclusion",
+    "title": "The Geography of Digital Exclusion in Low- and Middle-Income Countries: Access, Use, and Gender Gaps",
+    "url": "https://documents.worldbank.org/curated/en/099033126143097016/pdf/P506842-871c2940-d708-4ef5-bf78-a7617d0547a2.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "World Bank"
+   },
+   {
+    "id": "broadband-state-2024",
+    "title": "The State of Broadband 2024: Leveraging AI for Universal Connectivity",
+    "url": "https://broadbandcommission.net/broadband-commission-assesses-ai-and-the-digital-divides/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Broadband Commission for Sustainable Development (ITU and UNESCO)"
+   },
+   {
     "id": "tfgi-digital-sustainability",
     "title": "Digital Sustainability: Southeast Asia's Next Frontier (executive summary)",
     "url": "https://techforgoodinstitute.org/downloads/22867/20801/Executive-Summary_Digital-Sustainability-Southeast-Asias-Next-Frontier.pdf",
@@ -1018,6 +1162,30 @@
    }
   ],
   "economics/investment": [
+   {
+    "id": "sia-state-2025",
+    "title": "2025 State of the U.S. Semiconductor Industry",
+    "url": "https://www.semiconductors.org/2025-state-of-the-u-s-semiconductor-industry/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Semiconductor Industry Association (industry association)"
+   },
+   {
+    "id": "gsma-mobile-economy-apac-2025",
+    "title": "Mobile Economy Asia Pacific 2025",
+    "url": "https://www.gsma.com/newsroom/all-documents/asia-pacifics-mobile-sector-adds-950-billion-to-gdp-on-track-to-reach-1-4-trillion-by-2030-gsma-report-reveals/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA (mobile industry association)"
+   },
+   {
+    "id": "cset-reshoring-packaging",
+    "title": "Re-Shoring Advanced Semiconductor Packaging",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Re-Shoring-Advanced-Semiconductor-Packaging.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
    {
     "id": "ainow-landscape-2025",
     "title": "Artificial Power: 2025 Landscape Report",
@@ -1225,6 +1393,22 @@
   ],
   "economics/ownership": [
    {
+    "id": "oecd-cloud-competition",
+    "title": "Competition in the provision of cloud computing services",
+    "url": "https://www.oecd.org/en/publications/2025/05/competition-in-the-provision-of-cloud-computing-services_f42582ad.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "cset-semiconductor-supply-chain",
+    "title": "The Semiconductor Supply Chain: Assessing National Competitiveness",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/The-Semiconductor-Supply-Chain-Issue-Brief-1.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
+   {
     "id": "ainow-landscape-2025",
     "title": "Artificial Power: 2025 Landscape Report",
     "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
@@ -1346,6 +1530,38 @@
    }
   ],
   "economics/evidence": [
+   {
+    "id": "itu-facts-figures-2025",
+    "title": "Facts and Figures 2025",
+    "url": "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Telecommunication Union (ITU, UN agency)"
+   },
+   {
+    "id": "oecd-public-cloud-compute",
+    "title": "Measuring domestic public cloud compute availability for artificial intelligence",
+    "url": "https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "eto-semiconductor-dataset",
+    "title": "Semiconductor Supply Chain Dataset (September 2026 release)",
+    "url": "https://eto.tech/dataset-docs/chipexplorer",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Emerging Technology Observatory (ETO), Georgetown University"
+   },
+   {
+    "id": "worldbank-digital-exclusion",
+    "title": "The Geography of Digital Exclusion in Low- and Middle-Income Countries: Access, Use, and Gender Gaps",
+    "url": "https://documents.worldbank.org/curated/en/099033126143097016/pdf/P506842-871c2940-d708-4ef5-bf78-a7617d0547a2.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "World Bank"
+   },
    {
     "id": "stanford-canaries",
     "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence",
@@ -1577,6 +1793,38 @@
   ],
   "society/participation": [
    {
+    "id": "itu-facts-figures-2025",
+    "title": "Facts and Figures 2025",
+    "url": "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Telecommunication Union (ITU, UN agency)"
+   },
+   {
+    "id": "gsma-mobile-economy-apac-2025",
+    "title": "Mobile Economy Asia Pacific 2025",
+    "url": "https://www.gsma.com/newsroom/all-documents/asia-pacifics-mobile-sector-adds-950-billion-to-gdp-on-track-to-reach-1-4-trillion-by-2030-gsma-report-reveals/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GSMA (mobile industry association)"
+   },
+   {
+    "id": "worldbank-digital-exclusion",
+    "title": "The Geography of Digital Exclusion in Low- and Middle-Income Countries: Access, Use, and Gender Gaps",
+    "url": "https://documents.worldbank.org/curated/en/099033126143097016/pdf/P506842-871c2940-d708-4ef5-bf78-a7617d0547a2.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "World Bank"
+   },
+   {
+    "id": "broadband-state-2024",
+    "title": "The State of Broadband 2024: Leveraging AI for Universal Connectivity",
+    "url": "https://broadbandcommission.net/broadband-commission-assesses-ai-and-the-digital-divides/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Broadband Commission for Sustainable Development (ITU and UNESCO)"
+   },
+   {
     "id": "cmu-state-local-ai-guide",
     "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale",
     "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf",
@@ -1732,6 +1980,22 @@
    }
   ],
   "governance/rules": [
+   {
+    "id": "oecd-cloud-competition",
+    "title": "Competition in the provision of cloud computing services",
+    "url": "https://www.oecd.org/en/publications/2025/05/competition-in-the-provision-of-cloud-computing-services_f42582ad.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "icann-isoc-igf-footprints",
+    "title": "Footprints of 20 Years of the Internet Governance Forum",
+    "url": "https://www.internetsociety.org/news/press-releases/2025/what-held-the-internet-together-for-20-years-and-why-its-now-at-risk/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Corporation for Assigned Names and Numbers (ICANN) and Internet Society (ISOC)"
+   },
    {
     "id": "hai-ai-index-2026",
     "title": "AI Index Report 2026",
@@ -1918,6 +2182,22 @@
    }
   ],
   "governance/procurement": [
+   {
+    "id": "govtech-cloud-first",
+    "title": "Doubling down on cloud to deliver better government services",
+    "url": "https://www.tech.gov.sg/technews/doubling-down-on-cloud-to-deliver-better-government-services",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Government Technology Agency of Singapore (GovTech Singapore)"
+   },
+   {
+    "id": "aws-dedicated-local-zones",
+    "title": "Meet digital sovereignty needs with AWS Dedicated Local Zones expanded services",
+    "url": "https://aws.amazon.com/blogs/security/meet-digital-sovereignty-needs-with-aws-dedicated-local-zones-expanded-services/?utm_source=securityblogs-xyz",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon Web Services (AWS)"
+   },
    {
     "id": "cmu-state-local-ai-guide",
     "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale",
@@ -2147,6 +2427,14 @@
   ],
   "governance/standards": [
    {
+    "id": "nist-cloud-definition",
+    "title": "The NIST Definition of Cloud Computing",
+    "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "National Institute of Standards and Technology (US)"
+   },
+   {
     "id": "hoch-mugge-brussels",
     "title": "EU Influence in Global AI Governance and its Limits",
     "url": "https://doi.org/10.1007/s44206-026-00284-0",
@@ -2273,6 +2561,30 @@
   ],
   "politics/international": [
    {
+    "id": "eurohpc-ai-factories",
+    "title": "AI Factories",
+    "url": "https://www.eurohpc-ju.europa.eu/ai-factories_en",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European High Performance Computing Joint Undertaking (EuroHPC JU)"
+   },
+   {
+    "id": "icann-isoc-igf-footprints",
+    "title": "Footprints of 20 Years of the Internet Governance Forum",
+    "url": "https://www.internetsociety.org/news/press-releases/2025/what-held-the-internet-together-for-20-years-and-why-its-now-at-risk/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Internet Corporation for Assigned Names and Numbers (ICANN) and Internet Society (ISOC)"
+   },
+   {
+    "id": "oecd-public-cloud-compute",
+    "title": "Measuring domestic public cloud compute availability for artificial intelligence",
+    "url": "https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
     "id": "ainow-landscape-2025",
     "title": "Artificial Power: 2025 Landscape Report",
     "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
@@ -2371,6 +2683,22 @@
   ],
   "politics/national": [
    {
+    "id": "aws-dedicated-local-zones",
+    "title": "Meet digital sovereignty needs with AWS Dedicated Local Zones expanded services",
+    "url": "https://aws.amazon.com/blogs/security/meet-digital-sovereignty-needs-with-aws-dedicated-local-zones-expanded-services/?utm_source=securityblogs-xyz",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Amazon Web Services (AWS)"
+   },
+   {
+    "id": "singapore-nais-compute-2026",
+    "title": "Update to Singapore's National AI Strategy: Refreshed Priorities to Harness AI for the Public Good (Factsheet)",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ministry of Digital Development and Information, Singapore"
+   },
+   {
     "id": "wadipalapa-indonesia-ai-policy",
     "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia",
     "url": "https://doi.org/10.1177/18681034231226393",
@@ -2468,6 +2796,38 @@
    }
   ],
   "politics/chips": [
+   {
+    "id": "sia-state-2025",
+    "title": "2025 State of the U.S. Semiconductor Industry",
+    "url": "https://www.semiconductors.org/2025-state-of-the-u-s-semiconductor-industry/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Semiconductor Industry Association (industry association)"
+   },
+   {
+    "id": "cset-reshoring-packaging",
+    "title": "Re-Shoring Advanced Semiconductor Packaging",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Re-Shoring-Advanced-Semiconductor-Packaging.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
+   {
+    "id": "eto-semiconductor-dataset",
+    "title": "Semiconductor Supply Chain Dataset (September 2026 release)",
+    "url": "https://eto.tech/dataset-docs/chipexplorer",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Emerging Technology Observatory (ETO), Georgetown University"
+   },
+   {
+    "id": "cset-semiconductor-supply-chain",
+    "title": "The Semiconductor Supply Chain: Assessing National Competitiveness",
+    "url": "https://cset.georgetown.edu/wp-content/uploads/The-Semiconductor-Supply-Chain-Issue-Brief-1.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
    {
     "id": "cset-tracking-chips",
     "title": "Tracking AI Chips",
@@ -2602,6 +2962,14 @@
    }
   ],
   "environment/goals": [
+   {
+    "id": "singapore-nais-compute-2026",
+    "title": "Update to Singapore's National AI Strategy: Refreshed Priorities to Harness AI for the Public Good (Factsheet)",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ministry of Digital Development and Information, Singapore"
+   },
    {
     "id": "isis-ai-climate",
     "title": "AI and Climate Considerations",
