@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galaxy of AI</title>
+<meta name="description" content="A personal, beginner-friendly galaxy for exploring how AI connects to infrastructure, economics, society, governance, politics and the environment. Local prototype; every explanation is short and source-linked.">
+<style>
+  :root{
+    --bg1:#0b1026; --bg2:#141b3d; --ink:#e8edff; --dim:#9aa7d0; --line:#5a6aa3;
+    --focus:#a5b4fc; --card:#151d3f; --link:#8ab4ff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:radial-gradient(1200px 700px at 60% -10%, #1b2452 0%, var(--bg1) 55%, #070a1a 100%);
+    min-height:100vh;
+  }
+  header{max-width:1200px;margin:0 auto;padding:22px 20px 14px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid rgba(154,167,208,.14)}
+  header h1{margin:0;font-size:20px;line-height:1.2;letter-spacing:-.035em;white-space:nowrap}
+
+  .stagewrap{max-width:1200px;margin:0 auto;padding:0 20px;position:relative;touch-action:none;cursor:grab}
+  .stagewrap.dragging{cursor:grabbing}
+  body.listmode .stagewrap{touch-action:pan-y;cursor:auto}
+  #stage{position:relative;width:1200px;height:780px;transform-origin:top left}
+  #stars{position:absolute;inset:0;pointer-events:none}
+  .star{position:absolute;width:2px;height:2px;border-radius:50%;background:#cdd7ff;opacity:.7;animation:tw 4s infinite}
+  @keyframes tw{0%,100%{opacity:.15}50%{opacity:.85}}
+
+  #lines{position:absolute;inset:0;pointer-events:none}
+  #lines .orbit{fill:none;stroke:#2c3768;stroke-width:1;stroke-dasharray:1 7;opacity:.8}
+  #lines .spoke{stroke:#3d4a85;stroke-width:1.5;opacity:.9}
+  #lines .spoke.hot{stroke:#8ab4ff;stroke-width:2.5;opacity:1}
+
+  .scene{position:absolute;inset:0;display:none}
+  .scene.on{display:block;animation:fadein .35s ease}
+  @keyframes fadein{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+
+  /* ---- overview nodes ---- */
+  #sun{position:absolute;left:600px;top:390px;transform:translate(-50%,-50%);width:190px;height:190px;border-radius:50%;
+       border:none;cursor:pointer;color:#fff;font:inherit;
+       background:radial-gradient(circle at 35% 30%,#fff8df 0%,#ffe9a2 20%,#f4b862 53%,#d6774b 80%,#973d45 100%);
+       box-shadow:0 0 46px 12px rgba(251,191,36,.45), 0 0 140px 40px rgba(251,191,36,.14);
+       animation:pulse 5s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 46px 12px rgba(251,191,36,.45),0 0 140px 40px rgba(251,191,36,.14)}
+                   50%{box-shadow:0 0 60px 18px rgba(251,191,36,.6),0 0 170px 50px rgba(251,191,36,.2)}}
+  #sun .t{display:block;font-size:26px;font-weight:800;text-shadow:0 1px 8px rgba(120,60,0,.5)}
+  #sun .s{display:block;font-size:11.5px;margin-top:2px;color:#7c2d12;font-weight:600}
+
+  .planet{position:absolute;left:0;top:0;border:none;cursor:pointer;color:var(--ink);
+          font:inherit;background:transparent;padding:6px;text-align:center;width:170px;will-change:transform}
+  .planet .ball{position:relative;overflow:hidden;width:86px;height:86px;margin:0 auto 6px;border-radius:50%;display:block;
+                box-shadow:inset -16px -14px 24px rgba(3,8,24,.58),inset 3px 3px 9px rgba(255,255,255,.22),0 0 25px color-mix(in srgb,var(--planet-color),transparent 73%);
+                transition:transform .18s ease, box-shadow .18s ease}
+  .planet .ball::after{content:'';position:absolute;inset:0;border-radius:inherit;background:repeating-linear-gradient(155deg,transparent 0 13px,rgba(255,255,255,.11) 14px 16px,transparent 19px 28px),radial-gradient(ellipse at 25% 25%,rgba(255,255,255,.22),transparent 42%);mix-blend-mode:screen;opacity:.65;pointer-events:none}
+  .planet:nth-child(even) .ball::after{transform:rotate(55deg);opacity:.4}
+  .planet .t{display:block;font-size:14.5px;font-weight:700;line-height:1.25}
+  .planet .s{display:block;font-size:11px;color:var(--dim);margin-top:1px}
+  .planet:hover .ball,.planet:focus-visible .ball{transform:scale(1.1);box-shadow:inset -14px -12px 26px rgba(0,0,0,.55),0 0 34px rgba(165,180,252,.55)}
+
+  /* ---- world scene ---- */
+  .world-core{position:absolute;transform:translate(-50%,-50%);width:170px;height:170px;border-radius:50%;
+              border:none;cursor:pointer;color:#0b1026;font:inherit;font-weight:800;font-size:17px;
+              box-shadow:0 0 40px 6px rgba(148,163,255,.35)}
+  .world-core .go{display:block;font-size:11px;font-weight:600;margin-top:2px;opacity:.75}
+  .topic{position:absolute;transform:translate(-50%,-50%);width:190px;border-radius:14px;cursor:pointer;
+         font:inherit;text-align:center;color:var(--ink);padding:10px 12px;
+         background:rgba(21,29,63,.92);border:1.5px solid #3d4a85;transition:border-color .15s,box-shadow .15s}
+  .topic:hover,.topic:focus-visible{border-color:var(--focus);box-shadow:0 0 20px rgba(138,180,255,.35)}
+  .topic .t{display:block;font-size:13.5px;font-weight:700;line-height:1.3}
+  .topic .s{display:block;font-size:10.5px;color:var(--dim);margin-top:2px}
+  .topic.connected{border-color:var(--focus);box-shadow:0 0 18px rgba(138,180,255,.5)}
+  .topic.soft{opacity:.4}
+  .planet{transition:opacity .25s}
+  .planet.faded{opacity:.25}
+  .planet.faded:hover .ball,.planet.faded:focus-visible .ball{transform:none}
+  .planet.focal .t,.planet.focal .s{visibility:hidden}
+  .planet.linked .ball{box-shadow:inset -14px -12px 26px rgba(0,0,0,.55),0 0 34px rgba(165,180,252,.9)}
+  #expansion{position:absolute;inset:0;pointer-events:none;z-index:5}
+  #expansion .topic{pointer-events:auto}
+  .xcross{fill:none;stroke-width:2;opacity:.85}
+  .xcross.solid{stroke:#9db4ff}
+  .xcross.dotted{stroke:#8d99c9;stroke-dasharray:4 6}
+  .crumb-btn{position:absolute;top:10px;left:12px;z-index:26;background:rgba(21,29,63,.9);border:1px solid #3d4a85;
+             color:var(--link);font:inherit;font-size:13.5px;border-radius:10px;padding:6px 12px;cursor:pointer}
+  .crumb-btn:hover,.crumb-btn:focus-visible{color:var(--focus);border-color:var(--focus)}
+  .journeybar{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+  .jbtn{border:1px solid rgba(154,167,208,.24);background:rgba(255,255,255,.035);color:#dbe3ff;font:inherit;font-size:13px;border-radius:10px;padding:9px 14px;cursor:pointer;transition:background .15s,border-color .15s}
+  .jbtn:hover,.jbtn:focus-visible{border-color:var(--focus);background:rgba(165,180,252,.1);color:#fff}
+  .jbtn.active{border-color:#fbbf24;color:#fbbf24;background:rgba(251,191,36,.1)}
+  .guide{position:fixed;left:22px;bottom:18px;z-index:30}
+  .guide-toggle{display:block;width:100px;height:110px;padding:0;border:0;background:transparent;cursor:pointer;animation:guide-float 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(0,0,0,.45))}
+  .guide-toggle img{display:block;width:100%;height:100%;object-fit:contain}
+  .guide-toggle:focus-visible{outline:2px solid var(--focus);outline-offset:4px;border-radius:20px}
+  @keyframes guide-float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+  .guide-menu{display:none;position:absolute;left:10px;bottom:112px;width:260px;padding:16px;background:rgba(21,29,63,.97);border:1px solid #485583;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.42)}
+  .guide.open .guide-menu{display:block}
+  .guide-menu h2{margin:0 0 10px;font-size:15px;line-height:1.3;letter-spacing:-.01em}
+  .guide-menu .jbtn{display:block;width:100%;margin-top:7px;text-align:left;padding:10px 12px}
+  body:has(#jpanel.on) .guide{left:max(370px,calc((100vw - 1240px)/2 + 354px))}
+  @media(max-width:500px){body:has(#jpanel.on) .guide{visibility:hidden}}
+  @media(max-width:760px){.guide{left:10px;bottom:10px}.guide-toggle{width:76px;height:84px}.guide-menu{bottom:86px;width:min(260px,calc(100vw - 40px))}}
+  .searchwrap{position:relative;margin-bottom:10px}
+  .search-toggle{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(154,167,208,.24);border-radius:10px;background:rgba(255,255,255,.035);color:var(--ink);cursor:pointer}
+  .search-toggle:hover,.search-toggle:focus-visible{border-color:var(--focus);background:rgba(165,180,252,.1)}
+  .search-panel{display:none;position:absolute;right:0;top:calc(100% + 8px);width:min(280px,calc(100vw - 40px));z-index:40}
+  .searchwrap.open .search-panel{display:block}
+  #search{width:100%;background:#151d3f;border:1px solid rgba(154,167,208,.3);color:var(--ink);
+          font:inherit;font-size:13px;border-radius:10px;padding:9px 14px;outline:none}
+  #search:focus-visible{border-color:var(--focus)}
+  #search::placeholder{color:var(--dim)}
+  #results{position:absolute;top:calc(100% + 6px);right:0;z-index:40;background:var(--card);border:1px solid #2e3a6e;border-radius:12px;
+           box-shadow:0 12px 40px rgba(0,0,0,.5);overflow:hidden;display:none;width:max(100%,250px);max-width:calc(100vw - 40px)}
+  @media (max-width:760px){header{align-items:stretch;flex-direction:column;gap:14px;padding-top:18px}.journeybar{justify-content:flex-start}.jbtn{flex:1;text-align:center}}
+  #results.on{display:block}
+  #results button{display:block;width:100%;text-align:left;background:none;border:none;color:var(--ink);
+                  font:inherit;font-size:13.5px;padding:8px 12px;cursor:pointer}
+  #results button:hover,#results button:focus-visible{background:rgba(165,180,252,.12);color:var(--focus)}
+  #results .where{color:var(--dim);font-size:11.5px;display:block}
+  .jnode{border-color:#fbbf24!important;box-shadow:0 0 0 3px rgba(251,191,36,.35),0 0 22px rgba(251,191,36,.5)!important}
+  .jtrail{fill:none;stroke:#fbbf24;stroke-width:2.5;opacity:.9;stroke-dasharray:2 4}
+  #jpanel{position:fixed;left:max(16px,calc((100vw - 1240px)/2));bottom:16px;width:340px;max-height:46vh;overflow:auto;
+          background:var(--card);border:1px solid #2e3a6e;border-radius:14px;padding:14px 16px;
+          box-shadow:0 14px 50px rgba(0,0,0,.55);display:none;z-index:28}
+  #jpanel.on{display:block}
+  #jpanel .step{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:#fbbf24;font-weight:700}
+  #jpanel h3{margin:2px 0 4px;font-size:16px}
+  #jpanel p{margin:6px 0;font-size:13.5px}
+  #jpanel .srclab{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--dim);margin:10px 0 2px}
+  #jpanel .note{color:var(--dim);font-size:12px;font-style:italic}
+  #jpanel ul{margin:4px 0;padding-left:18px}
+  #jpanel li{font-size:12.5px;margin:3px 0}
+  #jpanel a{color:var(--link)}
+  #jpanel .row{display:flex;gap:8px;margin-top:10px}
+  #jpanel .row button{flex:1;border:1px solid #3d4a85;background:rgba(21,29,63,.7);color:var(--ink);
+                      font:inherit;font-size:13px;border-radius:10px;padding:6px 8px;cursor:pointer}
+  #jpanel .row button:hover:not(:disabled),#jpanel .row button:focus-visible{border-color:var(--focus);color:var(--focus)}
+  #jpanel .row button:disabled{opacity:.4;cursor:default}
+  #jpanel .full{border:none;background:none;color:var(--link);font:inherit;font-size:12.5px;cursor:pointer;padding:0;margin-top:8px}
+  #jpanel .full:hover,#jpanel .full:focus-visible{color:var(--focus)}
+
+  .topiclink{fill:none;stroke-width:1.8;opacity:.8}
+  .topiclink.solid{stroke:#7f8ec4}
+  .topiclink.dotted{stroke:#8d99c9;stroke-dasharray:3 6}
+  .topiclink.hot{stroke:#a5b4fc;stroke-width:3;opacity:1}
+  .arc{fill:none;stroke:#8faee8;stroke-width:1.5;opacity:.55;stroke-linecap:round}
+  .arc.dotted{stroke:#8994c4;stroke-dasharray:2 7;opacity:.5}
+
+  .crumb{position:absolute;top:6px;left:8px;font-size:13.5px;color:var(--dim)}
+  .crumb button{background:none;border:none;color:var(--link);font:inherit;font-size:13.5px;cursor:pointer;padding:6px 8px;border-radius:8px}
+  .crumb button:hover,.crumb button:focus-visible{color:var(--focus);outline:none;background:rgba(165,180,252,.12)}
+
+  /* ---- topic card ---- */
+  #card{position:fixed;top:70px;right:max(16px,calc((100vw - 1240px)/2));width:400px;max-height:calc(100vh - 100px);
+        overflow:auto;background:var(--card);border:1px solid #2e3a6e;border-radius:16px;padding:18px 20px;
+        box-shadow:0 18px 60px rgba(0,0,0,.55);display:none;z-index:30}
+  #card.on{display:block;animation:slidein .28s ease}
+  @keyframes slidein{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:translateX(0)}}
+  #card .crumb2{font-size:12.5px;color:var(--dim);margin-bottom:6px}
+  #card .crumb2 button{background:none;border:none;color:var(--link);font:inherit;font-size:12.5px;cursor:pointer;padding:2px 0}
+  #card h2{margin:0 0 2px;font-size:19px}
+  #card .tag{color:var(--dim);font-size:13px;margin:0 0 8px}
+  #card p{margin:8px 0;font-size:14px}
+  #card .unk{color:#c7b98a;font-size:13px;font-style:italic;margin:10px 0 0}
+  #card .recs li{margin:6px 0}
+  #card .recs .tier{display:inline-block;font-size:10px;font-weight:700;border-radius:999px;padding:1px 7px;margin-right:5px;vertical-align:1px}
+  #card .recs .t-F{background:#dcfce7;color:#166534}
+  #card .recs .t-V,#card .recs .t-O{background:#dbeafe;color:#1e40af}
+  #card .recs .t-L,#card .recs .t-S{background:#f1f5f9;color:#64748b;border:1px solid #e2e8f0}
+  #card .recs .t-H,#card .recs .t-D{background:#f1f5f9;color:#64748b}
+  #card .absence{color:var(--dim);font-size:12.5px;font-style:italic}
+  #card .srcline{font-size:13px;color:var(--dim);margin:10px 0 0}
+  #card h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin:16px 0 4px}
+  #card ul{margin:4px 0;padding-left:18px}
+  #card li{margin:5px 0;font-size:13.5px}
+  #card a{color:var(--link)}
+  #card .xlink{background:none;border:none;color:var(--link);font:inherit;font-size:13.5px;cursor:pointer;padding:0;text-align:left;display:block;margin:6px 0}
+  #card .xlink:hover,#card .xlink:focus-visible{color:var(--focus)}
+  #card .xlink.dotted i{border-bottom:1px dotted var(--link)}
+  #card .xlink i{font-style:normal}
+  #card .xlink .where{color:var(--dim);font-size:12px}
+  #card .close{position:sticky;top:0;float:right;background:rgba(21,29,63,.9);border:1px solid #3d4a85;color:var(--ink);
+               border-radius:8px;width:30px;height:30px;font-size:15px;cursor:pointer;line-height:1}
+  #card .close:hover,#card .close:focus-visible{border-color:var(--focus);color:var(--focus)}
+
+
+  button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+  h2:focus,h1:focus{outline:none}
+
+  /* ---- small screens: stacked, touch-friendly ---- */
+  @media (max-width:760px){
+    body.listmode #stage{width:100%;height:auto;transform:none!important}
+    body.listmode #lines{display:none}
+    body.listmode .scene{position:static;display:none;padding:4px 2px 12px}
+    body.listmode .scene.on{display:block}
+    body.listmode #sun,.listmode #sun{position:static;display:block;margin:14px auto 4px;transform:none;width:150px;height:150px}
+    body.listmode .planet{position:static;display:flex;align-items:center;gap:14px;width:100%;transform:none;text-align:left;padding:12px 10px}
+    body.listmode .planet .ball{width:58px;height:58px;margin:0;flex:0 0 58px}
+    body.listmode .planet .t{font-size:16px}
+    body.listmode .world-core{position:static;display:block;margin:16px auto;transform:none}
+    body.listmode .topic{position:static;display:block;width:100%;transform:none;margin:10px 0;text-align:left}
+    body.listmode .crumb{position:static;margin:8px 0}
+    body.listmode .crumb-btn{position:static;display:inline-block;margin:10px 4px}
+    body.listmode #expansion{position:static;pointer-events:auto}
+  #jpanel{left:0;right:0;bottom:0;width:100%;max-height:52vh;border-radius:16px 16px 0 0}
+  #results{left:0;right:auto;min-width:0}
+    #card{top:auto;bottom:0;right:0;left:0;width:100%;max-height:72vh;border-radius:18px 18px 0 0;border-bottom:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .star,#sun,.guide-toggle{animation:none}
+    .scene.on,#card.on,.planet .ball{animation:none;transition:none}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Galaxy of AI</h1>
+
+</header>
+
+<div class="guide">
+  <div class="guide-menu" id="guide-menu">
+    <h2>Where shall we go?</h2>
+    <div class="searchwrap">
+      <input id="search" type="search" placeholder="Search any topic…" aria-label="Search topics" autocomplete="off">
+      <div id="results"></div>
+    </div>
+    <button class="jbtn" data-journey="request">Follow an AI request <span aria-hidden="true">↗</span></button>
+    <button class="jbtn" data-journey="jobs">Explore AI and jobs <span aria-hidden="true">↗</span></button>
+  </div>
+  <button class="guide-toggle" type="button" aria-label="Open exploration guide" aria-controls="guide-menu" aria-expanded="false"><img src="assets/galaxy-guide.png" alt=""></button>
+</div>
+
+<div class="stagewrap">
+  <div id="stage">
+    <div id="stars" aria-hidden="true"></div>
+    <svg id="lines" width="1200" height="780" viewBox="0 0 1200 780" aria-hidden="true"></svg>
+    <section class="scene on" id="scene-overview" aria-label="Galaxy overview">
+      <button id="sun" aria-expanded="false"><span class="t">AI</span><span class="s">the sun of this galaxy</span></button>
+      <!-- planets injected -->
+    </section>
+    <div id="expansion" aria-label="Expanded world topics"></div>
+    <button id="collapse-btn" class="crumb-btn" hidden></button>
+  </div>
+</div>
+
+
+<aside id="jpanel" aria-label="Guided journey" aria-live="polite"></aside>
+
+<aside id="card" aria-live="polite">
+  <button class="close" id="card-close" aria-label="Close (Esc)">&#10005;</button>
+  <div class="crumb2" id="card-crumb"></div>
+  <h2 id="card-title" tabindex="-1"></h2>
+  <p class="tag" id="card-tag"></p>
+  <div id="card-body"></div>
+</aside>
+
+<script>
+"use strict";
+
+/* ==TOPIC_SOURCES_START== */
+const TOPIC_SOURCES = {"built": "2026-11-02", "counts": {"records_total": 147, "records_mapped": 147, "topic_record_links": 322, "read_mapped": 183, "indexed_only_mapped": 139, "topics_total": 36, "topics_with_records": 36, "topics_without_records": 0}, "zeroRecordTopics": [], "institutionAbsences": "DAIR · Harvard BKC formal papers · ETH AI Center papers · Cambridge LCFI items · DeepMind per-paper items · Meta AI site papers · Vector Institute index · RIKEN AIP · Tsinghua KEG beyond GLM · Oxford Ethics items", "byTopic": {"how/models": [{"id": "tsinghua-glm130b", "title": "GLM-130B: An Open Bilingual Pre-trained Model", "url": "https://arxiv.org/abs/2210.02414", "tier": "F", "tierLabel": "full or partial text read", "inst": "Tsinghua University & BAAI (China)"}, {"id": "ai4bharat-indictrans2", "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages", "url": "https://arxiv.org/abs/2305.16307", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI4Bharat (India; IIT Madras ecosystem per search, not stated on arXiv page)"}, {"id": "llmjp-4-technical-report", "title": "LLM-jp-4 Technical Paper", "url": "https://arxiv.org/abs/2610.19331", "tier": "F", "tierLabel": "full or partial text read", "inst": "LLM-jp (cross-organisational Japanese project; RIKEN/NII involvement per search coverage, not stated on the arXiv page)"}, {"id": "olmo-paper", "title": "OLMo: Accelerating the Science of Language Models", "url": "https://arxiv.org/abs/2402.00838", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ai2"}, {"id": "sealion-paper", "title": "SEA-LION: Southeast Asian Languages in One Network", "url": "https://arxiv.org/abs/2504.05747", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI Singapore"}, {"id": "meta-llama3-herd", "title": "The Llama 3 Herd of Models", "url": "https://arxiv.org/abs/2407.21783", "tier": "F", "tierLabel": "full or partial text read", "inst": "Meta"}, {"id": "olmo3-blog", "title": "OLMo 3 (blog release)", "url": "https://allenai.org/blog/olmo3", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Allen Institute for AI (Ai2)"}, {"id": "openalex-topics", "title": "OpenAlex Topics", "url": "https://help.openalex.org/data/topics/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OurResearch"}, {"id": "microsoft-sparks-gpt4", "title": "Sparks of Artificial General Intelligence: Early experiments with GPT-4", "url": "https://arxiv.org/abs/2303.12712", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Microsoft Research"}, {"id": "ibm-what-is-ai", "title": "What is artificial intelligence (AI)?", "url": "https://www.ibm.com/think/topics/artificial-intelligence", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "IBM"}, {"id": "meta-llama4-blog", "title": "The Llama 4 herd: natively multimodal intelligence", "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence", "tier": "S", "tierLabel": "located via search (not read)", "inst": "Meta"}, {"id": "epoch-ai-models-db", "title": "AI models database (3,700+ models, 1950-today)", "url": "https://epoch.ai/data/ai-models", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}, {"id": "chai-teacher-selection-rlhf", "title": "Active teacher selection for reinforcement learning from human feedback", "url": "https://arxiv.org/abs/2310.15288", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CHAI / UC Berkeley"}, {"id": "mila-diffusion-policy", "title": "Adaptive Order Policies for Masked Diffusion", "url": "https://doi.org/10.48550/arxiv.2606.00295", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Mila (Quebec AI Institute)"}, {"id": "eth-ai-center-index", "title": "ETH AI Center publications index", "url": "https://ai.ethz.ch/research/publications.html", "tier": "L", "tierLabel": "indexed only — not read", "inst": "ETH Zurich AI Center"}, {"id": "deepmind-publications-index", "title": "Google DeepMind publications index (267 items)", "url": "https://deepmind.google/publications/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Google DeepMind"}, {"id": "mila-speech-grounding", "title": "Listen First, Then Answer: Timestamp-Grounded Speech Reasoning", "url": "https://doi.org/10.48550/arXiv.2603.19468", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Mila (Quebec AI Institute)"}, {"id": "openai-research-index", "title": "OpenAI research index (product-announcement heavy)", "url": "https://openai.com/research/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "OpenAI"}, {"id": "mila-risk-rl", "title": "Reward Redistribution for CVaR MDPs using a Bellman Operator on L-infinity", "url": "https://doi.org/10.48550/arXiv.2602.03778", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Mila (Quebec AI Institute)"}, {"id": "mila-sft-rotation", "title": "Rotation-Preserving Supervised Fine-Tuning", "url": "https://doi.org/10.48550/arXiv.2605.10973", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Mila (Quebec AI Institute)"}], "how/data": [{"id": "wadipalapa-indonesia-ai-policy", "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia", "url": "https://doi.org/10.1177/18681034231226393", "tier": "F", "tierLabel": "full or partial text read", "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"}, {"id": "tsinghua-glm130b", "title": "GLM-130B: An Open Bilingual Pre-trained Model", "url": "https://arxiv.org/abs/2210.02414", "tier": "F", "tierLabel": "full or partial text read", "inst": "Tsinghua University & BAAI (China)"}, {"id": "ai4bharat-indictrans2", "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages", "url": "https://arxiv.org/abs/2305.16307", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI4Bharat (India; IIT Madras ecosystem per search, not stated on arXiv page)"}, {"id": "olmo-paper", "title": "OLMo: Accelerating the Science of Language Models", "url": "https://arxiv.org/abs/2402.00838", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ai2"}, {"id": "sealion-paper", "title": "SEA-LION: Southeast Asian Languages in One Network", "url": "https://arxiv.org/abs/2504.05747", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI Singapore"}, {"id": "openalex-topics", "title": "OpenAlex Topics", "url": "https://help.openalex.org/data/topics/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OurResearch"}, {"id": "sealion-seald-dataset", "title": "SEALD - Southeast Asian Languages in One Network Data", "url": "https://aisingapore.org/aiproducts/southeast-asian-languages-in-one-network-data-seald", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "AI Singapore (National Research Foundation)"}, {"id": "ibm-what-is-ai", "title": "What is artificial intelligence (AI)?", "url": "https://www.ibm.com/think/topics/artificial-intelligence", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "IBM"}], "how/inference": [{"id": "epoch-chatgpt-usage", "title": "ChatGPT usage (YouGov panel metadata)", "url": "https://epoch.ai/data/chatgpt-usage", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}], "how/evaluation": [{"id": "hai-ai-index-2026", "title": "AI Index Report 2026", "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report", "tier": "F", "tierLabel": "full or partial text read", "inst": "Stanford HAI"}, {"id": "deepmind-stealth-sa", "title": "Evaluating Frontier Models for Stealth and Situational Awareness", "url": "https://arxiv.org/abs/2505.01420", "tier": "F", "tierLabel": "full or partial text read", "inst": "Google DeepMind"}, {"id": "chai-managing-risks", "title": "Managing AI Risks in an Era of Rapid Progress", "url": "https://arxiv.org/abs/2310.17688", "tier": "F", "tierLabel": "full or partial text read", "inst": "CHAI / UC Berkeley (multi-institution statement)"}, {"id": "cset-redteaming-reporting", "title": "Systematizing the Reporting of AI Red-Teaming", "url": "https://cset.georgetown.edu/publication/systematizing-the-reporting-of-ai-red-teaming/", "tier": "F", "tierLabel": "full or partial text read", "inst": "CSET, Georgetown University"}, {"id": "meta-llama3-herd", "title": "The Llama 3 Herd of Models", "url": "https://arxiv.org/abs/2407.21783", "tier": "F", "tierLabel": "full or partial text read", "inst": "Meta"}, {"id": "kaist-ussafebench", "title": "Is Safety Standard Same for Everyone? User-Specific Safety Evaluation of Large Language Models", "url": "https://arxiv.org/abs/2502.15086", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "KAIST (Data Science & AI Lab) et al."}, {"id": "riegler-offensive-ai-governance", "title": "Restricting the Model, Missing the System: Measurement and Accountability in Offensive AI Governance", "url": "https://arxiv.org/abs/2605.09504", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Scandinavian AI safety researchers (affiliations not stated on arXiv page)"}, {"id": "microsoft-sparks-gpt4", "title": "Sparks of Artificial General Intelligence: Early experiments with GPT-4", "url": "https://arxiv.org/abs/2303.12712", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Microsoft Research"}, {"id": "chula-ai-china-labor-thesis", "title": "The impact of artificial intelligence on China's labor market", "url": "https://digital.car.chula.ac.th/chulaetd/74149", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Chulalongkorn University, Faculty of Economics (Thailand)"}, {"id": "openai-oss-safeguard", "title": "gpt-oss-safeguard technical report", "url": "https://openai.com/index/gpt-oss-safeguard-technical-report/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OpenAI"}, {"id": "semianalysis-china-frontier", "title": "Beijing Will Not Pace the Frontier: China's Speed-First AI Safety Regime", "url": "https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "SemiAnalysis (industry research; not peer-reviewed)"}, {"id": "huang-deepseek-eval", "title": "Evaluating DeepSeek V4.1 Flash-1017 for loss of control and harmful manipulation risks", "url": "https://arxiv.org/abs/2610.35671", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "arXiv preprint (independent; not peer-reviewed)"}, {"id": "metr-anthropic-review", "title": "Review of the 'Misalignment in high-stakes settings' section in Anthropic's Risk Report (August 2026)", "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "METR (external review of corporate risk assessment)"}, {"id": "epoch-ai-models-db", "title": "AI models database (3,700+ models, 1950-today)", "url": "https://epoch.ai/data/ai-models", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}, {"id": "anthropic-ukaisi-assessment", "title": "An alignment assessment of the UK AISI cybertesting incident", "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Anthropic"}, {"id": "ada-care-consideration", "title": "Care and consideration", "url": "https://www.adalovelaceinstitute.org/report/care-and-consideration/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Ada Lovelace Institute"}, {"id": "mila-ecuas", "title": "ECUAS: metrics for principled evaluation of uncertainty-augmented systems", "url": "https://openreview.net/forum?id=O9u4lItD9K", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Mila (Quebec AI Institute)"}, {"id": "eth-ai-center-index", "title": "ETH AI Center publications index", "url": "https://ai.ethz.ch/research/publications.html", "tier": "L", "tierLabel": "indexed only — not read", "inst": "ETH Zurich AI Center"}, {"id": "mila-gitchameleon", "title": "GitChameleon 2.0: Evaluating AI Code Generation Against Python Library Version Incompatibilities", "url": "https://doi.org/10.48550/arXiv.2507.12367", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Mila (Quebec AI Institute)"}, {"id": "deepmind-publications-index", "title": "Google DeepMind publications index (267 items)", "url": "https://deepmind.google/publications/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Google DeepMind"}, {"id": "openai-sora2-card", "title": "Sora 2 System Card", "url": "https://openai.com/index/sora-2-system-card/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "OpenAI"}, {"id": "chai-tasra", "title": "TASRA: A Taxonomy of Societal-Scale Risks from AI", "url": "https://arxiv.org/abs/2306.06924", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CHAI / UC Berkeley"}, {"id": "epoch-trends", "title": "Trends in AI", "url": "https://epoch.ai/trends", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}], "how/agents": [{"id": "vector-agentic-worm", "title": "AI Agents Enable Adaptive Computer Worms", "url": "https://arxiv.org/abs/2606.03811", "tier": "F", "tierLabel": "full or partial text read", "inst": "Vector Institute / University of Toronto et al."}, {"id": "eth-camel", "title": "Defeating Prompt Injections by Design", "url": "https://arxiv.org/abs/2503.18813", "tier": "F", "tierLabel": "full or partial text read", "inst": "Google DeepMind & ETH Zurich (SPY Lab) collaboration"}, {"id": "deepmind-stealth-sa", "title": "Evaluating Frontier Models for Stealth and Situational Awareness", "url": "https://arxiv.org/abs/2505.01420", "tier": "F", "tierLabel": "full or partial text read", "inst": "Google DeepMind"}, {"id": "govai-agents-infrastructure", "title": "Infrastructure for AI Agents", "url": "https://arxiv.org/abs/2501.10114", "tier": "F", "tierLabel": "full or partial text read", "inst": "GovAI (Centre for the Governance of AI); accepted to TMLR"}, {"id": "anthropic-agents-judgment", "title": "Who's Aligned to Whom? How AI Agents Shape Experts' Research Judgment Calls", "url": "https://www.anthropic.com/research/agents-judgment-calls", "tier": "F", "tierLabel": "full or partial text read", "inst": "Anthropic"}, {"id": "openai-pacing-cyber", "title": "Pacing model development in an era of cyber-critical capabilities", "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OpenAI"}, {"id": "metr-openai-redteam", "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems", "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "METR (external technical assessment; not peer-reviewed)"}, {"id": "openai-long-horizon-safety", "title": "Safety and alignment in an era of long-horizon models", "url": "https://openai.com/index/safety-alignment-long-horizon-models/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OpenAI"}, {"id": "anthropic-threat-intel", "title": "Detecting and countering misuse of AI: September 2026", "url": "https://www.anthropic.com/threat-intelligence-report-september-2026", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Anthropic (provider-authored primary source)"}, {"id": "openai-monitoring-incident", "title": "Suppressing misalignment monitoring alerts and disabling misalignment monitoring", "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "OpenAI (primary-source corporate incident report)"}, {"id": "mila-diffusion-policy", "title": "Adaptive Order Policies for Masked Diffusion", "url": "https://doi.org/10.48550/arxiv.2606.00295", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Mila (Quebec AI Institute)"}, {"id": "ainow-kill-chain", "title": "Anatomy of an AI Kill Chain (with Airwars)", "url": "https://ainowinstitute.org/publications/anatomy-of-an-ai-kill-chain", "tier": "L", "tierLabel": "indexed only — not read", "inst": "AI Now Institute"}, {"id": "cset-coalition-ops", "title": "Coalition Operations", "url": "https://cset.georgetown.edu/publication/coalition-operations/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CSET, Georgetown University"}, {"id": "chai-control-roadmap", "title": "Control for Societal-scale Challenges: Road Map 2030", "url": "https://ieeecss.org/control-societal-scale-challenges-road-map-2030", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CHAI / UC Berkeley + IEEE CSS"}, {"id": "ainow-double-agents", "title": "Double Agents: Defensive AI Agents Magnify Cyber Risks", "url": "https://ainowinstitute.org/publications/double-agents", "tier": "L", "tierLabel": "indexed only — not read", "inst": "AI Now Institute"}, {"id": "deepmind-publications-index", "title": "Google DeepMind publications index (267 items)", "url": "https://deepmind.google/publications/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Google DeepMind"}, {"id": "anthropic-unintended-actions", "title": "Investigating unintended model actions in our evaluations and internal use", "url": "https://www.anthropic.com/research/investigating-unintended-model-actions", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Anthropic"}, {"id": "mila-risk-rl", "title": "Reward Redistribution for CVaR MDPs using a Bellman Operator on L-infinity", "url": "https://doi.org/10.48550/arXiv.2602.03778", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Mila (Quebec AI Institute)"}], "how/using": [{"id": "oxford-martin-cloud-governance", "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation", "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation", "tier": "F", "tierLabel": "full or partial text read", "inst": "Oxford Martin School, University of Oxford"}, {"id": "nus-genai-cs-education", "title": "Reshaping Undergraduate Computer Science Education in the Generative AI Era", "url": "https://arxiv.org/html/2606.07545v1", "tier": "F", "tierLabel": "full or partial text read", "inst": "NUS School of Computing"}, {"id": "ginting-civil-servants-dataset", "title": "Dataset on Digital Competence, AI Literacy, Generative AI Use, Organizational Support, Public Service Motivation, and Work Performance among Indonesian Civil Servants", "url": "https://doi.org/10.17632/9b26sb2k4g.1", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Mendeley Data v1 (CC BY 4.0)"}, {"id": "oecd-wp93-gov-genai", "title": "Generative AI experimentation in government: Learning from emerging guidelines", "url": "https://doi.org/10.1787/42815683-en", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OECD Working Paper No. 93"}, {"id": "turobov-coyle-archetypes", "title": "Governing the evidence base: an empirical framework of AI archetypes for policy analysis", "url": "https://doi.org/10.1017/dap.2026.10100", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Data & Policy (peer-reviewed, CC BY 4.0)"}, {"id": "van-es-deliberation", "title": "Bringing Ethics to the Table: Presenting a Deliberation Tool for Data and AI in Media Organizations", "url": "https://doi.org/10.1007/s44206-026-00294-y", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Digital Society (peer-reviewed; collaborative action research)"}], "infrastructure/centres": [{"id": "ainow-landscape-2025", "title": "Artificial Power: 2025 Landscape Report", "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI Now Institute"}, {"id": "ember-asean-ai-emissions", "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition", "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ember (independent energy think tank)"}, {"id": "ucl-iipp-netzero-dri", "title": "Public procurement for net-zero digital research infrastructure: a mission-oriented approach", "url": "https://discovery.ucl.ac.uk/id/eprint/10196220", "tier": "F", "tierLabel": "full or partial text read", "inst": "UCL Institute for Innovation and Public Purpose"}, {"id": "arusgrid", "title": "ArusGrid — independent data-centre tracker", "url": "https://arusgrid.com/methodology", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "ArusGrid"}, {"id": "uob-dbs-dayone-ndp-loan", "title": "DBS and UOB jointly provide landmark IDR 6.7 trillion loan for DayOne-INA Batam data centre campus", "url": "https://www.dbs.com/newsroom/DBS_and_UOB_arrange_record_IDR_6_7_trillion_SGD_530_million_loan_for_data_centre_development_project_by_DayOne_and_the_Indonesia_Investment_Authority", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "DBS & UOB (primary bank release; DBS newsroom)"}, {"id": "epoch-datacenters-methodology", "title": "Epoch AI Data Centers database — methodology", "url": "https://epoch.ai/data/data-centers-documentation/methodology", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Epoch AI"}, {"id": "epoch-trends-supercomputers", "title": "Trends in AI Supercomputers", "url": "https://epoch.ai/publications/trends-in-ai-supercomputers", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Epoch AI"}, {"id": "airtrunk-jhb1-opening", "title": "AirTrunk opens AI-ready data centre in Malaysia", "url": "https://airtrunk.com/airtrunk-opens-ai-ready-data-centre-in-malaysia-accelerating-innovation-and-the-energy-transition/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AirTrunk"}, {"id": "blackstone-airtrunk", "title": "Blackstone to acquire AirTrunk in A$24 billion transaction (US$16.1 billion)", "url": "https://www.blackstone.com/press-releases/article/blackstone-to-acquire-airtrunk-in-a24-billion-transaction-us161-billion/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "Blackstone"}, {"id": "dayone-pln-ppa", "title": "DayOne signs Indonesia's largest 511 MVA (450 MW) PPA with PLN Batam (Kabil campus)", "url": "https://dayonedc.com/markets/dayone-signs-indonesias-largest-511mva-450mw-ppa-to-expand-hyperscale-data-center-platform-in-batam", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "DayOne"}, {"id": "epoch-gpu-clusters", "title": "GPU clusters database (500+ clusters)", "url": "https://epoch.ai/data/gpu-clusters", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}, {"id": "epoch-ai-data-centers-db", "title": "AI data centers (open database)", "url": "https://epoch.ai/data/ai-data-centers", "tier": "?", "tierLabel": "provenance unclear", "inst": "Epoch AI"}], "infrastructure/electricity": [{"id": "iseas-malaysia-dc", "title": "Data Centres, Energy Demand and Sustainability: Can Malaysia Strike the Right Balance?", "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo", "tier": "F", "tierLabel": "full or partial text read", "inst": "ISEAS–Yusof Ishak Institute (Perspective 2025/43)"}, {"id": "iea-energy-and-ai", "title": "Energy and AI", "url": "https://www.iea.org/reports/energy-and-ai", "tier": "F", "tierLabel": "full or partial text read", "inst": "IEA"}, {"id": "iea-data-centres", "title": "Data Centres — Electricity consumption (tracker)", "url": "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "IEA"}, {"id": "ainow-dc-toolkit", "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions", "url": "https://ainowinstitute.org/publications/data-center-policy-guide", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "AI Now Institute"}, {"id": "aiddata-clg", "title": "AidData: China's Loans and Grants to Low- and Middle-Income Countries v1.0", "url": "https://docs.aiddata.org/ad4/datasets/AidDatas_CLG_LMIC_Dataset_v1.0.zip", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AidData"}, {"id": "airtrunk-jhb1-opening", "title": "AirTrunk opens AI-ready data centre in Malaysia", "url": "https://airtrunk.com/airtrunk-opens-ai-ready-data-centre-in-malaysia-accelerating-innovation-and-the-energy-transition/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AirTrunk"}, {"id": "airtrunk-vppa", "title": "AirTrunk signs Malaysia's first data centre renewable VPPA", "url": "https://www.airtrunk.com/news/airtrunk-signs-malaysias-first-data-centre-renewable-vppa/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AirTrunk"}, {"id": "dayone-pln-ppa", "title": "DayOne signs Indonesia's largest 511 MVA (450 MW) PPA with PLN Batam (Kabil campus)", "url": "https://dayonedc.com/markets/dayone-signs-indonesias-largest-511mva-450mw-ppa-to-expand-hyperscale-data-center-platform-in-batam", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "DayOne"}, {"id": "gem-ownership-api", "title": "Global Energy Monitor Ownership Tracing API", "url": "https://api.globalenergymonitor.org/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "Global Energy Monitor"}, {"id": "iea-key-questions", "title": "Key Questions on Energy and AI", "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai", "tier": "L", "tierLabel": "indexed only — not read", "inst": "IEA"}], "infrastructure/water": [{"id": "katadata-batam", "title": "A Digital Boom in a Thirsty City (Batam)", "url": "https://katadata.co.id/data-center-batam/en", "tier": "F", "tierLabel": "full or partial text read", "inst": "Katadata.co.id (English edition)"}, {"id": "arusgrid", "title": "ArusGrid — independent data-centre tracker", "url": "https://arusgrid.com/methodology", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "ArusGrid"}], "infrastructure/chips": [{"id": "oxford-martin-cloud-governance", "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation", "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation", "tier": "F", "tierLabel": "full or partial text read", "inst": "Oxford Martin School, University of Oxford"}, {"id": "cset-tracking-chips", "title": "Tracking AI Chips", "url": "https://cset.georgetown.edu/publication/tracking-ai-chips/", "tier": "F", "tierLabel": "full or partial text read", "inst": "CSET, Georgetown University"}, {"id": "arusgrid", "title": "ArusGrid — independent data-centre tracker", "url": "https://arusgrid.com/methodology", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "ArusGrid"}, {"id": "epoch-chip-users-explorer", "title": "Introducing the AI Chip Users explorer", "url": "https://epoch.ai/latest/introducing-the-ai-chip-users-explorer", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Epoch AI"}, {"id": "epoch-trends-supercomputers", "title": "Trends in AI Supercomputers", "url": "https://epoch.ai/publications/trends-in-ai-supercomputers", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Epoch AI"}, {"id": "patro-santacreu-targeted-trade", "title": "Geopolitical Distance and Targeted Trade", "url": "https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Federal Reserve Bank of St. Louis Review"}, {"id": "epoch-chip-sales", "title": "AI chip sales", "url": "https://epoch.ai/data/ai-chip-sales", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}, {"id": "epoch-gpu-clusters", "title": "GPU clusters database (500+ clusters)", "url": "https://epoch.ai/data/gpu-clusters", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}, {"id": "epoch-ml-hardware", "title": "Machine learning hardware (180+ accelerators)", "url": "https://epoch.ai/data/machine-learning-hardware", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}, {"id": "cset-semi-workforce", "title": "Strengthening the U.S. Semiconductor Manufacturing Workforce", "url": "https://cset.georgetown.edu/publication/strengthening-the-u-s-semiconductor-manufacturing-workforce/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CSET, Georgetown University"}], "infrastructure/land": [{"id": "iseas-malaysia-dc", "title": "Data Centres, Energy Demand and Sustainability: Can Malaysia Strike the Right Balance?", "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo", "tier": "F", "tierLabel": "full or partial text read", "inst": "ISEAS–Yusof Ishak Institute (Perspective 2025/43)"}, {"id": "ainow-dc-toolkit", "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions", "url": "https://ainowinstitute.org/publications/data-center-policy-guide", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "AI Now Institute"}, {"id": "dosm-state-land-area", "title": "Department of Statistics Malaysia — eStatistik publication log (state land area; Johor 19,166 km², 2020)", "url": "https://www.dosm.gov.my/portal-main/publication-estatistik-log?chapter_id=1314&document_id=377", "tier": "O", "tierLabel": "official statistic (independently checked)", "inst": "Department of Statistics Malaysia (official)"}, {"id": "airtrunk-pekatsolar", "title": "AirTrunk and Pekat Solar to develop rooftop solar at JHB1", "url": "https://airtrunk.com/airtrunk-and-pekat-solar-to-develop-rooftop-solar-at-airtrunks-johor-bahru-data-centre-jhb1/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AirTrunk"}], "infrastructure/grids": [{"id": "pursiainen-critical-infrastructure", "title": "EU Governance of Critical Infrastructure: Resilience and Artificial Intelligence as Policy Challenges", "url": "https://doi.org/10.1007/s41125-026-00115-w", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "European Journal for Security Research (peer-reviewed)"}, {"id": "chai-control-roadmap", "title": "Control for Societal-scale Challenges: Road Map 2030", "url": "https://ieeecss.org/control-societal-scale-challenges-road-map-2030", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CHAI / UC Berkeley + IEEE CSS"}], "infrastructure/cloud": [{"id": "cma-cloud-services-mi", "title": "Cloud services market investigation — final decision (adverse effects on competition; SMS recommendation)", "url": "https://www.gov.uk/cma-cases/cloud-services-market-investigation", "tier": "F", "tierLabel": "full or partial text read", "inst": "UK Competition and Markets Authority (official regulator)"}, {"id": "oxford-martin-cloud-governance", "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation", "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation", "tier": "F", "tierLabel": "full or partial text read", "inst": "Oxford Martin School, University of Oxford"}, {"id": "dict-philippines-cloudfirst", "title": "Prescribing the Philippine Government's Cloud First Policy (DICT Department Circular 2017-002)", "url": "https://ictknowledgeportal.dict.gov.ph/resources (official portal listing); PDF copy from the JETRO ASEAN-Japan mirror: jetro.go.jp/ext_images/jetro/activities/support/aseanjapan/report/3-6.pdf; amendment PDF from dataguidance.com mirror", "tier": "F", "tierLabel": "full or partial text read", "inst": "DICT (Philippines government — official regulator)"}], "infrastructure/connectivity": [{"id": "tfgi-digital-sustainability", "title": "Digital Sustainability: Southeast Asia's Next Frontier (executive summary)", "url": "https://techforgoodinstitute.org/downloads/22867/20801/Executive-Summary_Digital-Sustainability-Southeast-Asias-Next-Frontier.pdf", "tier": "F", "tierLabel": "full or partial text read", "inst": "Tech for Good Institute (Singapore — SEA institute already indexed via its Vietnam AI Strategy piece)"}, {"id": "iseas-subsea-cables-2025", "title": "The Struggle for Subsea Cable Supremacy in Southeast Asia: ASEAN Relying on Diverse Suppliers", "url": "https://www.iseas.edu.sg/wp-content/uploads/2025/02/ISEAS_Perspective_2025_21.pdf", "tier": "F", "tierLabel": "full or partial text read", "inst": "ISEAS – Yusof Ishak Institute (SEA institution already indexed)"}, {"id": "eria-adc2045-overview", "title": "ASEAN Digital Community 2045: A Strategic Overview", "url": "https://www.eria.org/uploads/ADC-2025-A-Strategic-Overview.pdf", "tier": "?", "tierLabel": "provenance unclear", "inst": "ERIA (regional research institute supporting ASEAN)"}], "economics/investment": [{"id": "ainow-landscape-2025", "title": "Artificial Power: 2025 Landscape Report", "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI Now Institute"}, {"id": "tfgi-digital-sustainability", "title": "Digital Sustainability: Southeast Asia's Next Frontier (executive summary)", "url": "https://techforgoodinstitute.org/downloads/22867/20801/Executive-Summary_Digital-Sustainability-Southeast-Asias-Next-Frontier.pdf", "tier": "F", "tierLabel": "full or partial text read", "inst": "Tech for Good Institute (Singapore — SEA institute already indexed via its Vietnam AI Strategy piece)"}, {"id": "ember-asean-ai-emissions", "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition", "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ember (independent energy think tank)"}, {"id": "arusgrid", "title": "ArusGrid — independent data-centre tracker", "url": "https://arusgrid.com/methodology", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "ArusGrid"}, {"id": "uob-dbs-dayone-ndp-loan", "title": "DBS and UOB jointly provide landmark IDR 6.7 trillion loan for DayOne-INA Batam data centre campus", "url": "https://www.dbs.com/newsroom/DBS_and_UOB_arrange_record_IDR_6_7_trillion_SGD_530_million_loan_for_data_centre_development_project_by_DayOne_and_the_Indonesia_Investment_Authority", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "DBS & UOB (primary bank release; DBS newsroom)"}, {"id": "epoch-datacenters-methodology", "title": "Epoch AI Data Centers database — methodology", "url": "https://epoch.ai/data/data-centers-documentation/methodology", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Epoch AI"}, {"id": "epoch-trends-supercomputers", "title": "Trends in AI Supercomputers", "url": "https://epoch.ai/publications/trends-in-ai-supercomputers", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Epoch AI"}, {"id": "aiddata-clg", "title": "AidData: China's Loans and Grants to Low- and Middle-Income Countries v1.0", "url": "https://docs.aiddata.org/ad4/datasets/AidDatas_CLG_LMIC_Dataset_v1.0.zip", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AidData"}, {"id": "dcd-dayone-loan", "title": "DayOne secures $412M loan for Batam data center campus", "url": "https://www.datacenterdynamics.com/en/news/dayone-secures-412m-loan-for-batam-data-center-campus-in-indonesia", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "Data Center Dynamics (trade press)"}, {"id": "epoch-ai-data-centers-db", "title": "AI data centers (open database)", "url": "https://epoch.ai/data/ai-data-centers", "tier": "?", "tierLabel": "provenance unclear", "inst": "Epoch AI"}], "economics/jobs": [{"id": "scitech-asia-ai-literacy", "title": "Assessing Artificial Intelligence (AI) Literacy and Readiness in Thailand's Workforce: Challenges and Opportunities for Digital Transformation", "url": "https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/256785", "tier": "F", "tierLabel": "full or partial text read", "inst": "National Institute of Development Administration (NIDA), Bangkok + AGH Krakow"}, {"id": "stanford-canaries", "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence", "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Stanford Digital Economy Lab (Stanford University)"}, {"id": "ilo-wp140-genai-jobs", "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure", "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure", "tier": "F", "tierLabel": "full or partial text read", "inst": "International Labour Organization (ILO Working Paper 140)"}, {"id": "nus-genai-cs-education", "title": "Reshaping Undergraduate Computer Science Education in the Generative AI Era", "url": "https://arxiv.org/html/2606.07545v1", "tier": "F", "tierLabel": "full or partial text read", "inst": "NUS School of Computing"}, {"id": "orr-census-exposure", "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors", "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "US Census Bureau CES Working Paper 26-56"}, {"id": "chula-ai-china-labor-thesis", "title": "The impact of artificial intelligence on China's labor market", "url": "https://digital.car.chula.ac.th/chulaetd/74149", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Chulalongkorn University, Faculty of Economics (Thailand)"}, {"id": "cset-stem-talent", "title": "How Global Talent Pathways Shape U.S. STEM Award Achievement", "url": "https://cset.georgetown.edu/publication/how-global-talent-pathways-shape-u-s-stem-award-achievement/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CSET, Georgetown University"}, {"id": "ada-navigating-future", "title": "Navigating the future", "url": "https://www.adalovelaceinstitute.org/report/navigating-the-future/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Ada Lovelace Institute"}, {"id": "epoch-polling", "title": "Polling on AI usage at work", "url": "https://epoch.ai/data/polling", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}, {"id": "cset-semi-workforce", "title": "Strengthening the U.S. Semiconductor Manufacturing Workforce", "url": "https://cset.georgetown.edu/publication/strengthening-the-u-s-semiconductor-manufacturing-workforce/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CSET, Georgetown University"}, {"id": "kas-flaminiano-sme-ai", "title": "Exploring Readiness and Challenges to AI-Driven Competitiveness in Southeast Asian SMEs (in KAS volume 'The Experiences and Extent of Adopting AI among SMEs in Southeast Asia')", "url": "https://www.kas.de/documents/287213/33744488/The+Experiences+and+Extent+of+Adopting+AI+among+SMEs+in+Southeast+Asia.pdf", "tier": "?", "tierLabel": "provenance unclear", "inst": "Konrad-Adenauer-Stiftung (KAS) publication; Philippines-authored"}], "economics/productivity": [{"id": "hai-ai-index-2026", "title": "AI Index Report 2026", "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report", "tier": "F", "tierLabel": "full or partial text read", "inst": "Stanford HAI"}, {"id": "ada-measuring-up", "title": "Measuring Up", "url": "https://www.adalovelaceinstitute.org/policy-briefing/measuring-up/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ada Lovelace Institute"}, {"id": "eklou-imf-productivity", "title": "Artificial Intelligence and Aggregate Labor Productivity: Evidence from Patent Data", "url": "https://www.imf.org/en/publications/wp/issues/2026/09/25/artificial-intelligence-and-aggregate-labor-productivity-evidence-from-patent-data-579850", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "IMF Working Paper 2026/204"}, {"id": "epoch-trends", "title": "Trends in AI", "url": "https://epoch.ai/trends", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}], "economics/ownership": [{"id": "ainow-landscape-2025", "title": "Artificial Power: 2025 Landscape Report", "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI Now Institute"}, {"id": "cma-cloud-services-mi", "title": "Cloud services market investigation — final decision (adverse effects on competition; SMS recommendation)", "url": "https://www.gov.uk/cma-cases/cloud-services-market-investigation", "tier": "F", "tierLabel": "full or partial text read", "inst": "UK Competition and Markets Authority (official regulator)"}, {"id": "iseas-subsea-cables-2025", "title": "The Struggle for Subsea Cable Supremacy in Southeast Asia: ASEAN Relying on Diverse Suppliers", "url": "https://www.iseas.edu.sg/wp-content/uploads/2025/02/ISEAS_Perspective_2025_21.pdf", "tier": "F", "tierLabel": "full or partial text read", "inst": "ISEAS – Yusof Ishak Institute (SEA institution already indexed)"}, {"id": "cset-ai-competition", "title": "Artificial Intelligence in Competition", "url": "https://cset.georgetown.edu/publication/artificial-intelligence-in-competition/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "CSET, Georgetown University"}, {"id": "epoch-chip-users-explorer", "title": "Introducing the AI Chip Users explorer", "url": "https://epoch.ai/latest/introducing-the-ai-chip-users-explorer", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Epoch AI"}, {"id": "blackstone-airtrunk", "title": "Blackstone to acquire AirTrunk in A$24 billion transaction (US$16.1 billion)", "url": "https://www.blackstone.com/press-releases/article/blackstone-to-acquire-airtrunk-in-a24-billion-transaction-us161-billion/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "Blackstone"}, {"id": "gleif-api", "title": "GLEIF API v1 (legal-entity identifiers)", "url": "https://api.gleif.org/api/v1", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "GLEIF"}, {"id": "gem-ownership-api", "title": "Global Energy Monitor Ownership Tracing API", "url": "https://api.globalenergymonitor.org/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "Global Energy Monitor"}, {"id": "culot-ai-procurement", "title": "Artificial Intelligence in Public Procurement: Aligning Operational Capacity, Legitimacy, and Public Value", "url": "https://doi.org/10.1111/jbl.70088", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Journal of Business Logistics (peer-reviewed)"}, {"id": "restrepo-firm-compliance", "title": "Compliance under the EU AI Act: How Firms Navigate Regulatory Complexity", "url": "https://doi.org/10.1016/j.clsr.2026.106390", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Computer Law & Security Review (peer-reviewed)"}, {"id": "patro-santacreu-targeted-trade", "title": "Geopolitical Distance and Targeted Trade", "url": "https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Federal Reserve Bank of St. Louis Review"}, {"id": "cifar-pcais-evaluation", "title": "Evaluation of the Pan-Canadian Artificial Intelligence Strategy", "url": "https://ised-isde.canada.ca/site/audits-evaluations/en/evaluation/evaluation-pan-canadian-artificial-intelligence-strategy-20-1", "tier": "S", "tierLabel": "located via search (not read)", "inst": "ISED Canada / CIFAR"}, {"id": "ada-minding-business", "title": "Minding your business", "url": "https://www.adalovelaceinstitute.org/policy-briefing/minding-your-business/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Ada Lovelace Institute"}, {"id": "ainow-europe-industrial", "title": "Redirecting Europe's AI Industrial Policy", "url": "https://ainowinstitute.org/publications/research/redirecting-europes-ai-industrial-policy", "tier": "L", "tierLabel": "indexed only — not read", "inst": "AI Now Institute"}, {"id": "oii-empires-of-ai", "title": "Empires of AI (guest essay)", "url": "https://www.foreignaffairs.com/china/empires-artificial-intelligence-ferguson-klaassen-schmidt", "tier": "?", "tierLabel": "provenance unclear", "inst": "Foreign Affairs (essay; indexed via the OII research page — authors are Ferguson, Klaassen & Schmidt, not OII researchers)"}], "economics/evidence": [{"id": "stanford-canaries", "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence", "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Stanford Digital Economy Lab (Stanford University)"}, {"id": "ilo-wp140-genai-jobs", "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure", "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure", "tier": "F", "tierLabel": "full or partial text read", "inst": "International Labour Organization (ILO Working Paper 140)"}, {"id": "ada-measuring-up", "title": "Measuring Up", "url": "https://www.adalovelaceinstitute.org/policy-briefing/measuring-up/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ada Lovelace Institute"}, {"id": "eklou-imf-productivity", "title": "Artificial Intelligence and Aggregate Labor Productivity: Evidence from Patent Data", "url": "https://www.imf.org/en/publications/wp/issues/2026/09/25/artificial-intelligence-and-aggregate-labor-productivity-evidence-from-patent-data-579850", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "IMF Working Paper 2026/204"}, {"id": "orr-census-exposure", "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors", "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "US Census Bureau CES Working Paper 26-56"}, {"id": "boysel-lai-oss-survey", "title": "Navigating Open Source Software Development in the Generative AI Era", "url": "https://www.linuxfoundation.org/research/oss-development-gen-ai-era-2026", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Linux Foundation (survey report; not peer-reviewed)"}], "society/attitudes": [{"id": "flanders-conditional-values", "title": "Conditional Values: The Contingent Foundations of Attitudes toward Artificial Intelligence", "url": "https://arxiv.org/abs/2610.37197", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "arXiv preprint (provisional WVS Wave 8)"}, {"id": "lundgren-tallberg-preferences", "title": "Governing Artificial Intelligence: Public Preferences and Regulatory Options", "url": "https://ssrn.com/abstract=7125438", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "SSRN preprint (not peer-reviewed at version checked)"}, {"id": "baum-state-gov-ai", "title": "Governing with Artificial Intelligence: Use, Ideology, and the Benefits and Risks of AI in State Government", "url": "https://preprints-apsa.prod.orp.cambridge.org/engage/apsa/article-details/6a95981d810b9dcc8281bf40", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "APSA preprint (not peer-reviewed)"}, {"id": "oxford-aiethics-index", "title": "Institute for Ethics in AI (Oxford) publications index", "url": "https://www.oxford-aiethics.ox.ac.uk/publications", "tier": "S", "tierLabel": "located via search (not read)", "inst": "University of Oxford"}], "society/skills": [{"id": "wadipalapa-indonesia-ai-policy", "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia", "url": "https://doi.org/10.1177/18681034231226393", "tier": "F", "tierLabel": "full or partial text read", "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"}, {"id": "scitech-asia-ai-literacy", "title": "Assessing Artificial Intelligence (AI) Literacy and Readiness in Thailand's Workforce: Challenges and Opportunities for Digital Transformation", "url": "https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/256785", "tier": "F", "tierLabel": "full or partial text read", "inst": "National Institute of Development Administration (NIDA), Bangkok + AGH Krakow"}, {"id": "stanford-canaries", "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence", "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Stanford Digital Economy Lab (Stanford University)"}, {"id": "ilo-wp140-genai-jobs", "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure", "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure", "tier": "F", "tierLabel": "full or partial text read", "inst": "International Labour Organization (ILO Working Paper 140)"}, {"id": "nus-genai-cs-education", "title": "Reshaping Undergraduate Computer Science Education in the Generative AI Era", "url": "https://arxiv.org/html/2606.07545v1", "tier": "F", "tierLabel": "full or partial text read", "inst": "NUS School of Computing"}, {"id": "anthropic-agents-judgment", "title": "Who's Aligned to Whom? How AI Agents Shape Experts' Research Judgment Calls", "url": "https://www.anthropic.com/research/agents-judgment-calls", "tier": "F", "tierLabel": "full or partial text read", "inst": "Anthropic"}, {"id": "ginting-civil-servants-dataset", "title": "Dataset on Digital Competence, AI Literacy, Generative AI Use, Organizational Support, Public Service Motivation, and Work Performance among Indonesian Civil Servants", "url": "https://doi.org/10.17632/9b26sb2k4g.1", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Mendeley Data v1 (CC BY 4.0)"}, {"id": "boysel-lai-oss-survey", "title": "Navigating Open Source Software Development in the Generative AI Era", "url": "https://www.linuxfoundation.org/research/oss-development-gen-ai-era-2026", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Linux Foundation (survey report; not peer-reviewed)"}, {"id": "okmaps", "title": "Open Knowledge Maps", "url": "https://openknowledgemaps.org/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Open Knowledge Maps"}, {"id": "tfgi-vietnam-ai-strategy", "title": "Vietnam's AI Strategy: Aligning Aspirations with Adaptive Governance", "url": "https://techforgoodinstitute.org/insights/country-spotlights/vietnams-ai-strategy-aligning-aspirations-with-adaptive-governance", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Tech For Good Institute (Singapore); author at LKY School, NUS"}, {"id": "van-es-deliberation", "title": "Bringing Ethics to the Table: Presenting a Deliberation Tool for Data and AI in Media Organizations", "url": "https://doi.org/10.1007/s44206-026-00294-y", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Digital Society (peer-reviewed; collaborative action research)"}, {"id": "chai-teacher-selection-rlhf", "title": "Active teacher selection for reinforcement learning from human feedback", "url": "https://arxiv.org/abs/2310.15288", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CHAI / UC Berkeley"}, {"id": "mila-gitchameleon", "title": "GitChameleon 2.0: Evaluating AI Code Generation Against Python Library Version Incompatibilities", "url": "https://doi.org/10.48550/arXiv.2507.12367", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Mila (Quebec AI Institute)"}, {"id": "cset-stem-talent", "title": "How Global Talent Pathways Shape U.S. STEM Award Achievement", "url": "https://cset.georgetown.edu/publication/how-global-talent-pathways-shape-u-s-stem-award-achievement/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CSET, Georgetown University"}, {"id": "ada-navigating-future", "title": "Navigating the future", "url": "https://www.adalovelaceinstitute.org/report/navigating-the-future/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Ada Lovelace Institute"}, {"id": "epoch-polling", "title": "Polling on AI usage at work", "url": "https://epoch.ai/data/polling", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}, {"id": "ichei-sea-universities-report", "title": "AI Activities and Recommendations Regarding AI Integration in Southeast Asian Universities (ICHEI report, July 2025)", "url": "https://ar.ichei.org/static/upload/2025/07/17/202507175355.pdf", "tier": "?", "tierLabel": "provenance unclear", "inst": "ICHEI (UNESCO category-2 centre, Shenzhen) — regional higher-education institute"}, {"id": "kas-flaminiano-sme-ai", "title": "Exploring Readiness and Challenges to AI-Driven Competitiveness in Southeast Asian SMEs (in KAS volume 'The Experiences and Extent of Adopting AI among SMEs in Southeast Asia')", "url": "https://www.kas.de/documents/287213/33744488/The+Experiences+and+Extent+of+Adopting+AI+among+SMEs+in+Southeast+Asia.pdf", "tier": "?", "tierLabel": "provenance unclear", "inst": "Konrad-Adenauer-Stiftung (KAS) publication; Philippines-authored"}], "society/participation": [{"id": "cmu-state-local-ai-guide", "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale", "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf", "tier": "F", "tierLabel": "full or partial text read", "inst": "Block Center for Technology and Society, Carnegie Mellon University"}, {"id": "tfgi-digital-sustainability", "title": "Digital Sustainability: Southeast Asia's Next Frontier (executive summary)", "url": "https://techforgoodinstitute.org/downloads/22867/20801/Executive-Summary_Digital-Sustainability-Southeast-Asias-Next-Frontier.pdf", "tier": "F", "tierLabel": "full or partial text read", "inst": "Tech for Good Institute (Singapore — SEA institute already indexed via its Vietnam AI Strategy piece)"}, {"id": "ai4bharat-indictrans2", "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages", "url": "https://arxiv.org/abs/2305.16307", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI4Bharat (India; IIT Madras ecosystem per search, not stated on arXiv page)"}, {"id": "sealion-paper", "title": "SEA-LION: Southeast Asian Languages in One Network", "url": "https://arxiv.org/abs/2504.05747", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI Singapore"}, {"id": "govai-voice-access", "title": "Voice and Access in AI: Global AI Majority Participation in Artificial Intelligence Development and Governance", "url": "https://governance.ai/research-paper/voice-and-access-in-ai-global-ai-majority-participation-in-artificial-intelligence-development-and-governance", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "GovAI (Centre for the Governance of AI)"}, {"id": "ustenko-participation", "title": "AI for citizen participation in international policymaking: multilingual inclusion", "url": "https://doi.org/10.3389/fpos.2026.1842794", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Frontiers in Political Science (peer-reviewed)"}, {"id": "ada-care-consideration", "title": "Care and consideration", "url": "https://www.adalovelaceinstitute.org/report/care-and-consideration/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Ada Lovelace Institute"}, {"id": "oii-research-page", "title": "OII research index (projects + press; publication list paginated)", "url": "https://www.oii.ox.ac.uk/research/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Oxford Internet Institute"}, {"id": "eria-adc2045-overview", "title": "ASEAN Digital Community 2045: A Strategic Overview", "url": "https://www.eria.org/uploads/ADC-2025-A-Strategic-Overview.pdf", "tier": "?", "tierLabel": "provenance unclear", "inst": "ERIA (regional research institute supporting ASEAN)"}], "society/trust": [{"id": "vector-agentic-worm", "title": "AI Agents Enable Adaptive Computer Worms", "url": "https://arxiv.org/abs/2606.03811", "tier": "F", "tierLabel": "full or partial text read", "inst": "Vector Institute / University of Toronto et al."}, {"id": "kaist-ussafebench", "title": "Is Safety Standard Same for Everyone? User-Specific Safety Evaluation of Large Language Models", "url": "https://arxiv.org/abs/2502.15086", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "KAIST (Data Science & AI Lab) et al."}, {"id": "riegler-offensive-ai-governance", "title": "Restricting the Model, Missing the System: Measurement and Accountability in Offensive AI Governance", "url": "https://arxiv.org/abs/2605.09504", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Scandinavian AI safety researchers (affiliations not stated on arXiv page)"}, {"id": "anthropic-threat-intel", "title": "Detecting and countering misuse of AI: September 2026", "url": "https://www.anthropic.com/threat-intelligence-report-september-2026", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Anthropic (provider-authored primary source)"}, {"id": "anthropic-cyber-assessment", "title": "An alignment assessment of recent cybersecurity incidents", "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Anthropic"}, {"id": "epoch-chatgpt-usage", "title": "ChatGPT usage (YouGov panel metadata)", "url": "https://epoch.ai/data/chatgpt-usage", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}, {"id": "ainow-double-agents", "title": "Double Agents: Defensive AI Agents Magnify Cyber Risks", "url": "https://ainowinstitute.org/publications/double-agents", "tier": "L", "tierLabel": "indexed only — not read", "inst": "AI Now Institute"}, {"id": "lcfi-repository", "title": "LCFI open-access publication collection (Cambridge Apollo)", "url": "https://www.repository.cam.ac.uk/handle/1810/286662", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Leverhulme Centre for the Future of Intelligence, University of Cambridge"}, {"id": "openai-sora2-card", "title": "Sora 2 System Card", "url": "https://openai.com/index/sora-2-system-card/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "OpenAI"}, {"id": "chai-tasra", "title": "TASRA: A Taxonomy of Societal-Scale Risks from AI", "url": "https://arxiv.org/abs/2306.06924", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CHAI / UC Berkeley"}], "governance/rules": [{"id": "hai-ai-index-2026", "title": "AI Index Report 2026", "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report", "tier": "F", "tierLabel": "full or partial text read", "inst": "Stanford HAI"}, {"id": "isis-ai-climate", "title": "AI and Climate Considerations", "url": "https://www.cert.isis.org.my/publications/ai-and-climate-considerations/", "tier": "F", "tierLabel": "full or partial text read", "inst": "ISIS Malaysia (CERT)"}, {"id": "wadipalapa-indonesia-ai-policy", "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia", "url": "https://doi.org/10.1177/18681034231226393", "tier": "F", "tierLabel": "full or partial text read", "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"}, {"id": "ainow-landscape-2025", "title": "Artificial Power: 2025 Landscape Report", "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI Now Institute"}, {"id": "cma-cloud-services-mi", "title": "Cloud services market investigation — final decision (adverse effects on competition; SMS recommendation)", "url": "https://www.gov.uk/cma-cases/cloud-services-market-investigation", "tier": "F", "tierLabel": "full or partial text read", "inst": "UK Competition and Markets Authority (official regulator)"}, {"id": "ada-measuring-up", "title": "Measuring Up", "url": "https://www.adalovelaceinstitute.org/policy-briefing/measuring-up/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ada Lovelace Institute"}, {"id": "cset-ai-competition", "title": "Artificial Intelligence in Competition", "url": "https://cset.georgetown.edu/publication/artificial-intelligence-in-competition/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "CSET, Georgetown University"}, {"id": "turobov-coyle-archetypes", "title": "Governing the evidence base: an empirical framework of AI archetypes for policy analysis", "url": "https://doi.org/10.1017/dap.2026.10100", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Data & Policy (peer-reviewed, CC BY 4.0)"}, {"id": "mit-ai-gov-map", "title": "MIT AI Governance Map", "url": "https://airisk.mit.edu/ai-governance", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "MIT"}, {"id": "ainow-dc-toolkit", "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions", "url": "https://ainowinstitute.org/publications/data-center-policy-guide", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "AI Now Institute"}, {"id": "oecd-policy-navigator", "title": "OECD AI Policy Navigator", "url": "https://oecd.ai/en/dashboards/international", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OECD"}, {"id": "tfgi-vietnam-ai-strategy", "title": "Vietnam's AI Strategy: Aligning Aspirations with Adaptive Governance", "url": "https://techforgoodinstitute.org/insights/country-spotlights/vietnams-ai-strategy-aligning-aspirations-with-adaptive-governance", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Tech For Good Institute (Singapore); author at LKY School, NUS"}, {"id": "govai-voice-access", "title": "Voice and Access in AI: Global AI Majority Participation in Artificial Intelligence Development and Governance", "url": "https://governance.ai/research-paper/voice-and-access-in-ai-global-ai-majority-participation-in-artificial-intelligence-development-and-governance", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "GovAI (Centre for the Governance of AI)"}, {"id": "airtrunk-fy24-sustainability", "title": "AirTrunk FY24 Sustainability Report", "url": "https://airtrunk.com/wp-content/uploads/2024/10/FY24-Sustainability-Report-by-AirTrunk.pdf", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AirTrunk"}, {"id": "restrepo-firm-compliance", "title": "Compliance under the EU AI Act: How Firms Navigate Regulatory Complexity", "url": "https://doi.org/10.1016/j.clsr.2026.106390", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Computer Law & Security Review (peer-reviewed)"}, {"id": "kim-regime-complex-documents", "title": "Coordinating fragmented global AI governance: Control, Rights, and Safety", "url": "https://doi.org/10.1007/s11077-026-09632-w", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Policy Sciences (peer-reviewed research note)"}, {"id": "pursiainen-critical-infrastructure", "title": "EU Governance of Critical Infrastructure: Resilience and Artificial Intelligence as Policy Challenges", "url": "https://doi.org/10.1007/s41125-026-00115-w", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "European Journal for Security Research (peer-reviewed)"}, {"id": "geith-regime-complex", "title": "The Emerging Regime Complex for Artificial Intelligence", "url": "https://doi.org/10.1093/isagsq/ksag145", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Global Studies Quarterly (peer-reviewed; dataset of 119 institutions)"}, {"id": "ainow-nuclear", "title": "Fission for Algorithms: The Undermining of Nuclear Regulation in Service of AI", "url": "https://ainowinstitute.org/publications/fission-for-algorithms", "tier": "L", "tierLabel": "indexed only — not read", "inst": "AI Now Institute"}, {"id": "lcfi-repository", "title": "LCFI open-access publication collection (Cambridge Apollo)", "url": "https://www.repository.cam.ac.uk/handle/1810/286662", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Leverhulme Centre for the Future of Intelligence, University of Cambridge"}, {"id": "ada-uk-regulation-options", "title": "Making sense of the current options for AI regulation in the UK", "url": "https://www.adalovelaceinstitute.org/feature/ai-regulation-options-uk/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Ada Lovelace Institute"}, {"id": "ada-minding-business", "title": "Minding your business", "url": "https://www.adalovelaceinstitute.org/policy-briefing/minding-your-business/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Ada Lovelace Institute"}, {"id": "chai-tasra", "title": "TASRA: A Taxonomy of Societal-Scale Risks from AI", "url": "https://arxiv.org/abs/2306.06924", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CHAI / UC Berkeley"}], "governance/procurement": [{"id": "cmu-state-local-ai-guide", "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale", "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf", "tier": "F", "tierLabel": "full or partial text read", "inst": "Block Center for Technology and Society, Carnegie Mellon University"}, {"id": "oxford-martin-cloud-governance", "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation", "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation", "tier": "F", "tierLabel": "full or partial text read", "inst": "Oxford Martin School, University of Oxford"}, {"id": "dict-philippines-cloudfirst", "title": "Prescribing the Philippine Government's Cloud First Policy (DICT Department Circular 2017-002)", "url": "https://ictknowledgeportal.dict.gov.ph/resources (official portal listing); PDF copy from the JETRO ASEAN-Japan mirror: jetro.go.jp/ext_images/jetro/activities/support/aseanjapan/report/3-6.pdf; amendment PDF from dataguidance.com mirror", "tier": "F", "tierLabel": "full or partial text read", "inst": "DICT (Philippines government — official regulator)"}, {"id": "ucl-iipp-netzero-dri", "title": "Public procurement for net-zero digital research infrastructure: a mission-oriented approach", "url": "https://discovery.ucl.ac.uk/id/eprint/10196220", "tier": "F", "tierLabel": "full or partial text read", "inst": "UCL Institute for Innovation and Public Purpose"}, {"id": "oecd-wp93-gov-genai", "title": "Generative AI experimentation in government: Learning from emerging guidelines", "url": "https://doi.org/10.1787/42815683-en", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OECD Working Paper No. 93"}, {"id": "ainow-dc-toolkit", "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions", "url": "https://ainowinstitute.org/publications/data-center-policy-guide", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "AI Now Institute"}, {"id": "culot-ai-procurement", "title": "Artificial Intelligence in Public Procurement: Aligning Operational Capacity, Legitimacy, and Public Value", "url": "https://doi.org/10.1111/jbl.70088", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Journal of Business Logistics (peer-reviewed)"}, {"id": "ucl-iipp-taxonomy", "title": "Mission-Oriented Procurement for Green Innovation: A new taxonomy", "url": "https://www.ucl.ac.uk/bartlett/publications/2026/jun/mission-oriented-procurement-green-innovation-new-taxonomy", "tier": "S", "tierLabel": "located via search (not read)", "inst": "UCL Institute for Innovation and Public Purpose"}, {"id": "cmu-blockcenter-index", "title": "Block Center publications index", "url": "https://www.cmu.edu/block-center/publications", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Block Center for Technology and Society, Carnegie Mellon University"}, {"id": "cmu-transition-memo", "title": "The United States Government's Role in Harnessing Technology for Future Prosperity: A Transition Memorandum", "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Block%20Center%202025%20Transition%20Memo%20(2).pdf", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Block Center for Technology and Society, Carnegie Mellon University"}], "governance/oversight": [{"id": "aegis-postmarket", "title": "AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks", "url": "https://doi.org/10.1038/s41746-026-03290-1", "tier": "F", "tierLabel": "full or partial text read", "inst": "npj Digital Medicine (peer-reviewed; engineering demonstration)"}, {"id": "vector-agentic-worm", "title": "AI Agents Enable Adaptive Computer Worms", "url": "https://arxiv.org/abs/2606.03811", "tier": "F", "tierLabel": "full or partial text read", "inst": "Vector Institute / University of Toronto et al."}, {"id": "eth-camel", "title": "Defeating Prompt Injections by Design", "url": "https://arxiv.org/abs/2503.18813", "tier": "F", "tierLabel": "full or partial text read", "inst": "Google DeepMind & ETH Zurich (SPY Lab) collaboration"}, {"id": "deepmind-stealth-sa", "title": "Evaluating Frontier Models for Stealth and Situational Awareness", "url": "https://arxiv.org/abs/2505.01420", "tier": "F", "tierLabel": "full or partial text read", "inst": "Google DeepMind"}, {"id": "govai-agents-infrastructure", "title": "Infrastructure for AI Agents", "url": "https://arxiv.org/abs/2501.10114", "tier": "F", "tierLabel": "full or partial text read", "inst": "GovAI (Centre for the Governance of AI); accepted to TMLR"}, {"id": "chai-managing-risks", "title": "Managing AI Risks in an Era of Rapid Progress", "url": "https://arxiv.org/abs/2310.17688", "tier": "F", "tierLabel": "full or partial text read", "inst": "CHAI / UC Berkeley (multi-institution statement)"}, {"id": "cset-redteaming-reporting", "title": "Systematizing the Reporting of AI Red-Teaming", "url": "https://cset.georgetown.edu/publication/systematizing-the-reporting-of-ai-red-teaming/", "tier": "F", "tierLabel": "full or partial text read", "inst": "CSET, Georgetown University"}, {"id": "anthropic-agents-judgment", "title": "Who's Aligned to Whom? How AI Agents Shape Experts' Research Judgment Calls", "url": "https://www.anthropic.com/research/agents-judgment-calls", "tier": "F", "tierLabel": "full or partial text read", "inst": "Anthropic"}, {"id": "metr-coverup", "title": "AI systems could cover up misbehavior", "url": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "METR (research-organisation demo; not journal peer review)"}, {"id": "metr-openai-redteam", "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems", "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "METR (external technical assessment; not peer-reviewed)"}, {"id": "riegler-offensive-ai-governance", "title": "Restricting the Model, Missing the System: Measurement and Accountability in Offensive AI Governance", "url": "https://arxiv.org/abs/2605.09504", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Scandinavian AI safety researchers (affiliations not stated on arXiv page)"}, {"id": "openai-long-horizon-safety", "title": "Safety and alignment in an era of long-horizon models", "url": "https://openai.com/index/safety-alignment-long-horizon-models/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OpenAI"}, {"id": "openai-oss-safeguard", "title": "gpt-oss-safeguard technical report", "url": "https://openai.com/index/gpt-oss-safeguard-technical-report/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OpenAI"}, {"id": "metr-anthropic-review", "title": "Review of the 'Misalignment in high-stakes settings' section in Anthropic's Risk Report (August 2026)", "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "METR (external review of corporate risk assessment)"}, {"id": "openai-monitoring-incident", "title": "Suppressing misalignment monitoring alerts and disabling misalignment monitoring", "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "OpenAI (primary-source corporate incident report)"}, {"id": "anthropic-cyber-assessment", "title": "An alignment assessment of recent cybersecurity incidents", "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Anthropic"}, {"id": "anthropic-ukaisi-assessment", "title": "An alignment assessment of the UK AISI cybertesting incident", "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Anthropic"}, {"id": "anthropic-unintended-actions", "title": "Investigating unintended model actions in our evaluations and internal use", "url": "https://www.anthropic.com/research/investigating-unintended-model-actions", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Anthropic"}], "governance/standards": [{"id": "hoch-mugge-brussels", "title": "EU Influence in Global AI Governance and its Limits", "url": "https://doi.org/10.1007/s44206-026-00284-0", "tier": "F", "tierLabel": "full or partial text read", "inst": "Digital Society (peer-reviewed)"}, {"id": "oxford-martin-cloud-governance", "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation", "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation", "tier": "F", "tierLabel": "full or partial text read", "inst": "Oxford Martin School, University of Oxford"}, {"id": "govai-agents-infrastructure", "title": "Infrastructure for AI Agents", "url": "https://arxiv.org/abs/2501.10114", "tier": "F", "tierLabel": "full or partial text read", "inst": "GovAI (Centre for the Governance of AI); accepted to TMLR"}, {"id": "cset-cyber-compliance", "title": "Outpaced: AI and Policy's Role in Transforming Cybersecurity Compliance", "url": "https://cset.georgetown.edu/publication/outpaced-ai-and-policys-role-in-transforming-cybersecurity-compliance/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CSET, Georgetown University"}], "governance/postmarket": [{"id": "aegis-postmarket", "title": "AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks", "url": "https://doi.org/10.1038/s41746-026-03290-1", "tier": "F", "tierLabel": "full or partial text read", "inst": "npj Digital Medicine (peer-reviewed; engineering demonstration)"}, {"id": "chincholikar-incident-disclosure", "title": "The AI incident disclosure shadow: tracking AI incidents into U.S. securities filings", "url": "https://doi.org/10.3389/frai.2026.1969275", "tier": "F", "tierLabel": "full or partial text read", "inst": "Frontiers in Artificial Intelligence (peer-reviewed; pre-registered)"}, {"id": "metr-coverup", "title": "AI systems could cover up misbehavior", "url": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "METR (research-organisation demo; not journal peer review)"}, {"id": "cset-cyber-compliance", "title": "Outpaced: AI and Policy's Role in Transforming Cybersecurity Compliance", "url": "https://cset.georgetown.edu/publication/outpaced-ai-and-policys-role-in-transforming-cybersecurity-compliance/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CSET, Georgetown University"}], "governance/discretion": [{"id": "cmu-state-local-ai-guide", "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale", "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf", "tier": "F", "tierLabel": "full or partial text read", "inst": "Block Center for Technology and Society, Carnegie Mellon University"}, {"id": "wadipalapa-indonesia-ai-policy", "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia", "url": "https://doi.org/10.1177/18681034231226393", "tier": "F", "tierLabel": "full or partial text read", "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"}, {"id": "harvard-bkc-governed-ai", "title": "Are We Ready to Be Governed by Artificial Intelligence?", "url": "https://cyber.harvard.edu/story/2025-12/are-we-ready-be-governed-artificial-intelligence", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Berkman Klein Center, Harvard University"}, {"id": "anastasopoulos-discretion", "title": "Artificial Intelligence, Bureaucratic Discretion, and Democratic Administration", "url": "https://doi.org/10.1111/puar.70201", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Public Administration Review (peer-reviewed; normative)"}, {"id": "baum-state-gov-ai", "title": "Governing with Artificial Intelligence: Use, Ideology, and the Benefits and Risks of AI in State Government", "url": "https://preprints-apsa.prod.orp.cambridge.org/engage/apsa/article-details/6a95981d810b9dcc8281bf40", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "APSA preprint (not peer-reviewed)"}, {"id": "oxford-aiethics-index", "title": "Institute for Ethics in AI (Oxford) publications index", "url": "https://www.oxford-aiethics.ox.ac.uk/publications", "tier": "S", "tierLabel": "located via search (not read)", "inst": "University of Oxford"}, {"id": "oii-research-page", "title": "OII research index (projects + press; publication list paginated)", "url": "https://www.oii.ox.ac.uk/research/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Oxford Internet Institute"}], "politics/international": [{"id": "ainow-landscape-2025", "title": "Artificial Power: 2025 Landscape Report", "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI Now Institute"}, {"id": "chai-managing-risks", "title": "Managing AI Risks in an Era of Rapid Progress", "url": "https://arxiv.org/abs/2310.17688", "tier": "F", "tierLabel": "full or partial text read", "inst": "CHAI / UC Berkeley (multi-institution statement)"}, {"id": "iseas-subsea-cables-2025", "title": "The Struggle for Subsea Cable Supremacy in Southeast Asia: ASEAN Relying on Diverse Suppliers", "url": "https://www.iseas.edu.sg/wp-content/uploads/2025/02/ISEAS_Perspective_2025_21.pdf", "tier": "F", "tierLabel": "full or partial text read", "inst": "ISEAS – Yusof Ishak Institute (SEA institution already indexed)"}, {"id": "mit-ai-gov-map", "title": "MIT AI Governance Map", "url": "https://airisk.mit.edu/ai-governance", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "MIT"}, {"id": "oecd-policy-navigator", "title": "OECD AI Policy Navigator", "url": "https://oecd.ai/en/dashboards/international", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OECD"}, {"id": "chula-ai-china-labor-thesis", "title": "The impact of artificial intelligence on China's labor market", "url": "https://digital.car.chula.ac.th/chulaetd/74149", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Chulalongkorn University, Faculty of Economics (Thailand)"}, {"id": "govai-voice-access", "title": "Voice and Access in AI: Global AI Majority Participation in Artificial Intelligence Development and Governance", "url": "https://governance.ai/research-paper/voice-and-access-in-ai-global-ai-majority-participation-in-artificial-intelligence-development-and-governance", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "GovAI (Centre for the Governance of AI)"}, {"id": "kim-regime-complex-documents", "title": "Coordinating fragmented global AI governance: Control, Rights, and Safety", "url": "https://doi.org/10.1007/s11077-026-09632-w", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Policy Sciences (peer-reviewed research note)"}, {"id": "geith-regime-complex", "title": "The Emerging Regime Complex for Artificial Intelligence", "url": "https://doi.org/10.1093/isagsq/ksag145", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Global Studies Quarterly (peer-reviewed; dataset of 119 institutions)"}, {"id": "ainow-kill-chain", "title": "Anatomy of an AI Kill Chain (with Airwars)", "url": "https://ainowinstitute.org/publications/anatomy-of-an-ai-kill-chain", "tier": "L", "tierLabel": "indexed only — not read", "inst": "AI Now Institute"}, {"id": "cset-coalition-ops", "title": "Coalition Operations", "url": "https://cset.georgetown.edu/publication/coalition-operations/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "CSET, Georgetown University"}, {"id": "oii-empires-of-ai", "title": "Empires of AI (guest essay)", "url": "https://www.foreignaffairs.com/china/empires-artificial-intelligence-ferguson-klaassen-schmidt", "tier": "?", "tierLabel": "provenance unclear", "inst": "Foreign Affairs (essay; indexed via the OII research page — authors are Ferguson, Klaassen & Schmidt, not OII researchers)"}], "politics/national": [{"id": "wadipalapa-indonesia-ai-policy", "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia", "url": "https://doi.org/10.1177/18681034231226393", "tier": "F", "tierLabel": "full or partial text read", "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"}, {"id": "hoch-mugge-brussels", "title": "EU Influence in Global AI Governance and its Limits", "url": "https://doi.org/10.1007/s44206-026-00284-0", "tier": "F", "tierLabel": "full or partial text read", "inst": "Digital Society (peer-reviewed)"}, {"id": "ember-asean-ai-emissions", "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition", "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ember (independent energy think tank)"}, {"id": "ilo-wp140-genai-jobs", "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure", "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure", "tier": "F", "tierLabel": "full or partial text read", "inst": "International Labour Organization (ILO Working Paper 140)"}, {"id": "harvard-bkc-governed-ai", "title": "Are We Ready to Be Governed by Artificial Intelligence?", "url": "https://cyber.harvard.edu/story/2025-12/are-we-ready-be-governed-artificial-intelligence", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Berkman Klein Center, Harvard University"}, {"id": "openai-pacing-cyber", "title": "Pacing model development in an era of cyber-critical capabilities", "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "OpenAI"}, {"id": "tfgi-vietnam-ai-strategy", "title": "Vietnam's AI Strategy: Aligning Aspirations with Adaptive Governance", "url": "https://techforgoodinstitute.org/insights/country-spotlights/vietnams-ai-strategy-aligning-aspirations-with-adaptive-governance", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "Tech For Good Institute (Singapore); author at LKY School, NUS"}, {"id": "semianalysis-china-frontier", "title": "Beijing Will Not Pace the Frontier: China's Speed-First AI Safety Regime", "url": "https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "SemiAnalysis (industry research; not peer-reviewed)"}, {"id": "cifar-pcais-evaluation", "title": "Evaluation of the Pan-Canadian Artificial Intelligence Strategy", "url": "https://ised-isde.canada.ca/site/audits-evaluations/en/evaluation/evaluation-pan-canadian-artificial-intelligence-strategy-20-1", "tier": "S", "tierLabel": "located via search (not read)", "inst": "ISED Canada / CIFAR"}, {"id": "ada-uk-regulation-options", "title": "Making sense of the current options for AI regulation in the UK", "url": "https://www.adalovelaceinstitute.org/feature/ai-regulation-options-uk/", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Ada Lovelace Institute"}, {"id": "ainow-europe-industrial", "title": "Redirecting Europe's AI Industrial Policy", "url": "https://ainowinstitute.org/publications/research/redirecting-europes-ai-industrial-policy", "tier": "L", "tierLabel": "indexed only — not read", "inst": "AI Now Institute"}, {"id": "cmu-transition-memo", "title": "The United States Government's Role in Harnessing Technology for Future Prosperity: A Transition Memorandum", "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Block%20Center%202025%20Transition%20Memo%20(2).pdf", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Block Center for Technology and Society, Carnegie Mellon University"}], "politics/chips": [{"id": "cset-tracking-chips", "title": "Tracking AI Chips", "url": "https://cset.georgetown.edu/publication/tracking-ai-chips/", "tier": "F", "tierLabel": "full or partial text read", "inst": "CSET, Georgetown University"}, {"id": "patro-santacreu-targeted-trade", "title": "Geopolitical Distance and Targeted Trade", "url": "https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade", "tier": "H", "tierLabel": "handoff-verified metadata (not read)", "inst": "Federal Reserve Bank of St. Louis Review"}, {"id": "epoch-chip-sales", "title": "AI chip sales", "url": "https://epoch.ai/data/ai-chip-sales", "tier": "L", "tierLabel": "indexed only — not read", "inst": "Epoch AI"}], "politics/accountability": [{"id": "chincholikar-incident-disclosure", "title": "The AI incident disclosure shadow: tracking AI incidents into U.S. securities filings", "url": "https://doi.org/10.3389/frai.2026.1969275", "tier": "F", "tierLabel": "full or partial text read", "inst": "Frontiers in Artificial Intelligence (peer-reviewed; pre-registered)"}], "environment/energy": [{"id": "isis-ai-climate", "title": "AI and Climate Considerations", "url": "https://www.cert.isis.org.my/publications/ai-and-climate-considerations/", "tier": "F", "tierLabel": "full or partial text read", "inst": "ISIS Malaysia (CERT)"}, {"id": "ainow-landscape-2025", "title": "Artificial Power: 2025 Landscape Report", "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report", "tier": "F", "tierLabel": "full or partial text read", "inst": "AI Now Institute"}, {"id": "iseas-malaysia-dc", "title": "Data Centres, Energy Demand and Sustainability: Can Malaysia Strike the Right Balance?", "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo", "tier": "F", "tierLabel": "full or partial text read", "inst": "ISEAS–Yusof Ishak Institute (Perspective 2025/43)"}, {"id": "iea-energy-and-ai", "title": "Energy and AI", "url": "https://www.iea.org/reports/energy-and-ai", "tier": "F", "tierLabel": "full or partial text read", "inst": "IEA"}, {"id": "ember-asean-ai-emissions", "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition", "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ember (independent energy think tank)"}, {"id": "ucl-iipp-netzero-dri", "title": "Public procurement for net-zero digital research infrastructure: a mission-oriented approach", "url": "https://discovery.ucl.ac.uk/id/eprint/10196220", "tier": "F", "tierLabel": "full or partial text read", "inst": "UCL Institute for Innovation and Public Purpose"}, {"id": "iea-data-centres", "title": "Data Centres — Electricity consumption (tracker)", "url": "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "IEA"}, {"id": "airtrunk-fy24-sustainability", "title": "AirTrunk FY24 Sustainability Report", "url": "https://airtrunk.com/wp-content/uploads/2024/10/FY24-Sustainability-Report-by-AirTrunk.pdf", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AirTrunk"}, {"id": "airtrunk-pekatsolar", "title": "AirTrunk and Pekat Solar to develop rooftop solar at JHB1", "url": "https://airtrunk.com/airtrunk-and-pekat-solar-to-develop-rooftop-solar-at-airtrunks-johor-bahru-data-centre-jhb1/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AirTrunk"}, {"id": "airtrunk-vppa", "title": "AirTrunk signs Malaysia's first data centre renewable VPPA", "url": "https://www.airtrunk.com/news/airtrunk-signs-malaysias-first-data-centre-renewable-vppa/", "tier": "D", "tierLabel": "Discovery Engine snapshot (not human-verified)", "inst": "AirTrunk"}, {"id": "ainow-nuclear", "title": "Fission for Algorithms: The Undermining of Nuclear Regulation in Service of AI", "url": "https://ainowinstitute.org/publications/fission-for-algorithms", "tier": "L", "tierLabel": "indexed only — not read", "inst": "AI Now Institute"}, {"id": "iea-key-questions", "title": "Key Questions on Energy and AI", "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai", "tier": "L", "tierLabel": "indexed only — not read", "inst": "IEA"}], "environment/goals": [{"id": "isis-ai-climate", "title": "AI and Climate Considerations", "url": "https://www.cert.isis.org.my/publications/ai-and-climate-considerations/", "tier": "F", "tierLabel": "full or partial text read", "inst": "ISIS Malaysia (CERT)"}, {"id": "iea-energy-and-ai", "title": "Energy and AI", "url": "https://www.iea.org/reports/energy-and-ai", "tier": "F", "tierLabel": "full or partial text read", "inst": "IEA"}, {"id": "ember-asean-ai-emissions", "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition", "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/", "tier": "F", "tierLabel": "full or partial text read", "inst": "Ember (independent energy think tank)"}, {"id": "ucl-iipp-taxonomy", "title": "Mission-Oriented Procurement for Green Innovation: A new taxonomy", "url": "https://www.ucl.ac.uk/bartlett/publications/2026/jun/mission-oriented-procurement-green-innovation-new-taxonomy", "tier": "S", "tierLabel": "located via search (not read)", "inst": "UCL Institute for Innovation and Public Purpose"}], "environment/resources": [{"id": "katadata-batam", "title": "A Digital Boom in a Thirsty City (Batam)", "url": "https://katadata.co.id/data-center-batam/en", "tier": "F", "tierLabel": "full or partial text read", "inst": "Katadata.co.id (English edition)"}, {"id": "uob-dbs-dayone-ndp-loan", "title": "DBS and UOB jointly provide landmark IDR 6.7 trillion loan for DayOne-INA Batam data centre campus", "url": "https://www.dbs.com/newsroom/DBS_and_UOB_arrange_record_IDR_6_7_trillion_SGD_530_million_loan_for_data_centre_development_project_by_DayOne_and_the_Indonesia_Investment_Authority", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "DBS & UOB (primary bank release; DBS newsroom)"}, {"id": "ainow-dc-toolkit", "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions", "url": "https://ainowinstitute.org/publications/data-center-policy-guide", "tier": "V", "tierLabel": "verified/read at origin (not full text)", "inst": "AI Now Institute"}]}};
+/* ==TOPIC_SOURCES_END== */
+
+/* =============================================================
+   GALAXY DATA
+   To extend: add a world to GALAXY.worlds, or a topic to a world.
+   Cross-links: {to:"worldId/topicId", label, dotted:true?}
+   dotted = a connection worth exploring, not backed by a source.
+   ============================================================= */
+
+const GALAXY = {
+  sun: {
+    title:"AI", tagline:"the sun of this galaxy",
+    body:[
+      "<p>Artificial intelligence means computer systems that do things we used to need people for: writing, answering questions, spotting patterns, writing code. Modern AI is mostly large models \u2014 programs trained on huge amounts of data, then run every time someone uses them.</p>",
+      "<p>Everything in this galaxy connects to AI in one of four ways: building it, running it, paying for it, or governing it. Click a planet to explore one of these worlds.</p>",
+      "<p>One habit worth keeping anywhere on this map: a connection means <i>these things are related</i> \u2014 it never means <i>this causes that</i>.</p>"
+    ],
+    sources:[
+      {label:"Further reading \u2014 IBM: What is artificial intelligence (AI)?", url:"https://www.ibm.com/think/topics/artificial-intelligence"}
+    ]
+  },
+
+  worlds: [
+    {
+      id:"how", title:"How AI works", tagline:"what AI actually is", color:"#b4a5ed", orbit:{i:0, a:215},
+      topics:[
+        { id:"models", title:"Models & training", tagline:"learned, not programmed",
+          body:[
+            "<p>A model is a program that learned patterns from millions of examples. Training means adjusting it over and over until its answers get good \u2014 nobody writes its rules by hand.</p>",
+            "<p>What comes out depends on the data and the training choices, which is why two models built the same way can behave differently.</p>"
+          ],
+          unknown:"Exactly what a model learns \u2014 and what it merely memorises \u2014 is still an open research question.",
+          sources:[{label:"Further reading \u2014 IBM: What is artificial intelligence? (learning from data)", url:"https://www.ibm.com/think/topics/artificial-intelligence"}],
+          links:[{to:"how/data", label:"only as good as its data"}] },
+        { id:"data", title:"Data", tagline:"what models learn from",
+          body:[
+            "<p>Models learn from enormous collections of text, images and code. What was collected, whether it was allowed, and whose voices it includes are active debates.</p>"
+          ],
+          unknown:"What counts as fair and representative training data is unsettled.",
+          sources:[{label:"Further reading \u2014 IBM: What is artificial intelligence? (training data)", url:"https://www.ibm.com/think/topics/artificial-intelligence"}],
+          links:[{to:"how/inference", label:"flows into every use"},
+                 {to:"society/participation", label:"whose voices are in the data?", dotted:true}] },
+        { id:"inference", title:"Inference & everyday use", tagline:"the moment you touch AI",
+          body:[
+            "<p>Every time someone types a prompt, the model runs somewhere and produces an answer \u2014 the jargon is \u201cinference\u201d. That is the moment AI touches electricity, data centres and money.</p>"
+          ],
+          sources:[{label:"Further reading \u2014 IEA tracker: data-centre electricity consumption", url:"https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks"}],
+          links:[
+            {to:"infrastructure/centres", label:"runs in a data centre somewhere"},
+            {to:"economics/investment", label:"each use costs a little money and power"},
+            {to:"how/agents", label:"some uses act on their own"},
+            {to:"how/evaluation", label:"check before trusting"}
+          ] },
+        { id:"evaluation", title:"Evaluation & benchmarks", tagline:"testing what models can do",
+          body:[
+            "<p>Researchers test models with standard question sets (\u201cbenchmarks\u201d) and safety evaluations. Independent evaluations also exist \u2014 one 2026 preprint ran 34 tests on a released model and found improvements alongside remaining weaknesses.</p>",
+            "<p>A good benchmark score is evidence about the test \u2014 not proof of how a system behaves in the world.</p>"
+          ],
+          unknown:"Benchmarks age quickly, and scores say little about real-world rates of harm.",
+          sources:[{label:"Further reading \u2014 Huang et al.: an example of independent evaluation (arXiv preprint)", url:"https://arxiv.org/abs/2610.35671"}] },
+        { id:"agents", title:"Agents & doing tasks", tagline:"AI that acts, not just answers",
+          body:[
+            "<p>AI agents are systems that do not just answer \u2014 they carry out sequences of actions: browsing, writing and running code, using tools. Because they act, they need monitoring: logs, alerts and sandboxes \u2014 machinery that can fail.</p>",
+            "<p>In 2026, an external red team examined OpenAI\u2019s internal agent monitoring as it existed between 21 July and 11 August, and found ways it could be bypassed. OpenAI separately reported two of its coding agents disabling security alerts during routine tasks.</p>"
+          ],
+          unknown:"How often agents evade oversight in normal operation is unknown \u2014 the public evidence covers specific examined systems at specific dates.",
+          sources:[
+            {label:"METR & Redwood Research \u2014 Red-teaming OpenAI\u2019s agent monitoring (22 Oct 2026)", url:"https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/"},
+            {label:"OpenAI \u2014 incident report: suppressing monitoring alerts (20 Oct 2026)", url:"https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/"}
+          ],
+          links:[{to:"governance/oversight", label:"oversight machinery for agents"}] },
+        { id:"using", title:"Using AI in organisations", tagline:"adapting AI to real work",
+          body:[
+            "<p>Organisations usually adapt AI to their work \u2014 with prompts, templates and human review \u2014 rather than building models from scratch. One peer-reviewed study compared human experts, topic modelling and LLM-assisted analysis on 63 UN policy documents: AI made analysis faster, and the authors kept human interpretation central.</p>",
+            "<p>An OECD review of guidelines across 14 countries found public-service AI rules fragmented, with weak measurement of performance, impact and compliance.</p>"
+          ],
+          unknown:"Whether AI-assisted analysis improves real decisions \u2014 rather than producing plausible drafts \u2014 is largely unmeasured.",
+          sources:[
+            {label:"Turobov & Coyle \u2014 Governing the evidence base (Data & Policy, CC BY)", url:"https://doi.org/10.1017/dap.2026.10100"},
+            {label:"OECD Working Paper No. 93 \u2014 Generative AI experimentation in government", url:"https://doi.org/10.1787/42815683-en"}
+          ],
+          links:[
+            {to:"governance/procurement", label:"public services buy and adapt AI"},
+            {to:"society/skills", label:"verification work falls on people"}
+          ] }
+      ]
+    },
+
+    {
+      id:"infrastructure", title:"Infrastructure", tagline:"the systems behind AI", color:"#72c4ce", orbit:{i:1, a:170},
+      topics:[
+        { id:"cloud", title:"Cloud services & compute platforms", tagline:"renting computing power",
+          body:["<p>Cloud providers make computing, storage and software available over a network. AI developers can rent computing power instead of owning every machine they use. These services still run on physical servers, networks and data centres.</p>", "<p>Access, prices and the difficulty of moving between providers can shape who builds and uses AI. A UK competition investigation found concerns about concentration and switching costs in the market it studied.</p>"],
+          unknown:"The UK investigation does not establish market shares or switching costs in Southeast Asia. Cloud arrangements differ by service and customer.",
+          sources:[{label:"UK competition authority — cloud services investigation",url:"https://www.gov.uk/cma-cases/cloud-services-market-investigation"},{label:"Oxford Martin School — governing through the cloud",url:"https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation"}],links:[] },
+        { id:"connectivity", title:"Networks & access", tagline:"how the systems connect",
+          body:["<p>Networks carry data between people, cloud services and data centres. Undersea cables link countries; local networks connect homes, organisations and devices. Access depends on more than whether a connection exists: its cost, speed and reliability matter too.</p>","<p>Research on Southeast Asia describes how cable suppliers and routes are shaped by both commercial decisions and international politics.</p>"],
+          unknown:"The evidence on individual cable projects does not describe every route or establish who can access AI in every community.",
+          sources:[{label:"ISEAS — subsea cables in Southeast Asia",url:"https://www.iseas.edu.sg/wp-content/uploads/2025/02/ISEAS_Perspective_2025_21.pdf"}],links:[] },
+        { id:"centres", title:"Data centres", tagline:"where the computing happens",
+          body:[
+            "<p>Buildings full of computers. Many house the cloud services and websites everyone uses; a growing subset are built specifically for training and running AI. Two independent trackers watch the buildout: ArusGrid lists projects across Southeast Asia, the Gulf and India, with every claim backed by a dated source; Epoch AI tracks AI-optimised centres worldwide, partly by studying satellite photos of cooling equipment.</p>",
+            "<p>A centre\u2019s size is measured by its IT load \u2014 the power its computers are rated to draw, in megawatts (MW). That is a measure of demand, not of electricity consumed over time. AI racks are much denser than traditional ones: 60 kW or more against 5\u201310 kW (ISIS Malaysia).</p>"
+          ],
+          unknown:"Both trackers are honest about gaps: Epoch estimates it covers about 46% (30\u201378%) of global AI compute, and ArusGrid says live megawatt figures are systematically undercounted.",
+          sources:[
+            {label:"ArusGrid \u2014 methodology", url:"https://arusgrid.com/methodology"},
+            {label:"Epoch AI \u2014 Data Centers database, methodology", url:"https://epoch.ai/data/data-centers-documentation/methodology"},
+            {label:"ISIS Malaysia \u2014 AI and Climate Considerations (Jun 2026)", url:"https://www.cert.isis.org.my/publications/ai-and-climate-considerations/"}
+          ],
+          links:[
+            {to:"infrastructure/electricity", label:"the power demand"},
+            {to:"infrastructure/water", label:"water where cooling needs it"},
+            {to:"infrastructure/grids", label:"part of critical infrastructure"},
+            {to:"economics/investment", label:"big capital projects"},
+            {to:"environment/resources", label:"use land, power and water"},
+            {to:"politics/chips", label:"chip export rules shape who can build"}
+          ] },
+        { id:"electricity", title:"Electricity", tagline:"the grid connection",
+          body:[
+            "<p>Data centres are large electricity customers running around the clock. An ISEAS commentary projects Malaysian data centres needing over 5,000 MW by 2035 \u2014 a projection the author compares with about 40% of Peninsular Malaysia\u2019s present power capacity (11.1% of projected 2035 capacity) \u2014 and notes operators have already secured 5.9 GW of maximum demand, which the author calls \u201chazardously high\u201d. Secured maximum demand is a committed reservation, not continuous draw.</p>",
+            "<p>The International Energy Agency keeps a dedicated tracker of data-centre electricity consumption (2015\u20132025).</p>"
+          ],
+          unknown:"How much electricity AI uses worldwide is not settled \u2014 estimates differ in what they count and which years.",
+          sources:[
+            {label:"ISEAS Perspective 2025/43 \u2014 Sara Loo (Jun 2025)", url:"https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo"},
+            {label:"IEA \u2014 Data Centres: electricity consumption", url:"https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks"}
+          ],
+          links:[{to:"infrastructure/grids", label:"sits inside essential systems"},
+                 {to:"environment/energy", label:"where the power comes from matters"}] },
+        { id:"water", title:"Water & cooling", tagline:"not all centres are thirsty",
+          body:[
+            "<p>Not every data centre drinks water: some cool with air, others with water or hybrid designs \u2014 it depends on the cooling system, the climate and how the site is run.</p>",
+            "<p>Where water <i>is</i> used, demand can be large. In Johor and two neighbouring Malaysian states, water utilities received requests of about 808 million litres a day and say around 142 million can realistically be supplied (ISIS Malaysia, citing SPAN). In Batam, Indonesia, Katadata reports the flagship data-centre project could use around 3 million litres a day on an island that relies entirely on six rain-fed reservoirs.</p>"
+          ],
+          unknown:"Whether data centres caused the water stress reported in Batam is not established \u2014 the report itself does not claim it, and one 2024 shortage there was blamed on a pipe leak.",
+          sources:[
+            {label:"ISIS Malaysia \u2014 AI and Climate Considerations (Jun 2026)", url:"https://www.cert.isis.org.my/publications/ai-and-climate-considerations/"},
+            {label:"Katadata \u2014 A Digital Boom in a Thirsty City (Batam)", url:"https://katadata.co.id/data-center-batam/en"}
+          ],
+          links:[{to:"environment/resources", label:"the same water serves everyone"}] },
+        { id:"chips", title:"Chips & supply chains", tagline:"the specialised hardware",
+          body:[
+            "<p>AI runs on specialised chips made by a handful of companies in concentrated supply chains. Governments treat them strategically: export rules decide who can buy the most advanced ones, and ArusGrid records a chip export-control access tier for every project it tracks.</p>",
+            "<p>Trade research finds export controls concentrate on high-technology, economically important products \u2014 organised more around products than destination countries.</p>"
+          ],
+          unknown:"Who actually ends up with which chips is often secret; ownership and tenant arrangements are hard to observe.",
+          sources:[
+            {label:"ArusGrid \u2014 chip export-control access tiers", url:"https://arusgrid.com/methodology"},
+            {label:"Patro & Santacreu \u2014 Geopolitical Distance and Targeted Trade (St Louis Fed Review)", url:"https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade"}
+          ],
+          links:[{to:"politics/chips", label:"the politics of chip controls"}] },
+        { id:"land", title:"Land & permits", tagline:"where projects are allowed",
+          body:[
+            "<p>A data centre starts with land, a grid connection and planning approvals \u2014 decided through local processes, with residents and businesses living with the results.</p>",
+            "<p>How fast that happens varies: Malaysia\u2019s \u201cGreen Lane\u201d pathway cut grid-connection times from 36\u201348 months to about 12 (ISEAS), and fast connection is one reason Johor concentrated so much capacity.</p>"
+          ],
+          unknown:"How approvals balance data centres against other local needs is a case-by-case question.",
+          sources:[
+            {label:"ISEAS Perspective 2025/43 \u2014 Sara Loo (Jun 2025)", url:"https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo"},
+            {label:"Katadata \u2014 Batam reporting, incl. local context", url:"https://katadata.co.id/data-center-batam/en"}
+          ],
+          links:[{to:"infrastructure/centres", label:"approvals shape the buildout"}] },
+        { id:"grids", title:"Grids & critical infrastructure", tagline:"hooking into essential systems",
+          body:[
+            "<p>Data centres and AI services plug into electricity, water and telecom networks that everyone depends on \u2014 \u201ccritical infrastructure\u201d. A peer-reviewed analysis of EU policy finds its governance adapting to AI and resilience goals in a path-dependent, uneven way: existing institutions stretch and adjust rather than being replaced.</p>"
+          ],
+          unknown:"That study analyses EU policy documents and standardisation \u2014 not measured outcomes at specific grid or water operators.",
+          sources:[{label:"Pursiainen, R\u00f8d & Johansson \u2014 EU Governance of Critical Infrastructure (Eur. J. Security Research)", url:"https://doi.org/10.1007/s41125-026-00115-w"}],
+          links:[{to:"governance/rules", label:"who governs essential systems"}] }
+      ]
+    },
+
+    {
+      id:"economics", title:"Economics", tagline:"who pays, who gains", color:"#d8a65d", orbit:{i:1, a:-25},
+      topics:[
+        { id:"investment", title:"Investment", tagline:"the money behind the buildout",
+          body:[
+            "<p>Data centres are big capital projects. ArusGrid records capital and power costs per project where figures are public; Epoch AI estimates roughly $38 billion of capital cost per gigawatt of IT power. Malaysia approved RM144.4 billion of data-centre projects between 2021 and mid-2025 (ISIS Malaysia).</p>"
+          ],
+          unknown:"About half of the facilities in ArusGrid have no usable capital figure \u2014 a missing number is not evidence of zero.",
+          sources:[
+            {label:"ArusGrid \u2014 methodology", url:"https://arusgrid.com/methodology"},
+            {label:"Epoch AI \u2014 methodology (cost model)", url:"https://epoch.ai/data/data-centers-documentation/methodology"},
+            {label:"ISIS Malaysia \u2014 AI and Climate Considerations", url:"https://www.cert.isis.org.my/publications/ai-and-climate-considerations/"}
+          ],
+          links:[{to:"infrastructure/centres", label:"the projects this money builds"}] },
+        { id:"jobs", title:"AI exposure & jobs", tagline:"exposure is not job loss",
+          body:[
+            "<p>\u201cAI exposure\u201d means how much of a job\u2019s tasks AI could do or change \u2014 it is not the same as losing a job.</p>",
+            "<p>A US Census Bureau working paper (Sep 2026, administrative records) found that after ChatGPT\u2019s introduction, graduates in the most AI-exposed tenth of college majors saw their likelihood of initial employment decline by five percentage points, and full-quarter initial earnings decline by thirteen percent \u2014 a hit the authors compare to graduating into a large recession. Effects fade as graduates move further from entry but stay substantial for the most exposed.</p>"
+          ],
+          unknown:"The comparison cannot cleanly separate AI from everything else changing at the same time \u2014 a documented correlation, not proven cause.",
+          sources:[{label:"US Census Bureau \u2014 CES Working Paper 26-56, Orr, Tucker & Warren", url:"https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html"}],
+          links:[{to:"society/attitudes", label:"does exposure shape how people feel about AI?", dotted:true}] },
+        { id:"productivity", title:"Productivity", tagline:"does AI make us more productive?",
+          body:[
+            "<p>An IMF working paper used AI-related patents from 2000\u20132017 \u2014 before today\u2019s AI \u2014 and estimated that historical AI innovation was associated with roughly 0.8\u20131.2% higher output per worker.</p>"
+          ],
+          unknown:"That is a past, patent-based association \u2014 not a measurement of today\u2019s generative AI boom.",
+          sources:[{label:"IMF Working Paper 2026/204 \u2014 AI and aggregate labour productivity", url:"https://www.imf.org/en/publications/wp/issues/2026/09/25/artificial-intelligence-and-aggregate-labor-productivity-evidence-from-patent-data-579850"}] },
+        { id:"ownership", title:"Ownership & market power", tagline:"who controls the stack",
+          body:[
+            "<p>A few companies control much of the chips, cloud and models that everyone else depends on. For public agencies buying AI, interviews with 38 EU/US experts point to the decisive levers being contractual: who owns the data, who can audit, and who can exit.</p>"
+          ],
+          sources:[{label:"Culot et al. \u2014 AI in Public Procurement (Journal of Business Logistics)", url:"https://doi.org/10.1111/jbl.70088"}],
+          links:[
+            {to:"economics/investment", label:"the capital behind market power"},
+            {to:"governance/procurement", label:"procurement is where this lands"}
+          ] },
+        { id:"evidence", title:"Reading the evidence", tagline:"what studies can and cannot say",
+          body:[
+            "<p>Most numbers in this galaxy come with fine print. The US Census study uses administrative records yet still cannot fully separate AI from everything else changing at once; the IMF estimate rests on pre-2020 patents; the open-source findings are self-reported by surveyed developers.</p>",
+            "<p>Useful rules of thumb: peer review is not proof of a strong design; a correlation is not a cause; a self-report is not a measurement; a working paper is not a settled result.</p>"
+          ],
+          unknown:"Independent replications of most of these findings do not exist yet.",
+          sources:[
+            {label:"US Census Bureau \u2014 CES Working Paper 26-56", url:"https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html"},
+            {label:"IMF Working Paper 2026/204", url:"https://www.imf.org/en/publications/wp/issues/2026/09/25/artificial-intelligence-and-aggregate-labor-productivity-evidence-from-patent-data-579850"},
+            {label:"Linux Foundation \u2014 OSS development in the GenAI era (survey)", url:"https://www.linuxfoundation.org/research/oss-development-gen-ai-era-2026"}
+          ],
+          links:[
+            {to:"economics/jobs", label:"applied to the jobs study"},
+            {to:"economics/productivity", label:"applied to the productivity estimate"}
+          ] }
+      ]
+    },
+
+    {
+      id:"society", title:"People & society", tagline:"living with AI", color:"#db96b7", orbit:{i:1, a:105},
+      topics:[
+        { id:"attitudes", title:"Public attitudes", tagline:"what people say they want",
+          body:[
+            "<p>In a seven-country experiment, participants tended to prefer safety over innovation, public over private governance, and international over national approaches to AI rules.</p>",
+            "<p>Provisional World Values Survey data across 24 country samples (40,960 respondents) finds one consistent anchor: optimism about science and technology is the strongest pooled predictor of favourable views of AI \u2014 while other values correlate differently from country to country.</p>",
+            "<p>These are stated preferences and cross-sectional associations \u2014 not votes, and not proof of what shapes opinion over time.</p>"
+          ],
+          unknown:"Whether these attitudes translate into political pressure or actual policy choices is not established.",
+          sources:[
+            {label:"Lundgren & Tallberg \u2014 Public Preferences and Regulatory Options (SSRN preprint)", url:"https://ssrn.com/abstract=7125438"},
+            {label:"Flanders & Nungsari \u2014 Conditional Values (arXiv preprint, WVS Wave 8)", url:"https://arxiv.org/abs/2610.37197"}
+          ],
+          links:[{to:"politics/national", label:"do preferences shape national rules?", dotted:true}] },
+        { id:"skills", title:"Skills & verification", tagline:"checking becomes the work",
+          body:[
+            "<p>AI makes it cheaper to produce text, code and analysis \u2014 and shifts more work onto the people who must check it. In a Linux Foundation survey, open-source maintainers reported growing verification pressure, and only about a third of surveyed projects had formal policies on AI-assisted contributions.</p>",
+            "<p>These are self-reported assessments by respondents, not measured rates.</p>"
+          ],
+          sources:[
+            {label:"Linux Foundation \u2014 Navigating Open Source Software Development in the Generative AI Era", url:"https://www.linuxfoundation.org/research/oss-development-gen-ai-era-2026"},
+            {label:"Further reading (dataset, not findings) \u2014 Digital competence & AI literacy among 1,000 Indonesian civil servants (Mendeley Data, CC BY)", url:"https://doi.org/10.17632/9b26sb2k4g.1"}
+          ],
+          links:[{to:"economics/jobs", label:"verification is work too"}] },
+        { id:"participation", title:"Participation & inclusion", tagline:"who gets heard",
+          body:[
+            "<p>Who gets heard in public consultations varies. An analysis of 5,152 participants in a Civil 20 consultation across 64 countries found people from Global South countries wrote much shorter responses \u2014 a six-word median versus nine for the Global North.</p>",
+            "<p>AI was not used in that consultation; it is a diagnosis of the problem AI tools might address \u2014 or deepen.</p>"
+          ],
+          unknown:"No evidence shown here on whether AI would make consultations more or less legitimate.",
+          sources:[{label:"Ustenko et al. \u2014 AI for citizen participation (Frontiers in Political Science)", url:"https://doi.org/10.3389/fpos.2026.1842794"}] },
+        { id:"trust", title:"Trust & misuse", tagline:"selected cases, unknown totals",
+          body:[
+            "<p>AI providers publish reports of misuse they detected and disrupted \u2014 fraud, influence operations, cyber activity. These come from privileged access to platform data.</p>",
+            "<p>They are deliberately selected notable cases: valuable detail, but without a reliable denominator they cannot say how common misuse is overall.</p>"
+          ],
+          unknown:"The true incidence of AI-assisted misuse is unknown.",
+          sources:[{label:"Anthropic \u2014 Threat Intelligence Report (Sep 2026)", url:"https://www.anthropic.com/threat-intelligence-report-september-2026"}] }
+      ]
+    },
+
+    {
+      id:"governance", title:"Governance", tagline:"rules and machinery", color:"#83c7a2", orbit:{i:0, a:20},
+      topics:[
+        { id:"rules", title:"Rules & who writes them", tagline:"maps of paper",
+          body:[
+            "<p>The MIT AI Governance Map classifies over 1,000 governance documents by risk, sector and scope \u2014 and says its findings are \u201cindicative\u201d, with most documents from the US. The OECD AI Policy Navigator lists initiatives from more than 80 jurisdictions and organisations.</p>",
+            "<p>A map of documents is not a map of what actually happens: written rules and real-world practice can come apart.</p>"
+          ],
+          sources:[
+            {label:"MIT AI Governance Map (data CC BY 4.0)", url:"https://airisk.mit.edu/ai-governance"},
+            {label:"OECD AI Policy Navigator", url:"https://oecd.ai/en/dashboards/international"}
+          ],
+          links:[
+            {to:"governance/standards", label:"rules need standards to land"},
+            {to:"politics/international", label:"the international picture"}
+          ] },
+        { id:"procurement", title:"Public institutions & procurement", tagline:"contracts are control",
+          body:[
+            "<p>When governments buy AI, the contract is where control lives. Interviews with 38 EU/US experts point to data ownership and portability, audit trails, and exit rights as the levers that decide what an agency can independently check and change.</p>",
+            "<p>An OECD review of guidelines across 14 countries found public-service AI rules fragmented, with weak measurement of performance, impact and compliance.</p>"
+          ],
+          sources:[
+            {label:"Culot et al. \u2014 AI in Public Procurement (J. of Business Logistics)", url:"https://doi.org/10.1111/jbl.70088"},
+            {label:"OECD Working Paper No. 93 \u2014 Generative AI experimentation in government", url:"https://doi.org/10.1787/42815683-en"}
+          ],
+          links:[
+            {to:"governance/oversight", label:"oversight needs what contracts provide"},
+            {to:"governance/postmarket", label:"what happens after purchase"},
+            {to:"economics/ownership", label:"the market-power side"}
+          ] },
+        { id:"oversight", title:"Human oversight", tagline:"the machinery that watches",
+          body:[
+            "<p>Oversight \u2014 people and monitoring systems watching what AI does, and being able to stop it \u2014 is itself machinery, and it can fail. In October 2026, OpenAI reported that two internal coding agents disabled security alerts or removed monitoring during routine tasks.</p>",
+            "<p>Earlier, an external red team (METR and Redwood Research) had found ways to bypass OpenAI\u2019s agent monitoring as it existed between 21 July and 11 August 2026.</p>",
+            "<p>The machinery itself needs guarding too: METR demonstrated that a crafted transcript could change what a reviewer <i>saw</i> in a test viewer \u2014 without touching the data behind it. It was a proof of concept, reported and patched within a day; no real exploitation was observed.</p>"
+          ],
+          unknown:"The red team described the system as it was before 21 July 2026; OpenAI said most issues were later fixed, and METR did not independently verify those fixes. Why the agents disabled alerts is not settled.",
+          sources:[
+            {label:"OpenAI \u2014 incident report: suppressing misalignment monitoring (Oct 2026)", url:"https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/"},
+            {label:"METR \u2014 Red-Teaming OpenAI\u2019s Internal Agent Monitoring Systems", url:"https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/"},
+            {label:"METR \u2014 AI systems could cover up misbehavior (6 Oct 2026)", url:"https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/"}
+          ] },
+        { id:"standards", title:"Standards & audit access", tagline:"rules need checkers",
+          body:[
+            "<p>Rules increasingly rely on technical standards and independent checks. Researchers studying the EU AI Act\u2019s global influence argue its reach may be limited by dependence on outside standard-setters, uneven enforcement and competition \u2014 copying a law is not the same as implementing it.</p>"
+          ],
+          unknown:"The EU AI Act is too young for definitive evaluation, by the authors\u2019 own account.",
+          sources:[{label:"Hoch & M\u00fcgge \u2014 EU Influence in Global AI Governance and its Limits", url:"https://doi.org/10.1007/s44206-026-00284-0"}],
+          links:[{to:"politics/national", label:"the EU example, in politics"}] },
+        { id:"postmarket", title:"Watching AI after deployment", tagline:"oversight beyond launch day",
+          body:[
+            "<p>Approving an AI system is not the same as watching it afterwards \u2014 systems can change, drift, or fail in new ways once in use. In medicine, researchers built AEGIS: a working demonstration of post-market monitoring infrastructure that separates one-off approval from ongoing alarm monitoring, under both US and EU regulatory frameworks.</p>",
+            "<p>Its limits matter: the demonstration verified specified failure cases in a test setting \u2014 not real-world patient safety.</p>"
+          ],
+          unknown:"Most AI used in public services has no equivalent of post-market monitoring \u2014 a gap this study documents only for the settings it examined.",
+          sources:[{label:"Afdideh et al. \u2014 AEGIS: post-market governance for adaptive medical AI (npj Digital Medicine)", url:"https://doi.org/10.1038/s41746-026-03290-1"}],
+          links:[
+            {to:"governance/oversight", label:"the machinery this needs"},
+            {to:"politics/accountability", label:"what gets reported when things fail"}
+          ] },
+        { id:"discretion", title:"Officials & discretion", tagline:"who decides \u2014 human or system?",
+          body:[
+            "<p>When AI enters public decisions \u2014 benefits, permits, triage \u2014 someone\u2019s judgment moves. A peer-reviewed article argues that handing decisions to algorithms risks accountability, equal treatment and the giving of reasons, and proposes that humans keep the final say in consequential cases.</p>",
+            "<p>This is an argument about what good administration requires \u2014 not a measurement of what happens when AI is introduced.</p>"
+          ],
+          unknown:"Evidence on what actually happens to decision quality when agencies adopt AI remains thin.",
+          sources:[{label:"Anastasopoulos \u2014 AI, Bureaucratic Discretion, and Democratic Administration (Public Administration Review)", url:"https://doi.org/10.1111/puar.70201"}],
+          links:[
+            {to:"governance/oversight", label:"human oversight, applied to officials"},
+            {to:"society/attitudes", label:"what the public says it wants", dotted:true}
+          ] }
+      ]
+    },
+
+    {
+      id:"politics", title:"Politics & law", tagline:"power, borders, accountability", color:"#e09586", orbit:{i:2, a:-70},
+      topics:[
+        { id:"international", title:"International cooperation", tagline:"a fragmented regime complex",
+          body:[
+            "<p>AI governance is not one system. Researchers counted 119 international institutions active in AI governance (2014\u20132024) and found low hierarchy \u2014 a fragmented \u201cregime complex\u201d, concentrated geographically in Europe.</p>",
+            "<p>Another study of nearly 200,000 policy documents found most carry only one of three agendas: control, rights, or safety \u2014 different communities, rarely overlapping.</p>"
+          ],
+          unknown:"Fragmentation has not been shown to cause weak enforcement \u2014 that is a hypothesis, not a finding.",
+          sources:[
+            {label:"Geith, Lundgren & Tallberg \u2014 The Emerging Regime Complex for AI (Global Studies Quarterly)", url:"https://doi.org/10.1093/isagsq/ksag145"},
+            {label:"Kim \u2014 Coordinating fragmented global AI governance (Policy Sciences)", url:"https://doi.org/10.1007/s11077-026-09632-w"}
+          ] },
+        { id:"national", title:"National approaches", tagline:"does copying a law work?",
+          body:[
+            "<p>The EU\u2019s AI Act is the most-cited model, but researchers argue its global influence may be limited by uneven enforcement and reliance on external standard-setters. Studies of Chinese model releases interpret public safety disclosures as sparse relative to the pace of launches \u2014 with the explicit caveat that no published evaluation does not mean no evaluation happened.</p>"
+          ],
+          unknown:"Claims about national strategy here are interpretive; the EU Act is too young for definitive evaluation.",
+          sources:[
+            {label:"Hoch & M\u00fcgge \u2014 EU Influence in Global AI Governance and its Limits", url:"https://doi.org/10.1007/s44206-026-00284-0"},
+            {label:"Chen, Doug & Patel \u2014 Beijing Will Not Pace the Frontier (SemiAnalysis)", url:"https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier"}
+          ] },
+        { id:"chips", title:"Chips & geopolitics", tagline:"technology as statecraft",
+          body:[
+            "<p>Export controls concentrate on high-technology, economically important products \u2014 semiconductors among them \u2014 organised more around products than destination countries, according to product-level trade research.</p>",
+            "<p>Data-centre trackers translate this into practice: ArusGrid rates every project\u2019s chip export-control access.</p>"
+          ],
+          sources:[
+            {label:"Patro & Santacreu \u2014 Geopolitical Distance and Targeted Trade (St Louis Fed Review)", url:"https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade"},
+            {label:"ArusGrid \u2014 chip export-control access tiers", url:"https://arusgrid.com/methodology"}
+          ],
+          links:[{to:"infrastructure/chips", label:"the hardware this governs"}] },
+        { id:"accountability", title:"Law & accountability", tagline:"when harm happens, who hears?",
+          body:[
+            "<p>When AI causes harm, does anyone hear about it? Matching 1,389 incidents from the AI Incident Database to US public companies found 307 incidents linked to 21 companies \u2014 and only four had incident-specific disclosure in securities filings.</p>",
+            "<p>Public-company disclosure has legal thresholds, so this is not proof of law-breaking \u2014 but it shows how much never reaches a formal accountability channel.</p>"
+          ],
+          unknown:"Whether stronger disclosure rules would change company behaviour is untested.",
+          sources:[{label:"Chincholikar & Chawla \u2014 The AI incident disclosure shadow (Frontiers in AI)", url:"https://doi.org/10.3389/frai.2026.1969275"}] }
+      ]
+    },
+
+    {
+      id:"environment", title:"Environment", tagline:"energy, water, climate", color:"#69bbad", orbit:{i:2, a:27},
+      topics:[
+        { id:"energy", title:"Energy & emissions", tagline:"where the power comes from",
+          body:[
+            "<p>Malaysia\u2019s grid is projected to stay over 75% fossil-fuel-dependent until at least 2033, and Ember projects Malaysian data-centre demand rising from 9 to 68 TWh between 2024 and 2030 \u2014 roughly 30% of national consumption \u2014 with emissions potentially rising sevenfold on that grid.</p>",
+            "<p>\u201cGreen\u201d labels can mislead: renewable-energy certificates can be double-counted, and emissions still happen within the country (ISIS Malaysia).</p>"
+          ],
+          sources:[{label:"ISIS Malaysia \u2014 AI and Climate Considerations (Jun 2026)", url:"https://www.cert.isis.org.my/publications/ai-and-climate-considerations/"}],
+          links:[{to:"infrastructure/electricity", label:"the demand side"}] },
+        { id:"goals", title:"Climate goals vs buildout", tagline:"two goals pulling apart",
+          body:[
+            "<p>Malaysia wants to be an \u201cAI Nation by 2030\u201d and net-zero by 2050 \u2014 two goals that increasingly pull against each other, argue ISIS Malaysia researchers, who conclude that \u201cthe instruments meant to govern the boom were designed for a smaller scale of infrastructure\u201d.</p>"
+          ],
+          sources:[{label:"ISIS Malaysia \u2014 AI and Climate Considerations", url:"https://www.cert.isis.org.my/publications/ai-and-climate-considerations/"}],
+          links:[{to:"governance/rules", label:"what governance would have to do"}] },
+        { id:"resources", title:"Resources & local place", tagline:"the view from the ground",
+          body:[
+            "<p>Water and land are local resources with local politics. Batam\u2019s story ends on an open question \u2014 in a drought, who gets the water first? In Johor, data-centre projects wait until mid-2027 for water connections.</p>"
+          ],
+          unknown:"Local effects must be established case by case: growth near stress is not proof of cause.",
+          sources:[
+            {label:"Katadata \u2014 A Digital Boom in a Thirsty City (Batam)", url:"https://katadata.co.id/data-center-batam/en"},
+            {label:"ISIS Malaysia \u2014 AI and Climate Considerations", url:"https://www.cert.isis.org.my/publications/ai-and-climate-considerations/"}
+          ],
+          links:[{to:"infrastructure/water", label:"the engineering side of water"}],
+          sources_note:"Research catalogue with more sources on this topic: <a href='sources/CATALOGUE.md' target='_blank' rel='noopener'>sources/CATALOGUE.md</a> (local file — includes AI Now\u2019s data-centre policy toolkit and regional records)." }
+      ]
+    }
+  ]
+};
+
+/* =============================================================
+   RENDERING
+   ============================================================= */
+
+const stage = document.getElementById("stage");
+const linesSvg = document.getElementById("lines");
+const overview = document.getElementById("scene-overview");
+const expansion = document.getElementById("expansion");
+const collapseBtn = document.getElementById("collapse-btn");
+const card = document.getElementById("card");
+const byTopic = {};
+GALAXY.worlds.forEach(w => w.topics.forEach(t => byTopic[w.id + "/" + t.id] = {world:w, topic:t}));
+
+// Snapshot from sources/graph.json; links are associations, not proof of causation.
+const RESEARCH_LINKS = [{"from": "how/models", "to": "how/data", "relation": "only as good as its data", "kind": "association"}, {"from": "how/data", "to": "how/inference", "relation": "flows into every use", "kind": "association"}, {"from": "how/inference", "to": "infrastructure/centres", "relation": "runs in a data centre somewhere", "kind": "sourced"}, {"from": "how/inference", "to": "economics/investment", "relation": "each use costs a little money and power", "kind": "association"}, {"from": "how/inference", "to": "how/agents", "relation": "some uses act on their own", "kind": "sourced"}, {"from": "how/inference", "to": "how/evaluation", "relation": "check before trusting", "kind": "association"}, {"from": "how/agents", "to": "governance/oversight", "relation": "oversight machinery for agents", "kind": "sourced"}, {"from": "how/using", "to": "governance/procurement", "relation": "public services buy and adapt AI", "kind": "sourced"}, {"from": "how/using", "to": "society/skills", "relation": "verification work falls on people", "kind": "sourced"}, {"from": "infrastructure/centres", "to": "infrastructure/electricity", "relation": "sized by rated power (IT load)", "kind": "sourced"}, {"from": "infrastructure/centres", "to": "infrastructure/water", "relation": "water where cooling needs it", "kind": "sourced"}, {"from": "infrastructure/centres", "to": "infrastructure/grids", "relation": "part of critical infrastructure?", "kind": "association"}, {"from": "infrastructure/centres", "to": "economics/investment", "relation": "big capital projects", "kind": "sourced"}, {"from": "infrastructure/centres", "to": "environment/resources", "relation": "use land, power and water", "kind": "sourced"}, {"from": "infrastructure/centres", "to": "politics/chips", "relation": "chip export rules shape who can build", "kind": "sourced"}, {"from": "infrastructure/electricity", "to": "infrastructure/grids", "relation": "sits inside essential systems", "kind": "sourced"}, {"from": "infrastructure/electricity", "to": "environment/energy", "relation": "where the power comes from matters", "kind": "sourced"}, {"from": "infrastructure/water", "to": "environment/resources", "relation": "the same water serves everyone", "kind": "sourced"}, {"from": "infrastructure/chips", "to": "politics/chips", "relation": "the politics of chip controls", "kind": "sourced"}, {"from": "infrastructure/land", "to": "infrastructure/centres", "relation": "approvals shape the buildout", "kind": "association"}, {"from": "infrastructure/grids", "to": "governance/rules", "relation": "grids run on rules — and the rules lag", "kind": "sourced"}, {"from": "economics/investment", "to": "infrastructure/centres", "relation": "the projects this money builds", "kind": "association"}, {"from": "economics/jobs", "to": "society/attitudes", "relation": "does exposure shape how people feel about AI?", "kind": "association"}, {"from": "economics/ownership", "to": "governance/procurement", "relation": "procurement is where this lands", "kind": "association"}, {"from": "economics/evidence", "to": "economics/jobs", "relation": "applied to the jobs study", "kind": "sourced"}, {"from": "economics/evidence", "to": "economics/productivity", "relation": "applied to the productivity estimate", "kind": "sourced"}, {"from": "society/skills", "to": "economics/jobs", "relation": "verification is work too", "kind": "sourced"}, {"from": "society/attitudes", "to": "politics/national", "relation": "do preferences shape national rules?", "kind": "association"}, {"from": "governance/rules", "to": "governance/standards", "relation": "rules need standards to land", "kind": "sourced"}, {"from": "governance/rules", "to": "politics/international", "relation": "the international picture", "kind": "association"}, {"from": "governance/procurement", "to": "governance/oversight", "relation": "oversight needs what contracts provide", "kind": "association"}, {"from": "governance/procurement", "to": "governance/postmarket", "relation": "what happens after purchase", "kind": "association"}, {"from": "governance/postmarket", "to": "governance/oversight", "relation": "the machinery this needs", "kind": "sourced"}, {"from": "governance/postmarket", "to": "politics/accountability", "relation": "what gets reported when things fail", "kind": "sourced"}, {"from": "governance/discretion", "to": "governance/oversight", "relation": "human oversight, applied to officials", "kind": "association"}, {"from": "governance/discretion", "to": "society/attitudes", "relation": "what the public says it wants", "kind": "association"}, {"from": "governance/standards", "to": "politics/national", "relation": "the EU example, in politics", "kind": "sourced"}, {"from": "environment/energy", "to": "infrastructure/electricity", "relation": "the demand side", "kind": "sourced"}, {"from": "environment/goals", "to": "governance/rules", "relation": "what governance would have to do", "kind": "sourced"}, {"from": "environment/resources", "to": "infrastructure/water", "relation": "the engineering side of water", "kind": "sourced"}, {"from": "how/inference", "to": "environment/energy", "relation": "using AI means electricity demand somewhere", "kind": "sourced"}, {"from": "economics/investment", "to": "environment/energy", "relation": "capital buildout sets the emissions path", "kind": "sourced"}, {"from": "how/evaluation", "to": "governance/oversight", "relation": "evaluations feed safety cases and oversight decisions", "kind": "sourced"}, {"from": "economics/jobs", "to": "politics/national", "relation": "exposure differs sharply by income level - relevant to national policy", "kind": "association"}, {"from": "how/models", "to": "economics/ownership", "relation": "open-weight releases broaden access - a challenge to concentration?", "kind": "association"}, {"from": "infrastructure/water", "to": "governance/rules", "relation": "water approvals need catchment-level governance", "kind": "association"}, {"from": "environment/energy", "to": "politics/national", "relation": "energy transition needs national frameworks for data centres", "kind": "association"}, {"from": "economics/investment", "to": "politics/national", "relation": "SEA AI infrastructure is financed with state funds and cross-border banks (two documented cases)", "kind": "sourced"}, {"from": "governance/discretion", "to": "politics/national", "relation": "central gatekeeping over local AI, as documented in three provinces", "kind": "sourced"}, {"from": "how/data", "to": "society/skills", "relation": "both are readiness resources, and both gaps appeared together", "kind": "association"}, {"from": "economics/ownership", "to": "politics/national", "relation": "AI Now argues market concentration seeks state backing", "kind": "association"}, {"from": "economics/evidence", "to": "governance/rules", "relation": "Ada Lovelace argues weak productivity evidence still reaches decisions", "kind": "association"}, {"from": "society/skills", "to": "governance/oversight", "relation": "oversight runs through people, and AI shapes their judgment", "kind": "sourced"}, {"from": "infrastructure/land", "to": "governance/rules", "relation": "siting and permits are where local rules bite", "kind": "association"}, {"from": "governance/procurement", "to": "environment/energy", "relation": "buying rules can pull greener infrastructure", "kind": "association"}, {"from": "infrastructure/cloud", "to": "infrastructure/centres", "relation": "cloud runs in data centres", "kind": "sourced"}, {"from": "infrastructure/cloud", "to": "economics/ownership", "relation": "a few providers hold most of the market", "kind": "sourced"}, {"from": "infrastructure/cloud", "to": "how/inference", "relation": "everyday AI arrives through cloud services", "kind": "sourced"}, {"from": "infrastructure/cloud", "to": "governance/oversight", "relation": "compute providers as points of oversight", "kind": "sourced"}, {"from": "infrastructure/cloud", "to": "politics/international", "relation": "cloud, chips and models as geopolitical chokepoints", "kind": "association"}, {"from": "infrastructure/connectivity", "to": "society/participation", "relation": "access decides who can take part", "kind": "sourced"}, {"from": "infrastructure/connectivity", "to": "infrastructure/cloud", "relation": "cloud needs networks, and networks carry the traffic", "kind": "sourced"}, {"from": "infrastructure/connectivity", "to": "politics/international", "relation": "cables are geopolitical pieces", "kind": "sourced"}, {"from": "infrastructure/connectivity", "to": "economics/ownership", "relation": "a handful of suppliers build the world's cables", "kind": "sourced"}, {"from": "governance/procurement", "to": "infrastructure/cloud", "relation": "governments buy cloud first", "kind": "sourced"}];
+RESEARCH_LINKS.forEach(edge => {
+  const a = byTopic[edge.from], b = byTopic[edge.to];
+  if (!a || !b) return;
+  [[a, edge.to, false], [b, edge.from, true]].forEach(([entry, to, reverse]) => {
+    entry.topic.links ||= [];
+    const link = {to, label:reverse ? "Related: " + edge.relation : edge.relation, dotted:edge.kind !== "sourced"};
+    const i = entry.topic.links.findIndex(item => item.to === to);
+    if (i < 0) entry.topic.links.push(link); else entry.topic.links[i] = link;
+  });
+});
+
+const SVGNS = "http://www.w3.org/2000/svg";
+function svgEl(tag, attrs){
+  const el = document.createElementNS(SVGNS, tag);
+  for (const k in attrs) el.setAttribute(k, attrs[k]);
+  return el;
+}
+
+/* stars — deterministic so they don't reshuffle on resize */
+(function stars(){
+  let s = 42; const rnd = () => (s = (s * 1664525 + 1013904223) % 4294967296) / 4294967296;
+  const box = document.getElementById("stars");
+  for (let i = 0; i < 110; i++){
+    const d = document.createElement("i");
+    d.className = "star";
+    d.style.left = (rnd() * 100) + "%";
+    d.style.top = (rnd() * 100) + "%";
+    d.style.animationDelay = (rnd() * 4).toFixed(2) + "s";
+    d.style.opacity = (0.25 + rnd() * 0.6).toFixed(2);
+    box.appendChild(d);
+  }
+})();
+
+/* ---- overview ---- */
+const CX = 600, CY = 390;
+const RINGS = [{rx:235, ry:150}, {rx:370, ry:235}, {rx:495, ry:325}];
+RINGS.forEach(({rx, ry}) => {
+  linesSvg.appendChild(svgEl("ellipse", {class:"orbit", cx:CX, cy:CY, rx, ry}));
+});
+
+GALAXY.worlds.forEach(w => {
+  const b = document.createElement("button");
+  b.className = "planet";
+  b.dataset.world = w.id;
+  b.innerHTML = "<span class='ball' style='--planet-color:" + w.color + ";background:radial-gradient(circle at 30% 27%, " + w.color + " 0%, " +
+    w.color + "dd 30%, #1a2345 100%)'></span><span class='t'>" + w.title + "</span><span class='s'>" + w.tagline + "</span>";
+  b.addEventListener("click", () => expandWorld(w.id));
+  overview.appendChild(b);
+});
+
+/* ---- faint arcs between worlds whose topics are connected ---- */
+const arcsG = svgEl("g", {id:"arcs"});
+linesSvg.appendChild(arcsG);
+const ARC_PAIRS = [];
+(function buildArcPairs(){
+  const seen = {};
+  GALAXY.worlds.forEach(w => w.topics.forEach(t => (t.links || []).forEach(l => {
+    const tw = l.to.split("/")[0];
+    if (tw === w.id || !GALAXY.worlds.some(x => x.id === tw)) return;
+    const key = [w.id, tw].sort().join("|");
+    if (!seen[key]){
+      seen[key] = {a:w.id, b:tw, dotted:true, n:0};
+      ARC_PAIRS.push(seen[key]);
+    }
+    seen[key].n++;
+    if (!l.dotted) seen[key].dotted = false;
+  })));
+  const NAME = {}; GALAXY.worlds.forEach(w => NAME[w.id] = w.title);
+  ARC_PAIRS.forEach(pr => {
+    const path = svgEl("path", {class:"arc" + (pr.dotted ? " dotted" : "")});
+    const tip = svgEl("title");
+    tip.textContent = NAME[pr.a] + " \u2194 " + NAME[pr.b] + " \u2014 " + pr.n + " topic connection" + (pr.n > 1 ? "s" : "");
+    path.appendChild(tip);
+    pr.el = path;
+    arcsG.appendChild(path);
+  });
+})();
+
+function updateArcs(){
+  const show = overview.classList.contains("on") && !document.body.classList.contains("listmode");
+  arcsG.style.display = show ? "" : "none";
+  if (!show) return;
+  ARC_PAIRS.forEach(pr => {
+    const A = planetPos(GALAXY.worlds.find(x => x.id === pr.a), orbitAngle);
+    const B = planetPos(GALAXY.worlds.find(x => x.id === pr.b), orbitAngle);
+    const mx = (A.x + B.x) / 2, my = (A.y + B.y) / 2;
+    const dx = mx - CX, dy = my - CY;
+    const dl = Math.hypot(dx, dy) || 1;
+    const cx = mx + dx / dl * 42, cy = my + dy / dl * 42;
+    pr.el.setAttribute("d", "M" + A.x + "," + A.y + " Q" + cx + "," + cy + " " + B.x + "," + B.y);
+  });
+}
+
+/* ---- in-canvas expansion: topics open around their planet ---- */
+let expanded = null;      // world id or null
+let expLayout = null;     // {pin:{x,y}, topics:[{t,x,y}]}
+let openRef = null;       // currently open topic ref, for redraws
+
+function worldById(id){ return GALAXY.worlds.find(x => x.id === id); }
+
+function layoutExpansion(){
+  const w = worldById(expanded);
+  if (!w || !expLayout) return;
+  const P = expLayout.pin;
+  const lx = P.x + (CX - P.x) * 0.5;
+  const ly = P.y + (CY - P.y) * 0.5;
+  const n = w.topics.length;
+  w.topics.forEach((t, i) => {
+    const ang = -Math.PI/2 + i * 2 * Math.PI / n;
+    let x = lx + 310 * Math.cos(ang);
+    let y = ly + 215 * Math.sin(ang) * (n <= 3 ? 0.8 : 1);
+    x = Math.max(105, Math.min(1095, x));
+    y = Math.max(64, Math.min(716, y));
+    t._x = x; t._y = y;
+    const o = expLayout.topics.find(q => q.t === t);
+    if (o){ o.x = x; o.y = y; }
+  });
+}
+
+function drawExpansionLines(){
+  linesSvg.querySelectorAll(".spoke.hot,.topiclink").forEach(e => e.remove());
+  const w = worldById(expanded);
+  const P = expLayout.pin;
+  w.topics.forEach(t => {
+    linesSvg.appendChild(svgEl("line", {class:"spoke hot", x1:P.x, y1:P.y, x2:t._x, y2:t._y}));
+  });
+  w.topics.forEach(t => (t.links || []).forEach(l => {
+    if (!l.to.startsWith(w.id + "/")) return;
+    const other = w.topics.find(x => w.id + "/" + x.id === l.to);
+    if (!other) return;
+    const mx = (t._x + other._x) / 2, my = (t._y + other._y) / 2;
+    const dx = other._x - t._x, dy = other._y - t._y;
+    const len = Math.hypot(dx, dy) || 1;
+    const cx = mx + (-dy / len) * 30, cy = my + (dx / len) * 30;
+    const p = svgEl("path", {class:"topiclink " + (l.dotted ? "dotted" : "solid"),
+      d:"M" + t._x + "," + t._y + " Q" + cx + "," + cy + " " + other._x + "," + other._y});
+    p.dataset.a = w.id + "/" + t.id;
+    p.dataset.b = l.to;
+    linesSvg.appendChild(p);
+  }));
+}
+
+function expandWorld(id){
+  if (expanded === id){ collapse(); return; }
+  if (expanded) collapse(true);
+  expanded = id;
+  const w = worldById(id);
+  const P = planetPos(w, orbitAngle);
+  expLayout = {pin:{x:P.x, y:P.y}, topics: w.topics.map(t => ({t, x:0, y:0}))};
+  layoutExpansion();
+  overview.querySelectorAll(".planet").forEach(el => {
+    el.classList.toggle("faded", el.dataset.world !== id);
+    el.setAttribute("aria-expanded", el.dataset.world === id ? "true" : "false");
+  });
+  const pw = overview.querySelector("[data-world='" + id + "']");
+  pw.style.transform = "translate(" + P.x + "px," + P.y + "px) translate(-50%,-50%)"; // pinned
+  pw.classList.add("focal");
+  drawExpansionLines();
+  expLayout.topics.forEach(({t, x, y}) => {
+    const el = document.createElement("button");
+    el.className = "topic exp";
+    el.style.left = x + "px";
+    el.style.top = y + "px";
+    el.dataset.topic = id + "/" + t.id;
+    el.innerHTML = "<span class='t'>" + t.title + "</span><span class='s'>" + t.tagline + "</span>";
+    el.addEventListener("click", () => openCard(id + "/" + t.id));
+    expansion.appendChild(el);
+  });
+  arcsG.style.display = "none";
+  collapseBtn.hidden = false;
+  collapseBtn.innerHTML = "&#8592; Collapse " + w.title;
+  hideCard();
+  updateOrbitMode();
+  if (!document.body.classList.contains("listmode")){
+    const first = expansion.querySelector(".topic");
+    if (first) first.focus();
+  }
+}
+
+function collapse(keepCard){
+  if (!expanded) return;
+  const id = expanded;
+  expanded = null; expLayout = null; openRef = null;
+  expansion.innerHTML = "";
+  linesSvg.querySelectorAll(".spoke.hot,.topiclink,.xcross").forEach(e => e.remove());
+  overview.querySelectorAll(".planet").forEach(el => {
+    el.classList.remove("faded", "linked", "focal");
+    el.setAttribute("aria-expanded", "false");
+  });
+  arcsG.style.display = "";
+  collapseBtn.hidden = true;
+  if (!keepCard) hideCard();
+  updateOrbitMode();
+  applyPositions(orbitAngle);
+  if (!keepCard){
+    const b = overview.querySelector("[data-world='" + id + "']");
+    if (b) b.focus();
+  }
+}
+
+collapseBtn.addEventListener("click", () => collapse());
+
+
+/* ---- topic card ---- */
+let lastTrigger = null;
+
+function fillCard(ref){
+  const hit = byTopic[ref];
+  if (!hit) return false;
+  const {world, topic} = hit;
+
+  const crumb = document.getElementById("card-crumb");
+  crumb.innerHTML = "";
+  const cb = document.createElement("button");
+  cb.textContent = world.title;
+  cb.addEventListener("click", () => hideCard(true));
+  crumb.append(cb, " \u203A " + topic.title);
+
+  const title = document.getElementById("card-title");
+  title.textContent = topic.title;
+  document.getElementById("card-tag").textContent = world.title + " \u00b7 " + topic.tagline;
+
+  let html = topic.body.join("");
+  if (topic.unknown) html += "<p class='unk'>Still unknown: " + topic.unknown + "</p>";
+  if (topic.sources_note) html += "<p class='srcline'>" + topic.sources_note + "</p>";
+  html += "<h3>Sources</h3><ul>" +
+    topic.sources.map(s => "<li><a href='" + s.url + "' target='_blank' rel='noopener'>" + s.label + "</a></li>").join("") + "</ul>";
+  const recs = (typeof TOPIC_SOURCES !== "undefined" && TOPIC_SOURCES.byTopic[ref]) || [];
+  if (recs.length){
+    html += "<h3>Catalogue records (" + recs.length + ")</h3><ul class='recs'>" +
+      recs.map(r => "<li><span class='tier t-" + r.tier + "'>" + r.tierLabel + "</span>" +
+        "<a href='" + r.url.split(/\s/)[0].replace(/["'<>]/g, "") + "' target='_blank' rel='noopener'>" + r.title + "</a>" +
+        "<span class='where'> \u2014 " + r.inst + "</span></li>").join("") + "</ul>";
+    const nIndexed = recs.filter(r => r.tier === "L" || r.tier === "S" || r.tier === "H" || r.tier === "D").length;
+    if (nIndexed === recs.length) html += "<p class='absence'>All records for this topic are indexed-only \u2014 an indexing absence, not a judgement about the topic.</p>";
+  } else {
+    html += "<h3>Catalogue records</h3><p class='absence'>No catalogue records indexed for this topic yet \u2014 an indexing absence, not a judgement.</p>";
+  }
+  if (topic.links && topic.links.length){
+    html += "<h3>Reaches into</h3>" + topic.links.map(l => {
+      const tgt = byTopic[l.to];
+      if (!tgt) return "";
+      return "<button class='xlink" + (l.dotted ? " dotted" : "") + "' data-goto='" + l.to + "'>" +
+             "<i>" + l.label + "</i> <span class='where'>\u2192 " + tgt.world.title + " \u00b7 " + tgt.topic.title +
+             (l.dotted ? " (association or question)" : "") + "</span></button>";
+    }).join("");
+  }
+  document.getElementById("card-body").innerHTML = html;
+  document.getElementById("card-body").querySelectorAll("[data-goto]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const to = btn.dataset.goto;
+      const hit2 = byTopic[to];
+      if (!hit2) return;
+      if (expanded !== hit2.world.id) expandWorld(hit2.world.id); // switch worlds in place
+      openCard(to);
+    });
+  });
+  return true;
+}
+
+function highlightConnections(ref){
+  const here = byTopic[ref].world.id;
+  const conn = new Set(((byTopic[ref].topic.links) || [])
+    .map(l => l.to).filter(k => byTopic[k] && byTopic[k].world.id === here));
+  expansion.querySelectorAll(".topic").forEach(el => {
+    const key = el.dataset.topic;
+    if (key === ref) return;
+    const back = ((byTopic[key].topic.links) || []).some(l => l.to === ref);
+    const lit = conn.has(key) || back;
+    el.classList.toggle("connected", lit);
+    el.classList.toggle("soft", !lit);
+  });
+  linesSvg.querySelectorAll(".topiclink").forEach(l => {
+    l.classList.toggle("hot", l.dataset.a === ref || l.dataset.b === ref);
+  });
+}
+
+function clearHighlights(){
+  expansion.querySelectorAll(".topic.connected,.topic.soft").forEach(el => el.classList.remove("connected", "soft"));
+  linesSvg.querySelectorAll(".topiclink.hot").forEach(l => l.classList.remove("hot"));
+}
+
+function drawCrossLines(ref){
+  linesSvg.querySelectorAll(".xcross").forEach(e => e.remove());
+  overview.querySelectorAll(".planet.linked").forEach(e => e.classList.remove("linked"));
+  if (!expLayout || !byTopic[ref]) return;
+  const src = expLayout.topics.find(o => o.t === byTopic[ref].topic);
+  if (!src) return;
+  (byTopic[ref].topic.links || []).forEach(l => {
+    const hit = byTopic[l.to];
+    if (!hit || hit.world.id === expanded) return;
+    const P = planetPos(hit.world, orbitAngle);
+    const path = svgEl("path", {class:"xcross " + (l.dotted ? "dotted" : "solid"),
+      d:"M" + src.x + "," + src.y + " Q" + ((src.x + P.x) / 2) + "," + ((src.y + P.y) / 2 - 24) + " " + P.x + "," + P.y});
+    const tip = svgEl("title");
+    tip.textContent = hit.topic.title + " \u2014 " + hit.world.title;
+    path.appendChild(tip);
+    linesSvg.appendChild(path);
+    const pel = overview.querySelector("[data-world='" + hit.world.id + "']");
+    if (pel) pel.classList.add("linked");
+  });
+}
+
+function openCard(ref){
+  if (!fillCard(ref)) return;
+  lastTrigger = expansion.querySelector("[data-topic='" + ref + "']") || document.getElementById("sun");
+  openRef = ref;
+  card.classList.add("on");
+  highlightConnections(ref);
+  drawCrossLines(ref);
+  document.getElementById("card-title").focus();
+}
+
+function hideCard(refocus){
+  card.classList.remove("on");
+  clearHighlights();
+  openRef = null;
+  linesSvg.querySelectorAll(".xcross").forEach(e => e.remove());
+  overview.querySelectorAll(".planet.linked").forEach(e => e.classList.remove("linked"));
+  if (refocus && lastTrigger) lastTrigger.focus();
+}
+
+document.getElementById("card-close").addEventListener("click", () => hideCard(true));
+
+/* sun card */
+document.getElementById("sun").addEventListener("click", () => {
+  const crumb = document.getElementById("card-crumb");
+  crumb.textContent = "About this galaxy";
+  const title = document.getElementById("card-title");
+  title.textContent = GALAXY.sun.title;
+  document.getElementById("card-tag").textContent = GALAXY.sun.tagline;
+  const cc = TOPIC_SOURCES.counts;
+  document.getElementById("card-body").innerHTML =
+    GALAXY.sun.body.join("") +
+    "<h3>Catalogue coverage</h3>" +
+    "<p>" + cc.records_total + " source records are catalogued; " + cc.topic_record_links + " record-links attach to this galaxy\u2019s " + cc.topics_total + " topics. Of those record-to-topic links, " + cc.read_mapped + " point to sources marked as read at some level (full text, sections, or page/abstract); " + cc.indexed_only_mapped + " link to sources indexed only \u2014 absences, not judgements.</p>" +
+    "<p class='unk'>Named institutional absences (indexed nowhere yet): " + TOPIC_SOURCES.institutionAbsences + ".</p>" +
+    "<h3>Sources</h3><ul>" +
+    GALAXY.sun.sources.map(s => "<li><a href='" + s.url + "' target='_blank' rel='noopener'>" + s.label + "</a></li>").join("") + "</ul>";
+  lastTrigger = document.getElementById("sun");
+  card.classList.add("on");
+  title.focus();
+});
+
+/* Esc: card first, then world */
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape") return;
+  if (card.classList.contains("on")) hideCard(true);
+  else if (journey) exitJourney();
+  else if (expanded) collapse();
+});
+
+/* ---- planet positions & slow orbital motion ---- */
+const ORBIT_PERIOD_MS = 160000; // one lap in ~2.7 minutes: slow, visible drift
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let orbitAngle = 0, lastFrame = null, orbitOn = false;
+
+function planetPos(w, ang){
+  const r = RINGS[w.orbit.i];
+  const a = w.orbit.a * Math.PI / 180 + ang;
+  return {x: CX + r.rx * Math.cos(a), y: CY + r.ry * Math.sin(a)};
+}
+
+function applyPositions(ang){
+  GALAXY.worlds.forEach(w => {
+    if (expanded === w.id) return; // pinned while expanded
+    const p = overview.querySelector("[data-world='" + w.id + "']");
+    const {x, y} = planetPos(w, ang);
+    p.style.transform = "translate(" + x + "px," + y + "px) translate(-50%,-50%)";
+  });
+}
+
+function orbitTick(t){
+  if (!orbitOn) return;
+  if (lastFrame != null) orbitAngle += (t - lastFrame) * (2 * Math.PI / ORBIT_PERIOD_MS);
+  lastFrame = t;
+  applyPositions(orbitAngle);
+  updateArcs();
+  requestAnimationFrame(orbitTick);
+}
+
+function updateOrbitMode(){
+  const list = document.body.classList.contains("listmode");
+  const shouldRun = !list && !reduceMotion.matches && !expanded;
+  if (shouldRun && !orbitOn){
+    orbitOn = true; lastFrame = null;
+    requestAnimationFrame(orbitTick);
+  } else if (!shouldRun){
+    orbitOn = false;
+    if (!list) applyPositions(orbitAngle); // park on the orbit — but never in list mode
+  }
+}
+reduceMotion.addEventListener ? reduceMotion.addEventListener("change", updateOrbitMode)
+                              : reduceMotion.addListener(updateOrbitMode);
+
+/* ---- layout: scale to fit, or stack on small screens ---- */
+const stagewrap = document.querySelector(".stagewrap");
+let panX = 0, panY = 0, gesture = null;
+stagewrap.addEventListener("pointerdown", e => {
+  if (e.button !== 0 || e.target.closest("button, a, input, textarea, select, #card, #jpanel")) return;
+  gesture = {id:e.pointerId, x:e.clientX, y:e.clientY, baseX:panX, baseY:panY, moved:false};
+  if (!document.body.classList.contains("listmode")) stagewrap.setPointerCapture(e.pointerId);
+});
+stagewrap.addEventListener("pointermove", e => {
+  if (!gesture || gesture.id !== e.pointerId || document.body.classList.contains("listmode")) return;
+  const dx = e.clientX - gesture.x, dy = e.clientY - gesture.y;
+  if (Math.hypot(dx, dy) > 5) gesture.moved = true;
+  if (!gesture.moved) return;
+  panX = Math.max(-stagewrap.clientWidth * .65, Math.min(stagewrap.clientWidth * .65, gesture.baseX + dx));
+  panY = Math.max(-stagewrap.clientHeight * .65, Math.min(stagewrap.clientHeight * .65, gesture.baseY + dy));
+  stage.style.translate = panX + "px " + panY + "px";
+  stagewrap.classList.add("dragging");
+});
+function endPan(e){
+  if (!gesture || gesture.id !== e.pointerId) return;
+  const wasTap = !gesture.moved && Math.hypot(e.clientX - gesture.x, e.clientY - gesture.y) < 5;
+  gesture = null;
+  stagewrap.classList.remove("dragging");
+  if (wasTap && e.type === "pointerup") { exitJourney(); collapse(); hideCard(); }
+}
+stagewrap.addEventListener("pointerup", endPan);
+stagewrap.addEventListener("pointercancel", endPan);
+function relayout(){
+  const wide = stagewrap.clientWidth >= 780;
+  document.body.classList.toggle("listmode", !wide);
+  if (wide){
+    // fit BOTH dimensions: width (canvas 1200) and height (canvas 780 minus header/legend space)
+    const availH = Math.max(430, window.innerHeight - 190);
+    const s = Math.min(stagewrap.clientWidth / 1200, availH / 780);
+    stage.style.transform = "scale(" + s + ")";
+    stagewrap.style.height = (780 * s) + "px";
+    updateOrbitMode();
+    if (!orbitOn) applyPositions(orbitAngle); // always (re)place: never leave stale coordinates
+    if (expanded && expLayout){
+      layoutExpansion();
+      drawExpansionLines();
+      expansion.querySelectorAll(".topic").forEach(el => {
+        const o = expLayout.topics.find(q => q.t === byTopic[el.dataset.topic].topic);
+        if (o){ el.style.left = o.x + "px"; el.style.top = o.y + "px"; }
+      });
+      if (openRef){ highlightConnections(openRef); drawCrossLines(openRef); }
+    }
+  } else {
+    stage.style.transform = "none";
+    stage.style.translate = "none";
+    panX = panY = 0;
+    stagewrap.style.height = "auto";
+    GALAXY.worlds.forEach(w => {
+      const p = overview.querySelector("[data-world='" + w.id + "']");
+      p.style.transform = ""; // CSS list mode positions statically
+    });
+    updateOrbitMode();
+  }
+  updateArcs();
+}
+window.addEventListener("resize", relayout);
+window.addEventListener("orientationchange", relayout);
+if (window.ResizeObserver) new ResizeObserver(relayout).observe(stagewrap);
+relayout();
+
+/* ---- guided journeys: step through the same galaxy ---- */
+const JOURNEYS = [
+  { id:"request", title:"Follow an AI request",
+    note:"A general learning path \u2014 it does not say where any particular request runs.",
+    steps:[
+      {t:"how/models", say:"Start with the model: a program that learned patterns from millions of examples \u2014 nobody wrote its rules by hand."},
+      {t:"how/inference", say:"Now you send a request. The model runs \u2014 the jargon is \u201cinference\u201d \u2014 and somewhere a machine produces the answer."},
+      {t:"infrastructure/chips", say:"The maths happens on specialised chips. AI racks draw 60 kW or more, against 5\u201310 kW for traditional servers."},
+      {t:"infrastructure/centres", say:"Those chips live in data centres \u2014 buildings planned project by project, and tracked independently by ArusGrid and Epoch AI."},
+      {t:"infrastructure/electricity", say:"A centre\u2019s size is its IT load \u2014 the power its computers are rated to draw. Running around the clock, that makes data centres large electricity customers."}
+    ]},
+  { id:"jobs", title:"AI and jobs",
+    note:"Exposure is about tasks, not destiny \u2014 every step here keeps its open questions.",
+    steps:[
+      {t:"economics/jobs", say:"\u201cAI exposure\u201d means how much of a job\u2019s tasks AI could do or change \u2014 not job loss. A US Census study found graduates in the most AI-exposed tenth of college majors started work with lower employment and earnings."},
+      {t:"economics/evidence", say:"Before concluding anything: that is a documented correlation, not a proven cause \u2014 the study cannot separate AI from everything else changing at the same time."},
+      {t:"society/skills", say:"A shift already visible in one corner of the economy: AI makes producing text and code cheap \u2014 and shifts more work onto the people who check it."},
+      {t:"society/attitudes", say:"And people have views. Surveys find one consistent anchor \u2014 optimism about technology \u2014 with other values differing by country. Stated preferences, not votes."}
+    ]}
+];
+
+const jpanel = document.getElementById("jpanel");
+let journey = null;
+
+function clearJourneyMarks(){
+  expansion.querySelectorAll(".topic.jnode").forEach(e => e.classList.remove("jnode"));
+  linesSvg.querySelectorAll(".jtrail").forEach(e => e.remove());
+}
+
+function showJourneyStep(){
+  const def = journey.def, step = def.steps[journey.idx];
+  const hit = byTopic[step.t];
+  if (expanded !== hit.world.id) expandWorld(hit.world.id);
+  clearJourneyMarks();
+  const el = expansion.querySelector("[data-topic='" + step.t + "']");
+  if (el) el.classList.add("jnode");
+  if (journey.idx > 0){ // trail from the previous step
+    const prevRef = def.steps[journey.idx - 1].t;
+    const prev = byTopic[prevRef];
+    let ax, ay;
+    const prevNode = (prev.world.id === hit.world.id) ? expLayout.topics.find(q => q.t === prev.topic) : null;
+    if (prevNode){ ax = prevNode.x; ay = prevNode.y; }
+    else { const P = planetPos(prev.world, orbitAngle); ax = P.x; ay = P.y; }
+    const B = expLayout.topics.find(q => q.t === hit.topic);
+    if (B){
+      const mx = (ax + B.x) / 2, my = (ay + B.y) / 2 - 18;
+      linesSvg.appendChild(svgEl("path", {class:"jtrail", d:"M" + ax + "," + ay + " Q" + mx + "," + my + " " + B.x + "," + B.y}));
+    }
+  }
+  const last = journey.idx === def.steps.length - 1;
+  jpanel.innerHTML =
+    "<div class='step'>Guided journey \u00b7 step " + (journey.idx + 1) + " of " + def.steps.length + "</div>" +
+    "<h3>" + hit.topic.title + "</h3>" +
+    "<p>" + step.say + "</p>" +
+    "<p class='srclab'>Sources for this step</p><ul>" +
+    hit.topic.sources.map(x => "<li><a href='" + x.url + "' target='_blank' rel='noopener'>" + x.label + "</a></li>").join("") + "</ul>" +
+    (last && def.note ? "<p class='note'>" + def.note + "</p>" : "") +
+    "<div class='row'><button id='jprev'" + (journey.idx === 0 ? " disabled" : "") + ">← Back</button>" +
+    "<button id='jnext'>" + (last ? "Finish ✓" : "Next →") + "</button></div>" +
+    "<button class='full' id='jfull'>Full details &amp; all connections</button><br>" +
+    "<button class='full' id='jexit'>Exit journey</button>";
+  jpanel.classList.add("on");
+  document.getElementById("jnext").addEventListener("click", () => {
+    if (journey.idx < def.steps.length - 1){ journey.idx++; showJourneyStep(); } else exitJourney();
+  });
+  document.getElementById("jprev").addEventListener("click", () => {
+    if (journey.idx > 0){ journey.idx--; showJourneyStep(); }
+  });
+  document.getElementById("jfull").addEventListener("click", () => openCard(step.t));
+  document.getElementById("jexit").addEventListener("click", () => exitJourney());
+  if (!document.body.classList.contains("listmode")){
+    const nb = document.getElementById("jnext");
+    if (nb) nb.focus({preventScroll:true});
+  }
+}
+
+function startJourney(def){
+  journey = {def, idx:0};
+  document.querySelectorAll(".jbtn").forEach(b => b.classList.toggle("active", b.dataset.journey === def.id));
+  showJourneyStep();
+}
+
+function exitJourney(){
+  journey = null;
+  jpanel.classList.remove("on");
+  clearJourneyMarks();
+  document.querySelectorAll(".jbtn").forEach(b => b.classList.remove("active"));
+}
+
+const guide = document.querySelector('.guide');
+const guideToggle = document.querySelector('.guide-toggle');
+function closeGuide(){guide.classList.remove('open');guideToggle.setAttribute('aria-expanded','false')}
+guideToggle.addEventListener('click',()=>{const open=guide.classList.toggle('open');guideToggle.setAttribute('aria-expanded',String(open))});
+document.addEventListener('click',e=>{if(!guide.contains(e.target))closeGuide()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape' && guide.classList.contains('open')){closeGuide();guideToggle.focus()}});
+document.querySelectorAll(".jbtn").forEach(b => b.addEventListener("click", () => {
+  closeGuide();
+  const def = JOURNEYS.find(x => x.id === b.dataset.journey);
+  if (!def) return;
+  if (journey && journey.def === def) exitJourney(); else startJourney(def);
+}));
+
+/* ---- simple topic search ---- */
+const searchInput = document.getElementById("search");
+const resultsBox = document.getElementById("results");
+const searchWrap = document.querySelector('.searchwrap');
+function closeSearch(){resultsBox.classList.remove('on');resultsBox.innerHTML='';searchInput.value=''}
+document.addEventListener('click',e=>{if(!searchWrap.contains(e.target))closeSearch()});
+
+searchInput.addEventListener("input", () => {
+  const q = searchInput.value.trim().toLowerCase();
+  if (q.length < 2){ resultsBox.classList.remove("on"); resultsBox.innerHTML = ""; return; }
+  const hits = [];
+  GALAXY.worlds.forEach(w => w.topics.forEach(t => {
+    if ((t.title + " " + t.tagline + " " + w.title).toLowerCase().includes(q)) hits.push({w, t});
+  }));
+  resultsBox.innerHTML = hits.slice(0, 8).map(h =>
+    "<button data-ref='" + h.w.id + "/" + h.t.id + "'><b>" + h.t.title + "</b>" +
+    "<span class='where'>" + h.w.title + " \u00b7 " + h.t.tagline + "</span></button>").join("")
+    || "<button disabled><span class='where'>No matching topics</span></button>";
+  resultsBox.classList.add("on");
+  resultsBox.querySelectorAll("button[data-ref]").forEach(b => b.addEventListener("click", () => {
+    exitJourney();
+    expandWorld(b.dataset.ref.split("/")[0]);
+    openCard(b.dataset.ref);
+    closeSearch();
+    closeGuide();
+  }));
+});
+searchInput.addEventListener("keydown", e => {
+  if (e.key === "Escape"){
+    e.stopPropagation();
+    closeSearch();
+    guideToggle.focus();
+  }
+});
+searchInput.addEventListener("blur", () => setTimeout(() => resultsBox.classList.remove("on"), 150));
+</script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galaxy of AI — first constellation</title>
+<meta name="description" content="A small, beginner-friendly map of how AI connects to data centres, electricity, economics, jobs, governance and human oversight. Personal learning prototype; every link is labelled and source-linked.">
+<style>
+  :root{
+    --ink:#1e293b; --muted:#64748b; --bg:#f8fafc; --card:#ffffff;
+    --topic:#64748b; --fact:#15803d; --unknown:#b45309; --accent:#4338ca;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  header{padding:20px 24px 8px;max-width:1240px;margin:0 auto}
+  header h1{margin:0 0 4px;font-size:26px}
+  header p{margin:4px 0;color:var(--muted);max-width:900px}
+  .layout{display:flex;gap:16px;padding:8px 24px 32px;max-width:1240px;margin:0 auto;align-items:flex-start}
+  .mapwrap{flex:1 1 auto;min-width:0;overflow:auto;border:1px solid #e2e8f0;border-radius:14px;background:#fff}
+  #canvas{position:relative;width:1200px;height:820px}
+  #edges{position:absolute;inset:0}
+  .node{position:absolute;transform:translate(-50%,-50%);border:2px solid #cbd5e1;border-radius:16px;background:#fff;
+        padding:10px 12px;min-width:150px;max-width:170px;text-align:center;cursor:pointer;
+        box-shadow:0 1px 3px rgba(15,23,42,.12);transition:box-shadow .15s,border-color .15s,opacity .2s}
+  .node:hover{border-color:#94a3b8}
+  .node .t{font-weight:700;font-size:15px;display:block}
+  .node .s{font-size:11.5px;color:var(--muted);display:block;margin-top:2px}
+  .node.hub{border-color:var(--accent);background:#eef2ff;min-width:190px;max-width:210px;padding:14px 12px}
+  .node.hub .t{font-size:19px}
+  .node.sel{border-color:var(--accent);box-shadow:0 0 0 4px rgba(67,56,202,.18)}
+  .node.dim,.edge.dim{opacity:.18}
+  .edge{transition:opacity .2s}
+  .edge path.line{fill:none;stroke-width:2.5}
+  .edge.t-label{font-size:12px;font-weight:600}
+  .panel{flex:0 0 360px;position:sticky;top:16px}
+  .card{background:var(--card);border:1px solid #e2e8f0;border-radius:14px;padding:16px 18px;margin-bottom:14px}
+  .card h2{margin:0 0 2px;font-size:19px}
+  .card .tag{color:var(--muted);font-size:13.5px;margin:0 0 10px}
+  .card p{margin:8px 0;font-size:14.5px}
+  .careful{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:10px 12px;margin:10px 0;font-size:13.5px}
+  .careful b{color:#92400e}
+  ul{margin:6px 0;padding-left:20px}
+  li{margin:4px 0;font-size:13.5px}
+  a{color:var(--accent)}
+  .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.02em;border-radius:999px;padding:1px 9px;vertical-align:1px}
+  .badge.topic{background:#e2e8f0;color:#334155}
+  .badge.fact{background:#dcfce7;color:#166534}
+  .badge.unknown{background:#fef3c7;color:#92400e}
+  .conn{font-size:13.5px;margin:3px 0}
+  .paths{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .paths button,.reset{border:1px solid #cbd5e1;background:#fff;border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer;color:var(--ink)}
+  .paths button:hover,.reset:hover{border-color:var(--accent);color:var(--accent)}
+  .legend{font-size:13.5px;margin:2px 0}
+  footer{max-width:1240px;margin:0 auto;padding:0 24px 36px;color:var(--muted);font-size:12.5px}
+  footer p{margin:4px 0}
+  @media (max-width:1080px){
+    .layout{flex-direction:column}
+    .panel{position:static;flex:none;width:100%}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Galaxy of AI — first constellation</h1>
+  <p>A small, explorable map for one learner: <b>AI at the centre</b>, and its connections to data &amp; compute, data centres, electricity, place, economics, jobs, governance and human oversight. Click any node to read a short, source-linked explanation.</p>
+  <p>How to read the lines: <span class="badge topic">topic link</span> means two subjects are related — <b>not</b> that one causes the other. <span class="badge fact">fact (sourced)</span> points to something documented. <span class="badge unknown">open question</span> is something nobody has settled here.</p>
+</header>
+
+<div class="layout">
+  <div class="mapwrap">
+    <div id="canvas">
+      <svg id="edges" width="1200" height="820" viewBox="0 0 1200 820" aria-hidden="true"></svg>
+      <!-- nodes are injected here -->
+    </div>
+  </div>
+
+  <aside class="panel">
+    <div class="paths" id="paths">
+      <button data-path="ai,compute,centres,electricity">Path 1 · question → infrastructure</button>
+      <button data-path="ai,governance,oversight">Path 2 · AI → institutional control</button>
+      <button data-path="centres,electricity,place">Path 3 · data centres → place</button>
+      <button class="reset" id="reset">Show everything</button>
+    </div>
+    <div class="card" id="panel"></div>
+  </aside>
+</div>
+
+<footer>
+  <p><b>What this is:</b> a personal learning prototype (v0.1, 1 Nov 2026), not a research instrument. Single HTML file — no framework, no accounts, no paid APIs, no external assets; it loads nothing from the internet (source links open only if you click them).</p>
+  <p><b>Honest framing:</b> topic links mean “these subjects are related”, never “this causes that”. Facts are summaries of the linked sources — check the originals before relying on them. Existing tools that inspired this (all mapped in PRE-STUDY.md): MIT AI Governance Map, OECD AI Policy Navigator, OpenAlex Topics, ArusGrid, Open Knowledge Maps. Nothing here claims to be novel research.</p>
+</footer>
+
+<script>
+"use strict";
+
+/* ---------- Data ---------- */
+
+const NODES = [
+  {
+    id:"ai", hub:true, x:600, y:410, title:"AI", tagline:"The centre of this map",
+    body:[
+      "Artificial intelligence here means computer systems that do things we used to need people for: writing text, answering questions, spotting patterns, writing code.",
+      "Modern AI is mostly large models — programs trained on huge amounts of data, then run (the jargon is \u201cinference\u201d) every time someone uses them.",
+      "Everything else on this map connects to AI in one of four ways: building it, running it, paying for it, or governing it."
+    ],
+    careful:"This map shows relationships between subjects. It does not claim that any of them cause the others.",
+    sources:[
+      {label:"OpenAlex Topics — how scholars classify AI research", url:"https://help.openalex.org/data/topics/"},
+      {label:"OECD AI Policy Navigator — policies across 80+ jurisdictions", url:"https://oecd.ai/en/dashboards/international"}
+    ]
+  },
+  {
+    id:"compute", x:360, y:180, title:"Data &amp; compute", tagline:"What AI is made of",
+    body:[
+      "Training and using AI takes three ingredients: the model itself, the data it learns from, and \u201ccompute\u201d — the specialised chips that do the maths.",
+      "Who owns the chips, the data and the software matters, because it decides who can check, change or switch off an AI system."
+    ],
+    careful:"\u201cCompute\u201d is just jargon for computing power. Bigger models generally need more of it — but this map does not quote specific numbers.",
+    sources:[
+      {label:"OECD AI Policy Navigator — includes a \u201ccompute\u201d policy topic", url:"https://oecd.ai/en/dashboards/international"},
+      {label:"OpenAlex Topics — machine-assigned research topics", url:"https://help.openalex.org/data/topics/"}
+    ]
+  },
+  {
+    id:"centres", x:170, y:410, title:"Data centres", tagline:"Where compute physically lives",
+    body:[
+      "Data centres are buildings full of computers. When you use an AI service, somewhere a machine in a building like this is doing the work.",
+      "They are planned one project at a time, and two independent trackers watch them. ArusGrid lists projects across Southeast Asia, the Gulf and India, with each claim backed by a dated source. Epoch AI tracks AI-optimised data centres worldwide, partly by studying satellite photos of cooling equipment.",
+      "A data centre\u2019s size is measured by the electricity its computers use (the \u201cIT load\u201d). AI centres are much denser than ordinary ones: an ISIS Malaysia paper contrasts traditional racks of 5\u201310 kW with AI racks of 60 kW or more."
+    ],
+    careful:"Both trackers are honest about gaps: ArusGrid says its live megawatt figures are \u201csystematically undercount[ed]\u201d, and Epoch AI estimates it covers only about 46% of global AI compute (30\u201378% likely range), because ownership is often secret and small sites are easy to miss. A missing number is not evidence that the true number is zero.",
+    sources:[
+      {label:"ArusGrid — methodology (independent data-centre tracker)", url:"https://arusgrid.com/methodology"},
+      {label:"Epoch AI — Data Centers database, methodology", url:"https://epoch.ai/data/data-centers-documentation/methodology"},
+      {label:"ISIS Malaysia — AI and Climate Considerations (Jun 2026)", url:"https://www.cert.isis.org.my/publications/ai-and-climate-considerations/"}
+    ]
+  },
+  {
+    id:"electricity", x:360, y:640, title:"Electricity", tagline:"Data centres plug into the grid",
+    body:[
+      "Physically, a data centre is a large electricity customer: its computers and cooling systems run around the clock.",
+      "The scale is becoming national news. An ISEAS commentary reports that Malaysian data centres are projected to need over 5,000 MW by 2035 — about 40% of Peninsular Malaysia\u2019s present power capacity — and that operators have already secured maximum demand of 5.9 GW from the utility TNB, which the author calls \u201chazardously high\u201d.",
+      "The International Energy Agency keeps a dedicated tracker of data-centre electricity consumption (2015\u20132025). How much electricity AI in particular uses worldwide is an actively discussed question with a range of estimates — this map deliberately does not quote one global number."
+    ],
+    careful:"The ISEAS piece is a commentary by one author (the institute notes the views are hers), and some figures rest on industry data without a full capacity breakdown. Estimates also differ in what they count (AI only, or all data centres?) and in which years they cover.",
+    sources:[
+      {label:"ISEAS Perspective 2025/43 — Sara Loo on Malaysia\u2019s data-centre energy balance (Jun 2025)", url:"https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo"},
+      {label:"IEA — Data Centres: electricity consumption", url:"https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks"}
+    ]
+  },
+  {
+    id:"place", x:610, y:745, title:"Water, land &amp; neighbours", tagline:"Data centres are built in real places",
+    body:[
+      "A data centre needs land, a grid connection, cooling water and permits — decided through local planning, with residents and businesses living with the results.",
+      "Katadata\u2019s report on Batam, Indonesia, shows both sides of the boom: at least 18 data centres planned or being built on an island that \u201crelies entirely on six rain-fed reservoirs\u201d. The flagship project could use around 3 million litres of water a day, and by 2032 ten facilities could need about 8% of the island\u2019s current total water supply — while 18 areas already face rationing.",
+      "The same report says fixing Batam\u2019s water pipes would cost about 74% of the authority\u2019s annual budget, and ends on an open question: in a drought, who gets the water first?"
+    ],
+    careful:"The report itself does not claim data centres caused a particular household shortage — the 2024 crisis in one area was blamed on a pipe leak. Reported water stress alongside data-centre growth is not the same as proven causation. Whether, when and how much data centres affect local water is a case-by-case question — an open unknown, not a settled fact.",
+    sources:[
+      {label:"Katadata — A Digital Boom in a Thirsty City (Batam)", url:"https://katadata.co.id/data-center-batam/en"}
+    ]
+  },
+  {
+    id:"economics", x:1040, y:410, title:"Economics", tagline:"Who pays, who gains",
+    body:[
+      "AI is also an economic story: investment, ownership, productivity and trade — including chips and export controls.",
+      "One IMF working paper used AI-related patents from 2000\u20132017 and estimated that historical AI innovation is associated with roughly 0.8\u20131.2% higher output per worker.",
+      "Data centres are big capital projects; ArusGrid records capital and power costs per project — where figures are public."
+    ],
+    careful:"The IMF estimate is based on a pre-generative-AI patent proxy: a historical association, not a measurement of today\u2019s AI boom.",
+    sources:[
+      {label:"IMF Working Paper 2026/204 — AI and aggregate labour productivity", url:"https://www.imf.org/en/publications/wp/issues/2026/09/25/artificial-intelligence-and-aggregate-labor-productivity-evidence-from-patent-data-579850"},
+      {label:"ArusGrid — capital and power costs per project", url:"https://arusgrid.com/methodology"}
+    ]
+  },
+  {
+    id:"jobs", x:840, y:640, title:"Jobs &amp; AI exposure", tagline:"What AI might do to work",
+    body:[
+      "\u201cAI exposure\u201d means how much of a job\u2019s tasks could be done or changed by AI. It is measured and debated — and it is not the same as \u201cAI replaces jobs\u201d.",
+      "A US Census Bureau working paper (September 2026) found that after ChatGPT arrived, recent graduates in the most AI-exposed college majors had about 5 percentage points lower initial employment and about 13% lower initial earnings than comparable graduates before."
+    ],
+    careful:"The authors note the comparison cannot cleanly separate AI\u2019s effect from everything else happening in the labour market at the same time. It is evidence of change, not proof of cause.",
+    sources:[
+      {label:"US Census Bureau — CES Working Paper 26-56 (Sep 2026)", url:"https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html"}
+    ]
+  },
+  {
+    id:"governance", x:840, y:180, title:"Governance", tagline:"Rules for AI, and who writes them",
+    body:[
+      "AI governance means the laws, regulations, standards and policies that try to steer how AI is built and used.",
+      "The MIT AI Governance Map classifies more than 1,000 governance documents by risk, sector and scope — and warns that its findings are \u201cindicative\u201d and that most documents are from the US.",
+      "The OECD AI Policy Navigator lists AI policy initiatives from more than 80 jurisdictions and organisations."
+    ],
+    careful:"A map of documents is not a map of what actually happens. Written rules and real-world practice can come apart.",
+    sources:[
+      {label:"MIT AI Governance Map (CC BY 4.0 data)", url:"https://airisk.mit.edu/ai-governance"},
+      {label:"OECD AI Policy Navigator", url:"https://oecd.ai/en/dashboards/international"}
+    ]
+  },
+  {
+    id:"oversight", x:600, y:95, title:"Human oversight", tagline:"People and systems checking AI",
+    body:[
+      "Oversight means humans — and monitoring systems — watching what AI does, and being able to stop or correct it.",
+      "This oversight machinery (logs, monitors, alerts) is itself built infrastructure, and it can fail. In October 2026, OpenAI reported that two of its internal coding agents had disabled security alerts or removed monitoring during routine tasks.",
+      "An external team (METR and Redwood Research) red-teamed OpenAI\u2019s agent monitoring as it existed between 21 July and 11 August 2026, and found ways monitoring could be bypassed."
+    ],
+    careful:"The red team described the system as it was before 21 July 2026. OpenAI said most issues were later fixed; METR did not independently verify those fixes. Disabling alerts is documented — why the agents did it is not settled.",
+    sources:[
+      {label:"OpenAI — incident report: suppressing misalignment monitoring (20 Oct 2026)", url:"https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/"},
+      {label:"METR — Red-Teaming OpenAI\u2019s Internal Agent Monitoring Systems (22 Oct 2026)", url:"https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/"}
+    ]
+  }
+];
+
+/* Edge types:
+   topic   = "these subjects are related" (no causal claim)
+   fact    = documented, source-linked (see the node panels)
+   unknown = genuinely unsettled; the map does not pretend to answer it */
+const EDGES = [
+  {from:"ai", to:"compute", type:"topic", label:"built from"},
+  {from:"ai", to:"centres", type:"topic", label:"runs on"},
+  {from:"ai", to:"electricity", type:"unknown", label:"uses power — how much?"},
+  {from:"ai", to:"economics", type:"topic", label:"investment &amp; ownership"},
+  {from:"ai", to:"jobs", type:"topic", label:"changes tasks"},
+  {from:"ai", to:"governance", type:"topic", label:"governed by rules"},
+  {from:"oversight", to:"ai", type:"fact", label:"documented events, 2026"},
+  {from:"compute", to:"centres", type:"topic", label:"physically lives here"},
+  {from:"centres", to:"electricity", type:"fact", label:"sized in megawatts (IT load)"},
+  {from:"electricity", to:"place", type:"topic", label:"shares the local grid &amp; water"},
+  {from:"centres", to:"place", type:"unknown", label:"local effects: case by case"},
+  {from:"economics", to:"jobs", type:"fact", label:"Census: AI-exposed graduates"},
+  {from:"governance", to:"oversight", type:"topic", label:"rules demand checkers", lt:0.32}
+];
+
+const TYPE_COLOR = {topic:"#94a3b8", fact:"#16a34a", unknown:"#d97706"};
+const TYPE_NAME  = {topic:"topic link", fact:"fact (sourced)", unknown:"open question"};
+
+/* ---------- Build the SVG edges ---------- */
+
+const svg = document.getElementById("edges");
+const SVGNS = "http://www.w3.org/2000/svg";
+const byId = {}; NODES.forEach(n => byId[n.id] = n);
+
+function edgeGeometry(e, i){
+  const a = byId[e.from], b = byId[e.to];
+  const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+  const dx = b.x - a.x, dy = b.y - a.y;
+  const len = Math.hypot(dx, dy) || 1;
+  const bend = (i % 2 === 0 ? 1 : -1) * Math.min(46, len * 0.14);
+  const cx = mx + (-dy / len) * bend, cy = my + (dx / len) * bend;
+  const t = e.lt || 0.5, u = 1 - t; // label sits at parameter t along the curve
+  return {x1:a.x, y1:a.y, cx, cy, x2:b.x, y2:b.y,
+          mx:u*u*a.x + 2*u*t*cx + t*t*b.x, my:u*u*a.y + 2*u*t*cy + t*t*b.y};
+}
+
+EDGES.forEach((e, i) => {
+  const g = edgeGeometry(e, i);
+  const grp = document.createElementNS(SVGNS, "g");
+  grp.setAttribute("class", "edge");
+  grp.dataset.edge = i;
+
+  const p = document.createElementNS(SVGNS, "path");
+  p.setAttribute("class", "line");
+  p.setAttribute("d", "M" + g.x1 + "," + g.y1 + " Q" + g.cx + "," + g.cy + " " + g.x2 + "," + g.y2);
+  p.setAttribute("stroke", TYPE_COLOR[e.type]);
+  if (e.type === "unknown") p.setAttribute("stroke-dasharray", "7 6");
+  const tip = document.createElementNS(SVGNS, "title");
+  tip.textContent = e.from + " — " + e.to + " : " + TYPE_NAME[e.type] + " (not a causal claim)";
+  p.appendChild(tip);
+  grp.appendChild(p);
+
+  const t = document.createElementNS(SVGNS, "text");
+  t.setAttribute("class", "t-label");
+  t.setAttribute("x", g.mx);
+  t.setAttribute("y", g.my - 6);
+  t.setAttribute("text-anchor", "middle");
+  t.setAttribute("fill", TYPE_COLOR[e.type]);
+  t.setAttribute("paint-order", "stroke");
+  t.setAttribute("stroke", "#ffffff");
+  t.setAttribute("stroke-width", "4");
+  t.innerHTML = e.label;
+  grp.appendChild(t);
+
+  svg.appendChild(grp);
+});
+
+/* ---------- Build the nodes ---------- */
+
+const canvas = document.getElementById("canvas");
+NODES.forEach(n => {
+  const el = document.createElement("button");
+  el.className = "node" + (n.hub ? " hub" : "");
+  el.style.left = n.x + "px";
+  el.style.top = n.y + "px";
+  el.dataset.node = n.id;
+  el.setAttribute("aria-pressed", "false");
+  el.innerHTML = "<span class='t'>" + n.title + "</span><span class='s'>" + n.tagline + "</span>";
+  el.addEventListener("click", () => selectNode(n.id));
+  canvas.appendChild(el);
+});
+
+/* ---------- Panel ---------- */
+
+const panel = document.getElementById("panel");
+const esc = s => s; // labels are authored here, not user input
+
+function connectionsOf(id){
+  return EDGES
+    .map((e, i) => ({e, i}))
+    .filter(({e}) => e.from === id || e.to === id)
+    .map(({e, i}) => {
+      const other = byId[e.from === id ? e.to : e.from];
+      const dir = e.from === id ? "\u2192 " : "\u2190 ";
+      return "<div class='conn'><span class='badge " + e.type + "'>" + TYPE_NAME[e.type] +
+             "</span> " + dir + other.title + " — <i>" + esc(e.label) + "</i></div>";
+    }).join("");
+}
+
+function showDefaultPanel(){
+  panel.innerHTML =
+    "<h2>How to read this map</h2>" +
+    "<p class='tag'>Click any node. Or trace one of the three paths from START-HERE.md.</p>" +
+    "<p class='legend'><span class='badge topic'>topic link</span> &nbsp;related subjects — <b>not</b> a causal claim.</p>" +
+    "<p class='legend'><span class='badge fact'>fact (sourced)</span> &nbsp;documented, with a link to the source.</p>" +
+    "<p class='legend'><span class='badge unknown'>open question</span> &nbsp;unsettled; the map does not pretend to answer it.</p>" +
+    "<p style='margin-top:12px'><b>The open questions on this map:</b></p>" +
+    "<ul>" +
+    "<li>How much electricity AI uses worldwide — estimates vary; see the <a href='https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks' target='_blank' rel='noopener'>IEA tracker</a>.</li>" +
+    "<li>Whether data centres caused the water insecurity reported in Batam — not established.</li>" +
+    "<li>How well AI oversight works after the October 2026 fixes — not independently verified.</li>" +
+    "</ul>";
+}
+showDefaultPanel();
+
+function showNodePanel(id){
+  const n = byId[id];
+  panel.innerHTML =
+    "<h2>" + n.title + "</h2>" +
+    "<p class='tag'>" + n.tagline + "</p>" +
+    n.body.map(p => "<p>" + p + "</p>").join("") +
+    "<div class='careful'><b>Handle with care:</b> " + n.careful + "</div>" +
+    "<p style='margin-bottom:2px'><b>Connections:</b></p>" + connectionsOf(id) +
+    "<p style='margin:12px 0 2px'><b>Sources:</b></p>" +
+    "<ul>" + n.sources.map(s => "<li><a href='" + s.url + "' target='_blank' rel='noopener'>" + s.label + "</a></li>").join("") + "</ul>";
+}
+
+/* ---------- Selection & paths ---------- */
+
+let selected = null, pathIds = null;
+
+function clearMarks(){
+  document.querySelectorAll(".node").forEach(el => {el.classList.remove("sel","dim"); el.setAttribute("aria-pressed","false");});
+  document.querySelectorAll(".edge").forEach(el => el.classList.remove("dim"));
+}
+
+function selectNode(id){
+  if (selected === id){ selected = null; clearMarks(); showDefaultPanel(); return; }
+  selected = id; pathIds = null;
+  clearMarks();
+  const keep = new Set([id]);
+  EDGES.forEach((e, i) => {
+    if (e.from === id || e.to === id){
+      keep.add(e.from); keep.add(e.to);
+      document.querySelector("[data-edge='" + i + "']").classList.add("keep");
+    } else {
+      document.querySelector("[data-edge='" + i + "']").classList.add("dim");
+    }
+  });
+  document.querySelectorAll(".node").forEach(el => {
+    if (el.dataset.node === id){ el.classList.add("sel"); el.setAttribute("aria-pressed","true"); }
+    else if (!keep.has(el.dataset.node)) el.classList.add("dim");
+  });
+  showNodePanel(id);
+}
+
+function highlightPath(ids){
+  selected = null; pathIds = ids;
+  clearMarks();
+  const keep = new Set(ids);
+  EDGES.forEach((e, i) => {
+    const inPath = ids.some((id, k) => {
+      if (k === 0) return false;
+      const prev = ids[k-1];
+      return (e.from === prev && e.to === id) || (e.from === id && e.to === prev);
+    });
+    if (inPath) keep.add(e.from), keep.add(e.to);
+    else document.querySelector("[data-edge='" + i + "']").classList.add("dim");
+  });
+  document.querySelectorAll(".node").forEach(el => {
+    if (!keep.has(el.dataset.node)) el.classList.add("dim");
+  });
+  const mid = ids[Math.floor(ids.length/2)];
+  showNodePanel(mid);
+}
+
+document.getElementById("paths").addEventListener("click", ev => {
+  const b = ev.target.closest("button[data-path]");
+  if (b) highlightPath(b.dataset.path.split(","));
+});
+document.getElementById("reset").addEventListener("click", () => {
+  selected = null; pathIds = null; clearMarks(); showDefaultPanel();
+});
+
+/* ---------- Fit the map to the available width ---------- */
+
+const mapwrap = document.querySelector(".mapwrap");
+function fitMap(){
+  const s = Math.min(1, mapwrap.clientWidth / 1200);
+  canvas.style.transformOrigin = "top left";
+  canvas.style.transform = "scale(" + s + ")";
+  mapwrap.style.height = (820 * s) + "px";
+}
+window.addEventListener("resize", fitMap);
+fitMap();
+</script>
+</body>
+</html>

@@ -1,0 +1,2665 @@
+{
+ "built": "2026-11-02",
+ "counts": {
+  "records_total": 147,
+  "records_mapped": 147,
+  "topic_record_links": 322,
+  "read_mapped": 183,
+  "indexed_only_mapped": 139,
+  "topics_total": 36,
+  "topics_with_records": 36,
+  "topics_without_records": 0
+ },
+ "zeroRecordTopics": [],
+ "institutionAbsences": "DAIR · Harvard BKC formal papers · ETH AI Center papers · Cambridge LCFI items · DeepMind per-paper items · Meta AI site papers · Vector Institute index · RIKEN AIP · Tsinghua KEG beyond GLM · Oxford Ethics items",
+ "byTopic": {
+  "how/models": [
+   {
+    "id": "tsinghua-glm130b",
+    "title": "GLM-130B: An Open Bilingual Pre-trained Model",
+    "url": "https://arxiv.org/abs/2210.02414",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Tsinghua University & BAAI (China)"
+   },
+   {
+    "id": "ai4bharat-indictrans2",
+    "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages",
+    "url": "https://arxiv.org/abs/2305.16307",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI4Bharat (India; IIT Madras ecosystem per search, not stated on arXiv page)"
+   },
+   {
+    "id": "llmjp-4-technical-report",
+    "title": "LLM-jp-4 Technical Paper",
+    "url": "https://arxiv.org/abs/2610.19331",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "LLM-jp (cross-organisational Japanese project; RIKEN/NII involvement per search coverage, not stated on the arXiv page)"
+   },
+   {
+    "id": "olmo-paper",
+    "title": "OLMo: Accelerating the Science of Language Models",
+    "url": "https://arxiv.org/abs/2402.00838",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ai2"
+   },
+   {
+    "id": "sealion-paper",
+    "title": "SEA-LION: Southeast Asian Languages in One Network",
+    "url": "https://arxiv.org/abs/2504.05747",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI Singapore"
+   },
+   {
+    "id": "meta-llama3-herd",
+    "title": "The Llama 3 Herd of Models",
+    "url": "https://arxiv.org/abs/2407.21783",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Meta"
+   },
+   {
+    "id": "olmo3-blog",
+    "title": "OLMo 3 (blog release)",
+    "url": "https://allenai.org/blog/olmo3",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Allen Institute for AI (Ai2)"
+   },
+   {
+    "id": "openalex-topics",
+    "title": "OpenAlex Topics",
+    "url": "https://help.openalex.org/data/topics/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OurResearch"
+   },
+   {
+    "id": "microsoft-sparks-gpt4",
+    "title": "Sparks of Artificial General Intelligence: Early experiments with GPT-4",
+    "url": "https://arxiv.org/abs/2303.12712",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Microsoft Research"
+   },
+   {
+    "id": "ibm-what-is-ai",
+    "title": "What is artificial intelligence (AI)?",
+    "url": "https://www.ibm.com/think/topics/artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IBM"
+   },
+   {
+    "id": "meta-llama4-blog",
+    "title": "The Llama 4 herd: natively multimodal intelligence",
+    "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence",
+    "tier": "S",
+    "tierLabel": "located via search (not read)",
+    "inst": "Meta"
+   },
+   {
+    "id": "epoch-ai-models-db",
+    "title": "AI models database (3,700+ models, 1950-today)",
+    "url": "https://epoch.ai/data/ai-models",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "chai-teacher-selection-rlhf",
+    "title": "Active teacher selection for reinforcement learning from human feedback",
+    "url": "https://arxiv.org/abs/2310.15288",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CHAI / UC Berkeley"
+   },
+   {
+    "id": "mila-diffusion-policy",
+    "title": "Adaptive Order Policies for Masked Diffusion",
+    "url": "https://doi.org/10.48550/arxiv.2606.00295",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Mila (Quebec AI Institute)"
+   },
+   {
+    "id": "eth-ai-center-index",
+    "title": "ETH AI Center publications index",
+    "url": "https://ai.ethz.ch/research/publications.html",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "ETH Zurich AI Center"
+   },
+   {
+    "id": "deepmind-publications-index",
+    "title": "Google DeepMind publications index (267 items)",
+    "url": "https://deepmind.google/publications/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Google DeepMind"
+   },
+   {
+    "id": "mila-speech-grounding",
+    "title": "Listen First, Then Answer: Timestamp-Grounded Speech Reasoning",
+    "url": "https://doi.org/10.48550/arXiv.2603.19468",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Mila (Quebec AI Institute)"
+   },
+   {
+    "id": "openai-research-index",
+    "title": "OpenAI research index (product-announcement heavy)",
+    "url": "https://openai.com/research/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "OpenAI"
+   },
+   {
+    "id": "mila-risk-rl",
+    "title": "Reward Redistribution for CVaR MDPs using a Bellman Operator on L-infinity",
+    "url": "https://doi.org/10.48550/arXiv.2602.03778",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Mila (Quebec AI Institute)"
+   },
+   {
+    "id": "mila-sft-rotation",
+    "title": "Rotation-Preserving Supervised Fine-Tuning",
+    "url": "https://doi.org/10.48550/arXiv.2605.10973",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Mila (Quebec AI Institute)"
+   }
+  ],
+  "how/data": [
+   {
+    "id": "wadipalapa-indonesia-ai-policy",
+    "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia",
+    "url": "https://doi.org/10.1177/18681034231226393",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"
+   },
+   {
+    "id": "tsinghua-glm130b",
+    "title": "GLM-130B: An Open Bilingual Pre-trained Model",
+    "url": "https://arxiv.org/abs/2210.02414",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Tsinghua University & BAAI (China)"
+   },
+   {
+    "id": "ai4bharat-indictrans2",
+    "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages",
+    "url": "https://arxiv.org/abs/2305.16307",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI4Bharat (India; IIT Madras ecosystem per search, not stated on arXiv page)"
+   },
+   {
+    "id": "olmo-paper",
+    "title": "OLMo: Accelerating the Science of Language Models",
+    "url": "https://arxiv.org/abs/2402.00838",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ai2"
+   },
+   {
+    "id": "sealion-paper",
+    "title": "SEA-LION: Southeast Asian Languages in One Network",
+    "url": "https://arxiv.org/abs/2504.05747",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI Singapore"
+   },
+   {
+    "id": "openalex-topics",
+    "title": "OpenAlex Topics",
+    "url": "https://help.openalex.org/data/topics/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OurResearch"
+   },
+   {
+    "id": "sealion-seald-dataset",
+    "title": "SEALD - Southeast Asian Languages in One Network Data",
+    "url": "https://aisingapore.org/aiproducts/southeast-asian-languages-in-one-network-data-seald",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "AI Singapore (National Research Foundation)"
+   },
+   {
+    "id": "ibm-what-is-ai",
+    "title": "What is artificial intelligence (AI)?",
+    "url": "https://www.ibm.com/think/topics/artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IBM"
+   }
+  ],
+  "how/inference": [
+   {
+    "id": "epoch-chatgpt-usage",
+    "title": "ChatGPT usage (YouGov panel metadata)",
+    "url": "https://epoch.ai/data/chatgpt-usage",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   }
+  ],
+  "how/evaluation": [
+   {
+    "id": "hai-ai-index-2026",
+    "title": "AI Index Report 2026",
+    "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Stanford HAI"
+   },
+   {
+    "id": "deepmind-stealth-sa",
+    "title": "Evaluating Frontier Models for Stealth and Situational Awareness",
+    "url": "https://arxiv.org/abs/2505.01420",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Google DeepMind"
+   },
+   {
+    "id": "chai-managing-risks",
+    "title": "Managing AI Risks in an Era of Rapid Progress",
+    "url": "https://arxiv.org/abs/2310.17688",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "CHAI / UC Berkeley (multi-institution statement)"
+   },
+   {
+    "id": "cset-redteaming-reporting",
+    "title": "Systematizing the Reporting of AI Red-Teaming",
+    "url": "https://cset.georgetown.edu/publication/systematizing-the-reporting-of-ai-red-teaming/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "meta-llama3-herd",
+    "title": "The Llama 3 Herd of Models",
+    "url": "https://arxiv.org/abs/2407.21783",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Meta"
+   },
+   {
+    "id": "kaist-ussafebench",
+    "title": "Is Safety Standard Same for Everyone? User-Specific Safety Evaluation of Large Language Models",
+    "url": "https://arxiv.org/abs/2502.15086",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "KAIST (Data Science & AI Lab) et al."
+   },
+   {
+    "id": "riegler-offensive-ai-governance",
+    "title": "Restricting the Model, Missing the System: Measurement and Accountability in Offensive AI Governance",
+    "url": "https://arxiv.org/abs/2605.09504",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Scandinavian AI safety researchers (affiliations not stated on arXiv page)"
+   },
+   {
+    "id": "microsoft-sparks-gpt4",
+    "title": "Sparks of Artificial General Intelligence: Early experiments with GPT-4",
+    "url": "https://arxiv.org/abs/2303.12712",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Microsoft Research"
+   },
+   {
+    "id": "chula-ai-china-labor-thesis",
+    "title": "The impact of artificial intelligence on China's labor market",
+    "url": "https://digital.car.chula.ac.th/chulaetd/74149",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Chulalongkorn University, Faculty of Economics (Thailand)"
+   },
+   {
+    "id": "openai-oss-safeguard",
+    "title": "gpt-oss-safeguard technical report",
+    "url": "https://openai.com/index/gpt-oss-safeguard-technical-report/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OpenAI"
+   },
+   {
+    "id": "semianalysis-china-frontier",
+    "title": "Beijing Will Not Pace the Frontier: China's Speed-First AI Safety Regime",
+    "url": "https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "SemiAnalysis (industry research; not peer-reviewed)"
+   },
+   {
+    "id": "huang-deepseek-eval",
+    "title": "Evaluating DeepSeek V4.1 Flash-1017 for loss of control and harmful manipulation risks",
+    "url": "https://arxiv.org/abs/2610.35671",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "arXiv preprint (independent; not peer-reviewed)"
+   },
+   {
+    "id": "metr-anthropic-review",
+    "title": "Review of the 'Misalignment in high-stakes settings' section in Anthropic's Risk Report (August 2026)",
+    "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "METR (external review of corporate risk assessment)"
+   },
+   {
+    "id": "epoch-ai-models-db",
+    "title": "AI models database (3,700+ models, 1950-today)",
+    "url": "https://epoch.ai/data/ai-models",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "anthropic-ukaisi-assessment",
+    "title": "An alignment assessment of the UK AISI cybertesting incident",
+    "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Anthropic"
+   },
+   {
+    "id": "ada-care-consideration",
+    "title": "Care and consideration",
+    "url": "https://www.adalovelaceinstitute.org/report/care-and-consideration/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "mila-ecuas",
+    "title": "ECUAS: metrics for principled evaluation of uncertainty-augmented systems",
+    "url": "https://openreview.net/forum?id=O9u4lItD9K",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Mila (Quebec AI Institute)"
+   },
+   {
+    "id": "eth-ai-center-index",
+    "title": "ETH AI Center publications index",
+    "url": "https://ai.ethz.ch/research/publications.html",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "ETH Zurich AI Center"
+   },
+   {
+    "id": "mila-gitchameleon",
+    "title": "GitChameleon 2.0: Evaluating AI Code Generation Against Python Library Version Incompatibilities",
+    "url": "https://doi.org/10.48550/arXiv.2507.12367",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Mila (Quebec AI Institute)"
+   },
+   {
+    "id": "deepmind-publications-index",
+    "title": "Google DeepMind publications index (267 items)",
+    "url": "https://deepmind.google/publications/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Google DeepMind"
+   },
+   {
+    "id": "openai-sora2-card",
+    "title": "Sora 2 System Card",
+    "url": "https://openai.com/index/sora-2-system-card/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "OpenAI"
+   },
+   {
+    "id": "chai-tasra",
+    "title": "TASRA: A Taxonomy of Societal-Scale Risks from AI",
+    "url": "https://arxiv.org/abs/2306.06924",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CHAI / UC Berkeley"
+   },
+   {
+    "id": "epoch-trends",
+    "title": "Trends in AI",
+    "url": "https://epoch.ai/trends",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   }
+  ],
+  "how/agents": [
+   {
+    "id": "vector-agentic-worm",
+    "title": "AI Agents Enable Adaptive Computer Worms",
+    "url": "https://arxiv.org/abs/2606.03811",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Vector Institute / University of Toronto et al."
+   },
+   {
+    "id": "eth-camel",
+    "title": "Defeating Prompt Injections by Design",
+    "url": "https://arxiv.org/abs/2503.18813",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Google DeepMind & ETH Zurich (SPY Lab) collaboration"
+   },
+   {
+    "id": "deepmind-stealth-sa",
+    "title": "Evaluating Frontier Models for Stealth and Situational Awareness",
+    "url": "https://arxiv.org/abs/2505.01420",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Google DeepMind"
+   },
+   {
+    "id": "govai-agents-infrastructure",
+    "title": "Infrastructure for AI Agents",
+    "url": "https://arxiv.org/abs/2501.10114",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "GovAI (Centre for the Governance of AI); accepted to TMLR"
+   },
+   {
+    "id": "anthropic-agents-judgment",
+    "title": "Who's Aligned to Whom? How AI Agents Shape Experts' Research Judgment Calls",
+    "url": "https://www.anthropic.com/research/agents-judgment-calls",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Anthropic"
+   },
+   {
+    "id": "openai-pacing-cyber",
+    "title": "Pacing model development in an era of cyber-critical capabilities",
+    "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OpenAI"
+   },
+   {
+    "id": "metr-openai-redteam",
+    "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
+    "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "METR (external technical assessment; not peer-reviewed)"
+   },
+   {
+    "id": "openai-long-horizon-safety",
+    "title": "Safety and alignment in an era of long-horizon models",
+    "url": "https://openai.com/index/safety-alignment-long-horizon-models/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OpenAI"
+   },
+   {
+    "id": "anthropic-threat-intel",
+    "title": "Detecting and countering misuse of AI: September 2026",
+    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Anthropic (provider-authored primary source)"
+   },
+   {
+    "id": "openai-monitoring-incident",
+    "title": "Suppressing misalignment monitoring alerts and disabling misalignment monitoring",
+    "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "OpenAI (primary-source corporate incident report)"
+   },
+   {
+    "id": "mila-diffusion-policy",
+    "title": "Adaptive Order Policies for Masked Diffusion",
+    "url": "https://doi.org/10.48550/arxiv.2606.00295",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Mila (Quebec AI Institute)"
+   },
+   {
+    "id": "ainow-kill-chain",
+    "title": "Anatomy of an AI Kill Chain (with Airwars)",
+    "url": "https://ainowinstitute.org/publications/anatomy-of-an-ai-kill-chain",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "cset-coalition-ops",
+    "title": "Coalition Operations",
+    "url": "https://cset.georgetown.edu/publication/coalition-operations/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "chai-control-roadmap",
+    "title": "Control for Societal-scale Challenges: Road Map 2030",
+    "url": "https://ieeecss.org/control-societal-scale-challenges-road-map-2030",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CHAI / UC Berkeley + IEEE CSS"
+   },
+   {
+    "id": "ainow-double-agents",
+    "title": "Double Agents: Defensive AI Agents Magnify Cyber Risks",
+    "url": "https://ainowinstitute.org/publications/double-agents",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "deepmind-publications-index",
+    "title": "Google DeepMind publications index (267 items)",
+    "url": "https://deepmind.google/publications/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Google DeepMind"
+   },
+   {
+    "id": "anthropic-unintended-actions",
+    "title": "Investigating unintended model actions in our evaluations and internal use",
+    "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Anthropic"
+   },
+   {
+    "id": "mila-risk-rl",
+    "title": "Reward Redistribution for CVaR MDPs using a Bellman Operator on L-infinity",
+    "url": "https://doi.org/10.48550/arXiv.2602.03778",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Mila (Quebec AI Institute)"
+   }
+  ],
+  "how/using": [
+   {
+    "id": "oxford-martin-cloud-governance",
+    "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
+    "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Oxford Martin School, University of Oxford"
+   },
+   {
+    "id": "nus-genai-cs-education",
+    "title": "Reshaping Undergraduate Computer Science Education in the Generative AI Era",
+    "url": "https://arxiv.org/html/2606.07545v1",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "NUS School of Computing"
+   },
+   {
+    "id": "ginting-civil-servants-dataset",
+    "title": "Dataset on Digital Competence, AI Literacy, Generative AI Use, Organizational Support, Public Service Motivation, and Work Performance among Indonesian Civil Servants",
+    "url": "https://doi.org/10.17632/9b26sb2k4g.1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Mendeley Data v1 (CC BY 4.0)"
+   },
+   {
+    "id": "oecd-wp93-gov-genai",
+    "title": "Generative AI experimentation in government: Learning from emerging guidelines",
+    "url": "https://doi.org/10.1787/42815683-en",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD Working Paper No. 93"
+   },
+   {
+    "id": "turobov-coyle-archetypes",
+    "title": "Governing the evidence base: an empirical framework of AI archetypes for policy analysis",
+    "url": "https://doi.org/10.1017/dap.2026.10100",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Data & Policy (peer-reviewed, CC BY 4.0)"
+   },
+   {
+    "id": "van-es-deliberation",
+    "title": "Bringing Ethics to the Table: Presenting a Deliberation Tool for Data and AI in Media Organizations",
+    "url": "https://doi.org/10.1007/s44206-026-00294-y",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Digital Society (peer-reviewed; collaborative action research)"
+   }
+  ],
+  "infrastructure/centres": [
+   {
+    "id": "ainow-landscape-2025",
+    "title": "Artificial Power: 2025 Landscape Report",
+    "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "ember-asean-ai-emissions",
+    "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition",
+    "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ember (independent energy think tank)"
+   },
+   {
+    "id": "ucl-iipp-netzero-dri",
+    "title": "Public procurement for net-zero digital research infrastructure: a mission-oriented approach",
+    "url": "https://discovery.ucl.ac.uk/id/eprint/10196220",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "UCL Institute for Innovation and Public Purpose"
+   },
+   {
+    "id": "arusgrid",
+    "title": "ArusGrid — independent data-centre tracker",
+    "url": "https://arusgrid.com/methodology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ArusGrid"
+   },
+   {
+    "id": "uob-dbs-dayone-ndp-loan",
+    "title": "DBS and UOB jointly provide landmark IDR 6.7 trillion loan for DayOne-INA Batam data centre campus",
+    "url": "https://www.dbs.com/newsroom/DBS_and_UOB_arrange_record_IDR_6_7_trillion_SGD_530_million_loan_for_data_centre_development_project_by_DayOne_and_the_Indonesia_Investment_Authority",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "DBS & UOB (primary bank release; DBS newsroom)"
+   },
+   {
+    "id": "epoch-datacenters-methodology",
+    "title": "Epoch AI Data Centers database — methodology",
+    "url": "https://epoch.ai/data/data-centers-documentation/methodology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "epoch-trends-supercomputers",
+    "title": "Trends in AI Supercomputers",
+    "url": "https://epoch.ai/publications/trends-in-ai-supercomputers",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "airtrunk-jhb1-opening",
+    "title": "AirTrunk opens AI-ready data centre in Malaysia",
+    "url": "https://airtrunk.com/airtrunk-opens-ai-ready-data-centre-in-malaysia-accelerating-innovation-and-the-energy-transition/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AirTrunk"
+   },
+   {
+    "id": "blackstone-airtrunk",
+    "title": "Blackstone to acquire AirTrunk in A$24 billion transaction (US$16.1 billion)",
+    "url": "https://www.blackstone.com/press-releases/article/blackstone-to-acquire-airtrunk-in-a24-billion-transaction-us161-billion/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "Blackstone"
+   },
+   {
+    "id": "dayone-pln-ppa",
+    "title": "DayOne signs Indonesia's largest 511 MVA (450 MW) PPA with PLN Batam (Kabil campus)",
+    "url": "https://dayonedc.com/markets/dayone-signs-indonesias-largest-511mva-450mw-ppa-to-expand-hyperscale-data-center-platform-in-batam",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "DayOne"
+   },
+   {
+    "id": "epoch-gpu-clusters",
+    "title": "GPU clusters database (500+ clusters)",
+    "url": "https://epoch.ai/data/gpu-clusters",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "epoch-ai-data-centers-db",
+    "title": "AI data centers (open database)",
+    "url": "https://epoch.ai/data/ai-data-centers",
+    "tier": "?",
+    "tierLabel": "provenance unclear",
+    "inst": "Epoch AI"
+   }
+  ],
+  "infrastructure/electricity": [
+   {
+    "id": "iseas-malaysia-dc",
+    "title": "Data Centres, Energy Demand and Sustainability: Can Malaysia Strike the Right Balance?",
+    "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "ISEAS–Yusof Ishak Institute (Perspective 2025/43)"
+   },
+   {
+    "id": "iea-energy-and-ai",
+    "title": "Energy and AI",
+    "url": "https://www.iea.org/reports/energy-and-ai",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "IEA"
+   },
+   {
+    "id": "iea-data-centres",
+    "title": "Data Centres — Electricity consumption (tracker)",
+    "url": "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEA"
+   },
+   {
+    "id": "ainow-dc-toolkit",
+    "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions",
+    "url": "https://ainowinstitute.org/publications/data-center-policy-guide",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "aiddata-clg",
+    "title": "AidData: China's Loans and Grants to Low- and Middle-Income Countries v1.0",
+    "url": "https://docs.aiddata.org/ad4/datasets/AidDatas_CLG_LMIC_Dataset_v1.0.zip",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AidData"
+   },
+   {
+    "id": "airtrunk-jhb1-opening",
+    "title": "AirTrunk opens AI-ready data centre in Malaysia",
+    "url": "https://airtrunk.com/airtrunk-opens-ai-ready-data-centre-in-malaysia-accelerating-innovation-and-the-energy-transition/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AirTrunk"
+   },
+   {
+    "id": "airtrunk-vppa",
+    "title": "AirTrunk signs Malaysia's first data centre renewable VPPA",
+    "url": "https://www.airtrunk.com/news/airtrunk-signs-malaysias-first-data-centre-renewable-vppa/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AirTrunk"
+   },
+   {
+    "id": "dayone-pln-ppa",
+    "title": "DayOne signs Indonesia's largest 511 MVA (450 MW) PPA with PLN Batam (Kabil campus)",
+    "url": "https://dayonedc.com/markets/dayone-signs-indonesias-largest-511mva-450mw-ppa-to-expand-hyperscale-data-center-platform-in-batam",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "DayOne"
+   },
+   {
+    "id": "gem-ownership-api",
+    "title": "Global Energy Monitor Ownership Tracing API",
+    "url": "https://api.globalenergymonitor.org/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "Global Energy Monitor"
+   },
+   {
+    "id": "iea-key-questions",
+    "title": "Key Questions on Energy and AI",
+    "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "IEA"
+   }
+  ],
+  "infrastructure/water": [
+   {
+    "id": "katadata-batam",
+    "title": "A Digital Boom in a Thirsty City (Batam)",
+    "url": "https://katadata.co.id/data-center-batam/en",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Katadata.co.id (English edition)"
+   },
+   {
+    "id": "arusgrid",
+    "title": "ArusGrid — independent data-centre tracker",
+    "url": "https://arusgrid.com/methodology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ArusGrid"
+   }
+  ],
+  "infrastructure/chips": [
+   {
+    "id": "oxford-martin-cloud-governance",
+    "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
+    "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Oxford Martin School, University of Oxford"
+   },
+   {
+    "id": "cset-tracking-chips",
+    "title": "Tracking AI Chips",
+    "url": "https://cset.georgetown.edu/publication/tracking-ai-chips/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "arusgrid",
+    "title": "ArusGrid — independent data-centre tracker",
+    "url": "https://arusgrid.com/methodology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ArusGrid"
+   },
+   {
+    "id": "epoch-chip-users-explorer",
+    "title": "Introducing the AI Chip Users explorer",
+    "url": "https://epoch.ai/latest/introducing-the-ai-chip-users-explorer",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "epoch-trends-supercomputers",
+    "title": "Trends in AI Supercomputers",
+    "url": "https://epoch.ai/publications/trends-in-ai-supercomputers",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "patro-santacreu-targeted-trade",
+    "title": "Geopolitical Distance and Targeted Trade",
+    "url": "https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Federal Reserve Bank of St. Louis Review"
+   },
+   {
+    "id": "epoch-chip-sales",
+    "title": "AI chip sales",
+    "url": "https://epoch.ai/data/ai-chip-sales",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "epoch-gpu-clusters",
+    "title": "GPU clusters database (500+ clusters)",
+    "url": "https://epoch.ai/data/gpu-clusters",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "epoch-ml-hardware",
+    "title": "Machine learning hardware (180+ accelerators)",
+    "url": "https://epoch.ai/data/machine-learning-hardware",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "cset-semi-workforce",
+    "title": "Strengthening the U.S. Semiconductor Manufacturing Workforce",
+    "url": "https://cset.georgetown.edu/publication/strengthening-the-u-s-semiconductor-manufacturing-workforce/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CSET, Georgetown University"
+   }
+  ],
+  "infrastructure/land": [
+   {
+    "id": "iseas-malaysia-dc",
+    "title": "Data Centres, Energy Demand and Sustainability: Can Malaysia Strike the Right Balance?",
+    "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "ISEAS–Yusof Ishak Institute (Perspective 2025/43)"
+   },
+   {
+    "id": "ainow-dc-toolkit",
+    "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions",
+    "url": "https://ainowinstitute.org/publications/data-center-policy-guide",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "dosm-state-land-area",
+    "title": "Department of Statistics Malaysia — eStatistik publication log (state land area; Johor 19,166 km², 2020)",
+    "url": "https://www.dosm.gov.my/portal-main/publication-estatistik-log?chapter_id=1314&document_id=377",
+    "tier": "O",
+    "tierLabel": "official statistic (independently checked)",
+    "inst": "Department of Statistics Malaysia (official)"
+   },
+   {
+    "id": "airtrunk-pekatsolar",
+    "title": "AirTrunk and Pekat Solar to develop rooftop solar at JHB1",
+    "url": "https://airtrunk.com/airtrunk-and-pekat-solar-to-develop-rooftop-solar-at-airtrunks-johor-bahru-data-centre-jhb1/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AirTrunk"
+   }
+  ],
+  "infrastructure/grids": [
+   {
+    "id": "pursiainen-critical-infrastructure",
+    "title": "EU Governance of Critical Infrastructure: Resilience and Artificial Intelligence as Policy Challenges",
+    "url": "https://doi.org/10.1007/s41125-026-00115-w",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "European Journal for Security Research (peer-reviewed)"
+   },
+   {
+    "id": "chai-control-roadmap",
+    "title": "Control for Societal-scale Challenges: Road Map 2030",
+    "url": "https://ieeecss.org/control-societal-scale-challenges-road-map-2030",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CHAI / UC Berkeley + IEEE CSS"
+   }
+  ],
+  "infrastructure/cloud": [
+   {
+    "id": "cma-cloud-services-mi",
+    "title": "Cloud services market investigation — final decision (adverse effects on competition; SMS recommendation)",
+    "url": "https://www.gov.uk/cma-cases/cloud-services-market-investigation",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "UK Competition and Markets Authority (official regulator)"
+   },
+   {
+    "id": "oxford-martin-cloud-governance",
+    "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
+    "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Oxford Martin School, University of Oxford"
+   },
+   {
+    "id": "dict-philippines-cloudfirst",
+    "title": "Prescribing the Philippine Government's Cloud First Policy (DICT Department Circular 2017-002)",
+    "url": "https://ictknowledgeportal.dict.gov.ph/resources (official portal listing); PDF copy from the JETRO ASEAN-Japan mirror: jetro.go.jp/ext_images/jetro/activities/support/aseanjapan/report/3-6.pdf; amendment PDF from dataguidance.com mirror",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "DICT (Philippines government — official regulator)"
+   }
+  ],
+  "infrastructure/connectivity": [
+   {
+    "id": "tfgi-digital-sustainability",
+    "title": "Digital Sustainability: Southeast Asia's Next Frontier (executive summary)",
+    "url": "https://techforgoodinstitute.org/downloads/22867/20801/Executive-Summary_Digital-Sustainability-Southeast-Asias-Next-Frontier.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Tech for Good Institute (Singapore — SEA institute already indexed via its Vietnam AI Strategy piece)"
+   },
+   {
+    "id": "iseas-subsea-cables-2025",
+    "title": "The Struggle for Subsea Cable Supremacy in Southeast Asia: ASEAN Relying on Diverse Suppliers",
+    "url": "https://www.iseas.edu.sg/wp-content/uploads/2025/02/ISEAS_Perspective_2025_21.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "ISEAS – Yusof Ishak Institute (SEA institution already indexed)"
+   },
+   {
+    "id": "eria-adc2045-overview",
+    "title": "ASEAN Digital Community 2045: A Strategic Overview",
+    "url": "https://www.eria.org/uploads/ADC-2025-A-Strategic-Overview.pdf",
+    "tier": "?",
+    "tierLabel": "provenance unclear",
+    "inst": "ERIA (regional research institute supporting ASEAN)"
+   }
+  ],
+  "economics/investment": [
+   {
+    "id": "ainow-landscape-2025",
+    "title": "Artificial Power: 2025 Landscape Report",
+    "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "tfgi-digital-sustainability",
+    "title": "Digital Sustainability: Southeast Asia's Next Frontier (executive summary)",
+    "url": "https://techforgoodinstitute.org/downloads/22867/20801/Executive-Summary_Digital-Sustainability-Southeast-Asias-Next-Frontier.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Tech for Good Institute (Singapore — SEA institute already indexed via its Vietnam AI Strategy piece)"
+   },
+   {
+    "id": "ember-asean-ai-emissions",
+    "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition",
+    "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ember (independent energy think tank)"
+   },
+   {
+    "id": "arusgrid",
+    "title": "ArusGrid — independent data-centre tracker",
+    "url": "https://arusgrid.com/methodology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ArusGrid"
+   },
+   {
+    "id": "uob-dbs-dayone-ndp-loan",
+    "title": "DBS and UOB jointly provide landmark IDR 6.7 trillion loan for DayOne-INA Batam data centre campus",
+    "url": "https://www.dbs.com/newsroom/DBS_and_UOB_arrange_record_IDR_6_7_trillion_SGD_530_million_loan_for_data_centre_development_project_by_DayOne_and_the_Indonesia_Investment_Authority",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "DBS & UOB (primary bank release; DBS newsroom)"
+   },
+   {
+    "id": "epoch-datacenters-methodology",
+    "title": "Epoch AI Data Centers database — methodology",
+    "url": "https://epoch.ai/data/data-centers-documentation/methodology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "epoch-trends-supercomputers",
+    "title": "Trends in AI Supercomputers",
+    "url": "https://epoch.ai/publications/trends-in-ai-supercomputers",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "aiddata-clg",
+    "title": "AidData: China's Loans and Grants to Low- and Middle-Income Countries v1.0",
+    "url": "https://docs.aiddata.org/ad4/datasets/AidDatas_CLG_LMIC_Dataset_v1.0.zip",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AidData"
+   },
+   {
+    "id": "dcd-dayone-loan",
+    "title": "DayOne secures $412M loan for Batam data center campus",
+    "url": "https://www.datacenterdynamics.com/en/news/dayone-secures-412m-loan-for-batam-data-center-campus-in-indonesia",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "Data Center Dynamics (trade press)"
+   },
+   {
+    "id": "epoch-ai-data-centers-db",
+    "title": "AI data centers (open database)",
+    "url": "https://epoch.ai/data/ai-data-centers",
+    "tier": "?",
+    "tierLabel": "provenance unclear",
+    "inst": "Epoch AI"
+   }
+  ],
+  "economics/jobs": [
+   {
+    "id": "scitech-asia-ai-literacy",
+    "title": "Assessing Artificial Intelligence (AI) Literacy and Readiness in Thailand's Workforce: Challenges and Opportunities for Digital Transformation",
+    "url": "https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/256785",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "National Institute of Development Administration (NIDA), Bangkok + AGH Krakow"
+   },
+   {
+    "id": "stanford-canaries",
+    "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence",
+    "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Stanford Digital Economy Lab (Stanford University)"
+   },
+   {
+    "id": "ilo-wp140-genai-jobs",
+    "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure",
+    "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "International Labour Organization (ILO Working Paper 140)"
+   },
+   {
+    "id": "nus-genai-cs-education",
+    "title": "Reshaping Undergraduate Computer Science Education in the Generative AI Era",
+    "url": "https://arxiv.org/html/2606.07545v1",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "NUS School of Computing"
+   },
+   {
+    "id": "orr-census-exposure",
+    "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
+    "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Census Bureau CES Working Paper 26-56"
+   },
+   {
+    "id": "chula-ai-china-labor-thesis",
+    "title": "The impact of artificial intelligence on China's labor market",
+    "url": "https://digital.car.chula.ac.th/chulaetd/74149",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Chulalongkorn University, Faculty of Economics (Thailand)"
+   },
+   {
+    "id": "cset-stem-talent",
+    "title": "How Global Talent Pathways Shape U.S. STEM Award Achievement",
+    "url": "https://cset.georgetown.edu/publication/how-global-talent-pathways-shape-u-s-stem-award-achievement/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "ada-navigating-future",
+    "title": "Navigating the future",
+    "url": "https://www.adalovelaceinstitute.org/report/navigating-the-future/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "epoch-polling",
+    "title": "Polling on AI usage at work",
+    "url": "https://epoch.ai/data/polling",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "cset-semi-workforce",
+    "title": "Strengthening the U.S. Semiconductor Manufacturing Workforce",
+    "url": "https://cset.georgetown.edu/publication/strengthening-the-u-s-semiconductor-manufacturing-workforce/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "kas-flaminiano-sme-ai",
+    "title": "Exploring Readiness and Challenges to AI-Driven Competitiveness in Southeast Asian SMEs (in KAS volume 'The Experiences and Extent of Adopting AI among SMEs in Southeast Asia')",
+    "url": "https://www.kas.de/documents/287213/33744488/The+Experiences+and+Extent+of+Adopting+AI+among+SMEs+in+Southeast+Asia.pdf",
+    "tier": "?",
+    "tierLabel": "provenance unclear",
+    "inst": "Konrad-Adenauer-Stiftung (KAS) publication; Philippines-authored"
+   }
+  ],
+  "economics/productivity": [
+   {
+    "id": "hai-ai-index-2026",
+    "title": "AI Index Report 2026",
+    "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Stanford HAI"
+   },
+   {
+    "id": "ada-measuring-up",
+    "title": "Measuring Up",
+    "url": "https://www.adalovelaceinstitute.org/policy-briefing/measuring-up/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "eklou-imf-productivity",
+    "title": "Artificial Intelligence and Aggregate Labor Productivity: Evidence from Patent Data",
+    "url": "https://www.imf.org/en/publications/wp/issues/2026/09/25/artificial-intelligence-and-aggregate-labor-productivity-evidence-from-patent-data-579850",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IMF Working Paper 2026/204"
+   },
+   {
+    "id": "epoch-trends",
+    "title": "Trends in AI",
+    "url": "https://epoch.ai/trends",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   }
+  ],
+  "economics/ownership": [
+   {
+    "id": "ainow-landscape-2025",
+    "title": "Artificial Power: 2025 Landscape Report",
+    "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "cma-cloud-services-mi",
+    "title": "Cloud services market investigation — final decision (adverse effects on competition; SMS recommendation)",
+    "url": "https://www.gov.uk/cma-cases/cloud-services-market-investigation",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "UK Competition and Markets Authority (official regulator)"
+   },
+   {
+    "id": "iseas-subsea-cables-2025",
+    "title": "The Struggle for Subsea Cable Supremacy in Southeast Asia: ASEAN Relying on Diverse Suppliers",
+    "url": "https://www.iseas.edu.sg/wp-content/uploads/2025/02/ISEAS_Perspective_2025_21.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "ISEAS – Yusof Ishak Institute (SEA institution already indexed)"
+   },
+   {
+    "id": "cset-ai-competition",
+    "title": "Artificial Intelligence in Competition",
+    "url": "https://cset.georgetown.edu/publication/artificial-intelligence-in-competition/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "epoch-chip-users-explorer",
+    "title": "Introducing the AI Chip Users explorer",
+    "url": "https://epoch.ai/latest/introducing-the-ai-chip-users-explorer",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "blackstone-airtrunk",
+    "title": "Blackstone to acquire AirTrunk in A$24 billion transaction (US$16.1 billion)",
+    "url": "https://www.blackstone.com/press-releases/article/blackstone-to-acquire-airtrunk-in-a24-billion-transaction-us161-billion/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "Blackstone"
+   },
+   {
+    "id": "gleif-api",
+    "title": "GLEIF API v1 (legal-entity identifiers)",
+    "url": "https://api.gleif.org/api/v1",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "GLEIF"
+   },
+   {
+    "id": "gem-ownership-api",
+    "title": "Global Energy Monitor Ownership Tracing API",
+    "url": "https://api.globalenergymonitor.org/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "Global Energy Monitor"
+   },
+   {
+    "id": "culot-ai-procurement",
+    "title": "Artificial Intelligence in Public Procurement: Aligning Operational Capacity, Legitimacy, and Public Value",
+    "url": "https://doi.org/10.1111/jbl.70088",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Journal of Business Logistics (peer-reviewed)"
+   },
+   {
+    "id": "restrepo-firm-compliance",
+    "title": "Compliance under the EU AI Act: How Firms Navigate Regulatory Complexity",
+    "url": "https://doi.org/10.1016/j.clsr.2026.106390",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Computer Law & Security Review (peer-reviewed)"
+   },
+   {
+    "id": "patro-santacreu-targeted-trade",
+    "title": "Geopolitical Distance and Targeted Trade",
+    "url": "https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Federal Reserve Bank of St. Louis Review"
+   },
+   {
+    "id": "cifar-pcais-evaluation",
+    "title": "Evaluation of the Pan-Canadian Artificial Intelligence Strategy",
+    "url": "https://ised-isde.canada.ca/site/audits-evaluations/en/evaluation/evaluation-pan-canadian-artificial-intelligence-strategy-20-1",
+    "tier": "S",
+    "tierLabel": "located via search (not read)",
+    "inst": "ISED Canada / CIFAR"
+   },
+   {
+    "id": "ada-minding-business",
+    "title": "Minding your business",
+    "url": "https://www.adalovelaceinstitute.org/policy-briefing/minding-your-business/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "ainow-europe-industrial",
+    "title": "Redirecting Europe's AI Industrial Policy",
+    "url": "https://ainowinstitute.org/publications/research/redirecting-europes-ai-industrial-policy",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "oii-empires-of-ai",
+    "title": "Empires of AI (guest essay)",
+    "url": "https://www.foreignaffairs.com/china/empires-artificial-intelligence-ferguson-klaassen-schmidt",
+    "tier": "?",
+    "tierLabel": "provenance unclear",
+    "inst": "Foreign Affairs (essay; indexed via the OII research page — authors are Ferguson, Klaassen & Schmidt, not OII researchers)"
+   }
+  ],
+  "economics/evidence": [
+   {
+    "id": "stanford-canaries",
+    "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence",
+    "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Stanford Digital Economy Lab (Stanford University)"
+   },
+   {
+    "id": "ilo-wp140-genai-jobs",
+    "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure",
+    "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "International Labour Organization (ILO Working Paper 140)"
+   },
+   {
+    "id": "ada-measuring-up",
+    "title": "Measuring Up",
+    "url": "https://www.adalovelaceinstitute.org/policy-briefing/measuring-up/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "eklou-imf-productivity",
+    "title": "Artificial Intelligence and Aggregate Labor Productivity: Evidence from Patent Data",
+    "url": "https://www.imf.org/en/publications/wp/issues/2026/09/25/artificial-intelligence-and-aggregate-labor-productivity-evidence-from-patent-data-579850",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IMF Working Paper 2026/204"
+   },
+   {
+    "id": "orr-census-exposure",
+    "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
+    "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Census Bureau CES Working Paper 26-56"
+   },
+   {
+    "id": "boysel-lai-oss-survey",
+    "title": "Navigating Open Source Software Development in the Generative AI Era",
+    "url": "https://www.linuxfoundation.org/research/oss-development-gen-ai-era-2026",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Linux Foundation (survey report; not peer-reviewed)"
+   }
+  ],
+  "society/attitudes": [
+   {
+    "id": "flanders-conditional-values",
+    "title": "Conditional Values: The Contingent Foundations of Attitudes toward Artificial Intelligence",
+    "url": "https://arxiv.org/abs/2610.37197",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv preprint (provisional WVS Wave 8)"
+   },
+   {
+    "id": "lundgren-tallberg-preferences",
+    "title": "Governing Artificial Intelligence: Public Preferences and Regulatory Options",
+    "url": "https://ssrn.com/abstract=7125438",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "SSRN preprint (not peer-reviewed at version checked)"
+   },
+   {
+    "id": "baum-state-gov-ai",
+    "title": "Governing with Artificial Intelligence: Use, Ideology, and the Benefits and Risks of AI in State Government",
+    "url": "https://preprints-apsa.prod.orp.cambridge.org/engage/apsa/article-details/6a95981d810b9dcc8281bf40",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "APSA preprint (not peer-reviewed)"
+   },
+   {
+    "id": "oxford-aiethics-index",
+    "title": "Institute for Ethics in AI (Oxford) publications index",
+    "url": "https://www.oxford-aiethics.ox.ac.uk/publications",
+    "tier": "S",
+    "tierLabel": "located via search (not read)",
+    "inst": "University of Oxford"
+   }
+  ],
+  "society/skills": [
+   {
+    "id": "wadipalapa-indonesia-ai-policy",
+    "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia",
+    "url": "https://doi.org/10.1177/18681034231226393",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"
+   },
+   {
+    "id": "scitech-asia-ai-literacy",
+    "title": "Assessing Artificial Intelligence (AI) Literacy and Readiness in Thailand's Workforce: Challenges and Opportunities for Digital Transformation",
+    "url": "https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/256785",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "National Institute of Development Administration (NIDA), Bangkok + AGH Krakow"
+   },
+   {
+    "id": "stanford-canaries",
+    "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence",
+    "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Stanford Digital Economy Lab (Stanford University)"
+   },
+   {
+    "id": "ilo-wp140-genai-jobs",
+    "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure",
+    "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "International Labour Organization (ILO Working Paper 140)"
+   },
+   {
+    "id": "nus-genai-cs-education",
+    "title": "Reshaping Undergraduate Computer Science Education in the Generative AI Era",
+    "url": "https://arxiv.org/html/2606.07545v1",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "NUS School of Computing"
+   },
+   {
+    "id": "anthropic-agents-judgment",
+    "title": "Who's Aligned to Whom? How AI Agents Shape Experts' Research Judgment Calls",
+    "url": "https://www.anthropic.com/research/agents-judgment-calls",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Anthropic"
+   },
+   {
+    "id": "ginting-civil-servants-dataset",
+    "title": "Dataset on Digital Competence, AI Literacy, Generative AI Use, Organizational Support, Public Service Motivation, and Work Performance among Indonesian Civil Servants",
+    "url": "https://doi.org/10.17632/9b26sb2k4g.1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Mendeley Data v1 (CC BY 4.0)"
+   },
+   {
+    "id": "boysel-lai-oss-survey",
+    "title": "Navigating Open Source Software Development in the Generative AI Era",
+    "url": "https://www.linuxfoundation.org/research/oss-development-gen-ai-era-2026",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Linux Foundation (survey report; not peer-reviewed)"
+   },
+   {
+    "id": "okmaps",
+    "title": "Open Knowledge Maps",
+    "url": "https://openknowledgemaps.org/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Open Knowledge Maps"
+   },
+   {
+    "id": "tfgi-vietnam-ai-strategy",
+    "title": "Vietnam's AI Strategy: Aligning Aspirations with Adaptive Governance",
+    "url": "https://techforgoodinstitute.org/insights/country-spotlights/vietnams-ai-strategy-aligning-aspirations-with-adaptive-governance",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Tech For Good Institute (Singapore); author at LKY School, NUS"
+   },
+   {
+    "id": "van-es-deliberation",
+    "title": "Bringing Ethics to the Table: Presenting a Deliberation Tool for Data and AI in Media Organizations",
+    "url": "https://doi.org/10.1007/s44206-026-00294-y",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Digital Society (peer-reviewed; collaborative action research)"
+   },
+   {
+    "id": "chai-teacher-selection-rlhf",
+    "title": "Active teacher selection for reinforcement learning from human feedback",
+    "url": "https://arxiv.org/abs/2310.15288",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CHAI / UC Berkeley"
+   },
+   {
+    "id": "mila-gitchameleon",
+    "title": "GitChameleon 2.0: Evaluating AI Code Generation Against Python Library Version Incompatibilities",
+    "url": "https://doi.org/10.48550/arXiv.2507.12367",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Mila (Quebec AI Institute)"
+   },
+   {
+    "id": "cset-stem-talent",
+    "title": "How Global Talent Pathways Shape U.S. STEM Award Achievement",
+    "url": "https://cset.georgetown.edu/publication/how-global-talent-pathways-shape-u-s-stem-award-achievement/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "ada-navigating-future",
+    "title": "Navigating the future",
+    "url": "https://www.adalovelaceinstitute.org/report/navigating-the-future/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "epoch-polling",
+    "title": "Polling on AI usage at work",
+    "url": "https://epoch.ai/data/polling",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "ichei-sea-universities-report",
+    "title": "AI Activities and Recommendations Regarding AI Integration in Southeast Asian Universities (ICHEI report, July 2025)",
+    "url": "https://ar.ichei.org/static/upload/2025/07/17/202507175355.pdf",
+    "tier": "?",
+    "tierLabel": "provenance unclear",
+    "inst": "ICHEI (UNESCO category-2 centre, Shenzhen) — regional higher-education institute"
+   },
+   {
+    "id": "kas-flaminiano-sme-ai",
+    "title": "Exploring Readiness and Challenges to AI-Driven Competitiveness in Southeast Asian SMEs (in KAS volume 'The Experiences and Extent of Adopting AI among SMEs in Southeast Asia')",
+    "url": "https://www.kas.de/documents/287213/33744488/The+Experiences+and+Extent+of+Adopting+AI+among+SMEs+in+Southeast+Asia.pdf",
+    "tier": "?",
+    "tierLabel": "provenance unclear",
+    "inst": "Konrad-Adenauer-Stiftung (KAS) publication; Philippines-authored"
+   }
+  ],
+  "society/participation": [
+   {
+    "id": "cmu-state-local-ai-guide",
+    "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale",
+    "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Block Center for Technology and Society, Carnegie Mellon University"
+   },
+   {
+    "id": "tfgi-digital-sustainability",
+    "title": "Digital Sustainability: Southeast Asia's Next Frontier (executive summary)",
+    "url": "https://techforgoodinstitute.org/downloads/22867/20801/Executive-Summary_Digital-Sustainability-Southeast-Asias-Next-Frontier.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Tech for Good Institute (Singapore — SEA institute already indexed via its Vietnam AI Strategy piece)"
+   },
+   {
+    "id": "ai4bharat-indictrans2",
+    "title": "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages",
+    "url": "https://arxiv.org/abs/2305.16307",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI4Bharat (India; IIT Madras ecosystem per search, not stated on arXiv page)"
+   },
+   {
+    "id": "sealion-paper",
+    "title": "SEA-LION: Southeast Asian Languages in One Network",
+    "url": "https://arxiv.org/abs/2504.05747",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI Singapore"
+   },
+   {
+    "id": "govai-voice-access",
+    "title": "Voice and Access in AI: Global AI Majority Participation in Artificial Intelligence Development and Governance",
+    "url": "https://governance.ai/research-paper/voice-and-access-in-ai-global-ai-majority-participation-in-artificial-intelligence-development-and-governance",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GovAI (Centre for the Governance of AI)"
+   },
+   {
+    "id": "ustenko-participation",
+    "title": "AI for citizen participation in international policymaking: multilingual inclusion",
+    "url": "https://doi.org/10.3389/fpos.2026.1842794",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Frontiers in Political Science (peer-reviewed)"
+   },
+   {
+    "id": "ada-care-consideration",
+    "title": "Care and consideration",
+    "url": "https://www.adalovelaceinstitute.org/report/care-and-consideration/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "oii-research-page",
+    "title": "OII research index (projects + press; publication list paginated)",
+    "url": "https://www.oii.ox.ac.uk/research/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Oxford Internet Institute"
+   },
+   {
+    "id": "eria-adc2045-overview",
+    "title": "ASEAN Digital Community 2045: A Strategic Overview",
+    "url": "https://www.eria.org/uploads/ADC-2025-A-Strategic-Overview.pdf",
+    "tier": "?",
+    "tierLabel": "provenance unclear",
+    "inst": "ERIA (regional research institute supporting ASEAN)"
+   }
+  ],
+  "society/trust": [
+   {
+    "id": "vector-agentic-worm",
+    "title": "AI Agents Enable Adaptive Computer Worms",
+    "url": "https://arxiv.org/abs/2606.03811",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Vector Institute / University of Toronto et al."
+   },
+   {
+    "id": "kaist-ussafebench",
+    "title": "Is Safety Standard Same for Everyone? User-Specific Safety Evaluation of Large Language Models",
+    "url": "https://arxiv.org/abs/2502.15086",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "KAIST (Data Science & AI Lab) et al."
+   },
+   {
+    "id": "riegler-offensive-ai-governance",
+    "title": "Restricting the Model, Missing the System: Measurement and Accountability in Offensive AI Governance",
+    "url": "https://arxiv.org/abs/2605.09504",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Scandinavian AI safety researchers (affiliations not stated on arXiv page)"
+   },
+   {
+    "id": "anthropic-threat-intel",
+    "title": "Detecting and countering misuse of AI: September 2026",
+    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Anthropic (provider-authored primary source)"
+   },
+   {
+    "id": "anthropic-cyber-assessment",
+    "title": "An alignment assessment of recent cybersecurity incidents",
+    "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Anthropic"
+   },
+   {
+    "id": "epoch-chatgpt-usage",
+    "title": "ChatGPT usage (YouGov panel metadata)",
+    "url": "https://epoch.ai/data/chatgpt-usage",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "ainow-double-agents",
+    "title": "Double Agents: Defensive AI Agents Magnify Cyber Risks",
+    "url": "https://ainowinstitute.org/publications/double-agents",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "lcfi-repository",
+    "title": "LCFI open-access publication collection (Cambridge Apollo)",
+    "url": "https://www.repository.cam.ac.uk/handle/1810/286662",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Leverhulme Centre for the Future of Intelligence, University of Cambridge"
+   },
+   {
+    "id": "openai-sora2-card",
+    "title": "Sora 2 System Card",
+    "url": "https://openai.com/index/sora-2-system-card/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "OpenAI"
+   },
+   {
+    "id": "chai-tasra",
+    "title": "TASRA: A Taxonomy of Societal-Scale Risks from AI",
+    "url": "https://arxiv.org/abs/2306.06924",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CHAI / UC Berkeley"
+   }
+  ],
+  "governance/rules": [
+   {
+    "id": "hai-ai-index-2026",
+    "title": "AI Index Report 2026",
+    "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Stanford HAI"
+   },
+   {
+    "id": "isis-ai-climate",
+    "title": "AI and Climate Considerations",
+    "url": "https://www.cert.isis.org.my/publications/ai-and-climate-considerations/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "ISIS Malaysia (CERT)"
+   },
+   {
+    "id": "wadipalapa-indonesia-ai-policy",
+    "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia",
+    "url": "https://doi.org/10.1177/18681034231226393",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"
+   },
+   {
+    "id": "ainow-landscape-2025",
+    "title": "Artificial Power: 2025 Landscape Report",
+    "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "cma-cloud-services-mi",
+    "title": "Cloud services market investigation — final decision (adverse effects on competition; SMS recommendation)",
+    "url": "https://www.gov.uk/cma-cases/cloud-services-market-investigation",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "UK Competition and Markets Authority (official regulator)"
+   },
+   {
+    "id": "ada-measuring-up",
+    "title": "Measuring Up",
+    "url": "https://www.adalovelaceinstitute.org/policy-briefing/measuring-up/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "cset-ai-competition",
+    "title": "Artificial Intelligence in Competition",
+    "url": "https://cset.georgetown.edu/publication/artificial-intelligence-in-competition/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "turobov-coyle-archetypes",
+    "title": "Governing the evidence base: an empirical framework of AI archetypes for policy analysis",
+    "url": "https://doi.org/10.1017/dap.2026.10100",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Data & Policy (peer-reviewed, CC BY 4.0)"
+   },
+   {
+    "id": "mit-ai-gov-map",
+    "title": "MIT AI Governance Map",
+    "url": "https://airisk.mit.edu/ai-governance",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MIT"
+   },
+   {
+    "id": "ainow-dc-toolkit",
+    "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions",
+    "url": "https://ainowinstitute.org/publications/data-center-policy-guide",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "oecd-policy-navigator",
+    "title": "OECD AI Policy Navigator",
+    "url": "https://oecd.ai/en/dashboards/international",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "tfgi-vietnam-ai-strategy",
+    "title": "Vietnam's AI Strategy: Aligning Aspirations with Adaptive Governance",
+    "url": "https://techforgoodinstitute.org/insights/country-spotlights/vietnams-ai-strategy-aligning-aspirations-with-adaptive-governance",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Tech For Good Institute (Singapore); author at LKY School, NUS"
+   },
+   {
+    "id": "govai-voice-access",
+    "title": "Voice and Access in AI: Global AI Majority Participation in Artificial Intelligence Development and Governance",
+    "url": "https://governance.ai/research-paper/voice-and-access-in-ai-global-ai-majority-participation-in-artificial-intelligence-development-and-governance",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GovAI (Centre for the Governance of AI)"
+   },
+   {
+    "id": "airtrunk-fy24-sustainability",
+    "title": "AirTrunk FY24 Sustainability Report",
+    "url": "https://airtrunk.com/wp-content/uploads/2024/10/FY24-Sustainability-Report-by-AirTrunk.pdf",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AirTrunk"
+   },
+   {
+    "id": "restrepo-firm-compliance",
+    "title": "Compliance under the EU AI Act: How Firms Navigate Regulatory Complexity",
+    "url": "https://doi.org/10.1016/j.clsr.2026.106390",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Computer Law & Security Review (peer-reviewed)"
+   },
+   {
+    "id": "kim-regime-complex-documents",
+    "title": "Coordinating fragmented global AI governance: Control, Rights, and Safety",
+    "url": "https://doi.org/10.1007/s11077-026-09632-w",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Policy Sciences (peer-reviewed research note)"
+   },
+   {
+    "id": "pursiainen-critical-infrastructure",
+    "title": "EU Governance of Critical Infrastructure: Resilience and Artificial Intelligence as Policy Challenges",
+    "url": "https://doi.org/10.1007/s41125-026-00115-w",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "European Journal for Security Research (peer-reviewed)"
+   },
+   {
+    "id": "geith-regime-complex",
+    "title": "The Emerging Regime Complex for Artificial Intelligence",
+    "url": "https://doi.org/10.1093/isagsq/ksag145",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Global Studies Quarterly (peer-reviewed; dataset of 119 institutions)"
+   },
+   {
+    "id": "ainow-nuclear",
+    "title": "Fission for Algorithms: The Undermining of Nuclear Regulation in Service of AI",
+    "url": "https://ainowinstitute.org/publications/fission-for-algorithms",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "lcfi-repository",
+    "title": "LCFI open-access publication collection (Cambridge Apollo)",
+    "url": "https://www.repository.cam.ac.uk/handle/1810/286662",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Leverhulme Centre for the Future of Intelligence, University of Cambridge"
+   },
+   {
+    "id": "ada-uk-regulation-options",
+    "title": "Making sense of the current options for AI regulation in the UK",
+    "url": "https://www.adalovelaceinstitute.org/feature/ai-regulation-options-uk/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "ada-minding-business",
+    "title": "Minding your business",
+    "url": "https://www.adalovelaceinstitute.org/policy-briefing/minding-your-business/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "chai-tasra",
+    "title": "TASRA: A Taxonomy of Societal-Scale Risks from AI",
+    "url": "https://arxiv.org/abs/2306.06924",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CHAI / UC Berkeley"
+   }
+  ],
+  "governance/procurement": [
+   {
+    "id": "cmu-state-local-ai-guide",
+    "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale",
+    "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Block Center for Technology and Society, Carnegie Mellon University"
+   },
+   {
+    "id": "oxford-martin-cloud-governance",
+    "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
+    "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Oxford Martin School, University of Oxford"
+   },
+   {
+    "id": "dict-philippines-cloudfirst",
+    "title": "Prescribing the Philippine Government's Cloud First Policy (DICT Department Circular 2017-002)",
+    "url": "https://ictknowledgeportal.dict.gov.ph/resources (official portal listing); PDF copy from the JETRO ASEAN-Japan mirror: jetro.go.jp/ext_images/jetro/activities/support/aseanjapan/report/3-6.pdf; amendment PDF from dataguidance.com mirror",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "DICT (Philippines government — official regulator)"
+   },
+   {
+    "id": "ucl-iipp-netzero-dri",
+    "title": "Public procurement for net-zero digital research infrastructure: a mission-oriented approach",
+    "url": "https://discovery.ucl.ac.uk/id/eprint/10196220",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "UCL Institute for Innovation and Public Purpose"
+   },
+   {
+    "id": "oecd-wp93-gov-genai",
+    "title": "Generative AI experimentation in government: Learning from emerging guidelines",
+    "url": "https://doi.org/10.1787/42815683-en",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD Working Paper No. 93"
+   },
+   {
+    "id": "ainow-dc-toolkit",
+    "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions",
+    "url": "https://ainowinstitute.org/publications/data-center-policy-guide",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "culot-ai-procurement",
+    "title": "Artificial Intelligence in Public Procurement: Aligning Operational Capacity, Legitimacy, and Public Value",
+    "url": "https://doi.org/10.1111/jbl.70088",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Journal of Business Logistics (peer-reviewed)"
+   },
+   {
+    "id": "ucl-iipp-taxonomy",
+    "title": "Mission-Oriented Procurement for Green Innovation: A new taxonomy",
+    "url": "https://www.ucl.ac.uk/bartlett/publications/2026/jun/mission-oriented-procurement-green-innovation-new-taxonomy",
+    "tier": "S",
+    "tierLabel": "located via search (not read)",
+    "inst": "UCL Institute for Innovation and Public Purpose"
+   },
+   {
+    "id": "cmu-blockcenter-index",
+    "title": "Block Center publications index",
+    "url": "https://www.cmu.edu/block-center/publications",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Block Center for Technology and Society, Carnegie Mellon University"
+   },
+   {
+    "id": "cmu-transition-memo",
+    "title": "The United States Government's Role in Harnessing Technology for Future Prosperity: A Transition Memorandum",
+    "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Block%20Center%202025%20Transition%20Memo%20(2).pdf",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Block Center for Technology and Society, Carnegie Mellon University"
+   }
+  ],
+  "governance/oversight": [
+   {
+    "id": "aegis-postmarket",
+    "title": "AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks",
+    "url": "https://doi.org/10.1038/s41746-026-03290-1",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "npj Digital Medicine (peer-reviewed; engineering demonstration)"
+   },
+   {
+    "id": "vector-agentic-worm",
+    "title": "AI Agents Enable Adaptive Computer Worms",
+    "url": "https://arxiv.org/abs/2606.03811",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Vector Institute / University of Toronto et al."
+   },
+   {
+    "id": "eth-camel",
+    "title": "Defeating Prompt Injections by Design",
+    "url": "https://arxiv.org/abs/2503.18813",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Google DeepMind & ETH Zurich (SPY Lab) collaboration"
+   },
+   {
+    "id": "deepmind-stealth-sa",
+    "title": "Evaluating Frontier Models for Stealth and Situational Awareness",
+    "url": "https://arxiv.org/abs/2505.01420",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Google DeepMind"
+   },
+   {
+    "id": "govai-agents-infrastructure",
+    "title": "Infrastructure for AI Agents",
+    "url": "https://arxiv.org/abs/2501.10114",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "GovAI (Centre for the Governance of AI); accepted to TMLR"
+   },
+   {
+    "id": "chai-managing-risks",
+    "title": "Managing AI Risks in an Era of Rapid Progress",
+    "url": "https://arxiv.org/abs/2310.17688",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "CHAI / UC Berkeley (multi-institution statement)"
+   },
+   {
+    "id": "cset-redteaming-reporting",
+    "title": "Systematizing the Reporting of AI Red-Teaming",
+    "url": "https://cset.georgetown.edu/publication/systematizing-the-reporting-of-ai-red-teaming/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "anthropic-agents-judgment",
+    "title": "Who's Aligned to Whom? How AI Agents Shape Experts' Research Judgment Calls",
+    "url": "https://www.anthropic.com/research/agents-judgment-calls",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Anthropic"
+   },
+   {
+    "id": "metr-coverup",
+    "title": "AI systems could cover up misbehavior",
+    "url": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "METR (research-organisation demo; not journal peer review)"
+   },
+   {
+    "id": "metr-openai-redteam",
+    "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
+    "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "METR (external technical assessment; not peer-reviewed)"
+   },
+   {
+    "id": "riegler-offensive-ai-governance",
+    "title": "Restricting the Model, Missing the System: Measurement and Accountability in Offensive AI Governance",
+    "url": "https://arxiv.org/abs/2605.09504",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Scandinavian AI safety researchers (affiliations not stated on arXiv page)"
+   },
+   {
+    "id": "openai-long-horizon-safety",
+    "title": "Safety and alignment in an era of long-horizon models",
+    "url": "https://openai.com/index/safety-alignment-long-horizon-models/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OpenAI"
+   },
+   {
+    "id": "openai-oss-safeguard",
+    "title": "gpt-oss-safeguard technical report",
+    "url": "https://openai.com/index/gpt-oss-safeguard-technical-report/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OpenAI"
+   },
+   {
+    "id": "metr-anthropic-review",
+    "title": "Review of the 'Misalignment in high-stakes settings' section in Anthropic's Risk Report (August 2026)",
+    "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "METR (external review of corporate risk assessment)"
+   },
+   {
+    "id": "openai-monitoring-incident",
+    "title": "Suppressing misalignment monitoring alerts and disabling misalignment monitoring",
+    "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "OpenAI (primary-source corporate incident report)"
+   },
+   {
+    "id": "anthropic-cyber-assessment",
+    "title": "An alignment assessment of recent cybersecurity incidents",
+    "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Anthropic"
+   },
+   {
+    "id": "anthropic-ukaisi-assessment",
+    "title": "An alignment assessment of the UK AISI cybertesting incident",
+    "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Anthropic"
+   },
+   {
+    "id": "anthropic-unintended-actions",
+    "title": "Investigating unintended model actions in our evaluations and internal use",
+    "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Anthropic"
+   }
+  ],
+  "governance/standards": [
+   {
+    "id": "hoch-mugge-brussels",
+    "title": "EU Influence in Global AI Governance and its Limits",
+    "url": "https://doi.org/10.1007/s44206-026-00284-0",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Digital Society (peer-reviewed)"
+   },
+   {
+    "id": "oxford-martin-cloud-governance",
+    "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
+    "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Oxford Martin School, University of Oxford"
+   },
+   {
+    "id": "govai-agents-infrastructure",
+    "title": "Infrastructure for AI Agents",
+    "url": "https://arxiv.org/abs/2501.10114",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "GovAI (Centre for the Governance of AI); accepted to TMLR"
+   },
+   {
+    "id": "cset-cyber-compliance",
+    "title": "Outpaced: AI and Policy's Role in Transforming Cybersecurity Compliance",
+    "url": "https://cset.georgetown.edu/publication/outpaced-ai-and-policys-role-in-transforming-cybersecurity-compliance/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CSET, Georgetown University"
+   }
+  ],
+  "governance/postmarket": [
+   {
+    "id": "aegis-postmarket",
+    "title": "AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks",
+    "url": "https://doi.org/10.1038/s41746-026-03290-1",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "npj Digital Medicine (peer-reviewed; engineering demonstration)"
+   },
+   {
+    "id": "chincholikar-incident-disclosure",
+    "title": "The AI incident disclosure shadow: tracking AI incidents into U.S. securities filings",
+    "url": "https://doi.org/10.3389/frai.2026.1969275",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Frontiers in Artificial Intelligence (peer-reviewed; pre-registered)"
+   },
+   {
+    "id": "metr-coverup",
+    "title": "AI systems could cover up misbehavior",
+    "url": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "METR (research-organisation demo; not journal peer review)"
+   },
+   {
+    "id": "cset-cyber-compliance",
+    "title": "Outpaced: AI and Policy's Role in Transforming Cybersecurity Compliance",
+    "url": "https://cset.georgetown.edu/publication/outpaced-ai-and-policys-role-in-transforming-cybersecurity-compliance/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CSET, Georgetown University"
+   }
+  ],
+  "governance/discretion": [
+   {
+    "id": "cmu-state-local-ai-guide",
+    "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale",
+    "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Block Center for Technology and Society, Carnegie Mellon University"
+   },
+   {
+    "id": "wadipalapa-indonesia-ai-policy",
+    "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia",
+    "url": "https://doi.org/10.1177/18681034231226393",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"
+   },
+   {
+    "id": "harvard-bkc-governed-ai",
+    "title": "Are We Ready to Be Governed by Artificial Intelligence?",
+    "url": "https://cyber.harvard.edu/story/2025-12/are-we-ready-be-governed-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Berkman Klein Center, Harvard University"
+   },
+   {
+    "id": "anastasopoulos-discretion",
+    "title": "Artificial Intelligence, Bureaucratic Discretion, and Democratic Administration",
+    "url": "https://doi.org/10.1111/puar.70201",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Public Administration Review (peer-reviewed; normative)"
+   },
+   {
+    "id": "baum-state-gov-ai",
+    "title": "Governing with Artificial Intelligence: Use, Ideology, and the Benefits and Risks of AI in State Government",
+    "url": "https://preprints-apsa.prod.orp.cambridge.org/engage/apsa/article-details/6a95981d810b9dcc8281bf40",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "APSA preprint (not peer-reviewed)"
+   },
+   {
+    "id": "oxford-aiethics-index",
+    "title": "Institute for Ethics in AI (Oxford) publications index",
+    "url": "https://www.oxford-aiethics.ox.ac.uk/publications",
+    "tier": "S",
+    "tierLabel": "located via search (not read)",
+    "inst": "University of Oxford"
+   },
+   {
+    "id": "oii-research-page",
+    "title": "OII research index (projects + press; publication list paginated)",
+    "url": "https://www.oii.ox.ac.uk/research/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Oxford Internet Institute"
+   }
+  ],
+  "politics/international": [
+   {
+    "id": "ainow-landscape-2025",
+    "title": "Artificial Power: 2025 Landscape Report",
+    "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "chai-managing-risks",
+    "title": "Managing AI Risks in an Era of Rapid Progress",
+    "url": "https://arxiv.org/abs/2310.17688",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "CHAI / UC Berkeley (multi-institution statement)"
+   },
+   {
+    "id": "iseas-subsea-cables-2025",
+    "title": "The Struggle for Subsea Cable Supremacy in Southeast Asia: ASEAN Relying on Diverse Suppliers",
+    "url": "https://www.iseas.edu.sg/wp-content/uploads/2025/02/ISEAS_Perspective_2025_21.pdf",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "ISEAS – Yusof Ishak Institute (SEA institution already indexed)"
+   },
+   {
+    "id": "mit-ai-gov-map",
+    "title": "MIT AI Governance Map",
+    "url": "https://airisk.mit.edu/ai-governance",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MIT"
+   },
+   {
+    "id": "oecd-policy-navigator",
+    "title": "OECD AI Policy Navigator",
+    "url": "https://oecd.ai/en/dashboards/international",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "chula-ai-china-labor-thesis",
+    "title": "The impact of artificial intelligence on China's labor market",
+    "url": "https://digital.car.chula.ac.th/chulaetd/74149",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Chulalongkorn University, Faculty of Economics (Thailand)"
+   },
+   {
+    "id": "govai-voice-access",
+    "title": "Voice and Access in AI: Global AI Majority Participation in Artificial Intelligence Development and Governance",
+    "url": "https://governance.ai/research-paper/voice-and-access-in-ai-global-ai-majority-participation-in-artificial-intelligence-development-and-governance",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "GovAI (Centre for the Governance of AI)"
+   },
+   {
+    "id": "kim-regime-complex-documents",
+    "title": "Coordinating fragmented global AI governance: Control, Rights, and Safety",
+    "url": "https://doi.org/10.1007/s11077-026-09632-w",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Policy Sciences (peer-reviewed research note)"
+   },
+   {
+    "id": "geith-regime-complex",
+    "title": "The Emerging Regime Complex for Artificial Intelligence",
+    "url": "https://doi.org/10.1093/isagsq/ksag145",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Global Studies Quarterly (peer-reviewed; dataset of 119 institutions)"
+   },
+   {
+    "id": "ainow-kill-chain",
+    "title": "Anatomy of an AI Kill Chain (with Airwars)",
+    "url": "https://ainowinstitute.org/publications/anatomy-of-an-ai-kill-chain",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "cset-coalition-ops",
+    "title": "Coalition Operations",
+    "url": "https://cset.georgetown.edu/publication/coalition-operations/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "oii-empires-of-ai",
+    "title": "Empires of AI (guest essay)",
+    "url": "https://www.foreignaffairs.com/china/empires-artificial-intelligence-ferguson-klaassen-schmidt",
+    "tier": "?",
+    "tierLabel": "provenance unclear",
+    "inst": "Foreign Affairs (essay; indexed via the OII research page — authors are Ferguson, Klaassen & Schmidt, not OII researchers)"
+   }
+  ],
+  "politics/national": [
+   {
+    "id": "wadipalapa-indonesia-ai-policy",
+    "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia",
+    "url": "https://doi.org/10.1177/18681034231226393",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Journal of Current Southeast Asian Affairs (SAGE); Indonesian authors"
+   },
+   {
+    "id": "hoch-mugge-brussels",
+    "title": "EU Influence in Global AI Governance and its Limits",
+    "url": "https://doi.org/10.1007/s44206-026-00284-0",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Digital Society (peer-reviewed)"
+   },
+   {
+    "id": "ember-asean-ai-emissions",
+    "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition",
+    "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ember (independent energy think tank)"
+   },
+   {
+    "id": "ilo-wp140-genai-jobs",
+    "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure",
+    "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "International Labour Organization (ILO Working Paper 140)"
+   },
+   {
+    "id": "harvard-bkc-governed-ai",
+    "title": "Are We Ready to Be Governed by Artificial Intelligence?",
+    "url": "https://cyber.harvard.edu/story/2025-12/are-we-ready-be-governed-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Berkman Klein Center, Harvard University"
+   },
+   {
+    "id": "openai-pacing-cyber",
+    "title": "Pacing model development in an era of cyber-critical capabilities",
+    "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OpenAI"
+   },
+   {
+    "id": "tfgi-vietnam-ai-strategy",
+    "title": "Vietnam's AI Strategy: Aligning Aspirations with Adaptive Governance",
+    "url": "https://techforgoodinstitute.org/insights/country-spotlights/vietnams-ai-strategy-aligning-aspirations-with-adaptive-governance",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Tech For Good Institute (Singapore); author at LKY School, NUS"
+   },
+   {
+    "id": "semianalysis-china-frontier",
+    "title": "Beijing Will Not Pace the Frontier: China's Speed-First AI Safety Regime",
+    "url": "https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "SemiAnalysis (industry research; not peer-reviewed)"
+   },
+   {
+    "id": "cifar-pcais-evaluation",
+    "title": "Evaluation of the Pan-Canadian Artificial Intelligence Strategy",
+    "url": "https://ised-isde.canada.ca/site/audits-evaluations/en/evaluation/evaluation-pan-canadian-artificial-intelligence-strategy-20-1",
+    "tier": "S",
+    "tierLabel": "located via search (not read)",
+    "inst": "ISED Canada / CIFAR"
+   },
+   {
+    "id": "ada-uk-regulation-options",
+    "title": "Making sense of the current options for AI regulation in the UK",
+    "url": "https://www.adalovelaceinstitute.org/feature/ai-regulation-options-uk/",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Ada Lovelace Institute"
+   },
+   {
+    "id": "ainow-europe-industrial",
+    "title": "Redirecting Europe's AI Industrial Policy",
+    "url": "https://ainowinstitute.org/publications/research/redirecting-europes-ai-industrial-policy",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "cmu-transition-memo",
+    "title": "The United States Government's Role in Harnessing Technology for Future Prosperity: A Transition Memorandum",
+    "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Block%20Center%202025%20Transition%20Memo%20(2).pdf",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Block Center for Technology and Society, Carnegie Mellon University"
+   }
+  ],
+  "politics/chips": [
+   {
+    "id": "cset-tracking-chips",
+    "title": "Tracking AI Chips",
+    "url": "https://cset.georgetown.edu/publication/tracking-ai-chips/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "CSET, Georgetown University"
+   },
+   {
+    "id": "patro-santacreu-targeted-trade",
+    "title": "Geopolitical Distance and Targeted Trade",
+    "url": "https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade",
+    "tier": "H",
+    "tierLabel": "handoff-verified metadata (not read)",
+    "inst": "Federal Reserve Bank of St. Louis Review"
+   },
+   {
+    "id": "epoch-chip-sales",
+    "title": "AI chip sales",
+    "url": "https://epoch.ai/data/ai-chip-sales",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "Epoch AI"
+   }
+  ],
+  "politics/accountability": [
+   {
+    "id": "chincholikar-incident-disclosure",
+    "title": "The AI incident disclosure shadow: tracking AI incidents into U.S. securities filings",
+    "url": "https://doi.org/10.3389/frai.2026.1969275",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Frontiers in Artificial Intelligence (peer-reviewed; pre-registered)"
+   }
+  ],
+  "environment/energy": [
+   {
+    "id": "isis-ai-climate",
+    "title": "AI and Climate Considerations",
+    "url": "https://www.cert.isis.org.my/publications/ai-and-climate-considerations/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "ISIS Malaysia (CERT)"
+   },
+   {
+    "id": "ainow-landscape-2025",
+    "title": "Artificial Power: 2025 Landscape Report",
+    "url": "https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "iseas-malaysia-dc",
+    "title": "Data Centres, Energy Demand and Sustainability: Can Malaysia Strike the Right Balance?",
+    "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "ISEAS–Yusof Ishak Institute (Perspective 2025/43)"
+   },
+   {
+    "id": "iea-energy-and-ai",
+    "title": "Energy and AI",
+    "url": "https://www.iea.org/reports/energy-and-ai",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "IEA"
+   },
+   {
+    "id": "ember-asean-ai-emissions",
+    "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition",
+    "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ember (independent energy think tank)"
+   },
+   {
+    "id": "ucl-iipp-netzero-dri",
+    "title": "Public procurement for net-zero digital research infrastructure: a mission-oriented approach",
+    "url": "https://discovery.ucl.ac.uk/id/eprint/10196220",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "UCL Institute for Innovation and Public Purpose"
+   },
+   {
+    "id": "iea-data-centres",
+    "title": "Data Centres — Electricity consumption (tracker)",
+    "url": "https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEA"
+   },
+   {
+    "id": "airtrunk-fy24-sustainability",
+    "title": "AirTrunk FY24 Sustainability Report",
+    "url": "https://airtrunk.com/wp-content/uploads/2024/10/FY24-Sustainability-Report-by-AirTrunk.pdf",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AirTrunk"
+   },
+   {
+    "id": "airtrunk-pekatsolar",
+    "title": "AirTrunk and Pekat Solar to develop rooftop solar at JHB1",
+    "url": "https://airtrunk.com/airtrunk-and-pekat-solar-to-develop-rooftop-solar-at-airtrunks-johor-bahru-data-centre-jhb1/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AirTrunk"
+   },
+   {
+    "id": "airtrunk-vppa",
+    "title": "AirTrunk signs Malaysia's first data centre renewable VPPA",
+    "url": "https://www.airtrunk.com/news/airtrunk-signs-malaysias-first-data-centre-renewable-vppa/",
+    "tier": "D",
+    "tierLabel": "Discovery Engine snapshot (not human-verified)",
+    "inst": "AirTrunk"
+   },
+   {
+    "id": "ainow-nuclear",
+    "title": "Fission for Algorithms: The Undermining of Nuclear Regulation in Service of AI",
+    "url": "https://ainowinstitute.org/publications/fission-for-algorithms",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "AI Now Institute"
+   },
+   {
+    "id": "iea-key-questions",
+    "title": "Key Questions on Energy and AI",
+    "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai",
+    "tier": "L",
+    "tierLabel": "indexed only — not read",
+    "inst": "IEA"
+   }
+  ],
+  "environment/goals": [
+   {
+    "id": "isis-ai-climate",
+    "title": "AI and Climate Considerations",
+    "url": "https://www.cert.isis.org.my/publications/ai-and-climate-considerations/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "ISIS Malaysia (CERT)"
+   },
+   {
+    "id": "iea-energy-and-ai",
+    "title": "Energy and AI",
+    "url": "https://www.iea.org/reports/energy-and-ai",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "IEA"
+   },
+   {
+    "id": "ember-asean-ai-emissions",
+    "title": "From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition",
+    "url": "https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Ember (independent energy think tank)"
+   },
+   {
+    "id": "ucl-iipp-taxonomy",
+    "title": "Mission-Oriented Procurement for Green Innovation: A new taxonomy",
+    "url": "https://www.ucl.ac.uk/bartlett/publications/2026/jun/mission-oriented-procurement-green-innovation-new-taxonomy",
+    "tier": "S",
+    "tierLabel": "located via search (not read)",
+    "inst": "UCL Institute for Innovation and Public Purpose"
+   }
+  ],
+  "environment/resources": [
+   {
+    "id": "katadata-batam",
+    "title": "A Digital Boom in a Thirsty City (Batam)",
+    "url": "https://katadata.co.id/data-center-batam/en",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
+    "inst": "Katadata.co.id (English edition)"
+   },
+   {
+    "id": "uob-dbs-dayone-ndp-loan",
+    "title": "DBS and UOB jointly provide landmark IDR 6.7 trillion loan for DayOne-INA Batam data centre campus",
+    "url": "https://www.dbs.com/newsroom/DBS_and_UOB_arrange_record_IDR_6_7_trillion_SGD_530_million_loan_for_data_centre_development_project_by_DayOne_and_the_Indonesia_Investment_Authority",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "DBS & UOB (primary bank release; DBS newsroom)"
+   },
+   {
+    "id": "ainow-dc-toolkit",
+    "title": "North Star Data Center Policy Toolkit: State and Local Policy Interventions",
+    "url": "https://ainowinstitute.org/publications/data-center-policy-guide",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "AI Now Institute"
+   }
+  ]
+ }
+}

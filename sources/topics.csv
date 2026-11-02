@@ -1,0 +1,37 @@
+id,title,domains,world
+how/models,Models & training,how,how
+how/data,Data,how,how
+how/inference,Inference & everyday use,how,how
+how/evaluation,Evaluation & benchmarks,how,how
+how/agents,Agents & doing tasks,how,how
+how/using,Using AI in organisations,how;governance,how
+infrastructure/centres,Data centres,infrastructure;economics;environment,infrastructure
+infrastructure/electricity,Electricity,infrastructure;environment,infrastructure
+infrastructure/water,Water & cooling,infrastructure;environment,infrastructure
+infrastructure/chips,Chips & supply chains,infrastructure;politics,infrastructure
+infrastructure/land,Land & permits,infrastructure,infrastructure
+infrastructure/grids,Grids & critical infrastructure,infrastructure;governance,infrastructure
+infrastructure/cloud,Cloud services & compute platforms,infrastructure;economics;governance,infrastructure
+infrastructure/connectivity,Networks & access,infrastructure;society,infrastructure
+economics/investment,Investment,economics;infrastructure,economics
+economics/jobs,AI exposure & jobs,economics;society,economics
+economics/productivity,Productivity,economics,economics
+economics/ownership,Ownership & market power,economics;governance,economics
+economics/evidence,Reading the evidence,economics;society,economics
+society/attitudes,Public attitudes,society;politics,society
+society/skills,Skills & verification,society;economics,society
+society/participation,Participation & inclusion,society,society
+society/trust,Trust & misuse,society,society
+governance/rules,Rules & who writes them,governance;politics,governance
+governance/procurement,Public institutions & procurement,governance;economics,governance
+governance/oversight,Human oversight,governance;how,governance
+governance/standards,Standards & audit access,governance;politics,governance
+governance/postmarket,Watching AI after deployment,governance,governance
+governance/discretion,Officials & discretion,governance;society,governance
+politics/international,International cooperation,politics;governance,politics
+politics/national,National approaches,politics;governance,politics
+politics/chips,Chips & geopolitics,politics;infrastructure,politics
+politics/accountability,Law & accountability,politics;governance,politics
+environment/energy,Energy & emissions,environment;infrastructure,environment
+environment/goals,Climate goals vs buildout,environment;governance,environment
+environment/resources,Resources & local place,environment;infrastructure;society,environment
