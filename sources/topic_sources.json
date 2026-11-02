@@ -1,10 +1,10 @@
 {
  "built": "2026-11-02",
  "counts": {
-  "records_total": 221,
-  "records_mapped": 221,
-  "topic_record_links": 576,
-  "read_mapped": 437,
+  "records_total": 263,
+  "records_mapped": 263,
+  "topic_record_links": 702,
+  "read_mapped": 563,
   "indexed_only_mapped": 139,
   "topics_total": 36,
   "topics_with_records": 36,
@@ -14,6 +14,86 @@
  "institutionAbsences": "DAIR · Harvard BKC formal papers · ETH AI Center papers · Cambridge LCFI items · DeepMind per-paper items · Meta AI site papers · Vector Institute index · RIKEN AIP · Tsinghua KEG beyond GLM · Oxford Ethics items",
  "byTopic": {
   "how/models": [
+   {
+    "id": "iso-23053-2022",
+    "title": "Framework for Artificial Intelligence (AI) Systems Using Machine Learning (ML)",
+    "url": "https://committee.iso.org/standard/74438.html?browse=tc",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-22989-2022",
+    "title": "Information technology — Artificial intelligence — Artificial intelligence concepts and terminology",
+    "url": "https://www.iso.org/standard/74296.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "flashattention-2-2023",
+    "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "url": "https://arxiv.org/abs/2307.08691",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Stanford University; Princeton University"
+   },
+   {
+    "id": "speculative-decoding-2023",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "url": "https://arxiv.org/abs/2211.17192",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google Research"
+   },
+   {
+    "id": "gptq-2023",
+    "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+    "url": "https://arxiv.org/abs/2210.17323v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IST Austria; ETH Zurich"
+   },
+   {
+    "id": "awq-2024",
+    "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+    "url": "https://arxiv.org/abs/2306.00978v5",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MIT; Tsinghua University; Shanghai Jiao Tong University"
+   },
+   {
+    "id": "attention-sinks-2023",
+    "title": "Efficient Streaming Language Models with Attention Sinks",
+    "url": "https://arxiv.org/abs/2309.17453",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MIT; Meta AI; Carnegie Mellon University"
+   },
+   {
+    "id": "deepseek-r1-2025",
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2501.12948",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "DeepSeek"
+   },
+   {
+    "id": "mobilellm-2024",
+    "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+    "url": "https://arxiv.org/abs/2402.14905",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Meta Reality Labs"
+   },
+   {
+    "id": "llm-int8-2022",
+    "title": "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+    "url": "https://arxiv.org/abs/2208.07339",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Washington; Meta AI; Hugging Face"
+   },
    {
     "id": "tsinghua-glm130b",
     "title": "GLM-130B: An Open Bilingual Pre-trained Model",
@@ -243,6 +323,118 @@
   ],
   "how/inference": [
    {
+    "id": "vllm-pagedattention-2023",
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "url": "https://arxiv.org/abs/2309.06180",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Berkeley"
+   },
+   {
+    "id": "flashattention-2-2023",
+    "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "url": "https://arxiv.org/abs/2307.08691",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Stanford University; Princeton University"
+   },
+   {
+    "id": "speculative-decoding-2023",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "url": "https://arxiv.org/abs/2211.17192",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google Research"
+   },
+   {
+    "id": "gptq-2023",
+    "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+    "url": "https://arxiv.org/abs/2210.17323v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IST Austria; ETH Zurich"
+   },
+   {
+    "id": "awq-2024",
+    "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+    "url": "https://arxiv.org/abs/2306.00978v5",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MIT; Tsinghua University; Shanghai Jiao Tong University"
+   },
+   {
+    "id": "orca-serving-2022",
+    "title": "Orca: A Distributed Serving System for Transformer-Based Generative Models",
+    "url": "https://www.usenix.org/conference/osdi22/presentation/yu",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Seoul National University; FriendliAI"
+   },
+   {
+    "id": "sglang-2024",
+    "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+    "url": "https://arxiv.org/abs/2312.07104",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Berkeley; Stanford University (LMSYS)"
+   },
+   {
+    "id": "attention-sinks-2023",
+    "title": "Efficient Streaming Language Models with Attention Sinks",
+    "url": "https://arxiv.org/abs/2309.17453",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MIT; Meta AI; Carnegie Mellon University"
+   },
+   {
+    "id": "deepseek-r1-2025",
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2501.12948",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "DeepSeek"
+   },
+   {
+    "id": "test-time-compute-2024",
+    "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+    "url": "https://arxiv.org/abs/2408.03314",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Berkeley; Google DeepMind"
+   },
+   {
+    "id": "mlperf-inference-2026",
+    "title": "MLPerf Inference: Datacenter benchmark suite",
+    "url": "https://mlcommons.org/benchmarks/inference-datacenter/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MLCommons"
+   },
+   {
+    "id": "epoch-inference-prices-2025",
+    "title": "LLM inference prices have fallen rapidly but unequally across tasks",
+    "url": "https://epoch.ai/data-insights/llm-inference-price-trends",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "mobilellm-2024",
+    "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+    "url": "https://arxiv.org/abs/2402.14905",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Meta Reality Labs"
+   },
+   {
+    "id": "llm-int8-2022",
+    "title": "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+    "url": "https://arxiv.org/abs/2208.07339",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Washington; Meta AI; Hugging Face"
+   },
+   {
     "id": "google-gemini-inference-water",
     "title": "Measuring the environmental impact of AI inference",
     "url": "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/",
@@ -260,6 +452,78 @@
    }
   ],
   "how/evaluation": [
+   {
+    "id": "iso-23053-2022",
+    "title": "Framework for Artificial Intelligence (AI) Systems Using Machine Learning (ML)",
+    "url": "https://committee.iso.org/standard/74438.html?browse=tc",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-22989-2022",
+    "title": "Information technology — Artificial intelligence — Artificial intelligence concepts and terminology",
+    "url": "https://www.iso.org/standard/74296.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-tr24028-2020",
+    "title": "Information technology — Artificial intelligence — Overview of trustworthiness in artificial intelligence",
+    "url": "https://knowledge.bsigroup.com/products/information-technology-artificial-intelligence-overview-of-trustworthiness-in-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "nist-genai-profile-2024",
+    "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+    "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Institute of Standards and Technology"
+   },
+   {
+    "id": "nist-sp1270-bias-2022",
+    "title": "Towards a Standard for Identifying and Managing Bias in Artificial Intelligence",
+    "url": "https://doi.org/10.6028/NIST.SP.1270",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Institute of Standards and Technology"
+   },
+   {
+    "id": "deepseek-r1-2025",
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2501.12948",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "DeepSeek"
+   },
+   {
+    "id": "test-time-compute-2024",
+    "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+    "url": "https://arxiv.org/abs/2408.03314",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Berkeley; Google DeepMind"
+   },
+   {
+    "id": "mlperf-inference-2026",
+    "title": "MLPerf Inference: Datacenter benchmark suite",
+    "url": "https://mlcommons.org/benchmarks/inference-datacenter/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MLCommons"
+   },
+   {
+    "id": "ntia-accountability-2024",
+    "title": "Artificial Intelligence Accountability Policy Report",
+    "url": "https://www.ntia.gov/sites/default/files/2024-04/ntia-ai-report-print.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Telecommunications and Information Administration (NTIA), US Department of Commerce"
+   },
    {
     "id": "google-gemini-inference-water",
     "title": "Measuring the environmental impact of AI inference",
@@ -455,6 +719,14 @@
   ],
   "how/agents": [
    {
+    "id": "sglang-2024",
+    "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+    "url": "https://arxiv.org/abs/2312.07104",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Berkeley; Stanford University (LMSYS)"
+   },
+   {
     "id": "vector-agentic-worm",
     "title": "AI Agents Enable Adaptive Computer Worms",
     "url": "https://arxiv.org/abs/2606.03811",
@@ -601,6 +873,14 @@
   ],
   "how/using": [
    {
+    "id": "mata-avianca-2023",
+    "title": "Mata v. Avianca, Inc.: Opinion and Order on Sanctions",
+    "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US District Court for the Southern District of New York"
+   },
+   {
     "id": "oxford-martin-cloud-governance",
     "title": "Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation",
     "url": "https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation",
@@ -650,6 +930,30 @@
    }
   ],
   "infrastructure/centres": [
+   {
+    "id": "vllm-pagedattention-2023",
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "url": "https://arxiv.org/abs/2309.06180",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Berkeley"
+   },
+   {
+    "id": "orca-serving-2022",
+    "title": "Orca: A Distributed Serving System for Transformer-Based Generative Models",
+    "url": "https://www.usenix.org/conference/osdi22/presentation/yu",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Seoul National University; FriendliAI"
+   },
+   {
+    "id": "attention-sinks-2023",
+    "title": "Efficient Streaming Language Models with Attention Sinks",
+    "url": "https://arxiv.org/abs/2309.17453",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MIT; Meta AI; Carnegie Mellon University"
+   },
    {
     "id": "imda-dcb-2023",
     "title": "Singapore's Digital Connectivity Blueprint",
@@ -1193,6 +1497,46 @@
   ],
   "infrastructure/chips": [
    {
+    "id": "flashattention-2-2023",
+    "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "url": "https://arxiv.org/abs/2307.08691",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Stanford University; Princeton University"
+   },
+   {
+    "id": "gptq-2023",
+    "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+    "url": "https://arxiv.org/abs/2210.17323v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IST Austria; ETH Zurich"
+   },
+   {
+    "id": "awq-2024",
+    "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+    "url": "https://arxiv.org/abs/2306.00978v5",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MIT; Tsinghua University; Shanghai Jiao Tong University"
+   },
+   {
+    "id": "mobilellm-2024",
+    "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+    "url": "https://arxiv.org/abs/2402.14905",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Meta Reality Labs"
+   },
+   {
+    "id": "llm-int8-2022",
+    "title": "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+    "url": "https://arxiv.org/abs/2208.07339",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Washington; Meta AI; Hugging Face"
+   },
+   {
     "id": "iea-energy-ai-water",
     "title": "Energy and AI, Box 5.4: Water use by data centres",
     "url": "https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf",
@@ -1622,6 +1966,30 @@
    }
   ],
   "infrastructure/cloud": [
+   {
+    "id": "vllm-pagedattention-2023",
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "url": "https://arxiv.org/abs/2309.06180",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Berkeley"
+   },
+   {
+    "id": "orca-serving-2022",
+    "title": "Orca: A Distributed Serving System for Transformer-Based Generative Models",
+    "url": "https://www.usenix.org/conference/osdi22/presentation/yu",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Seoul National University; FriendliAI"
+   },
+   {
+    "id": "sglang-2024",
+    "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+    "url": "https://arxiv.org/abs/2312.07104",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Berkeley; Stanford University (LMSYS)"
+   },
    {
     "id": "nist-cloud-definition",
     "title": "The NIST Definition of Cloud Computing",
@@ -2183,6 +2551,22 @@
   ],
   "economics/productivity": [
    {
+    "id": "speculative-decoding-2023",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "url": "https://arxiv.org/abs/2211.17192",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Google Research"
+   },
+   {
+    "id": "epoch-inference-prices-2025",
+    "title": "LLM inference prices have fallen rapidly but unequally across tasks",
+    "url": "https://epoch.ai/data-insights/llm-inference-price-trends",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
     "id": "hai-ai-index-2026",
     "title": "AI Index Report 2026",
     "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
@@ -2354,6 +2738,46 @@
    }
   ],
   "economics/evidence": [
+   {
+    "id": "test-time-compute-2024",
+    "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+    "url": "https://arxiv.org/abs/2408.03314",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of California, Berkeley; Google DeepMind"
+   },
+   {
+    "id": "mlperf-inference-2026",
+    "title": "MLPerf Inference: Datacenter benchmark suite",
+    "url": "https://mlcommons.org/benchmarks/inference-datacenter/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "MLCommons"
+   },
+   {
+    "id": "epoch-inference-prices-2025",
+    "title": "LLM inference prices have fallen rapidly but unequally across tasks",
+    "url": "https://epoch.ai/data-insights/llm-inference-price-trends",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Epoch AI"
+   },
+   {
+    "id": "oecd-aim",
+    "title": "The OECD AI Incidents Monitor: an evidence base for effective AI policy",
+    "url": "https://oecd.ai/en/wonk/incidents-monitor-aim",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD.AI Policy Observatory"
+   },
+   {
+    "id": "aiid-database",
+    "title": "The AI Incident Database",
+    "url": "https://incidentdatabase.ai/about/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Responsible AI Collaborative"
+   },
    {
     "id": "isoc-ixp-policy-2026",
     "title": "Internet Exchange Points and Local Interconnection Ecosystems",
@@ -2532,6 +2956,14 @@
    }
   ],
   "society/attitudes": [
+   {
+    "id": "ieee-7010-2020",
+    "title": "IEEE Recommended Practice for Assessing the Impact of Autonomous and Intelligent Systems on Human Well-Being",
+    "url": "https://standards.ieee.org/ieee/7010/7718/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEEE Standards Association"
+   },
    {
     "id": "postnote-762-water",
     "title": "What are data centres and how sustainable are they?",
@@ -2721,6 +3153,14 @@
   ],
   "society/participation": [
    {
+    "id": "ai-standards-hub",
+    "title": "The next phase of the AI Standards Hub (AISH)",
+    "url": "https://www.npl.co.uk/news/the-next-phase-of-the-ai-standards-hub-(aish)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Physical Laboratory; British Standards Institution"
+   },
+   {
     "id": "isoc-community-ixps-2025",
     "title": "Community-Driven IXPs",
     "url": "https://www.internetsociety.org/resources/doc/2025/community-driven-ixps/",
@@ -2899,6 +3339,62 @@
   ],
   "society/trust": [
    {
+    "id": "iso-tr24028-2020",
+    "title": "Information technology — Artificial intelligence — Overview of trustworthiness in artificial intelligence",
+    "url": "https://knowledge.bsigroup.com/products/information-technology-artificial-intelligence-overview-of-trustworthiness-in-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "ieee-7000-2021",
+    "title": "IEEE 7000-2021: Standard Model Process for Addressing Ethical Concerns During System Design",
+    "url": "https://standards.ieee.org/ieee/7000/6781/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEEE Standards Association"
+   },
+   {
+    "id": "ieee-7001-2021",
+    "title": "IEEE Standard for Transparency of Autonomous Systems",
+    "url": "https://standards.ieee.org/beyond-standards/from-principles-to-practice-understanding-ieee-7001-and-transparency-in-autonomous-systems/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEEE Standards Association"
+   },
+   {
+    "id": "ieee-7010-2020",
+    "title": "IEEE Recommended Practice for Assessing the Impact of Autonomous and Intelligent Systems on Human Well-Being",
+    "url": "https://standards.ieee.org/ieee/7010/7718/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEEE Standards Association"
+   },
+   {
+    "id": "nist-sp1270-bias-2022",
+    "title": "Towards a Standard for Identifying and Managing Bias in Artificial Intelligence",
+    "url": "https://doi.org/10.6028/NIST.SP.1270",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Institute of Standards and Technology"
+   },
+   {
+    "id": "ftc-ai-claims-2023",
+    "title": "Keep your AI claims in check",
+    "url": "https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-check",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Federal Trade Commission"
+   },
+   {
+    "id": "sec-ai-washing-2024",
+    "title": "SEC Charges Two Investment Advisers with Making False and Misleading Statements About Their Use of Artificial Intelligence",
+    "url": "https://www.sec.gov/newsroom/press-releases/2024-36",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Securities and Exchange Commission"
+   },
+   {
     "id": "duke-water-community-trust",
     "title": "Water Use and Community Trust: Key Components of Data Centers' Social License to Operate",
     "url": "https://deeptech.duke.edu/sites/default/files/Water-Use-and-Community-Trust-Paper_May7.pdf",
@@ -2988,6 +3484,94 @@
    }
   ],
   "governance/rules": [
+   {
+    "id": "iso-42001-2023",
+    "title": "Information technology — Artificial intelligence — Management system",
+    "url": "https://www.iso.org/standard/42001",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-23894-2023",
+    "title": "Information technology — Artificial intelligence — Guidance on risk management",
+    "url": "https://www.iso.org/standard/77304.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "ieee-7000-2021",
+    "title": "IEEE 7000-2021: Standard Model Process for Addressing Ethical Concerns During System Design",
+    "url": "https://standards.ieee.org/ieee/7000/6781/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEEE Standards Association"
+   },
+   {
+    "id": "nist-ai-rmf-2023",
+    "title": "NIST AI Risk Management Framework (AI RMF) 1.0",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Institute of Standards and Technology"
+   },
+   {
+    "id": "iso-42005-2025",
+    "title": "Information technology — Artificial intelligence (AI) — AI system impact assessment",
+    "url": "https://www.iso.org/standard/42005",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "eu-pld-2024",
+    "title": "Defective products: liability (Directive (EU) 2024/2853)",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum:4792027",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (EUR-Lex)"
+   },
+   {
+    "id": "coe-ai-convention-2024",
+    "title": "Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225)",
+    "url": "https://rm.coe.int/1680afae3c",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Council of Europe"
+   },
+   {
+    "id": "colorado-sb26-189",
+    "title": "SB26-189: Automated Decision-Making Technology",
+    "url": "https://leg.colorado.gov/bills/sb26-189",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Colorado General Assembly"
+   },
+   {
+    "id": "ftc-ai-claims-2023",
+    "title": "Keep your AI claims in check",
+    "url": "https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-check",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Federal Trade Commission"
+   },
+   {
+    "id": "asean-ai-guide-2024",
+    "title": "ASEAN Guide on AI Governance and Ethics",
+    "url": "https://asean.org/book/asean-guide-on-ai-governance-and-ethics/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ASEAN Secretariat"
+   },
+   {
+    "id": "mata-avianca-2023",
+    "title": "Mata v. Avianca, Inc.: Opinion and Order on Sanctions",
+    "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US District Court for the Southern District of New York"
+   },
    {
     "id": "isoc-ixp-policy-2026",
     "title": "Internet Exchange Points and Local Interconnection Ecosystems",
@@ -3489,6 +4073,110 @@
   ],
   "governance/oversight": [
    {
+    "id": "iso-42001-2023",
+    "title": "Information technology — Artificial intelligence — Management system",
+    "url": "https://www.iso.org/standard/42001",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-23894-2023",
+    "title": "Information technology — Artificial intelligence — Guidance on risk management",
+    "url": "https://www.iso.org/standard/77304.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-38507-2022",
+    "title": "Information technology — Governance of IT — Governance implications of the use of artificial intelligence by organizations",
+    "url": "https://www.iso.org/standard/56641.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "ieee-7001-2021",
+    "title": "IEEE Standard for Transparency of Autonomous Systems",
+    "url": "https://standards.ieee.org/beyond-standards/from-principles-to-practice-understanding-ieee-7001-and-transparency-in-autonomous-systems/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEEE Standards Association"
+   },
+   {
+    "id": "nist-ai-rmf-2023",
+    "title": "NIST AI Risk Management Framework (AI RMF) 1.0",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Institute of Standards and Technology"
+   },
+   {
+    "id": "nist-genai-profile-2024",
+    "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+    "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Institute of Standards and Technology"
+   },
+   {
+    "id": "eu-ai-act-monitoring-2024",
+    "title": "Article 72: Post-market monitoring by providers and post-market monitoring plan for high-risk AI systems",
+    "url": "https://ai-act.digiphile.law/article/article-72.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union"
+   },
+   {
+    "id": "ntia-accountability-2024",
+    "title": "Artificial Intelligence Accountability Policy Report",
+    "url": "https://www.ntia.gov/sites/default/files/2024-04/ntia-ai-report-print.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Telecommunications and Information Administration (NTIA), US Department of Commerce"
+   },
+   {
+    "id": "oecd-aim",
+    "title": "The OECD AI Incidents Monitor: an evidence base for effective AI policy",
+    "url": "https://oecd.ai/en/wonk/incidents-monitor-aim",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD.AI Policy Observatory"
+   },
+   {
+    "id": "canada-dadm-2019",
+    "title": "Directive on Automated Decision-Making",
+    "url": "https://publications.gc.ca/collections/collection_2021/sct-tbs/BT48-31-2021-eng.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Treasury Board of Canada Secretariat"
+   },
+   {
+    "id": "nyc-ll144-2021",
+    "title": "Automated Employment Decision Tools (AEDT)",
+    "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "New York City Department of Consumer and Worker Protection (DCWP)"
+   },
+   {
+    "id": "sec-ai-washing-2024",
+    "title": "SEC Charges Two Investment Advisers with Making False and Misleading Statements About Their Use of Artificial Intelligence",
+    "url": "https://www.sec.gov/newsroom/press-releases/2024-36",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Securities and Exchange Commission"
+   },
+   {
+    "id": "us-joint-statement-bias-2023",
+    "title": "Joint Statement on Enforcement Efforts Against Discrimination and Bias in Automated Systems",
+    "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/EEOC-CRT-FTC-CFPB-AI-Joint-Statement%28final%29.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "CFPB, US DOJ, EEOC and FTC (joint)"
+   },
+   {
     "id": "itu-iab-cables-2026",
     "title": "International Advisory Body on Submarine Cable Resilience: Report of the Working Groups",
     "url": "https://www.itu.int/digital-resilience/submarine-cables/wp-content/uploads/sites/2/2026/07/IAB-Publication-2026.pdf",
@@ -3691,6 +4379,118 @@
   ],
   "governance/standards": [
    {
+    "id": "iso-42001-2023",
+    "title": "Information technology — Artificial intelligence — Management system",
+    "url": "https://www.iso.org/standard/42001",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-23894-2023",
+    "title": "Information technology — Artificial intelligence — Guidance on risk management",
+    "url": "https://www.iso.org/standard/77304.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-23053-2022",
+    "title": "Framework for Artificial Intelligence (AI) Systems Using Machine Learning (ML)",
+    "url": "https://committee.iso.org/standard/74438.html?browse=tc",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-38507-2022",
+    "title": "Information technology — Governance of IT — Governance implications of the use of artificial intelligence by organizations",
+    "url": "https://www.iso.org/standard/56641.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-22989-2022",
+    "title": "Information technology — Artificial intelligence — Artificial intelligence concepts and terminology",
+    "url": "https://www.iso.org/standard/74296.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "iso-tr24028-2020",
+    "title": "Information technology — Artificial intelligence — Overview of trustworthiness in artificial intelligence",
+    "url": "https://knowledge.bsigroup.com/products/information-technology-artificial-intelligence-overview-of-trustworthiness-in-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "ieee-7000-2021",
+    "title": "IEEE 7000-2021: Standard Model Process for Addressing Ethical Concerns During System Design",
+    "url": "https://standards.ieee.org/ieee/7000/6781/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEEE Standards Association"
+   },
+   {
+    "id": "ieee-7001-2021",
+    "title": "IEEE Standard for Transparency of Autonomous Systems",
+    "url": "https://standards.ieee.org/beyond-standards/from-principles-to-practice-understanding-ieee-7001-and-transparency-in-autonomous-systems/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEEE Standards Association"
+   },
+   {
+    "id": "ieee-7010-2020",
+    "title": "IEEE Recommended Practice for Assessing the Impact of Autonomous and Intelligent Systems on Human Well-Being",
+    "url": "https://standards.ieee.org/ieee/7010/7718/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "IEEE Standards Association"
+   },
+   {
+    "id": "nist-ai-rmf-2023",
+    "title": "NIST AI Risk Management Framework (AI RMF) 1.0",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Institute of Standards and Technology"
+   },
+   {
+    "id": "nist-genai-profile-2024",
+    "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+    "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Institute of Standards and Technology"
+   },
+   {
+    "id": "nist-sp1270-bias-2022",
+    "title": "Towards a Standard for Identifying and Managing Bias in Artificial Intelligence",
+    "url": "https://doi.org/10.6028/NIST.SP.1270",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Institute of Standards and Technology"
+   },
+   {
+    "id": "ai-standards-hub",
+    "title": "The next phase of the AI Standards Hub (AISH)",
+    "url": "https://www.npl.co.uk/news/the-next-phase-of-the-ai-standards-hub-(aish)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Physical Laboratory; British Standards Institution"
+   },
+   {
+    "id": "iso-42005-2025",
+    "title": "Information technology — Artificial intelligence (AI) — AI system impact assessment",
+    "url": "https://www.iso.org/standard/42005",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
     "id": "nist-cloud-definition",
     "title": "The NIST Definition of Cloud Computing",
     "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
@@ -3732,6 +4532,30 @@
    }
   ],
   "governance/postmarket": [
+   {
+    "id": "eu-ai-act-monitoring-2024",
+    "title": "Article 72: Post-market monitoring by providers and post-market monitoring plan for high-risk AI systems",
+    "url": "https://ai-act.digiphile.law/article/article-72.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union"
+   },
+   {
+    "id": "eu-pld-2024",
+    "title": "Defective products: liability (Directive (EU) 2024/2853)",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum:4792027",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (EUR-Lex)"
+   },
+   {
+    "id": "aiid-database",
+    "title": "The AI Incident Database",
+    "url": "https://incidentdatabase.ai/about/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Responsible AI Collaborative"
+   },
    {
     "id": "aegis-postmarket",
     "title": "AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks",
@@ -3824,6 +4648,46 @@
    }
   ],
   "politics/international": [
+   {
+    "id": "iso-38507-2022",
+    "title": "Information technology — Governance of IT — Governance implications of the use of artificial intelligence by organizations",
+    "url": "https://www.iso.org/standard/56641.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "ai-standards-hub",
+    "title": "The next phase of the AI Standards Hub (AISH)",
+    "url": "https://www.npl.co.uk/news/the-next-phase-of-the-ai-standards-hub-(aish)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Physical Laboratory; British Standards Institution"
+   },
+   {
+    "id": "iso-42005-2025",
+    "title": "Information technology — Artificial intelligence (AI) — AI system impact assessment",
+    "url": "https://www.iso.org/standard/42005",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ISO/IEC"
+   },
+   {
+    "id": "coe-ai-convention-2024",
+    "title": "Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225)",
+    "url": "https://rm.coe.int/1680afae3c",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Council of Europe"
+   },
+   {
+    "id": "asean-ai-guide-2024",
+    "title": "ASEAN Guide on AI Governance and Ethics",
+    "url": "https://asean.org/book/asean-guide-on-ai-governance-and-ethics/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ASEAN Secretariat"
+   },
    {
     "id": "gsma-wrc23-2023",
     "title": "GSMA hails groundbreaking spectrum decisions at WRC-23",
@@ -4026,6 +4890,38 @@
    }
   ],
   "politics/national": [
+   {
+    "id": "canada-dadm-2019",
+    "title": "Directive on Automated Decision-Making",
+    "url": "https://publications.gc.ca/collections/collection_2021/sct-tbs/BT48-31-2021-eng.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Treasury Board of Canada Secretariat"
+   },
+   {
+    "id": "nyc-ll144-2021",
+    "title": "Automated Employment Decision Tools (AEDT)",
+    "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "New York City Department of Consumer and Worker Protection (DCWP)"
+   },
+   {
+    "id": "colorado-sb26-189",
+    "title": "SB26-189: Automated Decision-Making Technology",
+    "url": "https://leg.colorado.gov/bills/sb26-189",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Colorado General Assembly"
+   },
+   {
+    "id": "us-joint-statement-bias-2023",
+    "title": "Joint Statement on Enforcement Efforts Against Discrimination and Bias in Automated Systems",
+    "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/EEOC-CRT-FTC-CFPB-AI-Joint-Statement%28final%29.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "CFPB, US DOJ, EEOC and FTC (joint)"
+   },
    {
     "id": "setkab-palapa-ring-2019",
     "title": "Communications Ministry Tells Operators to Provide Signal Availability",
@@ -4382,6 +5278,118 @@
    }
   ],
   "politics/accountability": [
+   {
+    "id": "eu-ai-act-monitoring-2024",
+    "title": "Article 72: Post-market monitoring by providers and post-market monitoring plan for high-risk AI systems",
+    "url": "https://ai-act.digiphile.law/article/article-72.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union"
+   },
+   {
+    "id": "eu-pld-2024",
+    "title": "Defective products: liability (Directive (EU) 2024/2853)",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum:4792027",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (EUR-Lex)"
+   },
+   {
+    "id": "coe-ai-convention-2024",
+    "title": "Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225)",
+    "url": "https://rm.coe.int/1680afae3c",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Council of Europe"
+   },
+   {
+    "id": "ntia-accountability-2024",
+    "title": "Artificial Intelligence Accountability Policy Report",
+    "url": "https://www.ntia.gov/sites/default/files/2024-04/ntia-ai-report-print.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Telecommunications and Information Administration (NTIA), US Department of Commerce"
+   },
+   {
+    "id": "oecd-aim",
+    "title": "The OECD AI Incidents Monitor: an evidence base for effective AI policy",
+    "url": "https://oecd.ai/en/wonk/incidents-monitor-aim",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD.AI Policy Observatory"
+   },
+   {
+    "id": "aiid-database",
+    "title": "The AI Incident Database",
+    "url": "https://incidentdatabase.ai/about/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Responsible AI Collaborative"
+   },
+   {
+    "id": "canada-dadm-2019",
+    "title": "Directive on Automated Decision-Making",
+    "url": "https://publications.gc.ca/collections/collection_2021/sct-tbs/BT48-31-2021-eng.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Treasury Board of Canada Secretariat"
+   },
+   {
+    "id": "nyc-ll144-2021",
+    "title": "Automated Employment Decision Tools (AEDT)",
+    "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "New York City Department of Consumer and Worker Protection (DCWP)"
+   },
+   {
+    "id": "colorado-sb26-189",
+    "title": "SB26-189: Automated Decision-Making Technology",
+    "url": "https://leg.colorado.gov/bills/sb26-189",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Colorado General Assembly"
+   },
+   {
+    "id": "ftc-ai-claims-2023",
+    "title": "Keep your AI claims in check",
+    "url": "https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-check",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Federal Trade Commission"
+   },
+   {
+    "id": "sec-ai-washing-2024",
+    "title": "SEC Charges Two Investment Advisers with Making False and Misleading Statements About Their Use of Artificial Intelligence",
+    "url": "https://www.sec.gov/newsroom/press-releases/2024-36",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Securities and Exchange Commission"
+   },
+   {
+    "id": "us-joint-statement-bias-2023",
+    "title": "Joint Statement on Enforcement Efforts Against Discrimination and Bias in Automated Systems",
+    "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/EEOC-CRT-FTC-CFPB-AI-Joint-Statement%28final%29.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "CFPB, US DOJ, EEOC and FTC (joint)"
+   },
+   {
+    "id": "asean-ai-guide-2024",
+    "title": "ASEAN Guide on AI Governance and Ethics",
+    "url": "https://asean.org/book/asean-guide-on-ai-governance-and-ethics/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ASEAN Secretariat"
+   },
+   {
+    "id": "mata-avianca-2023",
+    "title": "Mata v. Avianca, Inc.: Opinion and Order on Sanctions",
+    "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US District Court for the Southern District of New York"
+   },
    {
     "id": "chincholikar-incident-disclosure",
     "title": "The AI incident disclosure shadow: tracking AI incidents into U.S. securities filings",
