@@ -396,7 +396,7 @@ header{display:none!important}body{padding-top:0!important;background:radial-gra
 .guide-menu #search{background:#fff;color:#1d3027;border-color:#cddbd3}.guide-menu #search::placeholder{color:#65786e}.guide-menu #results{background:#fff;border-color:#d2dfd7}.guide-menu #results button{color:#203c2d}.guide-menu #results button:hover{background:#edf2ee}.guide-menu #results .where{color:#60786a}
 #surprise-choices:not(:empty){border-top:1px solid #dce5df;margin-top:12px;padding-top:8px}.surprise-choice{display:block;width:100%;text-align:left;border:0;border-radius:9px;padding:9px 10px;background:transparent;color:#203c2d;font:inherit;cursor:pointer}.surprise-choice:hover,.surprise-choice:focus-visible{background:#eaf1ea}.surprise-choice strong,.surprise-choice small{display:block}.surprise-choice strong{font-size:13px}.surprise-choice small{font-size:11px;color:#5c7467;margin-top:1px}
 
-.guide-hello{background:#fbfaf6;color:#243943;border:1px solid #d9e3e4;box-shadow:0 8px 24px #0004}.guide-hello::before,.guide-hello::after{content:"";position:absolute;display:block;border-radius:50%;background:#fbfaf6;border:1px solid #d9e3e4}.guide-hello::before{width:9px;height:9px;left:18px;bottom:-12px}.guide-hello::after{width:5px;height:5px;left:11px;bottom:-19px}
+.guide-hello{pointer-events:auto;cursor:pointer;font-family:inherit;background:#fbfaf6;color:#243943;border:1px solid #d9e3e4;box-shadow:0 8px 24px #0004}.guide-hello::before,.guide-hello::after{content:"";position:absolute;display:block;border-radius:50%;background:#fbfaf6;border:1px solid #d9e3e4}.guide-hello::before{width:9px;height:9px;left:18px;bottom:-12px}.guide-hello::after{width:5px;height:5px;left:11px;bottom:-19px}
 body:has(#jpanel.on) .guide{left:22px}
 #jpanel{left:auto;right:max(16px,calc((100vw - 1240px)/2));bottom:16px;width:min(340px,calc(100vw - 110px));max-height:58vh;background:#fbfaf6;color:#1c303a;border:1px solid #dbe4e5;border-radius:18px;padding:18px;box-shadow:0 18px 50px #0007}
 #jpanel .step{color:#506f7b;letter-spacing:.08em}#jpanel h3{font-family:Georgia,serif;font-size:21px;line-height:1.2;letter-spacing:-.02em}#jpanel p,#jpanel li{color:#354e5b;line-height:1.55}#jpanel a,#jpanel .full{color:#285d78}#jpanel .note,#jpanel .srclab{color:#607784}#jpanel .row button{background:#eaf0f1;color:#213c47;border:1px solid #c8dadd;min-height:44px}
@@ -410,7 +410,7 @@ body:has(#jpanel.on) .guide{left:22px}
 </header>
 
 <div class="guide">
-  <div class="guide-hello" aria-hidden="true">Hi! I’m your guide.</div>
+  <button class="guide-hello" type="button" aria-label="Open exploration guide" aria-controls="guide-menu" aria-expanded="false">Hi! I’m your guide.</button>
   <div class="guide-menu" id="guide-menu">
     <h2>Where should I guide you?</h2>
     <div class="searchwrap">
@@ -1580,8 +1580,11 @@ function finishGuideDrag(e){
 }
 guideToggle.addEventListener('pointerup', finishGuideDrag);
 guideToggle.addEventListener('pointercancel', finishGuideDrag);
-function closeGuide(){guide.classList.remove('open');guideToggle.setAttribute('aria-expanded','false');positionGuide()}
-guideToggle.addEventListener('click',()=>{if(suppressGuideClick){suppressGuideClick=false;return}const open=guide.classList.toggle('open');guideToggle.setAttribute('aria-expanded',String(open));positionGuide()});
+const guideHello = guide.querySelector('.guide-hello');
+function setGuideOpen(open){guide.classList.toggle('open',open);guideToggle.setAttribute('aria-expanded',String(open));guideHello.setAttribute('aria-expanded',String(open));positionGuide()}
+function closeGuide(){setGuideOpen(false)}
+guideToggle.addEventListener('click',()=>{if(suppressGuideClick){suppressGuideClick=false;return}setGuideOpen(!guide.classList.contains('open'))});
+guideHello.addEventListener('click',()=>setGuideOpen(!guide.classList.contains('open')));
 document.addEventListener('click',e=>{if(!guide.contains(e.target))closeGuide()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape' && guide.classList.contains('open')){closeGuide();guideToggle.focus()}});
 document.querySelectorAll(".jbtn[data-journey]").forEach(b => b.addEventListener("click", () => {
