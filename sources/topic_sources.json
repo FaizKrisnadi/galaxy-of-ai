@@ -1,11 +1,11 @@
 {
  "built": "2026-11-02",
  "counts": {
-  "records_total": 333,
-  "records_mapped": 333,
-  "topic_record_links": 853,
-  "read_mapped": 714,
-  "indexed_only_mapped": 139,
+  "records_total": 363,
+  "records_mapped": 363,
+  "topic_record_links": 899,
+  "read_mapped": 781,
+  "indexed_only_mapped": 118,
   "topics_total": 36,
   "topics_with_records": 36,
   "topics_without_records": 0
@@ -256,6 +256,118 @@
    }
   ],
   "how/data": [
+   {
+    "id": "datasheets-datasets-2018",
+    "title": "Datasheets for Datasets",
+    "url": "https://arxiv.org/abs/1803.09010?context=cs.LG",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "bender-data-statements-2018",
+    "title": "Data Statements for Natural Language Processing: Toward Mitigating System Bias and Enabling Better Science",
+    "url": "https://www.mitpressjournals.org/doi/pdf/10.1162/tacl_a_00041",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Transactions of the Association for Computational Linguistics"
+   },
+   {
+    "id": "longpre-provenance-2023",
+    "title": "The Data Provenance Initiative: A Large Scale Audit of Dataset Licensing & Attribution in AI",
+    "url": "http://arxiv.org/abs/2310.16787",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "gadre-datacomp-2023",
+    "title": "DataComp: In search of the next generation of multimodal datasets",
+    "url": "https://arxiv.org/abs/2304.14108?context=cs.LG",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "schuhmann-laion5b-2022",
+    "title": "LAION-5B: An open large-scale dataset for training next generation image-text models",
+    "url": "https://arxiv.org/abs/2210.08402?context=cs.LG",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "penedo-refinedweb-2023",
+    "title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+    "url": "https://arxiv.org/abs/2306.01116?context=cs",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "penedo-fineweb-2024",
+    "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+    "url": "https://arxiv.org/abs/2406.17557",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "soldaini-dolma-2024",
+    "title": "Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+    "url": "https://arxiv.org/abs/2402.00159",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "gao-pile-2020",
+    "title": "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+    "url": "https://arxiv.org/abs/2101.00027",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "dodge-c4-2021",
+    "title": "Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus",
+    "url": "https://arXiv.org/abs/2104.08758?context=cs.AI",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "lhoest-datasets-2021",
+    "title": "Datasets: A Community Library for Natural Language Processing",
+    "url": "https://arxiv.org/abs/2109.02846?context=cs",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "cahyawijaya-nusacrowd-2022",
+    "title": "NusaCrowd: Open Source Initiative for Indonesian NLP Resources",
+    "url": "https://arxiv.org/abs/2212.09648?context=cs",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "singh-aya-2024",
+    "title": "Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning",
+    "url": "https://arxiv.org/abs/2402.06619?context=cs",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "gunasekar-phi1-2023",
+    "title": "Textbooks Are All You Need",
+    "url": "https://arxiv.org/abs/2306.11644?context=cs.LG",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
    {
     "id": "wadipalapa-indonesia-ai-policy",
     "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia",
@@ -616,24 +728,24 @@
     "id": "semianalysis-china-frontier",
     "title": "Beijing Will Not Pace the Frontier: China's Speed-First AI Safety Regime",
     "url": "https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
     "inst": "SemiAnalysis (industry research; not peer-reviewed)"
    },
    {
     "id": "huang-deepseek-eval",
     "title": "Evaluating DeepSeek V4.1 Flash-1017 for loss of control and harmful manipulation risks",
     "url": "https://arxiv.org/abs/2610.35671",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "arXiv preprint (independent; not peer-reviewed)"
    },
    {
     "id": "metr-anthropic-review",
     "title": "Review of the 'Misalignment in high-stakes settings' section in Anthropic's Risk Report (August 2026)",
     "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "METR (external review of corporate risk assessment)"
    },
    {
@@ -802,8 +914,8 @@
     "id": "openai-monitoring-incident",
     "title": "Suppressing misalignment monitoring alerts and disabling misalignment monitoring",
     "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
     "inst": "OpenAI (primary-source corporate incident report)"
    },
    {
@@ -988,8 +1100,8 @@
     "id": "van-es-deliberation",
     "title": "Bringing Ethics to the Table: Presenting a Deliberation Tool for Data and AI in Media Organizations",
     "url": "https://doi.org/10.1007/s44206-026-00294-y",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "Digital Society (peer-reviewed; collaborative action research)"
    }
   ],
@@ -1716,8 +1828,8 @@
     "id": "patro-santacreu-targeted-trade",
     "title": "Geopolitical Distance and Targeted Trade",
     "url": "https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "Federal Reserve Bank of St. Louis Review"
    },
    {
@@ -2040,8 +2152,8 @@
     "id": "pursiainen-critical-infrastructure",
     "title": "EU Governance of Critical Infrastructure: Resilience and Artificial Intelligence as Policy Challenges",
     "url": "https://doi.org/10.1007/s41125-026-00115-w",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "European Journal for Security Research (peer-reviewed)"
    },
    {
@@ -2346,6 +2458,46 @@
    }
   ],
   "economics/investment": [
+   {
+    "id": "csis-china-localization-2026",
+    "title": "China's Localization Drive in Semiconductors Gains Impetus from Allied Chip Export Controls",
+    "url": "https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Strategic and International Studies (CSIS)"
+   },
+   {
+    "id": "crs-chips-act-global-2023",
+    "title": "Semiconductors and the CHIPS Act: The Global Context",
+    "url": "https://www.congress.gov/crs_external_products/R/PDF/R47558/R47558.1.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Congressional Research Service"
+   },
+   {
+    "id": "gao-semiconductor-projects-2025",
+    "title": "Semiconductors: Information on Projects Funded to Strengthen U.S. Supply Chain",
+    "url": "https://www.gao.gov/products/gao-26-107882",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Government Accountability Office"
+   },
+   {
+    "id": "gao-chips-rd-plan-2026",
+    "title": "Semiconductors: Commerce Needs Plan to Meet CHIPS for America R&D Requirements",
+    "url": "https://www.gao.gov/products/gao-26-109121",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Government Accountability Office"
+   },
+   {
+    "id": "rieti-chips-japan-2025",
+    "title": "Chips in Japan: Industrial policy, decline and renewal",
+    "url": "https://www.rieti.go.jp/jp/publications/dp/25e116.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Research Institute of Economy, Trade and Industry (RIETI)"
+   },
    {
     "id": "mckinsey-genai-2023",
     "title": "The Economic Potential of Generative AI: The Next Productivity Frontier",
@@ -3036,16 +3188,16 @@
     "id": "restrepo-firm-compliance",
     "title": "Compliance under the EU AI Act: How Firms Navigate Regulatory Complexity",
     "url": "https://doi.org/10.1016/j.clsr.2026.106390",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
     "inst": "Computer Law & Security Review (peer-reviewed)"
    },
    {
     "id": "patro-santacreu-targeted-trade",
     "title": "Geopolitical Distance and Targeted Trade",
     "url": "https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "Federal Reserve Bank of St. Louis Review"
    },
    {
@@ -3082,6 +3234,22 @@
    }
   ],
   "economics/evidence": [
+   {
+    "id": "oecd-chip-landscape-2025",
+    "title": "The chip landscape",
+    "url": "https://www.oecd.org/en/publications/the-chip-landscape_02dbd028-en/full-report/component-3.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "oecd-mapping-value-chain-2025",
+    "title": "Mapping the semiconductor value chain: Working towards identifying dependencies and vulnerabilities",
+    "url": "https://www.OECD.org/content/dam/oecd/en/publications/reports/2025/06/mapping-the-semiconductor-value-chain_5ba52971/4154cdbf-en.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
    {
     "id": "becker-metr-2025",
     "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
@@ -3472,8 +3640,8 @@
     "id": "lundgren-tallberg-preferences",
     "title": "Governing Artificial Intelligence: Public Preferences and Regulatory Options",
     "url": "https://ssrn.com/abstract=7125438",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "SSRN preprint (not peer-reviewed at version checked)"
    },
    {
@@ -3594,8 +3762,8 @@
     "id": "van-es-deliberation",
     "title": "Bringing Ethics to the Table: Presenting a Deliberation Tool for Data and AI in Media Organizations",
     "url": "https://doi.org/10.1007/s44206-026-00294-y",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "Digital Society (peer-reviewed; collaborative action research)"
    },
    {
@@ -3656,6 +3824,22 @@
    }
   ],
   "society/participation": [
+   {
+    "id": "cahyawijaya-nusacrowd-2022",
+    "title": "NusaCrowd: Open Source Initiative for Indonesian NLP Resources",
+    "url": "https://arxiv.org/abs/2212.09648?context=cs",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "singh-aya-2024",
+    "title": "Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning",
+    "url": "https://arxiv.org/abs/2402.06619?context=cs",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
    {
     "id": "ai-standards-hub",
     "title": "The next phase of the AI Standards Hub (AISH)",
@@ -4060,6 +4244,22 @@
    }
   ],
   "governance/rules": [
+   {
+    "id": "eu-chips-act-2023",
+    "title": "Regulation (EU) 2023/1781 (Chips Act)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2023/1781/oj/eng",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (EUR-Lex)"
+   },
+   {
+    "id": "longpre-provenance-2023",
+    "title": "The Data Provenance Initiative: A Large Scale Audit of Dataset Licensing & Attribution in AI",
+    "url": "http://arxiv.org/abs/2310.16787",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
    {
     "id": "itu-unitar-ewaste-2024",
     "title": "The Global E-waste Monitor 2024",
@@ -4536,32 +4736,32 @@
     "id": "restrepo-firm-compliance",
     "title": "Compliance under the EU AI Act: How Firms Navigate Regulatory Complexity",
     "url": "https://doi.org/10.1016/j.clsr.2026.106390",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
     "inst": "Computer Law & Security Review (peer-reviewed)"
    },
    {
     "id": "kim-regime-complex-documents",
     "title": "Coordinating fragmented global AI governance: Control, Rights, and Safety",
     "url": "https://doi.org/10.1007/s11077-026-09632-w",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "Policy Sciences (peer-reviewed research note)"
    },
    {
     "id": "pursiainen-critical-infrastructure",
     "title": "EU Governance of Critical Infrastructure: Resilience and Artificial Intelligence as Policy Challenges",
     "url": "https://doi.org/10.1007/s41125-026-00115-w",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "European Journal for Security Research (peer-reviewed)"
    },
    {
     "id": "geith-regime-complex",
     "title": "The Emerging Regime Complex for Artificial Intelligence",
     "url": "https://doi.org/10.1093/isagsq/ksag145",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
     "inst": "Global Studies Quarterly (peer-reviewed; dataset of 119 institutions)"
    },
    {
@@ -5044,16 +5244,16 @@
     "id": "metr-anthropic-review",
     "title": "Review of the 'Misalignment in high-stakes settings' section in Anthropic's Risk Report (August 2026)",
     "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "METR (external review of corporate risk assessment)"
    },
    {
     "id": "openai-monitoring-incident",
     "title": "Suppressing misalignment monitoring alerts and disabling misalignment monitoring",
     "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
     "inst": "OpenAI (primary-source corporate incident report)"
    },
    {
@@ -5577,6 +5777,46 @@
   ],
   "politics/international": [
    {
+    "id": "csis-rethinking-export-controls-2026",
+    "title": "Rethinking Export Controls as a Tool in Modern Technology Competition",
+    "url": "https://www.csis.org/analysis/rethinking-export-controls-tool-modern-technology-competition",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Strategic and International Studies (CSIS)"
+   },
+   {
+    "id": "crs-chips-act-global-2023",
+    "title": "Semiconductors and the CHIPS Act: The Global Context",
+    "url": "https://www.congress.gov/crs_external_products/R/PDF/R47558/R47558.1.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Congressional Research Service"
+   },
+   {
+    "id": "crs-section301-mature-node-2025",
+    "title": "Section 301 and China: Mature-Node Semiconductors",
+    "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF12958/IF12958.5.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Congressional Research Service"
+   },
+   {
+    "id": "rand-full-stack-2025",
+    "title": "Full Stack: China's Evolving Industrial Policy for AI",
+    "url": "https://www.rand.org/pubs/perspectives/PEA4012-1.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "RAND"
+   },
+   {
+    "id": "taiwan-silicon-shield-2025",
+    "title": "Taiwan's 'Silicon Shield': Techno-authoritarian territories in the global semiconductor supply chain",
+    "url": "https://discovery.ucl.ac.uk/id/eprint/10212798/1/Datta_260825_DDS_Commentary_AD_YJC.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University College London (UCL Discovery)"
+   },
+   {
     "id": "imf-genai-2024",
     "title": "Gen-AI: Artificial Intelligence and the Future of Work",
     "url": "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379",
@@ -5828,16 +6068,16 @@
     "id": "kim-regime-complex-documents",
     "title": "Coordinating fragmented global AI governance: Control, Rights, and Safety",
     "url": "https://doi.org/10.1007/s11077-026-09632-w",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "Policy Sciences (peer-reviewed research note)"
    },
    {
     "id": "geith-regime-complex",
     "title": "The Emerging Regime Complex for Artificial Intelligence",
     "url": "https://doi.org/10.1093/isagsq/ksag145",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
     "inst": "Global Studies Quarterly (peer-reviewed; dataset of 119 institutions)"
    },
    {
@@ -6158,8 +6398,8 @@
     "id": "semianalysis-china-frontier",
     "title": "Beijing Will Not Pace the Frontier: China's Speed-First AI Safety Regime",
     "url": "https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "F",
+    "tierLabel": "full or partial text read",
     "inst": "SemiAnalysis (industry research; not peer-reviewed)"
    },
    {
@@ -6196,6 +6436,118 @@
    }
   ],
   "politics/chips": [
+   {
+    "id": "eu-chips-act-2023",
+    "title": "Regulation (EU) 2023/1781 (Chips Act)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2023/1781/oj/eng",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (EUR-Lex)"
+   },
+   {
+    "id": "nl-semiconductor-export-controls-2024",
+    "title": "The Netherlands expands export control measure for advanced semiconductor manufacturing equipment",
+    "url": "https://www.government.nl/latest/news/2024/09/06/the-netherlands-expands-export-control-measure-advanced-semiconductor-manufacturing-equipment",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Government of the Netherlands"
+   },
+   {
+    "id": "cset-bis-2023-explainer",
+    "title": "Explainer: The Commerce Department's October 2023 Export Control Update",
+    "url": "https://cset.georgetown.edu/article/bis-2023-update-explainer",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Security and Emerging Technology (CSET), Georgetown University"
+   },
+   {
+    "id": "csis-rethinking-export-controls-2026",
+    "title": "Rethinking Export Controls as a Tool in Modern Technology Competition",
+    "url": "https://www.csis.org/analysis/rethinking-export-controls-tool-modern-technology-competition",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Strategic and International Studies (CSIS)"
+   },
+   {
+    "id": "csis-china-localization-2026",
+    "title": "China's Localization Drive in Semiconductors Gains Impetus from Allied Chip Export Controls",
+    "url": "https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Center for Strategic and International Studies (CSIS)"
+   },
+   {
+    "id": "crs-chips-act-global-2023",
+    "title": "Semiconductors and the CHIPS Act: The Global Context",
+    "url": "https://www.congress.gov/crs_external_products/R/PDF/R47558/R47558.1.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Congressional Research Service"
+   },
+   {
+    "id": "crs-section301-mature-node-2025",
+    "title": "Section 301 and China: Mature-Node Semiconductors",
+    "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF12958/IF12958.5.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Congressional Research Service"
+   },
+   {
+    "id": "gao-semiconductor-projects-2025",
+    "title": "Semiconductors: Information on Projects Funded to Strengthen U.S. Supply Chain",
+    "url": "https://www.gao.gov/products/gao-26-107882",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Government Accountability Office"
+   },
+   {
+    "id": "gao-chips-rd-plan-2026",
+    "title": "Semiconductors: Commerce Needs Plan to Meet CHIPS for America R&D Requirements",
+    "url": "https://www.gao.gov/products/gao-26-109121",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Government Accountability Office"
+   },
+   {
+    "id": "oecd-chip-landscape-2025",
+    "title": "The chip landscape",
+    "url": "https://www.oecd.org/en/publications/the-chip-landscape_02dbd028-en/full-report/component-3.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "oecd-mapping-value-chain-2025",
+    "title": "Mapping the semiconductor value chain: Working towards identifying dependencies and vulnerabilities",
+    "url": "https://www.OECD.org/content/dam/oecd/en/publications/reports/2025/06/mapping-the-semiconductor-value-chain_5ba52971/4154cdbf-en.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "rand-full-stack-2025",
+    "title": "Full Stack: China's Evolving Industrial Policy for AI",
+    "url": "https://www.rand.org/pubs/perspectives/PEA4012-1.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "RAND"
+   },
+   {
+    "id": "rieti-chips-japan-2025",
+    "title": "Chips in Japan: Industrial policy, decline and renewal",
+    "url": "https://www.rieti.go.jp/jp/publications/dp/25e116.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Research Institute of Economy, Trade and Industry (RIETI)"
+   },
+   {
+    "id": "taiwan-silicon-shield-2025",
+    "title": "Taiwan's 'Silicon Shield': Techno-authoritarian territories in the global semiconductor supply chain",
+    "url": "https://discovery.ucl.ac.uk/id/eprint/10212798/1/Datta_260825_DDS_Commentary_AD_YJC.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University College London (UCL Discovery)"
+   },
    {
     "id": "iea-gcmo-2025",
     "title": "Global Critical Minerals Outlook 2025",
@@ -6264,8 +6616,8 @@
     "id": "patro-santacreu-targeted-trade",
     "title": "Geopolitical Distance and Targeted Trade",
     "url": "https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade",
-    "tier": "H",
-    "tierLabel": "handoff-verified metadata (not read)",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
     "inst": "Federal Reserve Bank of St. Louis Review"
    },
    {
@@ -6740,6 +7092,22 @@
    }
   ],
   "environment/resources": [
+   {
+    "id": "lo-nickel-mining-2024",
+    "title": "Nickel mining reduced forest cover in Indonesia but had mixed outcomes for well-being",
+    "url": "https://www.cell.com/one-earth/fulltext/S2590-3322(24)00534-7",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "One Earth (Cell Press, peer-reviewed)"
+   },
+   {
+    "id": "eu-crma-2024",
+    "title": "Regulation (EU) 2024/1252 (Critical Raw Materials Act)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1252/oj",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (EUR-Lex)"
+   },
    {
     "id": "iea-gcmo-2025",
     "title": "Global Critical Minerals Outlook 2025",
