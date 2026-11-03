@@ -1,10 +1,10 @@
 {
  "built": "2026-11-02",
  "counts": {
-  "records_total": 263,
-  "records_mapped": 263,
-  "topic_record_links": 702,
-  "read_mapped": 563,
+  "records_total": 333,
+  "records_mapped": 333,
+  "topic_record_links": 853,
+  "read_mapped": 714,
   "indexed_only_mapped": 139,
   "topics_total": 36,
   "topics_with_records": 36,
@@ -873,6 +873,70 @@
   ],
   "how/using": [
    {
+    "id": "dellacqua-jagged-2023",
+    "title": "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality",
+    "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=64700",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Harvard Business School"
+   },
+   {
+    "id": "peng-copilot-2023",
+    "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",
+    "url": "https://arxiv.org/abs/2302.06590?context=cs",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "becker-metr-2025",
+    "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+    "url": "https://arxiv.org/abs/2507.09089",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "METR"
+   },
+   {
+    "id": "cui-highskilled-2026",
+    "title": "The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535?cookieSet=1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Management Science"
+   },
+   {
+    "id": "dietvorst-algorithm-aversion-2015",
+    "title": "Algorithm aversion: people erroneously avoid algorithms after seeing them err",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25401381/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Journal of Experimental Psychology: General"
+   },
+   {
+    "id": "logg-algorithm-appreciation-2019",
+    "title": "Algorithm appreciation: People prefer algorithmic to human judgment",
+    "url": "https://psycnet.apa.org/record/2019-16202-008",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Organizational Behavior and Human Decision Processes"
+   },
+   {
+    "id": "aaa-self-driving-2025",
+    "title": "AAA: Fear in Self-Driving Vehicles Persists",
+    "url": "https://southjersey.aaa.com/news/aaa-fear-self-driving-vehicles-persists",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "AAA"
+   },
+   {
+    "id": "common-sense-teens-2025",
+    "title": "Talk, Trust, and Trade-Offs: How and Why Teens Use AI Companions",
+    "url": "https://www.commonsensemedia.org/sites/default/files/research/report/talk-trust-and-trade-offs_2025_web.pdf?ref=mereorthodoxy.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Common Sense Media"
+   },
+   {
     "id": "mata-avianca-2023",
     "title": "Mata v. Avianca, Inc.: Opinion and Order on Sanctions",
     "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf",
@@ -930,6 +994,14 @@
    }
   ],
   "infrastructure/centres": [
+   {
+    "id": "icef-embodied-ghg-2025",
+    "title": "ICEF Sustainable Data Centers Roadmap, Chapter 3.3: Embodied Greenhouse Gas Emissions (Scope 3)",
+    "url": "https://icef.go.jp/wp-content/themes/icef_new/pdf/roadmap/2025/CHAPTER%20%E2%85%A2%20%E2%80%93%203.%20EMBODIED%20GREENHOUSE%20GAS%20EMISSIONS%20%28SCOPE%203%29.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Innovation for Cool Earth Forum"
+   },
    {
     "id": "vllm-pagedattention-2023",
     "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
@@ -1496,6 +1568,22 @@
    }
   ],
   "infrastructure/chips": [
+   {
+    "id": "icef-embodied-ghg-2025",
+    "title": "ICEF Sustainable Data Centers Roadmap, Chapter 3.3: Embodied Greenhouse Gas Emissions (Scope 3)",
+    "url": "https://icef.go.jp/wp-content/themes/icef_new/pdf/roadmap/2025/CHAPTER%20%E2%85%A2%20%E2%80%93%203.%20EMBODIED%20GREENHOUSE%20GAS%20EMISSIONS%20%28SCOPE%203%29.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Innovation for Cool Earth Forum"
+   },
+   {
+    "id": "flops-footprints-2025",
+    "title": "From FLOPs to Footprints: The Resource Cost of Artificial Intelligence",
+    "url": "https://arxiv.org/pdf/2512.04142v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Bonn; Hugging Face"
+   },
    {
     "id": "flashattention-2-2023",
     "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
@@ -2259,6 +2347,30 @@
   ],
   "economics/investment": [
    {
+    "id": "mckinsey-genai-2023",
+    "title": "The Economic Potential of Generative AI: The Next Productivity Frontier",
+    "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "McKinsey & Company"
+   },
+   {
+    "id": "aghion-ai-growth-2017",
+    "title": "Artificial Intelligence and Economic Growth",
+    "url": "https://www.nber.org/papers/w23928",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Bureau of Economic Research"
+   },
+   {
+    "id": "iea-gcmo-2025",
+    "title": "Global Critical Minerals Outlook 2025",
+    "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency"
+   },
+   {
     "id": "isoc-peering-cost-2026",
     "title": "Dissecting the Cost of Peering",
     "url": "https://www.internetsociety.org/resources/doc/2026/dissecting-the-cost-of-peering/",
@@ -2461,6 +2573,118 @@
   ],
   "economics/jobs": [
    {
+    "id": "brynjolfsson-genai-work-2023",
+    "title": "Generative AI at Work",
+    "url": "https://www.nber.org/papers/w31161",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Bureau of Economic Research"
+   },
+   {
+    "id": "noy-zhang-2023",
+    "title": "Experimental evidence on the productivity effects of generative artificial intelligence",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37440646/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Science"
+   },
+   {
+    "id": "cui-highskilled-2026",
+    "title": "The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535?cookieSet=1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Management Science"
+   },
+   {
+    "id": "acemoglu-macro-2024",
+    "title": "The Simple Macroeconomics of AI",
+    "url": "https://www.nber.org/papers/w32487",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Bureau of Economic Research"
+   },
+   {
+    "id": "eloundou-gpts-2023",
+    "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.10130v3",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "imf-genai-2024",
+    "title": "Gen-AI: Artificial Intelligence and the Future of Work",
+    "url": "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Monetary Fund"
+   },
+   {
+    "id": "otis-kenya-2023",
+    "title": "The Uneven Impact of Generative AI on Entrepreneurial Performance",
+    "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=65159",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Harvard Business School"
+   },
+   {
+    "id": "mckinsey-genai-2023",
+    "title": "The Economic Potential of Generative AI: The Next Productivity Frontier",
+    "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "McKinsey & Company"
+   },
+   {
+    "id": "autor-new-work-2024",
+    "title": "New Frontiers: The Origins and Content of New Work, 1940-2018",
+    "url": "https://economics.mit.edu/sites/default/files/2023-12/New%20Frontiers%20-%20The%20Origins%20and%20Content%20of%20New%20Work%201940-2018.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Quarterly Journal of Economics"
+   },
+   {
+    "id": "pew-us-experts-2025",
+    "title": "How the U.S. Public and AI Experts View Artificial Intelligence",
+    "url": "https://www.pewresearch.org/internet/2025/04/03/how-the-us-public-and-ai-experts-view-artificial-intelligence/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Pew Research Center"
+   },
+   {
+    "id": "kpmg-global-2025",
+    "title": "Trust, attitudes and use of artificial intelligence: A global study 2025",
+    "url": "https://kpmg.com/sg/en/insights/ai-and-innovation/trust-attitudes-and-use-of-ai.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Melbourne / KPMG"
+   },
+   {
+    "id": "hai-index-opinion-2025",
+    "title": "Public Opinion | The 2025 AI Index Report",
+    "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report/public-opinion",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Stanford Institute for Human-Centered AI (HAI)"
+   },
+   {
+    "id": "eurobarometer-554-557",
+    "title": "Artificial Intelligence: European opinion divided",
+    "url": "https://www.veriangroup.com/news-and-insights/artificial-intelligence-and-the-future-of-work",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission / Verian"
+   },
+   {
+    "id": "ipsos-indonesia-2023",
+    "title": "Indonesia Ranks Third Globally in Concerns over Future Job Security",
+    "url": "https://www.ipsos.com/en-id/indonesia-ranks-third-globally-concerns-over-future-job-security-ipsos-global-advisor-survey",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ipsos Indonesia"
+   },
+   {
     "id": "scitech-asia-ai-literacy",
     "title": "Assessing Artificial Intelligence (AI) Literacy and Readiness in Thailand's Workforce: Challenges and Opportunities for Digital Transformation",
     "url": "https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/256785",
@@ -2550,6 +2774,126 @@
    }
   ],
   "economics/productivity": [
+   {
+    "id": "brynjolfsson-genai-work-2023",
+    "title": "Generative AI at Work",
+    "url": "https://www.nber.org/papers/w31161",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Bureau of Economic Research"
+   },
+   {
+    "id": "noy-zhang-2023",
+    "title": "Experimental evidence on the productivity effects of generative artificial intelligence",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37440646/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Science"
+   },
+   {
+    "id": "dellacqua-jagged-2023",
+    "title": "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality",
+    "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=64700",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Harvard Business School"
+   },
+   {
+    "id": "peng-copilot-2023",
+    "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",
+    "url": "https://arxiv.org/abs/2302.06590?context=cs",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "becker-metr-2025",
+    "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+    "url": "https://arxiv.org/abs/2507.09089",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "METR"
+   },
+   {
+    "id": "cui-highskilled-2026",
+    "title": "The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535?cookieSet=1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Management Science"
+   },
+   {
+    "id": "acemoglu-macro-2024",
+    "title": "The Simple Macroeconomics of AI",
+    "url": "https://www.nber.org/papers/w32487",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Bureau of Economic Research"
+   },
+   {
+    "id": "eloundou-gpts-2023",
+    "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.10130v3",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "imf-genai-2024",
+    "title": "Gen-AI: Artificial Intelligence and the Future of Work",
+    "url": "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Monetary Fund"
+   },
+   {
+    "id": "otis-kenya-2023",
+    "title": "The Uneven Impact of Generative AI on Entrepreneurial Performance",
+    "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=65159",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Harvard Business School"
+   },
+   {
+    "id": "mckinsey-genai-2023",
+    "title": "The Economic Potential of Generative AI: The Next Productivity Frontier",
+    "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "McKinsey & Company"
+   },
+   {
+    "id": "autor-new-work-2024",
+    "title": "New Frontiers: The Origins and Content of New Work, 1940-2018",
+    "url": "https://economics.mit.edu/sites/default/files/2023-12/New%20Frontiers%20-%20The%20Origins%20and%20Content%20of%20New%20Work%201940-2018.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Quarterly Journal of Economics"
+   },
+   {
+    "id": "aghion-ai-growth-2017",
+    "title": "Artificial Intelligence and Economic Growth",
+    "url": "https://www.nber.org/papers/w23928",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Bureau of Economic Research"
+   },
+   {
+    "id": "oecd-g7-2025",
+    "title": "Macroeconomic productivity gains from Artificial Intelligence in G7 economies",
+    "url": "https://www.oecd.org/en/publications/macroeconomic-productivity-gains-from-artificial-intelligence-in-g7-economies_a5319ab5-en.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "oecd-materials-2060",
+    "title": "Global Material Resources Outlook to 2060: Economic Drivers and Environmental Consequences",
+    "url": "https://www.oecd-ilibrary.org/environment/global-material-resources-outlook-to-2060_562bc71f-en",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
    {
     "id": "speculative-decoding-2023",
     "title": "Fast Inference from Transformers via Speculative Decoding",
@@ -2738,6 +3082,38 @@
    }
   ],
   "economics/evidence": [
+   {
+    "id": "becker-metr-2025",
+    "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+    "url": "https://arxiv.org/abs/2507.09089",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "METR"
+   },
+   {
+    "id": "eloundou-gpts-2023",
+    "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.10130v3",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "autor-new-work-2024",
+    "title": "New Frontiers: The Origins and Content of New Work, 1940-2018",
+    "url": "https://economics.mit.edu/sites/default/files/2023-12/New%20Frontiers%20-%20The%20Origins%20and%20Content%20of%20New%20Work%201940-2018.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Quarterly Journal of Economics"
+   },
+   {
+    "id": "oecd-g7-2025",
+    "title": "Macroeconomic productivity gains from Artificial Intelligence in G7 economies",
+    "url": "https://www.oecd.org/en/publications/macroeconomic-productivity-gains-from-artificial-intelligence-in-g7-economies_a5319ab5-en.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
    {
     "id": "test-time-compute-2024",
     "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
@@ -2957,6 +3333,118 @@
   ],
   "society/attitudes": [
    {
+    "id": "pew-us-experts-2025",
+    "title": "How the U.S. Public and AI Experts View Artificial Intelligence",
+    "url": "https://www.pewresearch.org/internet/2025/04/03/how-the-us-public-and-ai-experts-view-artificial-intelligence/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Pew Research Center"
+   },
+   {
+    "id": "pew-global-2025",
+    "title": "How People Around the World View AI",
+    "url": "https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Pew Research Center"
+   },
+   {
+    "id": "ipsos-ai-monitor-2025",
+    "title": "The Ipsos AI Monitor 2025",
+    "url": "https://www.ipsos.com/en-dk/ipsos-ai-monitor-2025",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ipsos"
+   },
+   {
+    "id": "kpmg-global-2025",
+    "title": "Trust, attitudes and use of artificial intelligence: A global study 2025",
+    "url": "https://kpmg.com/sg/en/insights/ai-and-innovation/trust-attitudes-and-use-of-ai.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Melbourne / KPMG"
+   },
+   {
+    "id": "edelman-flash-2025",
+    "title": "When Familiarity Breeds Trust: How Experience Turns AI Skeptics into Believers",
+    "url": "https://www.edelman.com/insights/familiarity-breeds-trust-in-ai",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Edelman"
+   },
+   {
+    "id": "hai-index-opinion-2025",
+    "title": "Public Opinion | The 2025 AI Index Report",
+    "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report/public-opinion",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Stanford Institute for Human-Centered AI (HAI)"
+   },
+   {
+    "id": "dietvorst-algorithm-aversion-2015",
+    "title": "Algorithm aversion: people erroneously avoid algorithms after seeing them err",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25401381/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Journal of Experimental Psychology: General"
+   },
+   {
+    "id": "logg-algorithm-appreciation-2019",
+    "title": "Algorithm appreciation: People prefer algorithmic to human judgment",
+    "url": "https://psycnet.apa.org/record/2019-16202-008",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Organizational Behavior and Human Decision Processes"
+   },
+   {
+    "id": "eurobarometer-554-557",
+    "title": "Artificial Intelligence: European opinion divided",
+    "url": "https://www.veriangroup.com/news-and-insights/artificial-intelligence-and-the-future-of-work",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission / Verian"
+   },
+   {
+    "id": "aaa-self-driving-2025",
+    "title": "AAA: Fear in Self-Driving Vehicles Persists",
+    "url": "https://southjersey.aaa.com/news/aaa-fear-self-driving-vehicles-persists",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "AAA"
+   },
+   {
+    "id": "ipsos-indonesia-2023",
+    "title": "Indonesia Ranks Third Globally in Concerns over Future Job Security",
+    "url": "https://www.ipsos.com/en-id/indonesia-ranks-third-globally-concerns-over-future-job-security-ipsos-global-advisor-survey",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ipsos Indonesia"
+   },
+   {
+    "id": "tbi-uk-2025",
+    "title": "What the UK Thinks About AI: Building Public Trust to Accelerate Adoption",
+    "url": "https://institute.global/insights/tech-and-digitalisation/what-the-uk-thinks-about-ai-building-public-trust-to-accelerate-adoption",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Tony Blair Institute for Global Change / Ipsos"
+   },
+   {
+    "id": "common-sense-teens-2025",
+    "title": "Talk, Trust, and Trade-Offs: How and Why Teens Use AI Companions",
+    "url": "https://www.commonsensemedia.org/sites/default/files/research/report/talk-trust-and-trade-offs_2025_web.pdf?ref=mereorthodoxy.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Common Sense Media"
+   },
+   {
+    "id": "home-office-frt-2025",
+    "title": "Public attitudes to police use of facial recognition technology",
+    "url": "https://www.gov.uk/government/publications/public-attitudes-to-police-use-of-facial-recognition-technology/public-attitudes-to-police-use-of-facial-recognition-technology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Home Office"
+   },
+   {
     "id": "ieee-7010-2020",
     "title": "IEEE Recommended Practice for Assessing the Impact of Autonomous and Intelligent Systems on Human Well-Being",
     "url": "https://standards.ieee.org/ieee/7010/7718/",
@@ -3006,6 +3494,22 @@
    }
   ],
   "society/skills": [
+   {
+    "id": "peng-copilot-2023",
+    "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",
+    "url": "https://arxiv.org/abs/2302.06590?context=cs",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "arXiv"
+   },
+   {
+    "id": "tbi-uk-2025",
+    "title": "What the UK Thinks About AI: Building Public Trust to Accelerate Adoption",
+    "url": "https://institute.global/insights/tech-and-digitalisation/what-the-uk-thinks-about-ai-building-public-trust-to-accelerate-adoption",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Tony Blair Institute for Global Change / Ipsos"
+   },
    {
     "id": "wadipalapa-indonesia-ai-policy",
     "title": "An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia",
@@ -3339,6 +3843,78 @@
   ],
   "society/trust": [
    {
+    "id": "ipsos-ai-monitor-2025",
+    "title": "The Ipsos AI Monitor 2025",
+    "url": "https://www.ipsos.com/en-dk/ipsos-ai-monitor-2025",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ipsos"
+   },
+   {
+    "id": "kpmg-global-2025",
+    "title": "Trust, attitudes and use of artificial intelligence: A global study 2025",
+    "url": "https://kpmg.com/sg/en/insights/ai-and-innovation/trust-attitudes-and-use-of-ai.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Melbourne / KPMG"
+   },
+   {
+    "id": "edelman-flash-2025",
+    "title": "When Familiarity Breeds Trust: How Experience Turns AI Skeptics into Believers",
+    "url": "https://www.edelman.com/insights/familiarity-breeds-trust-in-ai",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Edelman"
+   },
+   {
+    "id": "dietvorst-algorithm-aversion-2015",
+    "title": "Algorithm aversion: people erroneously avoid algorithms after seeing them err",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25401381/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Journal of Experimental Psychology: General"
+   },
+   {
+    "id": "logg-algorithm-appreciation-2019",
+    "title": "Algorithm appreciation: People prefer algorithmic to human judgment",
+    "url": "https://psycnet.apa.org/record/2019-16202-008",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Organizational Behavior and Human Decision Processes"
+   },
+   {
+    "id": "aaa-self-driving-2025",
+    "title": "AAA: Fear in Self-Driving Vehicles Persists",
+    "url": "https://southjersey.aaa.com/news/aaa-fear-self-driving-vehicles-persists",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "AAA"
+   },
+   {
+    "id": "ipsos-indonesia-2023",
+    "title": "Indonesia Ranks Third Globally in Concerns over Future Job Security",
+    "url": "https://www.ipsos.com/en-id/indonesia-ranks-third-globally-concerns-over-future-job-security-ipsos-global-advisor-survey",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ipsos Indonesia"
+   },
+   {
+    "id": "tbi-uk-2025",
+    "title": "What the UK Thinks About AI: Building Public Trust to Accelerate Adoption",
+    "url": "https://institute.global/insights/tech-and-digitalisation/what-the-uk-thinks-about-ai-building-public-trust-to-accelerate-adoption",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Tony Blair Institute for Global Change / Ipsos"
+   },
+   {
+    "id": "common-sense-teens-2025",
+    "title": "Talk, Trust, and Trade-Offs: How and Why Teens Use AI Companions",
+    "url": "https://www.commonsensemedia.org/sites/default/files/research/report/talk-trust-and-trade-offs_2025_web.pdf?ref=mereorthodoxy.com",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Common Sense Media"
+   },
+   {
     "id": "iso-tr24028-2020",
     "title": "Information technology — Artificial intelligence — Overview of trustworthiness in artificial intelligence",
     "url": "https://knowledge.bsigroup.com/products/information-technology-artificial-intelligence-overview-of-trustworthiness-in-artificial-intelligence",
@@ -3484,6 +4060,70 @@
    }
   ],
   "governance/rules": [
+   {
+    "id": "itu-unitar-ewaste-2024",
+    "title": "The Global E-waste Monitor 2024",
+    "url": "https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling?form=MG0AV3",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ITU / UNITAR"
+   },
+   {
+    "id": "jrc-eu-crms",
+    "title": "Critical and Strategic Materials",
+    "url": "https://rmis.jrc.ec.europa.eu/critical-and-strategic-materials",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission Joint Research Centre"
+   },
+   {
+    "id": "unep-sand-2022",
+    "title": "Sand and Sustainability: 10 Strategic Recommendations to Avert a Crisis",
+    "url": "https://www.unep.org/resources/report/sand-and-sustainability-10-strategic-recommendations-avert-crisis",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United Nations Environment Programme"
+   },
+   {
+    "id": "unep-tailings-2020",
+    "title": "Global Industry Standard on Tailings Management",
+    "url": "http://www.unep.org/resources/report/global-industry-standard-tailings-management",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UNEP / PRI / ICMM"
+   },
+   {
+    "id": "glover-deepsea-2026",
+    "title": "The environmental impacts of deep-sea mining",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42086038/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Current Biology"
+   },
+   {
+    "id": "pew-global-2025",
+    "title": "How People Around the World View AI",
+    "url": "https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Pew Research Center"
+   },
+   {
+    "id": "ipsos-ai-monitor-2025",
+    "title": "The Ipsos AI Monitor 2025",
+    "url": "https://www.ipsos.com/en-dk/ipsos-ai-monitor-2025",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Ipsos"
+   },
+   {
+    "id": "eurobarometer-554-557",
+    "title": "Artificial Intelligence: European opinion divided",
+    "url": "https://www.veriangroup.com/news-and-insights/artificial-intelligence-and-the-future-of-work",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission / Verian"
+   },
    {
     "id": "iso-42001-2023",
     "title": "Information technology — Artificial intelligence — Management system",
@@ -4073,6 +4713,70 @@
   ],
   "governance/oversight": [
    {
+    "id": "eu-ai-act-art55-2024",
+    "title": "Article 55: Obligations of providers of general-purpose AI models with systemic risk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (AI Act Service Desk)"
+   },
+   {
+    "id": "oecd-aim-methodology-2024",
+    "title": "Overview and methodology of the AI Incidents and Hazards Monitor",
+    "url": "https://oecd.ai/en/incidents-methodology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "boe-ss123-2023",
+    "title": "SS1/23: Model risk management principles for banks",
+    "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2023/may/model-risk-management-principles-for-banks-ss",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Bank of England"
+   },
+   {
+    "id": "copperbelt-air-2026",
+    "title": "Local pollution challenges in the global energy transition: air quality near hydrometallurgical and pyrometallurgical plants in the Congolese Copperbelt",
+    "url": "https://link.springer.com/article/10.1007/s10668-026-08147-x",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Environment, Development and Sustainability"
+   },
+   {
+    "id": "unep-tailings-2020",
+    "title": "Global Industry Standard on Tailings Management",
+    "url": "http://www.unep.org/resources/report/global-industry-standard-tailings-management",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UNEP / PRI / ICMM"
+   },
+   {
+    "id": "pew-us-experts-2025",
+    "title": "How the U.S. Public and AI Experts View Artificial Intelligence",
+    "url": "https://www.pewresearch.org/internet/2025/04/03/how-the-us-public-and-ai-experts-view-artificial-intelligence/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Pew Research Center"
+   },
+   {
+    "id": "edelman-flash-2025",
+    "title": "When Familiarity Breeds Trust: How Experience Turns AI Skeptics into Believers",
+    "url": "https://www.edelman.com/insights/familiarity-breeds-trust-in-ai",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Edelman"
+   },
+   {
+    "id": "home-office-frt-2025",
+    "title": "Public attitudes to police use of facial recognition technology",
+    "url": "https://www.gov.uk/government/publications/public-attitudes-to-police-use-of-facial-recognition-technology/public-attitudes-to-police-use-of-facial-recognition-technology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Home Office"
+   },
+   {
     "id": "iso-42001-2023",
     "title": "Information technology — Artificial intelligence — Management system",
     "url": "https://www.iso.org/standard/42001",
@@ -4533,6 +5237,118 @@
   ],
   "governance/postmarket": [
    {
+    "id": "eu-ai-act-art73-2024",
+    "title": "Article 73: Reporting of serious incidents",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-73",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (AI Act Service Desk)"
+   },
+   {
+    "id": "eu-ai-act-art55-2024",
+    "title": "Article 55: Obligations of providers of general-purpose AI models with systemic risk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (AI Act Service Desk)"
+   },
+   {
+    "id": "fda-pccp-2025",
+    "title": "Marketing Submission Recommendations for a Predetermined Change Control Plan for Artificial Intelligence-Enabled Device Software Functions",
+    "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Food and Drug Administration"
+   },
+   {
+    "id": "oecd-aim-methodology-2024",
+    "title": "Overview and methodology of the AI Incidents and Hazards Monitor",
+    "url": "https://oecd.ai/en/incidents-methodology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "oecd-incident-reporting-framework",
+    "title": "From deepfake scams to biased AI: How incident reporting can help us keep ahead of AI's harms",
+    "url": "https://oecd.ai/en/wonk/deepfake-scams-biased-ai-incidents-framework-reporting-can-keep-ahead-ai-harms",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "holtzman-redberg-pms-2025",
+    "title": "From Registry to Reality: Opportunities to Enhance Post-market Surveillance of High-Risk Medical Devices",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41966145/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Journal of Health Policy and Management"
+   },
+   {
+    "id": "eu-mdr-pms-2017",
+    "title": "Regulation (EU) 2017/745 on medical devices: post-market surveillance and vigilance (Articles 83 to 88)",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32017R0745",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (EUR-Lex)"
+   },
+   {
+    "id": "dora-incident-reporting-2025",
+    "title": "Commission Delegated Regulation (EU) 2025/301: content and time limits for reporting major ICT-related incidents under DORA",
+    "url": "https://eur-lex.europa.eu/eli/reg_del/2025/301/oj",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (EUR-Lex)"
+   },
+   {
+    "id": "ncsc-cisa-secure-ai-2023",
+    "title": "Guidelines for secure AI system development",
+    "url": "https://www.cyber.gov.au/sites/default/files/2025-03/Guidelines for secure AI system development (November 2023).pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK National Cyber Security Centre"
+   },
+   {
+    "id": "nis2-art23-2022",
+    "title": "Article 23: Reporting obligations (NIS2 Directive)",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022L2555",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (EUR-Lex)"
+   },
+   {
+    "id": "boe-ss123-2023",
+    "title": "SS1/23: Model risk management principles for banks",
+    "url": "https://www.bankofengland.co.uk/prudential-regulation/publication/2023/may/model-risk-management-principles-for-banks-ss",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Bank of England"
+   },
+   {
+    "id": "imda-model-framework-2020",
+    "title": "Singapore Model AI Governance Framework (Second Edition) and companion guides: media factsheet",
+    "url": "https://www.imda.gov.sg/assets/7bb338ed-ca9d-4b42-9094-836447af239f.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Infocomm Media Development Authority (Singapore)"
+   },
+   {
+    "id": "nhtsa-sgo-2021-01",
+    "title": "Standing General Order 2021-01: Incident Reporting for Automated Driving Systems (ADS) and Level 2 Advanced Driver Assistance Systems (ADAS)",
+    "url": "https://www.nhtsa.gov/sites/nhtsa.gov/files/2021-06/Standing_General_Order_2021_01-digital-06292021.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "National Highway Traffic Safety Administration (US Department of Transportation)"
+   },
+   {
+    "id": "fda-ai-lifecycle-draft-2025",
+    "title": "Artificial Intelligence-Enabled Device Software Functions: Lifecycle Management and Marketing Submission Recommendations",
+    "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "US Food and Drug Administration"
+   },
+   {
     "id": "eu-ai-act-monitoring-2024",
     "title": "Article 72: Post-market monitoring by providers and post-market monitoring plan for high-risk AI systems",
     "url": "https://ai-act.digiphile.law/article/article-72.html",
@@ -4591,6 +5407,118 @@
   ],
   "governance/discretion": [
    {
+    "id": "eu-ai-act-art14-2024",
+    "title": "Article 14: Human oversight",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (AI Act Service Desk)"
+   },
+   {
+    "id": "eu-ai-act-art26-2024",
+    "title": "Article 26: Obligations of deployers of high-risk AI systems",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-26",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (AI Act Service Desk)"
+   },
+   {
+    "id": "eu-ai-act-art27-2024",
+    "title": "Article 27: Fundamental rights impact assessment for high-risk AI systems",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-27",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Union (AI Act Service Desk)"
+   },
+   {
+    "id": "cjeu-schuva-2023",
+    "title": "OQ v Land Hessen (SCHUFA), Case C-634/21",
+    "url": "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A62021CJ0634",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Court of Justice of the European Union (EUR-Lex)"
+   },
+   {
+    "id": "coe-framework-convention-2024",
+    "title": "European Commission proposal to sign the Council of Europe AI Convention (COM(2024) 264)",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52024PC0264",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission (EUR-Lex)"
+   },
+   {
+    "id": "huq-human-decision-2019",
+    "title": "A Right to a Human Decision",
+    "url": "https://chicagounbound.uchicago.edu/public_law_and_legal_theory/790/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Chicago Law School (Chicago Unbound)"
+   },
+   {
+    "id": "citron-technological-due-process-2008",
+    "title": "Technological Due Process",
+    "url": "https://www.law.virginia.edu/scholarship/publication/danielle-k-citron/1153811",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Virginia School of Law"
+   },
+   {
+    "id": "crootof-humans-loop-2023",
+    "title": "Humans in the Loop",
+    "url": "https://cdn.vanderbilt.edu/vu-wordpress-0/wp-content/uploads/sites/278/2023/03/19121604/Humans-in-the-Loop.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Vanderbilt Law Review"
+   },
+   {
+    "id": "binns-accountability-2018",
+    "title": "Algorithmic Accountability and Public Reason",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6390894/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Philosophy & Technology (Springer)"
+   },
+   {
+    "id": "goddard-automation-bias-2012",
+    "title": "Automation bias: a systematic review of frequency, effect mediators, and mitigators",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21685142/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Journal of the American Medical Informatics Association"
+   },
+   {
+    "id": "lyell-automation-bias-2017",
+    "title": "Automation bias and verification complexity: a systematic review",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27516495/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Journal of the American Medical Informatics Association"
+   },
+   {
+    "id": "alkhatib-street-level-2019",
+    "title": "Street-Level Algorithms: A Theory at the Gaps Between Policy and Decisions",
+    "url": "https://hci.stanford.edu/publications/2019/streetlevelalgorithms/streetlevelalgorithms-chi2019.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Stanford HCI / ACM CHI 2019"
+   },
+   {
+    "id": "unesco-recommendation-2021",
+    "title": "Recommendation on the Ethics of Artificial Intelligence",
+    "url": "https://www.unesco.org/ethics-ai/en/recommendation",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UNESCO"
+   },
+   {
+    "id": "hleg-trustworthy-ai-2019",
+    "title": "Ethics Guidelines for Trustworthy AI",
+    "url": "https://digital-strategy.ec.europa.eu/en/node/1950/printable/pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission (Digital Strategy)"
+   },
+   {
     "id": "cmu-state-local-ai-guide",
     "title": "A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale",
     "url": "https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf",
@@ -4648,6 +5576,54 @@
    }
   ],
   "politics/international": [
+   {
+    "id": "imf-genai-2024",
+    "title": "Gen-AI: Artificial Intelligence and the Future of Work",
+    "url": "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Monetary Fund"
+   },
+   {
+    "id": "oecd-g7-2025",
+    "title": "Macroeconomic productivity gains from Artificial Intelligence in G7 economies",
+    "url": "https://www.oecd.org/en/publications/macroeconomic-productivity-gains-from-artificial-intelligence-in-g7-economies_a5319ab5-en.html",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "iea-gcmo-2025",
+    "title": "Global Critical Minerals Outlook 2025",
+    "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency"
+   },
+   {
+    "id": "usgs-critical-2025",
+    "title": "About the 2025 List of Critical Minerals",
+    "url": "https://www.usgs.gov/programs/mineral-resources-program/science/about-2025-list-critical-minerals",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "U.S. Geological Survey"
+   },
+   {
+    "id": "jrc-eu-crms",
+    "title": "Critical and Strategic Materials",
+    "url": "https://rmis.jrc.ec.europa.eu/critical-and-strategic-materials",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission Joint Research Centre"
+   },
+   {
+    "id": "pew-global-2025",
+    "title": "How People Around the World View AI",
+    "url": "https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Pew Research Center"
+   },
    {
     "id": "iso-38507-2022",
     "title": "Information technology — Governance of IT — Governance implications of the use of artificial intelligence by organizations",
@@ -5221,6 +6197,30 @@
   ],
   "politics/chips": [
    {
+    "id": "iea-gcmo-2025",
+    "title": "Global Critical Minerals Outlook 2025",
+    "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency"
+   },
+   {
+    "id": "usgs-critical-2025",
+    "title": "About the 2025 List of Critical Minerals",
+    "url": "https://www.usgs.gov/programs/mineral-resources-program/science/about-2025-list-critical-minerals",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "U.S. Geological Survey"
+   },
+   {
+    "id": "jrc-eu-crms",
+    "title": "Critical and Strategic Materials",
+    "url": "https://rmis.jrc.ec.europa.eu/critical-and-strategic-materials",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission Joint Research Centre"
+   },
+   {
     "id": "sia-state-2025",
     "title": "2025 State of the U.S. Semiconductor Industry",
     "url": "https://www.semiconductors.org/2025-state-of-the-u-s-semiconductor-industry/",
@@ -5278,6 +6278,14 @@
    }
   ],
   "politics/accountability": [
+   {
+    "id": "home-office-frt-2025",
+    "title": "Public attitudes to police use of facial recognition technology",
+    "url": "https://www.gov.uk/government/publications/public-attitudes-to-police-use-of-facial-recognition-technology/public-attitudes-to-police-use-of-facial-recognition-technology",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Home Office"
+   },
    {
     "id": "eu-ai-act-monitoring-2024",
     "title": "Article 72: Post-market monitoring by providers and post-market monitoring plan for high-risk AI systems",
@@ -5400,6 +6408,14 @@
    }
   ],
   "environment/energy": [
+   {
+    "id": "icef-embodied-ghg-2025",
+    "title": "ICEF Sustainable Data Centers Roadmap, Chapter 3.3: Embodied Greenhouse Gas Emissions (Scope 3)",
+    "url": "https://icef.go.jp/wp-content/themes/icef_new/pdf/roadmap/2025/CHAPTER%20%E2%85%A2%20%E2%80%93%203.%20EMBODIED%20GREENHOUSE%20GAS%20EMISSIONS%20%28SCOPE%203%29.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Innovation for Cool Earth Forum"
+   },
    {
     "id": "cru-leu-connection-policy-2025",
     "title": "Large Energy Users Connection Policy",
@@ -5555,6 +6571,86 @@
   ],
   "environment/goals": [
    {
+    "id": "unep-gro-2024",
+    "title": "Global Resources Outlook 2024: Bend the Trend",
+    "url": "https://www.resourcepanel.org/reports/global-resources-outlook-2024",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UNEP International Resource Panel"
+   },
+   {
+    "id": "oecd-materials-2060",
+    "title": "Global Material Resources Outlook to 2060: Economic Drivers and Environmental Consequences",
+    "url": "https://www.oecd-ilibrary.org/environment/global-material-resources-outlook-to-2060_562bc71f-en",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "itu-unitar-ewaste-2024",
+    "title": "The Global E-waste Monitor 2024",
+    "url": "https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling?form=MG0AV3",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ITU / UNITAR"
+   },
+   {
+    "id": "han-rare-earth-review-2025",
+    "title": "Environmental impacts of rare earth elements mining and strategies for sustainable management: A comprehensive review",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41223466/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Journal of Hazardous Materials"
+   },
+   {
+    "id": "souza-lithium-triangle-2025",
+    "title": "Review of the current knowledge and identified gaps in assessing the social and environmental impacts of mining processes in the Lithium Triangle",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2352550924003439",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Sustainable Production and Consumption"
+   },
+   {
+    "id": "copperbelt-air-2026",
+    "title": "Local pollution challenges in the global energy transition: air quality near hydrometallurgical and pyrometallurgical plants in the Congolese Copperbelt",
+    "url": "https://link.springer.com/article/10.1007/s10668-026-08147-x",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Environment, Development and Sustainability"
+   },
+   {
+    "id": "unep-sand-2022",
+    "title": "Sand and Sustainability: 10 Strategic Recommendations to Avert a Crisis",
+    "url": "https://www.unep.org/resources/report/sand-and-sustainability-10-strategic-recommendations-avert-crisis",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United Nations Environment Programme"
+   },
+   {
+    "id": "flops-footprints-2025",
+    "title": "From FLOPs to Footprints: The Resource Cost of Artificial Intelligence",
+    "url": "https://arxiv.org/pdf/2512.04142v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Bonn; Hugging Face"
+   },
+   {
+    "id": "unep-tailings-2020",
+    "title": "Global Industry Standard on Tailings Management",
+    "url": "http://www.unep.org/resources/report/global-industry-standard-tailings-management",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UNEP / PRI / ICMM"
+   },
+   {
+    "id": "glover-deepsea-2026",
+    "title": "The environmental impacts of deep-sea mining",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42086038/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Current Biology"
+   },
+   {
     "id": "edb-jtc-jurong-island-2025",
     "title": "Jurong Island to host Singapore's largest green data centre park; 10 per cent of land set aside for new energies",
     "url": "https://www.edb.gov.sg/en/news-and-insights/jurong-island-to-host-singapores-largest-green-data-centre-park-10-per-cent-of-land-set-aside-for-new-energies",
@@ -5644,6 +6740,118 @@
    }
   ],
   "environment/resources": [
+   {
+    "id": "iea-gcmo-2025",
+    "title": "Global Critical Minerals Outlook 2025",
+    "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "International Energy Agency"
+   },
+   {
+    "id": "unep-gro-2024",
+    "title": "Global Resources Outlook 2024: Bend the Trend",
+    "url": "https://www.resourcepanel.org/reports/global-resources-outlook-2024",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UNEP International Resource Panel"
+   },
+   {
+    "id": "oecd-materials-2060",
+    "title": "Global Material Resources Outlook to 2060: Economic Drivers and Environmental Consequences",
+    "url": "https://www.oecd-ilibrary.org/environment/global-material-resources-outlook-to-2060_562bc71f-en",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "OECD"
+   },
+   {
+    "id": "usgs-critical-2025",
+    "title": "About the 2025 List of Critical Minerals",
+    "url": "https://www.usgs.gov/programs/mineral-resources-program/science/about-2025-list-critical-minerals",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "U.S. Geological Survey"
+   },
+   {
+    "id": "itu-unitar-ewaste-2024",
+    "title": "The Global E-waste Monitor 2024",
+    "url": "https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling?form=MG0AV3",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "ITU / UNITAR"
+   },
+   {
+    "id": "han-rare-earth-review-2025",
+    "title": "Environmental impacts of rare earth elements mining and strategies for sustainable management: A comprehensive review",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41223466/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Journal of Hazardous Materials"
+   },
+   {
+    "id": "souza-lithium-triangle-2025",
+    "title": "Review of the current knowledge and identified gaps in assessing the social and environmental impacts of mining processes in the Lithium Triangle",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2352550924003439",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Sustainable Production and Consumption"
+   },
+   {
+    "id": "icef-embodied-ghg-2025",
+    "title": "ICEF Sustainable Data Centers Roadmap, Chapter 3.3: Embodied Greenhouse Gas Emissions (Scope 3)",
+    "url": "https://icef.go.jp/wp-content/themes/icef_new/pdf/roadmap/2025/CHAPTER%20%E2%85%A2%20%E2%80%93%203.%20EMBODIED%20GREENHOUSE%20GAS%20EMISSIONS%20%28SCOPE%203%29.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Innovation for Cool Earth Forum"
+   },
+   {
+    "id": "copperbelt-air-2026",
+    "title": "Local pollution challenges in the global energy transition: air quality near hydrometallurgical and pyrometallurgical plants in the Congolese Copperbelt",
+    "url": "https://link.springer.com/article/10.1007/s10668-026-08147-x",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Environment, Development and Sustainability"
+   },
+   {
+    "id": "jrc-eu-crms",
+    "title": "Critical and Strategic Materials",
+    "url": "https://rmis.jrc.ec.europa.eu/critical-and-strategic-materials",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "European Commission Joint Research Centre"
+   },
+   {
+    "id": "unep-sand-2022",
+    "title": "Sand and Sustainability: 10 Strategic Recommendations to Avert a Crisis",
+    "url": "https://www.unep.org/resources/report/sand-and-sustainability-10-strategic-recommendations-avert-crisis",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United Nations Environment Programme"
+   },
+   {
+    "id": "flops-footprints-2025",
+    "title": "From FLOPs to Footprints: The Resource Cost of Artificial Intelligence",
+    "url": "https://arxiv.org/pdf/2512.04142v1",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "University of Bonn; Hugging Face"
+   },
+   {
+    "id": "unep-tailings-2020",
+    "title": "Global Industry Standard on Tailings Management",
+    "url": "http://www.unep.org/resources/report/global-industry-standard-tailings-management",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UNEP / PRI / ICMM"
+   },
+   {
+    "id": "glover-deepsea-2026",
+    "title": "The environmental impacts of deep-sea mining",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42086038/",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Current Biology"
+   },
    {
     "id": "virginia-hb153-site-assessment-2026",
     "title": "Data centers; site assessment, sound profile of the high energy use facility (HB 153 / SB 94)",
