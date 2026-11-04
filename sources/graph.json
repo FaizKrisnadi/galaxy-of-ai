@@ -1,6 +1,6 @@
 {
  "project": "Galaxy of AI topic graph",
- "version": "0.7.1 (2026-11-02, Addendum 37: sample audit — 3 edge notes sharpened with verified statistics; all relationships and directions confirmed)",
+ "version": "0.9 (2026-11-04, source-pack integration: +14 health/Africa/LatAm readings; +3 sourced edges on evaluation and participation)",
  "note": "The galaxy is a graph, not a tree: topics carry one or more domains; edges are labelled, typed (association vs sourced), and kept in plain English. Sourced edges are grounded in the sources attached to the relevant topic cards; associations are exploratory questions, never causal claims.",
  "domains": {
   "how": "How AI works",
@@ -133,6 +133,24 @@
     "society"
    ],
    "world": "infrastructure"
+  },
+  {
+   "id": "society/health",
+   "title": "Health & medicine",
+   "domains": [
+    "society",
+    "governance"
+   ],
+   "world": "society"
+  },
+  {
+   "id": "politics/copyright",
+   "title": "Copyright & creative work",
+   "domains": [
+    "politics",
+    "society"
+   ],
+   "world": "politics"
   },
   {
    "id": "economics/investment",
@@ -785,6 +803,41 @@
    "relation": "governments buy cloud first",
    "kind": "sourced",
    "note": "Philippines DICT Department Circular 2017-002 (Sections 1-9 read 2 Nov 2026): 'It is hereby declared the policy of the government to adopt a \"cloud first\" approach and for government departments and agencies to consider cloud computing solutions as a primary part of their infostructure planning and procurement', with cloud as 'the preferred ICT deployment strategy' for all national agencies, LGUs, SOEs, SUCs and accredited private CSPs, subject to special-requirements and TCO/security exceptions (Sections 3, 5). An official 2017 policy TEXT — evidence of mandated procurement direction, not of implementation rates; Philippines-specific and predates today's concentrated cloud market (CMA, 2024-25)."
+  },
+  {
+   "from": "society/health",
+   "to": "governance/postmarket",
+   "relation": "health AI needs watching after deployment",
+   "kind": "sourced",
+   "note": "WHO guidance on large multi-modal models (news release read 4 Nov 2026): governments should introduce 'mandatory post-release auditing and impact assessments' by independent third parties for health AI, with results 'published with outcomes disaggregated by the type of user (e.g., age, race, disability)'. SCOPE: a WHO recommendation — it does not establish such auditing as an in-force legal requirement. A working medical demonstration exists: AEGIS (npj Digital Medicine, read 2 Nov) is exactly a post-market governance mechanism for adaptive medical AI - a proof-of-concept, per its authors, not a clinical evaluation."
+  },
+  {
+   "from": "politics/copyright",
+   "to": "governance/rules",
+   "relation": "copyright questions fit inside existing law",
+   "kind": "sourced",
+   "note": "US Copyright Office, Copyright and Artificial Intelligence Part 2: Copyrightability (Jan 2025; preface + executive summary + introduction read 4 Nov 2026; 52-pp body otherwise unread): 'Questions of copyrightability and AI can be resolved pursuant to existing law, without the need for legislative change'; 'Copyright does not extend to purely AI-generated material, or material where there is insufficient human control over the expressive elements'; 'prompts do not alone provide sufficient control'; and 'The case has not been made for additional copyright or sui generis protection for AI-generated content'."
+  },
+  {
+   "from": "society/health",
+   "to": "how/evaluation",
+   "relation": "health AI claims are only as strong as their evaluation studies",
+   "kind": "sourced",
+   "note": "Takita et al. meta-analysis (npj Digital Medicine 2025, FULL TEXT read; re-verified on the page): pooled generative-AI diagnostic accuracy '52.1% (95% CI 47.0-57.1%)' across 83 studies with '63/83 (76%)' at high risk of bias, and AI significantly worse than expert physicians (difference '15.8%'); Goh et al. RCT (JAMA Network Open 2024, FULL TEXT read): a large vignette-score gain for GPT-4 alone did not translate into human+AI gains (physicians+LLM 76% vs physicians 74%, P=.60). Both are evaluation-strength findings — the edge claim is about evidence quality, not that health AI fails."
+  },
+  {
+   "from": "how/evaluation",
+   "to": "society/participation",
+   "relation": "evaluation gaps reveal overlooked languages",
+   "kind": "sourced",
+   "note": "IrokoBench (arXiv 2406.03368, abstract read; date unconfirmed; African-led Masakhane-led collaboration): LLM 'capabilities remain limited to a few high-resource languages' and 'many low-resource languages (e.g., African languages) are often evaluated only on basic text classification tasks due to the lack of appropriate or comprehensive benchmarks outside of high-resource languages' — a human-translated benchmark for 17 African languages built to close that gap. The paper identifies an evaluation gap; it does not establish a causal effect on inclusion."
+  },
+  {
+   "from": "economics/jobs",
+   "to": "society/participation",
+   "relation": "platform workers' voice is a measurable labour condition",
+   "kind": "association",
+   "note": "Fairwork (organisational site read; date unconfirmed): rates gig platforms in Argentina, Brazil, Colombia, Ecuador, Paraguay and Uruguay (2025 reports) against five principles including 'Fair Representation — Support for workers' voice, organising, and good-faith negotiation', scored out of 10 with published thresholds. This source does not establish a connection to AI exposure. The ratings document representation as one of five measurable conditions of platform work; country scores were not on the page read and remain unverified."
   }
  ],
  "source_link_field": "catalogue.json records carry 'galaxy_topics' pointing at these topic ids"

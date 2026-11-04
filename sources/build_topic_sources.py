@@ -48,7 +48,7 @@ for tid in by_topic:
     by_topic[tid].sort(key=lambda x: (order.get(x["tier"], 9), x["title"]))
 
 data = {
-    "built": "2026-11-02",
+    "built": "2026-11-04",
     "counts": {
         "records_total": len(cat["records"]),
         "records_mapped": len({r["id"] for r in cat["records"] if r.get("galaxy_topics","").strip()}),

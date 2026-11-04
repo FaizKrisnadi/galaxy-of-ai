@@ -13,6 +13,8 @@ infrastructure/land,Land & permits,infrastructure,infrastructure
 infrastructure/grids,Grids & critical infrastructure,infrastructure;governance,infrastructure
 infrastructure/cloud,Cloud services & compute platforms,infrastructure;economics;governance,infrastructure
 infrastructure/connectivity,Networks & access,infrastructure;society,infrastructure
+society/health,Health & medicine,society;governance,society
+politics/copyright,Copyright & creative work,politics;society,politics
 economics/investment,Investment,economics;infrastructure,economics
 economics/jobs,AI exposure & jobs,economics;society,economics
 economics/productivity,Productivity,economics,economics

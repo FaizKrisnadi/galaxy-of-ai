@@ -50,13 +50,16 @@ for r in recs:
     elif has("metadata from", "index"): tiers["L list-metadata/index"] += 1
     else: tiers["OTHER"] += 1
 vread = sum(1 for r in recs if any(x in r["verification"] for x in ("verified at origin","verified-at-origin","executive summary read","dataset page read","publication page","abstract read","page read")) and "not read" not in r["verification"] and "not opened" not in r["verification"])
-print(f"   records whose content was read at origin: {vread}")
+print(f"   records with read-related phrases (heuristic, not proof of reading): {vread}")
 
 # 6 csv consistency
 with (src/"catalogue.csv").open() as f:
     rows = list(csv.DictReader(f))
-print(f"8. catalogue.csv rows: {len(rows)}; matches json: {len(rows)==len(recs)}")
-ok &= len(rows)==len(recs)
+fields = rows[0].keys() if rows else []
+expected = [{k: str(r.get(k, "")) for k in fields} for r in recs]
+match = rows == expected
+print(f"8. catalogue.csv rows: {len(rows)}; fields match json: {match}")
+ok &= match
 
-print("\nRESULT:", "ALL CHECKS PASS" if ok else "CHECKS FAILED")
+print("\nRESULT:", "STRUCTURAL CHECKS PASS (source claims not verified)" if ok else "CHECKS FAILED")
 sys.exit(0 if ok else 1)

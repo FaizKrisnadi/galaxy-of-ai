@@ -753,3 +753,65 @@ The dependency chain is now on the graph: models/inference → cloud → data ce
 No mismatches found in the sample; three edge notes sharpened to carry the exact supporting statistics (graph v0.7.1).
 
 **State:** **147 records** · 36 topics · 65 links (40 sourced / 25 association) · 322 topic-record links · 36/36 topics covered · read-mapped via bridge: **183**. catalogue.csv regenerated (147 rows, matches JSON). topic_sources.json refreshed JSON-only. **galaxy.html untouched** (checksum eb2a5f56… unchanged). checks.py: ALL PASS. No paid extras; no bypassing (ICHEI timeouts respected); Flash only.
+
+---
+
+## Addendum 38 (4 Nov 2026, librarian session): regional, health, copyright and futures expansion
+
+**Baseline verified:** 363 records (matches the independent check), graph v0.7.1 (36 topics / 65 links), checks passing, git main clean apart from the user's untracked preview dirs. Interim-session work (2–4 Nov) had grown the catalogue via notes/reading-ledger.csv + audit files; the galaxy.html embedded data block was stale at the 147-record state.
+
+**Batch 1 — Africa & Latin America (gaps: zero regional coverage):**
+1. **AU Continental AI Strategy** (Jul 2024, 66 pp — exec summary pp. 3–6 + five focus areas read; implementation unread). People-centric development framing; risks named incl. non-diverse data sourcing and indigenous-knowledge effects; "AI divide between and within countries"; 15 action areas starting with governance/regulations and public-sector adoption.
+2. **ILIA 2025 Executive Summary** (ECLAC + CENIA, EU-financed; 17 pp read in full; 184-pp report unread). Region = 6.6% of global GDP, 8.8% of population, **1.12% of global AI investment**; investment intensity six times below global average; talent-outflow gap widening since 2022; Brazil/Costa Rica reversing inertia; third edition adds "quality of use" metrics (traceability, explainability, sensitivity testing).
+
+**Batch 2 — Health & copyright (gaps: no health or copyright topic):**
+3. **US Copyright Office, Part 2: Copyrightability** (Jan 2025, 52 pp — preface + 8-bullet exec summary + intro read; section analysis unread). "Resolved pursuant to existing law"; no copyright in purely AI-generated material; prompts alone insufficient; no case for sui generis rights. Training-data question explicitly NOT in this part.
+4. **WHO LMM guidance** (Jan 2024; news release read at origin; ~98-pp guidance not opened). 40+ recommendations; five health-application areas; **"mandatory post-release auditing and impact assessments"** by independent third parties with disaggregated outcomes.
+
+**Batch 3 — Futures & competing views:**
+5. **Grace et al., Thousands of AI Authors** (2024; abstract read): 2,778 publishing researchers; 50% full-outperformance by 2047 (13 years earlier than the 2022 survey); 37.8–51.4% give ≥10% to extinction-level outcomes; broad agreement on prioritising risk research. Forecasts = expert opinion.
+6. **Bommasani et al., On the Opportunities and Risks of Foundation Models** (2021; §1.1 + contents read; body unread): homogenisation = high leverage + shared-bias liability across modalities.
+7. **Kapoor & Narayanan, AI as Normal Technology** (Apr 2025; read online to Part IV; truncated there): control/capabilities/diffusion principles; capability-reliability gap; benchmarks lack construct validity; systemic risks "far more important than the catastrophic ones"; resilience-first policy. The library's deliberate counter-frame.
+
+**Batch 4 — Asia beyond SEA:**
+8. **NITI Aayog, Responsible AI Part 1** (Feb 2021; principles + context read): six principles grounded in Indian constitutional rights; provenance flags (WEF C4IR knowledge partner; "legal inputs enabled by Microsoft").
+9. **Japan AI Guidelines for Business Ver. 1.0** (Apr 2024; official MIC English release read; guidelines PDF gated, METI page 403): unified soft-law guidelines after 3,947 public comments; action-item text NOT captured.
+
+**Graph v0.8 (38 topics, 67 links):** new topics **society/health** ("Health & medicine") and **politics/copyright** ("Copyright & creative work"), each created for a read source. Two new sourced edges: society/health → governance/postmarket (WHO mandatory post-release auditing + AEGIS as the medical demonstration); politics/copyright → governance/rules (USCO "resolved pursuant to existing law"). No other edges added; no training-data↔copyright edge (USCO Part 2 explicitly excludes that question).
+
+**Integration:** 372 records in catalogue.json/csv (9 added, 0 duplicates); 9 ledger rows appended (interim-session convention); notes in sources/notes/librarian-batch-2026-11-04.md; PDFs + extractions archived in sources/pdfs/ (6 files); topic_sources.json rebuilt; **galaxy.html's embedded TOPIC_SOURCES block rebuilt via the project's own build_topic_sources.py — git diff confirms exactly 1 line changed (the const), UI code untouched**. checks.py: ALL PASS (372 records, 67 links, 0 broken refs, CSV=JSON, 38/38 topics covered).
+
+**Honest limits:** all nine reads are partial (exec-summary/abstract/press-release level) with unread sections stated per record; the ILIA country tables, AU action-area detail, USCO section analysis, WHO full guidance, Grace survey methods, Bommasani chapters, Kapoor Part IV, NITI body and Japan guidelines text remain unread; the hardcoded institutionAbsences string in build_topic_sources.py predates the interim sessions' 216 additions and should be re-derived next pass; the 5 '?'-tier records and the interim sessions' ledger entries were not independently re-audited this session.
+
+---
+
+## Addendum 39 (4 Nov 2026, integration milestone): verified nine-reading batch integrated into the redesign-preview release
+
+**Corrections applied first (from research-audit/audit-nine-readings-and-edges.md, each verified against the original):** NITI = seven principles (seventh restored from the document's own list); AU adoption = Executive Council 45th Ordinary Session, 18–19 July 2024, Accra (per the document foreword); WHO quote corrected to "disaggregated by the type of user" with the explicit recommendation-not-law scope; Kapoor quote corrected to "the right analogy is nuclear power"; Japan Ver. 1.1 marked search-derived. aegis-postmarket gained `society/health` in galaxy_tags (found when the map panel rendered its reading without a note). Graph v0.8.1; CSV regenerated; root galaxy.html block regenerated (one-line diff).
+
+**Release integration (redesign-preview/, backups in research-audit/backups-2026-11-04/):** data.js (bridge 372/927/793/38 + 13 reading/audit notes + health/copyright topic items), galaxy.html (same splices + RESEARCH_LINKS 65→67 + two world-topic items), connection-evidence.js (65→67), translations.js (Indonesian for both new topics under id.ui; other languages on documented English fallback after a same-session mis-pass was caught and cleaned).
+
+**Validation:** checks.py ALL PASS; parity suite T1–T6 ALL PASS (bridge parity per record, world-topics==graph-topics, edge parity 67 across graph/CONNECTION_EVIDENCE/RESEARCH_LINKS, notes 372/372 in all four stores, no stale counts, corrected wording everywhere); node eval of the five modified galaxy.html consts; **real browser flows on a loopback server**: desktop map (society → Health & medicine with body/Still-open/connection/2 readings incl. notes and depth details; politics → Copyright & creative work with USCO reading), Catalogue view (both readings + depth details), mobile 390×844 (both flows), galaxy.html map experience (67 edges incl. both new; screenshot confirms the new node rendered, Indonesian UI), AI-test start screen, astronaut guide, Map/Read toggle, search — all intact.
+
+**Limitations found in browser verification:** (1) the release's i18n walker sometimes leaves freshly expanded panels in English (observed for the new Copyright topic in Indonesian mode while the Health topic translated; Indonesian strings verified present in the live dictionary; a manually translated node persists — release-UI characteristic, flagged to the owner, not patched); (2) language selection does not persist across reloads (release behaviour); (3) institutionAbsences string still needs re-derivation; (4) ICHEI remains an access-failure lead.
+
+**State:** 372 records · 38 topics · 67 links (42 sourced / 25 association) · bridge 927/793 · checks.py ALL PASS · backups + integration log in research-audit/ · no git operations.
+
+---
+
+## Addendum 40 (4 Nov 2026, supervised milestone): source-pack integrated — 14 new readings across health, Africa, Latin America
+
+**Verification before integration:** all 14 candidates independently re-verified against originals this session — Goh and Tao via direct publisher-page fetches (exact on-page figures confirmed), Hernström/Olson/Ruamviboonsuk via the Europe PMC API (title/journal/year/methods match), the 4 Africa items from archived extractions of the actual PDFs, the 3 LatAm items from the pages read in full. Dedupe by DOI/URL/title: zero overlaps with the 372-record baseline. Blocked items (Therabot; Isagah ACM) and unverified leads (MASAI final results; Oxford chatbot study; AIRIS-TB; Argentina pipeline figures) remain leads and were NOT added.
+
+**14 new records (372 → 386):**
+- Health (7, all open-access, all mapped to society/health + how/evaluation + oversight/postmarket as supported): Goh RCT (physicians+GPT-4 76% vs physicians 74%, P=.60 — vignette gains don't transfer); Hernström MASAI (105,934 women; detection 6.4 vs 5.0/1000; workload −44.2%); Kazemzadeh Zambia TB validation (1,932 participants; AUC 0.87; WHO sensitivity targets unmet at shared thresholds); Olson ambient scribes (burnout 51.9%→38.8%, pre/post — association labelled); Takita meta-analysis (pooled accuracy 52.1%, 76% high risk of bias); Ruamviboonsuk Thailand DR (94.7% accuracy in a national programme, over-read safety layer retained); Tao PreA RCT (consultation −28.7%, co-design beat fine-tuning — process endpoints only).
+- Africa (4): CIPIT State of AI in Africa 2025 (exec summary; Kenya/SA/Nigeria/Ghana strides; consumption→creation shift; uneven progress); GIZ Invisible Workers 2026 (Sub-Saharan data-work markets; Ghana Meta-moderator litigation); Pidoux et al. data-labour mapping (43 of 55 African countries, 17 firms, n=81 union-participatory); IrokoBench (17 African languages, human-translated benchmark).
+- Latin America (3): Latam-GPT official page (regional LLM project; details beyond the page marked unverified); Fundar Argentina value-chain column (data-centre-first critique; >25 AI bills none approved); Fairwork (five-principle platform ratings, 2025 reports for six countries).
+
+**New sourced edges (3; graph v0.9 = 70 links):** society/health → how/evaluation (Takita 76%-high-risk-of-bias + Goh non-transfer — evidence-quality claim, labelled); how/evaluation → society/participation (IrokoBench: evaluation gaps exclude language communities — no causal claim, labelled); economics/jobs → society/participation (Fairwork Fair Representation across six LatAm countries — country scores labelled unverified).
+
+**Release integration (redesign-preview/; backups research-audit/backups-2026-11-04/):** data.js + galaxy.html TOPIC_SOURCES/READING_NOTES/AUDIT_NOTES spliced to 386-state (973 links, 816 read-mapped); RESEARCH_LINKS and connection-evidence.js 67→70 edges. A visible map-panel double-reading of AEGIS was found in browser verification and fixed (the topic items' redundant hand-added sources arrays removed from both files — bridge records supply the readings). **i18n stall fixed narrowly** (i18n.js one line: rAF + 150 ms setTimeout fallback — the release's walker stalled when the tab was backgrounded because rAF pauses leave `queued` stuck true; verified: Indonesian now applies to newly expanded panels including both new topics via the release's own selector; parse-checked with node).
+
+**Validation:** checks.py ALL PASS (386 records, 70 links, 0 broken, CSV=JSON); parity suite ALL PASS (per-record bridge parity, world==graph topics, edges 70 across all three stores, notes 386/386 in four stores, no stale counts, corrected wording, no duplicate readings, id translations present); node eval of galaxy.html consts; real browser flows: Health topic page renders all 9 society/health readings with notes and depth details; Copyright topic renders USCO with note; Indonesian labels verified live (world and topic level); map page-side builder produces 9 readings for society/health; GIZ filter check on jobs topic passes; mobile 390×844 map spot-checked (society world renders; the health panel interaction requires the map's own "Show topic details" toggle — page-side data verified, interaction noted).
+
+**Honest limitations:** all 14 reads are abstract/exec/page level (three with PMC full text); two health studies have vendor co-authors (COIs recorded); Therabot/Isagah/Brookings/Argentina-figures remain leads; the map-panel interaction nuance above is release-UI behaviour, documented not patched; subagents failed twice on concurrency limits across sessions — all pack slices were completed directly; no git operations.
