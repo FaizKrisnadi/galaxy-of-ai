@@ -2,3 +2,8 @@ sources/pdfs/
 .DS_Store
 __pycache__/
 *.pyc
+
+# local build artifacts and working backups
+.wrangler/
+motion/
+research-audit/backups-*/
