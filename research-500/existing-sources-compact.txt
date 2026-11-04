@@ -1,0 +1,650 @@
+- The Emerging Regime Complex for Artificial Intelligence | https://doi.org/10.1093/isagsq/ksag145
+- Coordinating fragmented global AI governance: Control, Rights, and Safety as a regime complex | https://doi.org/10.1007/s11077-026-09632-w
+- EU Influence in Global AI Governance and its Limits | https://doi.org/10.1007/s44206-026-00284-0
+- Geopolitical Distance and Targeted Trade | https://www.stlouisfed.org/publications/review/2026/sep/geopolitical-distance-and-targeted-trade
+- Beijing Will Not Pace the Frontier: China's Speed-First AI Safety Regime | https://newsletter.semianalysis.com/p/beijing-will-not-pace-the-frontier
+- Governing Artificial Intelligence: Public Preferences and Regulatory Options | https://ssrn.com/abstract=7125438
+- Generative AI experimentation in government: Learning from emerging guidelines | https://doi.org/10.1787/42815683-en
+- Artificial Intelligence in Public Procurement: Aligning Operational Capacity, Legitimacy, and Public Value | https://doi.org/10.1111/jbl.70088
+- Governing with Artificial Intelligence: Use, Ideology, and the Benefits and Risks of AI in State Government | https://preprints-apsa.prod.orp.cambridge.org/engage/apsa/article-details/6a95981d810b9dcc8281bf40
+- EU Governance of Critical Infrastructure: Resilience and Artificial Intelligence as Policy Challenges | https://doi.org/10.1007/s41125-026-00115-w
+- Compliance under the EU AI Act: How Firms Navigate Regulatory Complexity in the Digital Landscape | https://doi.org/10.1016/j.clsr.2026.106390
+- Artificial Intelligence, Bureaucratic Discretion, and Democratic Administration | https://doi.org/10.1111/puar.70201
+- Governing the evidence base: an empirical framework of AI archetypes for policy analysis | https://doi.org/10.1017/dap.2026.10100
+- Bringing Ethics to the Table: Presenting a Deliberation Tool for Data and AI in Media Organizations | https://doi.org/10.1007/s44206-026-00294-y
+- AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks | https://doi.org/10.1038/s41746-026-03290-1
+- Dataset on Digital Competence, AI Literacy, Generative AI Use, Organizational Support, Public Service Motivation, and Work Performance among Indonesian Civil Servants | https://doi.org/10.17632/9b26sb2k4g.1
+- Red-Teaming OpenAI's Internal Agent Monitoring Systems | https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/
+- Suppressing misalignment monitoring alerts and disabling misalignment monitoring | https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/
+- AI systems could cover up misbehavior | https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/
+- Review of the 'Misalignment in high-stakes settings' section in Anthropic's Risk Report (August 2026) | https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/
+- Evaluating DeepSeek V4.1 Flash-1017 for loss of control and harmful manipulation risks | https://arxiv.org/abs/2610.35671
+- Detecting and countering misuse of AI: September 2026 | https://www.anthropic.com/threat-intelligence-report-september-2026
+- The AI incident disclosure shadow: tracking AI incidents into U.S. securities filings | https://doi.org/10.3389/frai.2026.1969275
+- AI for citizen participation in international policymaking: multilingual inclusion | https://doi.org/10.3389/fpos.2026.1842794
+- Conditional Values: The Contingent Foundations of Attitudes toward Artificial Intelligence | https://arxiv.org/abs/2610.37197
+- Navigating Open Source Software Development in the Generative AI Era | https://www.linuxfoundation.org/research/oss-development-gen-ai-era-2026
+- Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors | https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html
+- Artificial Intelligence and Aggregate Labor Productivity: Evidence from Patent Data | https://www.imf.org/en/publications/wp/issues/2026/09/25/artificial-intelligence-and-aggregate-labor-productivity-evidence-from-patent-data-579850
+- MIT AI Governance Map | https://airisk.mit.edu/ai-governance
+- OECD AI Policy Navigator | https://oecd.ai/en/dashboards/international
+- OpenAlex Topics | https://help.openalex.org/data/topics/
+- ArusGrid — independent data-centre tracker | https://arusgrid.com/methodology
+- Epoch AI Data Centers database — methodology | https://epoch.ai/data/data-centers-documentation/methodology
+- Open Knowledge Maps | https://openknowledgemaps.org/
+- A Digital Boom in a Thirsty City (Batam) | https://katadata.co.id/data-center-batam/en
+- Data Centres, Energy Demand and Sustainability: Can Malaysia Strike the Right Balance? | https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2025-43-data-centres-energy-demand-and-sustainability-can-malaysia-strike-the-right-balance-by-sara-loo
+- AI and Climate Considerations | https://www.cert.isis.org.my/publications/ai-and-climate-considerations/
+- Data Centres — Electricity consumption (tracker) | https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks
+- What is artificial intelligence (AI)? | https://www.ibm.com/think/topics/artificial-intelligence
+- DBS and UOB jointly provide landmark IDR 6.7 trillion loan for DayOne-INA Batam data centre campus | https://www.dbs.com/newsroom/DBS_and_UOB_arrange_record_IDR_6_7_trillion_SGD_530_million_loan_for_data_centre_development_project_by_DayOne_and_the_Indonesia_Investment_Authority
+- DayOne signs Indonesia's largest 511 MVA (450 MW) PPA with PLN Batam (Kabil campus) | https://dayonedc.com/markets/dayone-signs-indonesias-largest-511mva-450mw-ppa-to-expand-hyperscale-data-center-platform-in-batam
+- DayOne secures $412M loan for Batam data center campus | https://www.datacenterdynamics.com/en/news/dayone-secures-412m-loan-for-batam-data-center-campus-in-indonesia
+- AirTrunk opens AI-ready data centre in Malaysia | https://airtrunk.com/airtrunk-opens-ai-ready-data-centre-in-malaysia-accelerating-innovation-and-the-energy-transition/
+- AirTrunk signs Malaysia's first data centre renewable VPPA | https://www.airtrunk.com/news/airtrunk-signs-malaysias-first-data-centre-renewable-vppa/
+- AirTrunk and Pekat Solar to develop rooftop solar at JHB1 | https://airtrunk.com/airtrunk-and-pekat-solar-to-develop-rooftop-solar-at-airtrunks-johor-bahru-data-centre-jhb1/
+- AirTrunk FY24 Sustainability Report | https://airtrunk.com/wp-content/uploads/2024/10/FY24-Sustainability-Report-by-AirTrunk.pdf
+- Blackstone to acquire AirTrunk in A$24 billion transaction (US$16.1 billion) | https://www.blackstone.com/press-releases/article/blackstone-to-acquire-airtrunk-in-a24-billion-transaction-us161-billion/
+- AidData: China's Loans and Grants to Low- and Middle-Income Countries v1.0 | https://docs.aiddata.org/ad4/datasets/AidDatas_CLG_LMIC_Dataset_v1.0.zip
+- Global Energy Monitor Ownership Tracing API | https://api.globalenergymonitor.org/
+- GLEIF API v1 (legal-entity identifiers) | https://api.gleif.org/api/v1
+- AI data centers (open database) | https://epoch.ai/data/ai-data-centers
+- AI models database (3,700+ models, 1950-today) | https://epoch.ai/data/ai-models
+- AI chip sales | https://epoch.ai/data/ai-chip-sales
+- GPU clusters database (500+ clusters) | https://epoch.ai/data/gpu-clusters
+- Machine learning hardware (180+ accelerators) | https://epoch.ai/data/machine-learning-hardware
+- ChatGPT usage (YouGov panel metadata) | https://epoch.ai/data/chatgpt-usage
+- Polling on AI usage at work | https://epoch.ai/data/polling
+- Trends in AI | https://epoch.ai/trends
+- Systematizing the Reporting of AI Red-Teaming | https://cset.georgetown.edu/publication/systematizing-the-reporting-of-ai-red-teaming/
+- Tracking AI Chips | https://cset.georgetown.edu/publication/tracking-ai-chips/
+- How Global Talent Pathways Shape U.S. STEM Award Achievement | https://cset.georgetown.edu/publication/how-global-talent-pathways-shape-u-s-stem-award-achievement/
+- Strengthening the U.S. Semiconductor Manufacturing Workforce | https://cset.georgetown.edu/publication/strengthening-the-u-s-semiconductor-manufacturing-workforce/
+- Artificial Intelligence in Competition | https://cset.georgetown.edu/publication/artificial-intelligence-in-competition/
+- Outpaced: AI and Policy's Role in Transforming Cybersecurity Compliance | https://cset.georgetown.edu/publication/outpaced-ai-and-policys-role-in-transforming-cybersecurity-compliance/
+- Coalition Operations | https://cset.georgetown.edu/publication/coalition-operations/
+- AI Index Report 2026 | https://hai.stanford.edu/ai-index/2026-ai-index-report
+- Safety and alignment in an era of long-horizon models | https://openai.com/index/safety-alignment-long-horizon-models/
+- Pacing model development in an era of cyber-critical capabilities | https://openai.com/index/pacing-model-development-cyber-capabilities/
+- gpt-oss-safeguard technical report | https://openai.com/index/gpt-oss-safeguard-technical-report/
+- Sora 2 System Card | https://openai.com/index/sora-2-system-card/
+- OpenAI research index (product-announcement heavy) | https://openai.com/research/
+- Who's Aligned to Whom? How AI Agents Shape Experts' Research Judgment Calls | https://www.anthropic.com/research/agents-judgment-calls
+- An alignment assessment of the UK AISI cybertesting incident | https://www.anthropic.com/research/alignment-assessment-ukaisi
+- Investigating unintended model actions in our evaluations and internal use | https://www.anthropic.com/research/investigating-unintended-model-actions
+- An alignment assessment of recent cybersecurity incidents | https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents
+- Google DeepMind publications index (267 items) | https://deepmind.google/publications/
+- Energy and AI | https://www.iea.org/reports/energy-and-ai
+- Key Questions on Energy and AI | https://www.iea.org/reports/key-questions-on-energy-and-ai
+- Artificial Power: 2025 Landscape Report | https://ainowinstitute.org/publications/research/ai-now-2025-landscape-report
+- North Star Data Center Policy Toolkit: State and Local Policy Interventions | https://ainowinstitute.org/publications/data-center-policy-guide
+- Fission for Algorithms: The Undermining of Nuclear Regulation in Service of AI | https://ainowinstitute.org/publications/fission-for-algorithms
+- Anatomy of an AI Kill Chain (with Airwars) | https://ainowinstitute.org/publications/anatomy-of-an-ai-kill-chain
+- Double Agents: Defensive AI Agents Magnify Cyber Risks | https://ainowinstitute.org/publications/double-agents
+- Redirecting Europe's AI Industrial Policy | https://ainowinstitute.org/publications/research/redirecting-europes-ai-industrial-policy
+- ECUAS: metrics for principled evaluation of uncertainty-augmented systems | https://openreview.net/forum?id=O9u4lItD9K
+- GitChameleon 2.0: Evaluating AI Code Generation Against Python Library Version Incompatibilities | https://doi.org/10.48550/arXiv.2507.12367
+- Reward Redistribution for CVaR MDPs using a Bellman Operator on L-infinity | https://doi.org/10.48550/arXiv.2602.03778
+- Rotation-Preserving Supervised Fine-Tuning | https://doi.org/10.48550/arXiv.2605.10973
+- Adaptive Order Policies for Masked Diffusion | https://doi.org/10.48550/arxiv.2606.00295
+- Listen First, Then Answer: Timestamp-Grounded Speech Reasoning | https://doi.org/10.48550/arXiv.2603.19468
+- Empires of AI (guest essay) | https://www.foreignaffairs.com/china/empires-artificial-intelligence-ferguson-klaassen-schmidt
+- OII research index (projects + press; publication list paginated) | https://www.oii.ox.ac.uk/research/
+- Introducing the AI Chip Users explorer | https://epoch.ai/latest/introducing-the-ai-chip-users-explorer
+- Trends in AI Supercomputers | https://epoch.ai/publications/trends-in-ai-supercomputers
+- Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation | https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation
+- Managing AI Risks in an Era of Rapid Progress | https://arxiv.org/abs/2310.17688
+- TASRA: A Taxonomy of Societal-Scale Risks from AI | https://arxiv.org/abs/2306.06924
+- Control for Societal-scale Challenges: Road Map 2030 | https://ieeecss.org/control-societal-scale-challenges-road-map-2030
+- Active teacher selection for reinforcement learning from human feedback | https://arxiv.org/abs/2310.15288
+- The United States Government's Role in Harnessing Technology for Future Prosperity: A Transition Memorandum | https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Block%20Center%202025%20Transition%20Memo%20(2).pdf
+- A Policy Maker's Guide to Artificial Intelligence for State and Local Governments: Reaching Safe, Effective and Equitable Scale | https://www.cmu.edu/sites/default/files/cmu-block-center-site-files/documents/Safe%20and%20Equitable%20AI%20for%20State%20and%20Local%20Governments.pdf
+- Minding your business | https://www.adalovelaceinstitute.org/policy-briefing/minding-your-business/
+- Making sense of the current options for AI regulation in the UK | https://www.adalovelaceinstitute.org/feature/ai-regulation-options-uk/
+- Care and consideration | https://www.adalovelaceinstitute.org/report/care-and-consideration/
+- Measuring Up | https://www.adalovelaceinstitute.org/policy-briefing/measuring-up/
+- Navigating the future | https://www.adalovelaceinstitute.org/report/navigating-the-future/
+- OLMo: Accelerating the Science of Language Models | https://arxiv.org/abs/2402.00838
+- OLMo 3 (blog release) | https://allenai.org/blog/olmo3
+- SEA-LION: Southeast Asian Languages in One Network | https://arxiv.org/abs/2504.05747
+- SEALD - Southeast Asian Languages in One Network Data | https://aisingapore.org/aiproducts/southeast-asian-languages-in-one-network-data-seald
+- Evaluating Frontier Models for Stealth and Situational Awareness | https://arxiv.org/abs/2505.01420
+- LCFI open-access publication collection (Cambridge Apollo) | https://www.repository.cam.ac.uk/handle/1810/286662
+- Block Center publications index | https://www.cmu.edu/block-center/publications
+- ETH AI Center publications index | https://ai.ethz.ch/research/publications.html
+- Evaluation of the Pan-Canadian Artificial Intelligence Strategy | https://ised-isde.canada.ca/site/audits-evaluations/en/evaluation/evaluation-pan-canadian-artificial-intelligence-strategy-20-1
+- Public procurement for net-zero digital research infrastructure: a mission-oriented approach | https://discovery.ucl.ac.uk/id/eprint/10196220
+- Mission-Oriented Procurement for Green Innovation: A new taxonomy | https://www.ucl.ac.uk/bartlett/publications/2026/jun/mission-oriented-procurement-green-innovation-new-taxonomy
+- Reshaping Undergraduate Computer Science Education in the Generative AI Era | https://arxiv.org/html/2606.07545v1
+- Are We Ready to Be Governed by Artificial Intelligence? | https://cyber.harvard.edu/story/2025-12/are-we-ready-be-governed-artificial-intelligence
+- The Llama 3 Herd of Models | https://arxiv.org/abs/2407.21783
+- The Llama 4 herd: natively multimodal intelligence | https://ai.meta.com/blog/llama-4-multimodal-intelligence
+- Institute for Ethics in AI (Oxford) publications index | https://www.oxford-aiethics.ox.ac.uk/publications
+- Sparks of Artificial General Intelligence: Early experiments with GPT-4 | https://arxiv.org/abs/2303.12712
+- Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence | https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/
+- Is Safety Standard Same for Everyone? User-Specific Safety Evaluation of Large Language Models | https://arxiv.org/abs/2502.15086
+- Defeating Prompt Injections by Design | https://arxiv.org/abs/2503.18813
+- Voice and Access in AI: Global AI Majority Participation in Artificial Intelligence Development and Governance | https://governance.ai/research-paper/voice-and-access-in-ai-global-ai-majority-participation-in-artificial-intelligence-development-and-governance
+- Infrastructure for AI Agents | https://arxiv.org/abs/2501.10114
+- An Ambitious Artificial Intelligence Policy in a Decentralised Governance System: Evidence From Indonesia | https://doi.org/10.1177/18681034231226393
+- The impact of artificial intelligence on China's labor market | https://digital.car.chula.ac.th/chulaetd/74149
+- Assessing Artificial Intelligence (AI) Literacy and Readiness in Thailand's Workforce: Challenges and Opportunities for Digital Transformation | https://ph02.tci-thaijo.org/index.php/SciTechAsia/article/view/256785
+- Department of Statistics Malaysia — eStatistik publication log (state land area; Johor 19,166 km², 2020) | https://www.dosm.gov.my/portal-main/publication-estatistik-log?chapter_id=1314&document_id=377
+- AI Agents Enable Adaptive Computer Worms | https://arxiv.org/abs/2606.03811
+- GLM-130B: An Open Bilingual Pre-trained Model | https://arxiv.org/abs/2210.02414
+- IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages | https://arxiv.org/abs/2305.16307
+- Generative AI and Jobs: A Refined Global Index of Occupational Exposure | https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure
+- From AI to Emissions: Aligning ASEAN's Digital Growth with Energy Transition | https://ember-energy.org/latest-insights/from-ai-to-emissions-aligning-asean-digital-growth-with-energy-transition/
+- LLM-jp-4 Technical Paper | https://arxiv.org/abs/2610.19331
+- Restricting the Model, Missing the System: Measurement and Accountability in Offensive AI Governance | https://arxiv.org/abs/2605.09504
+- Vietnam's AI Strategy: Aligning Aspirations with Adaptive Governance | https://techforgoodinstitute.org/insights/country-spotlights/vietnams-ai-strategy-aligning-aspirations-with-adaptive-governance
+- Cloud services market investigation — final decision (adverse effects on competition; SMS recommendation) | https://www.gov.uk/cma-cases/cloud-services-market-investigation
+- Digital Sustainability: Southeast Asia's Next Frontier (executive summary) | https://techforgoodinstitute.org/downloads/22867/20801/Executive-Summary_Digital-Sustainability-Southeast-Asias-Next-Frontier.pdf
+- The Struggle for Subsea Cable Supremacy in Southeast Asia: ASEAN Relying on Diverse Suppliers | https://www.iseas.edu.sg/wp-content/uploads/2025/02/ISEAS_Perspective_2025_21.pdf
+- ASEAN Digital Community 2045: A Strategic Overview | https://www.eria.org/uploads/ADC-2025-A-Strategic-Overview.pdf
+- Prescribing the Philippine Government's Cloud First Policy (DICT Department Circular 2017-002) | https://ictknowledgeportal.dict.gov.ph/resources (official portal listing); PDF copy from the JETRO ASEAN-Japan mirror: jetro.go.jp/ext_images/jetro/activities/support/aseanjapan/report/3-6.pdf; amendment PDF from dataguidance.com mirror
+- Exploring Readiness and Challenges to AI-Driven Competitiveness in Southeast Asian SMEs (in KAS volume 'The Experiences and Extent of Adopting AI among SMEs in Southeast Asia') | https://www.kas.de/documents/287213/33744488/The+Experiences+and+Extent+of+Adopting+AI+among+SMEs+in+Southeast+Asia.pdf
+- AI Activities and Recommendations Regarding AI Integration in Southeast Asian Universities (ICHEI report, July 2025) | https://ar.ichei.org/static/upload/2025/07/17/202507175355.pdf
+- The NIST Definition of Cloud Computing | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf
+- Measuring domestic public cloud compute availability for artificial intelligence | https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html
+- Competition in the provision of cloud computing services | https://www.oecd.org/en/publications/2025/05/competition-in-the-provision-of-cloud-computing-services_f42582ad.html
+- Doubling down on cloud to deliver better government services | https://www.tech.gov.sg/technews/doubling-down-on-cloud-to-deliver-better-government-services
+- Update to Singapore's National AI Strategy: Refreshed Priorities to Harness AI for the Public Good (Factsheet) | https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/
+- AI Factories | https://www.eurohpc-ju.europa.eu/ai-factories_en
+- The Semiconductor Supply Chain: Assessing National Competitiveness | https://cset.georgetown.edu/wp-content/uploads/The-Semiconductor-Supply-Chain-Issue-Brief-1.pdf
+- 2025 State of the U.S. Semiconductor Industry | https://www.semiconductors.org/2025-state-of-the-u-s-semiconductor-industry/
+- CoWoS | https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm
+- Re-Shoring Advanced Semiconductor Packaging | https://cset.georgetown.edu/wp-content/uploads/CSET-Re-Shoring-Advanced-Semiconductor-Packaging.pdf
+- Facts and Figures 2025 | https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx
+- The State of Broadband 2024: Leveraging AI for Universal Connectivity | https://broadbandcommission.net/broadband-commission-assesses-ai-and-the-digital-divides/
+- How Many Submarine Cables Are There, Anyway? | https://resources.telegeography.com/how-many-submarine-cables-are-there-anyway?hs_amp=true
+- Mobile Economy Asia Pacific 2025 | https://www.gsma.com/newsroom/all-documents/asia-pacifics-mobile-sector-adds-950-billion-to-gdp-on-track-to-reach-1-4-trillion-by-2030-gsma-report-reveals/
+- The Geography of Digital Exclusion in Low- and Middle-Income Countries: Access, Use, and Gender Gaps | https://documents.worldbank.org/curated/en/099033126143097016/pdf/P506842-871c2940-d708-4ef5-bf78-a7617d0547a2.pdf
+- Footprints of 20 Years of the Internet Governance Forum | https://www.internetsociety.org/news/press-releases/2025/what-held-the-internet-together-for-20-years-and-why-its-now-at-risk/
+- Semiconductor Supply Chain Dataset (September 2026 release) | https://eto.tech/dataset-docs/chipexplorer
+- Meet digital sovereignty needs with AWS Dedicated Local Zones expanded services | https://aws.amazon.com/blogs/security/meet-digital-sovereignty-needs-with-aws-dedicated-local-zones-expanded-services/?utm_source=securityblogs-xyz
+- Electricity Grids and Secure Energy Transitions | https://www.iea.org/reports/electricity-grids-and-secure-energy-transitions/executive-summary
+- Queued Up: 2026 Edition, Characteristics of Power Plants Seeking Transmission Interconnection As of the End of 2025 | https://emp.lbl.gov/publications/queued-2026-edition-characteristics
+- Proposed data centre connection reforms | https://www.ofgem.gov.uk/consultation/proposed-data-centre-connection-reforms
+- Financing the ASEAN Power Grid | https://iea.blob.core.windows.net/assets/ae91a87e-275b-48b8-81b9-2eacadc8d28b/FinancingtheASEANPowerGrid.pdf
+- National Transmission Needs Study (United States fact sheet) | https://www.energy.gov/sites/default/files/2023-10/DOE_GDO_Needs_Study_Fact_Sheet_United_States.pdf
+- Accelerating electricity network connections for strategic demand | https://www.gov.uk/government/consultations/accelerating-electricity-network-connections-for-strategic-demand/accelerating-electricity-network-connections-for-strategic-demand-accessible-webpage
+- Explainer on the Interconnection Final Rule (Order No. 2023) | https://www.ferc.gov/explainer-interconnection-final-rule
+- Grids (Electricity 2026 chapter) | https://www.iea.org/reports/electricity-2026/grids
+- Strengthening America's Grid Supply Chain | https://www.energy.gov/oe/articles/strengthening-americas-grid-supply-chain
+- Electricity Distribution Transformers: Supply, Tariffs, and Policy Options | https://www.everycrsreport.com/files/2026-04-23_R48933_7b9be639e3196e5282d3817519df9f1ed2778302.pdf
+- EU electricity grids | https://www.europarl.europa.eu/RegData/etudes/BRIE/2025/772854/EPRS_BRI(2025)772854_EN.pdf
+- 2025 Long-Term Reliability Assessment: Industry Webinar (19 February 2026) | https://int.nerc.com/globalassets/programs/rapa/ra/2025_ltra_industry_webinar.pdf
+- The future for Great Britain's electricity infrastructure for the 2030s and beyond (Beyond 2030 Update) | https://www.neso.energy/news/future-great-britains-electricity-infrastructure-2030s-and-beyond
+- PH Secures ASEAN Power Grid Consensus, Advances 2026 Priority Economic Deliverables and Japan Partnerships | https://doe.gov.ph/ph-secures-asean-power-grid-consensus-advances-2026-priority-economic-deliverables-and-japan-partnership
+- Energy and AI, Box 5.4: Water use by data centres | https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf
+- 2024 United States Data Center Energy Usage Report | https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf
+- Making AI Less 'Thirsty': Uncovering and Addressing the Secret Water Footprint of AI Models | https://arxiv.org/abs/2304.03271v1
+- The carbon and water footprints of data centers and what this could mean for artificial intelligence | https://pmc.ncbi.nlm.nih.gov/articles/PMC12827721/
+- What are data centres and how sustainable are they? | https://researchbriefings.files.parliament.uk/documents/POST-PN-0762/POST-PN-0762.pdf
+- Inside Microsoft's two-decade push to cut water intensity while scaling for growth | https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/
+- Read Google's 2026 Environmental Report | https://blog.google/company-news/outreach-and-initiatives/sustainability/2026-environmental-report/
+- Measuring the environmental impact of AI inference | https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/
+- AWS Wins All 3 Singapore PUB Water Awards 2026 | https://www.aboutamazon.sg/news/sustainability/amazons-data-centre-water-stewardship-in-southeast-asia-aws-wins-all-three-singapore-pub-water-awards-for-2026
+- Regulating Data Center Water Use in California | https://clee.berkeley.edu/publications/regulating-data-center-water-use-in-california/
+- Water | https://sustainability.atmeta.com/water/
+- Thirsty Data and the Lone Star State: The Impact of Data Center Growth on Texas' Water Supply | https://harcresearch.org/wp-content/uploads/2026/01/Thirsty-Data-Water-Use-and-The-Projected-Data-Center-Boom-in-Texas.pdf
+- Water Use and Community Trust: Key Components of Data Centers' Social License to Operate | https://deeptech.duke.edu/sites/default/files/Water-Use-and-Community-Trust-Paper_May7.pdf
+- Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints | https://unu.edu/sites/default/files/2026-10/UNU-INWEH-Report-The_Env_Cost_of_AI-2026.pdf
+- Delivering AI Growth Zones | https://www.gov.uk/government/publications/delivering-ai-growth-zones/delivering-ai-growth-zones
+- Data Centers: Land Use Considerations | https://www.loudoun.gov/6410/Land-Use-Considerations
+- Demand for AI and data processing is growing exponentially: which role does the Netherlands want in the European data centre market and how much can it take on? | https://www.cbre.co.uk/insights/viewpoints/demand-for-ai-and-data-processing-is-growing-exponentially
+- Large Energy Users Connection Policy | https://cruie-live-96ca64acab2247eca8a850a7e54b-5b34f62.divio-media.com/documents/CRU2025236_Large_Energy_User_connection_policy_decision_paper.pdf?utm_source=chatgpt.com
+- Data Centers in Virginia, 2024 | https://jlarc.virginia.gov/pdfs/reports/Rpt598-2.pdf?ref=yacnews.com
+- PW Digital Gateway | https://www.pwcva.gov/department/planning-office/pw-digital-gateway
+- Data Centers | https://www.fairfaxcounty.gov/topics/data-centers
+- Statenvoordracht Datacenterstrategie 2025-2027 | https://noordholland.bestuurlijkeinformatie.nl/Document/View/f12ad536-0299-46ca-8bbe-7222d305cb47
+- Vestigingsbeleid datacenters gemeente Amsterdam 2020-2030 (eerste herziening) | https://odnzkg.nl/wp-content/uploads/2026/07/Vestigingsbeleid-datacenters-2020-2030-Amsterdam-Duurzaam-Digitaal-eerste-herziening.pdf
+- Data centers; site assessment, sound profile of the high energy use facility (HB 153 / SB 94) | https://dls.virginia.gov/commissions/eur/files/Energy_Legislation_Virginia_2026_CEUR_Summary.pdf
+- Board of County Supervisors of Prince William County v. Oak Valley Homeowners Association, Inc., et al. | https://law.justia.com/cases/virginia/court-of-appeals-published/2026/1590-25-4.html
+- JLG Unveils IBTEC To Move Malaysia Up The Industrial Value-Chain | https://www.jlandgroup.com.my/wp-content/uploads/2026/07/20251205_StarProperty_JLG-Unveils-IBTEC-To-Move-Malaysia-Up-The-Industrial-Value-Chain.pdf
+- Jurong Island to host Singapore's largest green data centre park; 10 per cent of land set aside for new energies | https://www.edb.gov.sg/en/news-and-insights/jurong-island-to-host-singapores-largest-green-data-centre-park-10-per-cent-of-land-set-aside-for-new-energies
+- Powered Land: Power Play, The Emerging Powered Land Opportunity | https://www.hines.com/powered-land/power-play-full-report
+- Internet Exchange Points and Local Interconnection Ecosystems | https://www.internetsociety.org/wp-content/uploads/2026/10/Internet-Exchange-Points-and-Local-Interconnection-Ecosystems-Policy-Brief_EN.pdf
+- Dissecting the Cost of Peering | https://www.internetsociety.org/resources/doc/2026/dissecting-the-cost-of-peering/
+- Community-Driven IXPs | https://www.internetsociety.org/resources/doc/2025/community-driven-ixps/
+- State of Mobile Internet Connectivity 2025 | https://www.gsma.com/newsroom/press-release/gsma-calls-for-renewed-focus-on-closing-the-usage-gap-as-more-than-3-billion-people-remain-offline-despite-available-mobile-internet-services/
+- GSMA hails groundbreaking spectrum decisions at WRC-23 | https://gsma.com/newsroom/press-release/gsma-hails-groundbreaking-spectrum-decisions-at-wrc-23/
+- Communications Ministry Tells Operators to Provide Signal Availability | https://setkab.go.id/en/communications-ministry-tells-operators-to-provide-signal-availability/
+- Singapore's Digital Connectivity Blueprint | https://www.imda.gov.sg/-/media/imda/files/programme/digital-connectivity-blueprint/digital-connectivity-blueprint-report.pdf
+- International Advisory Body on Submarine Cable Resilience: Report of the Working Groups | https://www.itu.int/digital-resilience/submarine-cables/wp-content/uploads/sites/2/2026/07/IAB-Publication-2026.pdf
+- Gigabit Infrastructure Act | https://digital-strategy.ec.europa.eu/en/policies/gigabit-infrastructure-act
+- Broadband Equity, Access, and Deployment (BEAD) Program: BEAD Supplemental Deployment Policy Notice | https://broadbandusa.ntia.gov/funding-programs/broadband-equity-access-and-deployment-bead-program/BEAD_Supplemental_Deployment_Policy_Notice
+- Emboldened offenders, endangered communities: internet shutdowns in 2024 | https://www.accessnow.org/press-release/keepiton-internet-shutdowns-2024-en/
+- Meaningful connectivity: What creates a successful community network? | https://www.apc.org/en/blog/meaningful-connectivity-what-creates-successful-community-network
+- Cloudflare Radar 2024 Year in Review | https://radar.cloudflare.com/year-in-review/2024
+- Palapa Ring has successfully improved mobile connectivity in remote Indonesian islands | https://insights.opensignal.com/2020/11/26/palapa-ring-has-successfully-improved-mobile-connectivity-in-remote-indonesian-islands
+- Article 72: Post-market monitoring by providers and post-market monitoring plan for high-risk AI systems | https://ai-act.digiphile.law/article/article-72.html
+- Defective products: liability (Directive (EU) 2024/2853) | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum:4792027
+- Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225) | https://rm.coe.int/1680afae3c
+- Artificial Intelligence Accountability Policy Report | https://www.ntia.gov/sites/default/files/2024-04/ntia-ai-report-print.pdf
+- The OECD AI Incidents Monitor: an evidence base for effective AI policy | https://oecd.ai/en/wonk/incidents-monitor-aim
+- The AI Incident Database | https://incidentdatabase.ai/about/
+- Directive on Automated Decision-Making | https://publications.gc.ca/collections/collection_2021/sct-tbs/BT48-31-2021-eng.pdf
+- Automated Employment Decision Tools (AEDT) | https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page
+- SB26-189: Automated Decision-Making Technology | https://leg.colorado.gov/bills/sb26-189
+- Keep your AI claims in check | https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-check
+- SEC Charges Two Investment Advisers with Making False and Misleading Statements About Their Use of Artificial Intelligence | https://www.sec.gov/newsroom/press-releases/2024-36
+- Joint Statement on Enforcement Efforts Against Discrimination and Bias in Automated Systems | https://www.ftc.gov/system/files/ftc_gov/pdf/EEOC-CRT-FTC-CFPB-AI-Joint-Statement%28final%29.pdf
+- ASEAN Guide on AI Governance and Ethics | https://asean.org/book/asean-guide-on-ai-governance-and-ethics/
+- Mata v. Avianca, Inc.: Opinion and Order on Sanctions | https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf
+- Efficient Memory Management for Large Language Model Serving with PagedAttention | https://arxiv.org/abs/2309.06180
+- FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning | https://arxiv.org/abs/2307.08691
+- Fast Inference from Transformers via Speculative Decoding | https://arxiv.org/abs/2211.17192
+- GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers | https://arxiv.org/abs/2210.17323v1
+- AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration | https://arxiv.org/abs/2306.00978v5
+- Orca: A Distributed Serving System for Transformer-Based Generative Models | https://www.usenix.org/conference/osdi22/presentation/yu
+- SGLang: Efficient Execution of Structured Language Model Programs | https://arxiv.org/abs/2312.07104
+- Efficient Streaming Language Models with Attention Sinks | https://arxiv.org/abs/2309.17453
+- DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning | https://arxiv.org/abs/2501.12948
+- Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters | https://arxiv.org/abs/2408.03314
+- MLPerf Inference: Datacenter benchmark suite | https://mlcommons.org/benchmarks/inference-datacenter/
+- LLM inference prices have fallen rapidly but unequally across tasks | https://epoch.ai/data-insights/llm-inference-price-trends
+- MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases | https://arxiv.org/abs/2402.14905
+- LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale | https://arxiv.org/abs/2208.07339
+- Information technology — Artificial intelligence — Management system | https://www.iso.org/standard/42001
+- Information technology — Artificial intelligence — Guidance on risk management | https://www.iso.org/standard/77304.html
+- Framework for Artificial Intelligence (AI) Systems Using Machine Learning (ML) | https://committee.iso.org/standard/74438.html?browse=tc
+- Information technology — Governance of IT — Governance implications of the use of artificial intelligence by organizations | https://www.iso.org/standard/56641.html
+- Information technology — Artificial intelligence — Artificial intelligence concepts and terminology | https://www.iso.org/standard/74296.html
+- Information technology — Artificial intelligence — Overview of trustworthiness in artificial intelligence | https://knowledge.bsigroup.com/products/information-technology-artificial-intelligence-overview-of-trustworthiness-in-artificial-intelligence
+- IEEE 7000-2021: Standard Model Process for Addressing Ethical Concerns During System Design | https://standards.ieee.org/ieee/7000/6781/
+- IEEE Standard for Transparency of Autonomous Systems | https://standards.ieee.org/beyond-standards/from-principles-to-practice-understanding-ieee-7001-and-transparency-in-autonomous-systems/
+- IEEE Recommended Practice for Assessing the Impact of Autonomous and Intelligent Systems on Human Well-Being | https://standards.ieee.org/ieee/7010/7718/
+- NIST AI Risk Management Framework (AI RMF) 1.0 | https://www.nist.gov/itl/ai-risk-management-framework
+- Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile | https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
+- Towards a Standard for Identifying and Managing Bias in Artificial Intelligence | https://doi.org/10.6028/NIST.SP.1270
+- The next phase of the AI Standards Hub (AISH) | https://www.npl.co.uk/news/the-next-phase-of-the-ai-standards-hub-(aish)
+- Information technology — Artificial intelligence (AI) — AI system impact assessment | https://www.iso.org/standard/42005
+- How the U.S. Public and AI Experts View Artificial Intelligence | https://www.pewresearch.org/internet/2025/04/03/how-the-us-public-and-ai-experts-view-artificial-intelligence/
+- How People Around the World View AI | https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/
+- The Ipsos AI Monitor 2025 | https://www.ipsos.com/en-dk/ipsos-ai-monitor-2025
+- Trust, attitudes and use of artificial intelligence: A global study 2025 | https://kpmg.com/sg/en/insights/ai-and-innovation/trust-attitudes-and-use-of-ai.html
+- When Familiarity Breeds Trust: How Experience Turns AI Skeptics into Believers | https://www.edelman.com/insights/familiarity-breeds-trust-in-ai
+- Public Opinion | The 2025 AI Index Report | https://hai.stanford.edu/ai-index/2025-ai-index-report/public-opinion
+- Algorithm aversion: people erroneously avoid algorithms after seeing them err | https://pubmed.ncbi.nlm.nih.gov/25401381/
+- Algorithm appreciation: People prefer algorithmic to human judgment | https://psycnet.apa.org/record/2019-16202-008
+- Artificial Intelligence: European opinion divided | https://www.veriangroup.com/news-and-insights/artificial-intelligence-and-the-future-of-work
+- AAA: Fear in Self-Driving Vehicles Persists | https://southjersey.aaa.com/news/aaa-fear-self-driving-vehicles-persists
+- Indonesia Ranks Third Globally in Concerns over Future Job Security | https://www.ipsos.com/en-id/indonesia-ranks-third-globally-concerns-over-future-job-security-ipsos-global-advisor-survey
+- What the UK Thinks About AI: Building Public Trust to Accelerate Adoption | https://institute.global/insights/tech-and-digitalisation/what-the-uk-thinks-about-ai-building-public-trust-to-accelerate-adoption
+- Talk, Trust, and Trade-Offs: How and Why Teens Use AI Companions | https://www.commonsensemedia.org/sites/default/files/research/report/talk-trust-and-trade-offs_2025_web.pdf?ref=mereorthodoxy.com
+- Public attitudes to police use of facial recognition technology | https://www.gov.uk/government/publications/public-attitudes-to-police-use-of-facial-recognition-technology/public-attitudes-to-police-use-of-facial-recognition-technology
+- Global Critical Minerals Outlook 2025 | https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary
+- Global Resources Outlook 2024: Bend the Trend | https://www.resourcepanel.org/reports/global-resources-outlook-2024
+- Global Material Resources Outlook to 2060: Economic Drivers and Environmental Consequences | https://www.oecd-ilibrary.org/environment/global-material-resources-outlook-to-2060_562bc71f-en
+- About the 2025 List of Critical Minerals | https://www.usgs.gov/programs/mineral-resources-program/science/about-2025-list-critical-minerals
+- The Global E-waste Monitor 2024 | https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling?form=MG0AV3
+- Environmental impacts of rare earth elements mining and strategies for sustainable management: A comprehensive review | https://pubmed.ncbi.nlm.nih.gov/41223466/
+- Review of the current knowledge and identified gaps in assessing the social and environmental impacts of mining processes in the Lithium Triangle | https://www.sciencedirect.com/science/article/pii/S2352550924003439
+- ICEF Sustainable Data Centers Roadmap, Chapter 3.3: Embodied Greenhouse Gas Emissions (Scope 3) | https://icef.go.jp/wp-content/themes/icef_new/pdf/roadmap/2025/CHAPTER%20%E2%85%A2%20%E2%80%93%203.%20EMBODIED%20GREENHOUSE%20GAS%20EMISSIONS%20%28SCOPE%203%29.pdf
+- Local pollution challenges in the global energy transition: air quality near hydrometallurgical and pyrometallurgical plants in the Congolese Copperbelt | https://link.springer.com/article/10.1007/s10668-026-08147-x
+- Critical and Strategic Materials | https://rmis.jrc.ec.europa.eu/critical-and-strategic-materials
+- Sand and Sustainability: 10 Strategic Recommendations to Avert a Crisis | https://www.unep.org/resources/report/sand-and-sustainability-10-strategic-recommendations-avert-crisis
+- From FLOPs to Footprints: The Resource Cost of Artificial Intelligence | https://arxiv.org/pdf/2512.04142v1
+- Global Industry Standard on Tailings Management | http://www.unep.org/resources/report/global-industry-standard-tailings-management
+- The environmental impacts of deep-sea mining | https://pubmed.ncbi.nlm.nih.gov/42086038/
+- Generative AI at Work | https://www.nber.org/papers/w31161
+- Experimental evidence on the productivity effects of generative artificial intelligence | https://pubmed.ncbi.nlm.nih.gov/37440646/
+- Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality | https://www.hbs.edu/faculty/Pages/item.aspx?num=64700
+- The Impact of AI on Developer Productivity: Evidence from GitHub Copilot | https://arxiv.org/abs/2302.06590?context=cs
+- Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity | https://arxiv.org/abs/2507.09089
+- The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers | https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535?cookieSet=1
+- The Simple Macroeconomics of AI | https://www.nber.org/papers/w32487
+- GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models | https://arxiv.org/abs/2303.10130v3
+- Gen-AI: Artificial Intelligence and the Future of Work | https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379
+- The Uneven Impact of Generative AI on Entrepreneurial Performance | https://www.hbs.edu/faculty/Pages/item.aspx?num=65159
+- The Economic Potential of Generative AI: The Next Productivity Frontier | https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier
+- New Frontiers: The Origins and Content of New Work, 1940-2018 | https://economics.mit.edu/sites/default/files/2023-12/New%20Frontiers%20-%20The%20Origins%20and%20Content%20of%20New%20Work%201940-2018.pdf
+- Artificial Intelligence and Economic Growth | https://www.nber.org/papers/w23928
+- Macroeconomic productivity gains from Artificial Intelligence in G7 economies | https://www.oecd.org/en/publications/macroeconomic-productivity-gains-from-artificial-intelligence-in-g7-economies_a5319ab5-en.html
+- Article 73: Reporting of serious incidents | https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-73
+- Article 55: Obligations of providers of general-purpose AI models with systemic risk | https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55
+- Marketing Submission Recommendations for a Predetermined Change Control Plan for Artificial Intelligence-Enabled Device Software Functions | https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial-intelligence
+- Overview and methodology of the AI Incidents and Hazards Monitor | https://oecd.ai/en/incidents-methodology
+- From deepfake scams to biased AI: How incident reporting can help us keep ahead of AI's harms | https://oecd.ai/en/wonk/deepfake-scams-biased-ai-incidents-framework-reporting-can-keep-ahead-ai-harms
+- From Registry to Reality: Opportunities to Enhance Post-market Surveillance of High-Risk Medical Devices | https://pubmed.ncbi.nlm.nih.gov/41966145/
+- Regulation (EU) 2017/745 on medical devices: post-market surveillance and vigilance (Articles 83 to 88) | https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32017R0745
+- Commission Delegated Regulation (EU) 2025/301: content and time limits for reporting major ICT-related incidents under DORA | https://eur-lex.europa.eu/eli/reg_del/2025/301/oj
+- Guidelines for secure AI system development | https://www.cyber.gov.au/sites/default/files/2025-03/Guidelines for secure AI system development (November 2023).pdf
+- Article 23: Reporting obligations (NIS2 Directive) | https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022L2555
+- SS1/23: Model risk management principles for banks | https://www.bankofengland.co.uk/prudential-regulation/publication/2023/may/model-risk-management-principles-for-banks-ss
+- Singapore Model AI Governance Framework (Second Edition) and companion guides: media factsheet | https://www.imda.gov.sg/assets/7bb338ed-ca9d-4b42-9094-836447af239f.pdf
+- Standing General Order 2021-01: Incident Reporting for Automated Driving Systems (ADS) and Level 2 Advanced Driver Assistance Systems (ADAS) | https://www.nhtsa.gov/sites/nhtsa.gov/files/2021-06/Standing_General_Order_2021_01-digital-06292021.pdf
+- Artificial Intelligence-Enabled Device Software Functions: Lifecycle Management and Marketing Submission Recommendations | https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing
+- Article 14: Human oversight | https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14
+- Article 26: Obligations of deployers of high-risk AI systems | https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-26
+- Article 27: Fundamental rights impact assessment for high-risk AI systems | https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-27
+- OQ v Land Hessen (SCHUFA), Case C-634/21 | https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A62021CJ0634
+- European Commission proposal to sign the Council of Europe AI Convention (COM(2024) 264) | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52024PC0264
+- A Right to a Human Decision | https://chicagounbound.uchicago.edu/public_law_and_legal_theory/790/
+- Technological Due Process | https://www.law.virginia.edu/scholarship/publication/danielle-k-citron/1153811
+- Humans in the Loop | https://cdn.vanderbilt.edu/vu-wordpress-0/wp-content/uploads/sites/278/2023/03/19121604/Humans-in-the-Loop.pdf
+- Algorithmic Accountability and Public Reason | https://pmc.ncbi.nlm.nih.gov/articles/PMC6390894/
+- Automation bias: a systematic review of frequency, effect mediators, and mitigators | https://pubmed.ncbi.nlm.nih.gov/21685142/
+- Automation bias and verification complexity: a systematic review | https://pubmed.ncbi.nlm.nih.gov/27516495/
+- Street-Level Algorithms: A Theory at the Gaps Between Policy and Decisions | https://hci.stanford.edu/publications/2019/streetlevelalgorithms/streetlevelalgorithms-chi2019.pdf
+- Recommendation on the Ethics of Artificial Intelligence | https://www.unesco.org/ethics-ai/en/recommendation
+- Ethics Guidelines for Trustworthy AI | https://digital-strategy.ec.europa.eu/en/node/1950/printable/pdf
+- Regulation (EU) 2024/1252 (Critical Raw Materials Act) | https://eur-lex.europa.eu/eli/reg/2024/1252/oj
+- Datasheets for Datasets | https://arxiv.org/abs/1803.09010?context=cs.LG
+- Data Statements for Natural Language Processing: Toward Mitigating System Bias and Enabling Better Science | https://www.mitpressjournals.org/doi/pdf/10.1162/tacl_a_00041
+- The Data Provenance Initiative: A Large Scale Audit of Dataset Licensing & Attribution in AI | http://arxiv.org/abs/2310.16787
+- DataComp: In search of the next generation of multimodal datasets | https://arxiv.org/abs/2304.14108?context=cs.LG
+- LAION-5B: An open large-scale dataset for training next generation image-text models | https://arxiv.org/abs/2210.08402?context=cs.LG
+- The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only | https://arxiv.org/abs/2306.01116?context=cs
+- The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale | https://arxiv.org/abs/2406.17557
+- Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research | https://arxiv.org/abs/2402.00159
+- The Pile: An 800GB Dataset of Diverse Text for Language Modeling | https://arxiv.org/abs/2101.00027
+- Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus | https://arXiv.org/abs/2104.08758?context=cs.AI
+- Datasets: A Community Library for Natural Language Processing | https://arxiv.org/abs/2109.02846?context=cs
+- NusaCrowd: Open Source Initiative for Indonesian NLP Resources | https://arxiv.org/abs/2212.09648?context=cs
+- Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning | https://arxiv.org/abs/2402.06619?context=cs
+- Textbooks Are All You Need | https://arxiv.org/abs/2306.11644?context=cs.LG
+- Regulation (EU) 2023/1781 (Chips Act) | https://eur-lex.europa.eu/eli/reg/2023/1781/oj/eng
+- The Netherlands expands export control measure for advanced semiconductor manufacturing equipment | https://www.government.nl/latest/news/2024/09/06/the-netherlands-expands-export-control-measure-advanced-semiconductor-manufacturing-equipment
+- Explainer: The Commerce Department's October 2023 Export Control Update | https://cset.georgetown.edu/article/bis-2023-update-explainer
+- Rethinking Export Controls as a Tool in Modern Technology Competition | https://www.csis.org/analysis/rethinking-export-controls-tool-modern-technology-competition
+- China's Localization Drive in Semiconductors Gains Impetus from Allied Chip Export Controls | https://www.csis.org/analysis/chinas-localization-drive-semiconductors-gains-impetus-allied-chip-export-controls
+- Semiconductors and the CHIPS Act: The Global Context | https://www.congress.gov/crs_external_products/R/PDF/R47558/R47558.1.pdf
+- Section 301 and China: Mature-Node Semiconductors | https://www.congress.gov/crs_external_products/IF/PDF/IF12958/IF12958.5.pdf
+- Semiconductors: Information on Projects Funded to Strengthen U.S. Supply Chain | https://www.gao.gov/products/gao-26-107882
+- Semiconductors: Commerce Needs Plan to Meet CHIPS for America R&D Requirements | https://www.gao.gov/products/gao-26-109121
+- The chip landscape | https://www.oecd.org/en/publications/the-chip-landscape_02dbd028-en/full-report/component-3.html
+- Mapping the semiconductor value chain: Working towards identifying dependencies and vulnerabilities | https://www.OECD.org/content/dam/oecd/en/publications/reports/2025/06/mapping-the-semiconductor-value-chain_5ba52971/4154cdbf-en.pdf
+- Full Stack: China's Evolving Industrial Policy for AI | https://www.rand.org/pubs/perspectives/PEA4012-1.html
+- Chips in Japan: Industrial policy, decline and renewal | https://www.rieti.go.jp/jp/publications/dp/25e116.pdf
+- Taiwan's 'Silicon Shield': Techno-authoritarian territories in the global semiconductor supply chain | https://discovery.ucl.ac.uk/id/eprint/10212798/1/Datta_260825_DDS_Commentary_AD_YJC.pdf
+- Nickel mining reduced forest cover in Indonesia but had mixed outcomes for well-being | https://www.cell.com/one-earth/fulltext/S2590-3322(24)00534-7
+- Continental AI Strategy (African Union) | https://au.int/sites/default/files/documents/44004-doc-EN-_Continental_AI_Strategy_July_2024.pdf
+- Latin American Artificial Intelligence Index (ILIA) 2025 — Executive Summary | https://www.cepal.org/en/publications/84471-latin-american-artificial-intelligence-index-ilia-2025-executive-summary
+- Copyright and Artificial Intelligence, Part 2: Copyrightability | https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf
+- Ethics and governance of artificial intelligence for health: guidance on large multi-modal models | https://www.who.int/publications/i/item/9789240084759
+- Thousands of AI Authors on the Future of AI | https://arxiv.org/abs/2401.02843
+- On the Opportunities and Risks of Foundation Models | https://arxiv.org/abs/2108.07258
+- AI as Normal Technology | https://knightcolumbia.org/content/ai-as-normal-technology
+- Responsible AI: Approach Document for India, Part 1 — Principles for Responsible AI (#AIforAll) | https://www.niti.gov.in/sites/default/files/2021-02/Responsible-AI-22022021.pdf
+- AI Guidelines for Business Ver. 1.0 (Japan) | https://www.meti.go.jp/english/press/2024/0419_002.html
+- Large Language Model Influence on Diagnostic Reasoning: A Randomized Clinical Trial | https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2825395
+- Screening performance and characteristics of breast cancer detected in the Mammography Screening with Artificial Intelligence trial (MASAI) | https://pubmed.ncbi.nlm.nih.gov/39904652/
+- Prospective Multi-Site Validation of AI to Detect Tuberculosis and Chest X-Ray Abnormalities | https://pmc.ncbi.nlm.nih.gov/articles/PMC11737584
+- Use of Ambient AI Scribes to Reduce Administrative Burden and Professional Burnout | https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2839542
+- A systematic review and meta-analysis of diagnostic performance comparison between generative AI and physicians | https://www.nature.com/articles/s41746-025-01543-z
+- Real-time diabetic retinopathy screening by deep learning in a multisite national screening programme: a prospective interventional cohort study | https://pubmed.ncbi.nlm.nih.gov/35272972/
+- An LLM chatbot to facilitate primary-to-specialist care transitions: a randomized controlled trial | https://www.nature.com/articles/s41591-025-04176-7
+- The State of AI in Africa Report | https://aiconference.cipit.org/documents/the-state-of-ai-in-africa-report.pdf
+- Invisible Workers, Visible Harms: Perils and Precarities of AI Labour | https://www.bmz-digital.global/wp-content/uploads/2026/02/GIZ_2026_InvisibleWorkersVisibleHarms-1.pdf
+- Mapping Data Labour Supply Chain in Africa in an Era of Digital Apartheid: a Struggle for Recognition | https://arxiv.org/abs/2512.04269
+- IrokoBench: A Human-Translated Benchmark Dataset for Natural Language Tasks in African Languages | https://arxiv.org/abs/2406.03368
+- Latam-GPT (CENIA, Chile) — regional large language model project | https://www.latamgpt.org/en
+- Oportunidades para la Argentina en la cadena de valor de la Inteligencia Artificial | https://fund.ar/publicacion/oportunidades-para-la-argentina-en-la-cadena-de-valor-de-la-inteligencia-artificial
+- Fairwork platform-work ratings (Latin America: Argentina, Brazil, Colombia, Ecuador, Paraguay, Uruguay — 2025 reports) | https://fair.work
+- Copyright and Artificial Intelligence, Part 3: Generative AI Training | https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf
+- Report on Copyright and Artificial Intelligence | https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence
+- Extracting Training Data from Large Language Models | https://arxiv.org/abs/2012.07805
+- General Understanding on AI and Copyright in Japan: Overview | https://www.bunka.go.jp/english/policy/copyright/pdf/94055801_01.pdf
+- What Investment Data Implies about the AI Transition | https://www.nber.org/papers/w35290
+- The AI Buildout and the Economy: Publicly Available Data to Assess AI's Impact | https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html
+- Artificial intelligence, firm growth, and product innovation | https://www.sciencedirect.com/science/article/pii/S0304405X2300185X
+- Artificial Intelligence and the Labor Market | https://www.nber.org/papers/w33509
+- The Labor Market Impact of Digital Technologies | https://www.nber.org/papers/w33469
+- The Exposure of Workers to Artificial Intelligence in Low- and Middle-Income Countries | https://openknowledge.worldbank.org/entities/publication/4a11a37d-149a-44fb-a941-100065ff5eb8
+- Buffer or Bottleneck? Employment Exposure to Generative AI and the Digital Divide in Latin America | https://www.ilo.org/publications/buffer-or-bottleneck-employment-exposure-generative-ai-and-digital-divide
+- Artificial Intelligence and the Labour Market in Korea | https://www.oecd.org/en/publications/artificial-intelligence-and-the-labour-market-in-korea_68ab1a5a-en.html
+- The Short-Term Effects of Generative Artificial Intelligence on Employment: Evidence from an Online Labor Market | https://pubsonline.informs.org/doi/abs/10.1287/orsc.2023.18441
+- Now Hiring: Firm-Level Adoption of Generative AI in China | https://thedocs.worldbank.org/en/doc/cbdef4ef57efdbb3c29aa4c07edf860b-0050062026/original/Now-hiring-Firm-Level-Li-etal.pdf
+- World Development Report 2026: The Promise of Artificial Intelligence | https://www.worldbank.org/en/publication/wdr2026
+- Use of Artificial Intelligence and Productivity: Evidence from firm and worker surveys | https://www.rieti.go.jp/en/publications/summary/24100008.html
+- Better Technology, Worse Motivation: Generative Artificial Intelligence's Mediocrity Trap | https://www.adb.org/publications/better-technology-worse-motivation
+- AI Readiness and Economic Impacts in Asia and the Pacific (Asian Development Outlook April 2026, Special Topic) | https://www.adb.org/sites/default/files/publication/1135881/ado-april-2026-special-topic.pdf
+- Generative AI and Sales Productivity: Field Experiments in Online Retail | https://arxiv.org/abs/2510.12049
+- The effects of generative AI on productivity, innovation and entrepreneurship | https://www.oecd.org/en/publications/the-effects-of-generative-ai-on-productivity-innovation-and-entrepreneurship_b21df222-en.html
+- AI and Productivity in Europe | https://www.imf.org/en/publications/wp/issues/2025/04/04/ai-and-productivity-in-europe-565924
+- Developments in Artificial Intelligence markets: New indicators based on model characteristics, prices and providers | https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/developments-in-artificial-intelligence-markets-new-indicators-based-on-model-characteristics-prices-and-providers_75e50b2a/9302bf46-en.pdf
+- Concentrating Intelligence: Scaling and Market Structure in Artificial Intelligence | https://www.ineteconomics.org/uploads/papers/WP_228-Korinek-and-Vipra.pdf
+- Generative AI and Competition (Discussion Paper) | https://www.jftc.go.jp/file/241002DiscussionPaperEN.pdf
+- Use of artificial intelligence in enterprises (Statistics Explained) | https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises
+- AI Unboxed and Jobs: A Novel Measure and Firm-Level Evidence from Three Countries | https://docs.iza.org/dp16717.pdf
+- Opinions of the State Council on Deepening the Implementation of the "AI Plus" Initiative (国务院关于深入实施“人工智能+”行动的意见) | https://english.www.gov.cn/policies/latestreleases/202508/27/content_WS68ae7976c6d0868f4e8f51a0.html
+- Plano Brasileiro de Inteligência Artificial (PBIA) 2024-2028 | https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial
+- Política Nacional de Inteligencia Artificial (updated policy and Plan de Acción) | https://www.minciencia.gob.cl/areas/inteligencia-artificial/politica-nacional-de-inteligencia-artificial
+- Estrategia Nacional de Inteligencia Artificial del Uruguay 2024-2030 | https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/comunicacion/publicaciones/estrategia-nacional-inteligencia-artificial-del-uruguay-2024-2030
+- National Artificial Intelligence Strategy (NAIS) | https://fmcide.gov.ng/initiative/nais
+- South Africa National Artificial Intelligence Policy Framework (Towards the Development of South Africa National Artificial Intelligence Policy) | https://www.africadataprotection.org/South-Africa-AI.pdf
+- The UAE Charter for the Development and Use of Artificial Intelligence | https://uaelegislation.gov.ae/en/policy/details/the-uae-charter-for-the-development-and-use-of-artificial-intelligence
+- Law on the Digital Technology Industry No. 71/2025/QH15 (Luật Công nghiệp công nghệ số) | https://english.luatvietnam.vn/lawonthedigitaltechnologyindustryno71-2025-qh15datedjune142025ofthenationalassembly-405695-doc1.html
+- National Guidelines on AI Governance and Ethics (AIGE) | https://ai.gov.my/governance
+- White Paper: Regulation and Responsible Adoption of AI for Africa Towards Achievement of AU Agenda 2063 | https://dig.watch/resource/auda-nepad-white-paper-regulation-and-responsible-adoption-of-ai-in-africa-towards-achievement-of-au-agenda-2063
+- Africa Just AI | https://researchictafrica.net/project/africa-just-ai
+- State of Internet Freedom in Africa 2025: Navigating the Implications of AI on Digital Democracy in Africa | https://cipesa.org/wp-content/files/reports/State_of_Internet_Freedom_in_Africa_Report_.pdf
+- BharatGen | https://bharatgen.com
+- AI Safety Governance Framework 2.0 (人工智能安全治理框架 2.0版) | https://www.cac.gov.cn/2025-09/15/c_1759653448369123.htm
+- MOFCOM Announcement No. 61 of 2025 on Export Controls over Certain Rare Earth Items (商务部公告2025年第61号) | https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_7fc9bff0fb4546ecb02f66ee77d0e5f6.html
+- Amendment to Article 10-2 of the Statute for Industrial Innovation (the "Taiwan Chips Act") | https://www.leeandli.com/EN/NewslettersDetail/7030.htm
+- National AI Strategy Policy Directions (announced at the inaugural National AI Committee meeting, including the National AI Computing Center plan) | https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1040&pageIndex=1
+- ASEAN Framework for Integrated Semiconductor Supply Chain (AFISS) | https://www.eria.org/uploads/clean-afiss-22-sept---for-aem-endorsement--final-.pdf
+- Hiroshima Process International Code of Conduct for Organizations Developing Advanced AI Systems | https://www.mofa.go.jp/files/100573473.pdf
+- Resolution A/RES/78/265: Seizing the opportunities of safe, secure and trustworthy artificial intelligence systems for sustainable development | https://docs.un.org/en/A/78/L.49
+- Statement on Inclusive and Sustainable Artificial Intelligence for People and the Planet | https://www.elysee.fr/en/emmanuel-macron/2025/02/11/statement-on-inclusive-and-sustainable-artificial-intelligence-for-people-and-the-planet
+- Guidance for generative AI in education and research | https://unesdoc.unesco.org/ark:/48223/pf0000386693
+- Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust (Act No. 20676) | https://elaw.klri.re.kr/eng_service/lawView.do?hseq=71019&lang=ENG
+- Projeto de Lei No. 2338/2023 - Marco Legal da Inteligência Artificial (approved by the Federal Senate) | https://www25.senado.leg.br/web/atividade/materias/-/materia/157233
+- Act on Promotion of Research and Development, and Utilization of Artificial Intelligence-related Technology (Act No. 53 of June 4, 2025) | https://www.japaneselawtranslation.go.jp/en/laws/view/5066/en
+- India AI Governance Guidelines: Enabling Safe and Trusted AI Innovation | https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025115685601.pdf
+- Kenya Artificial Intelligence Strategy 2025-2030 | https://ict.go.ke/sites/default/files/2025-03/Kenya%20AI%20Strategy%202025%20-%202030.pdf
+- Guideline for Japanese Government's Procurements and Utilizations of Generative AI for the sake of Evolution and Innovation of Public Administration (Version 2.0) | https://www.digital.go.jp/news/decb64eb-f26e-41cb-8d37-f3dd173108b8
+- Governing with Artificial Intelligence: The State of Play and Way Forward in Core Government Functions | https://www.oecd.org/en/publications/2025/06/governing-with-artificial-intelligence_398fa287.html
+- Transformative Public Procurement of Artificial Intelligence | https://doi.org/10.3390/laws14060097
+- International AI Safety Report 2026 | https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
+- International Network of AI Safety Institutes: Joint Mission Statement | https://ised-isde.canada.ca/site/ised/en/international-network-ai-safety-institutes-mission-statement
+- International governance of advancing artificial intelligence | https://doi.org/10.1007/s00146-024-02050-7
+- European AI Standards - Technical Standardisation and Implementation Challenges under the EU AI Act | https://doi.org/10.1017/err.2025.10032
+- Harmonised Standards for the European AI Act | https://publications.jrc.ec.europa.eu/repository/handle/JRC139430
+- AI Verify Testing Framework | https://aiverifyfoundation.sg/tools/ai-verify-testing-framework
+- Incident reporting and investigation under the AI Act: some insights from aviation | https://doi.org/10.1093/ijlit/eaaf019
+- A general framework for governing marketed AI/ML medical devices | https://www.nature.com/articles/s41746-025-01717-9
+- Third Amended Standing General Order 2021-01: Incident Reporting for Automated Driving Systems (ADS) and Level 2 Advanced Driver Assistance Systems (ADAS) | https://www.nhtsa.gov/sites/nhtsa.gov/files/2025-04/third-amended-SGO-2021-01_2025.pdf
+- When Less Regulation Means More Complexity: The EU AI Liability Directive Withdrawal and Its Impact on European Technological Competitiveness | https://doi.org/10.1609/aies.v8i2.36679
+- After the AI Liability Directive: Civil Liability for Healthcare AI and the Limits of EU Risk Regulation | https://doi.org/10.1017/err.2026.10130
+- Governing AI for Humanity | https://www.un-ilibrary.org/content/books/9789211067873
+- Thomson Reuters Enterprise Centre GmbH v. Ross Intelligence Inc., Memorandum Opinion (D. Del. No. 1:20-cv-613-SB, February 11, 2025) | https://www.ded.uscourts.gov/sites/ded/files/opinions/20-613_5.pdf
+- How Generative AI Turns Copyright Upside Down | https://doi.org/10.52214/stlr.v25i2.12761
+- Direct Preference Optimization: Your Language Model is Secretly a Reward Model | https://arxiv.org/abs/2305.18290
+- QLoRA: Efficient Finetuning of Quantized LLMs | https://arxiv.org/abs/2305.14314
+- Mixtral of Experts | https://arxiv.org/abs/2401.04088
+- Scaling Data-Constrained Language Models | https://arxiv.org/abs/2305.16264
+- DataComp-LM: In search of the next generation of training sets for language models | https://arxiv.org/abs/2406.11794
+- DeepSeek-V3 Technical Report | https://arxiv.org/abs/2412.19437
+- Qwen2.5 Technical Report | https://arxiv.org/abs/2412.15115
+- GPQA: A Graduate-Level Google-Proof Q&A Benchmark | https://arxiv.org/abs/2311.12022
+- FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI | https://arxiv.org/abs/2411.04872
+- Humanity's Last Exam | https://arxiv.org/abs/2501.14249
+- The Leaderboard Illusion | https://arxiv.org/abs/2504.20879
+- SWE-bench: Can Language Models Resolve Real-World GitHub Issues? | https://arxiv.org/abs/2310.06770
+- AgentBench: Evaluating LLMs as Agents | https://arxiv.org/abs/2308.03688
+- OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments | https://arxiv.org/abs/2404.07972
+- τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains | https://arxiv.org/abs/2406.12045
+- The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery | https://arxiv.org/abs/2408.06292
+- EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty | https://arxiv.org/abs/2401.15077
+- FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision | https://arxiv.org/abs/2407.08608
+- The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits | https://arxiv.org/abs/2402.17764
+- How People Use ChatGPT | https://www.nber.org/papers/w34255
+- The Cybernetic Teammate: A Field Experiment on Generative AI Reshaping Teamwork and Expertise | https://www.nber.org/papers/w33641
+- Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations | https://arxiv.org/abs/2503.04761
+- Scaling India's Data Centre Ecosystem: Stakeholder Perspectives on Infrastructure, Energy, and Resilience | https://www.ceew.in/publications/how-is-data-centre-infrastructure-in-india-shaping-power-and-water-use
+- ASEAN Guide for Sustainable Data Centre Development | https://asean.org/wp-content/uploads/2026/01/2.-ASEAN-Guide-for-Sustainable-Data-Centre-Development_Dec-2025-Final.pdf
+- AI and Energy: The Future of Data Centers in Saudi Arabia | https://www.kapsarc.org/our-offerings/publications/ai-and-energy-the-future-of-data-centers-in-saudi-arabia
+- The Geography and Geopolitics of Hyperscale | https://www.orfonline.org/research/the-geography-and-geopolitics-of-hyperscale
+- Não somos quintal de data centers (We are not data centers' backyard) | https://idec.org.br/publicacao/nao-somos-quintal-de-data-centers
+- IEEJ Outlook 2026: AI and Future of Energy Demand | https://eneken.ieej.or.jp/data/12912.pdf
+- Electricity Demand and Grid Impacts of AI Data Centers: Challenges and Prospects | https://arxiv.org/abs/2509.07218
+- A Water Efficiency Dataset for African Data Centers | https://arxiv.org/abs/2412.03716
+- Divergent Futures in a Damaged Territory: The Rise of Data Centers and Water Conflicts in Santiago de Chile | https://www.tandfonline.com/doi/full/10.1080/10630732.2025.2546784
+- India's Semiconductor Ambitions and Global Competitiveness: Confronting the China Challenge | https://www.orfonline.org/research/india-s-semiconductor-ambitions-and-global-competitiveness-confronting-the-china-challenge
+- Taiwan's Semiconductor Sustainability and Global Implications | https://newlinesinstitute.org/tech-econ-sov-sec/taiwans-semiconductor-sustainability-and-global-implications
+- Chipping Point: Tracking Electricity Consumption and Emissions from AI Chip Manufacturing | https://www.greenpeace.org/static/planet4-eastasia-stateless/2025/04/5011514f-greenpeace_chipping_point.pdf
+- Advancing Cloud and Data Infrastructure Markets: Strategic Directions for Low- and Middle-Income Countries - Chapter 5: Data Centers at the Core of Cloud and Data Infrastructure Markets | https://thedocs.worldbank.org/en/doc/61714f214ed04bcd6e9623ad0e215897-0400012021/related/9781464820656-ch5.pdf
+- Power Hungry Processing: Watts Driving the Cost of AI Deployment? | https://arxiv.org/abs/2311.16863
+- Health-Informed Computing: Estimating and Addressing the Public Health Impact of Data Centers | https://arxiv.org/abs/2412.06288
+- Amid AI data center boom, China's tech companies' renewable energy percentages keep pace: Greenpeace report (Clean Cloud 2026 research briefing) | https://www.greenpeace.org/eastasia/press/69249/amid-ai-data-center-boom-chinas-tech-companies-renewable-energy-percentages-keep-pace-greenpeace-report
+- AI Energy Score (leaderboard and benchmark toolkit) | https://github.com/huggingface/AIEnergyScore
+- Spatial distribution and environmental attributes dataset of China's large-scale data centers in 2024 | https://www.nature.com/articles/s41597-026-07548-x
+- Africa Data Center and Infrastructure Tracker (AAGI Infrastructure Intelligence) | https://africanaigovernanceindex.com
+- Open Terrestrial Fiber Data Standard and Map ASA (P176146): Guide to Online Resources and Standard Development Process | https://documents1.worldbank.org/curated/en/099063023160023332/pdf/P1761460fac12e0b09cb90f26880158a4f.pdf
+- How Much of the United States Can Still Host New Hyperscale Data Centers? A Constraint-Based Feasibility Analysis | https://arxiv.org/abs/2602.02529
+- Africa's digital divide is closing, but participation in the digitalised economy remains highly uneven | https://www.afrobarometer.org/publication/pp95-africas-digital-divide-is-closing-but-participation-in-the-digitalised-economy-remains-highly-uneven
+- European citizens' knowledge and attitudes towards science and technology (Special Eurobarometer 557) | https://op.europa.eu/en/publication-detail/-/publication/ed239fc4-e2b4-11ef-be2a-01aa75ed71a1/language-en
+- 50 milhões de brasileiros já usam IA, mas potenciais benefícios continuam limitados às camadas de maior renda e escolaridade (TIC Domicílios 2025) | https://cetic.br/pt/noticia/50-milhoes-de-brasileiros-ja-usam-ia-mas-potenciais-beneficios-continuam-limitados-as-camadas-de-maior-renda-e-escolaridade
+- People's Attitudes and Perceptions in Qatar Towards Artificial Intelligence Technologies | https://link.springer.com/chapter/10.1007/978-981-96-7963-8_7
+- 第4回「AIに関する生活者意識調査」(Dentsu AI-related Consumer Awareness Survey, 4th wave) | https://www.dentsu.co.jp/news/release/2025/1223-010990.html
+- AI competency framework for students | https://www.unesco.org/en/articles/ai-competency-framework-students
+- The Future of Jobs Report 2025 | https://www.weforum.org/publications/the-future-of-jobs-report-2025
+- The scale of artificial intelligence literacy for all (SAIL4ALL): assessing knowledge of artificial intelligence in all adult populations | https://www.nature.com/articles/s41599-025-05978-3
+- Citizens and Experts Unite: Final Report on Global Consultations for France's 2025 AI Action Summit | https://thefuturesociety.org/aiagentsintheeu-3
+- AI Diffusion in Low Resource Language Countries | https://arxiv.org/abs/2511.02752
+- Digital News Report 2025 | https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary
+- Global State of Scams - 2025 | https://gasa.org/knowledge-base/reports/global-state-of-scams-2025
+- The Levers of Political Persuasion with Conversational AI | https://www.science.org/doi/10.1126/science.aea3884
+- iProov Study Reveals Deepfake Blindspot: Only 0.1% of People Can Accurately Detect AI-Generated Deepfakes | https://www.iproov.com/press/study-reveals-deepfake-blindspot-detect-ai-generated-content
+- Randomized Trial of a Generative AI Chatbot for Mental Health Treatment | https://ai.nejm.org/doi/full/10.1056/AIoa2400802
+- A community-codesigned LLM-powered chatbot for primary care: a randomized controlled trial | https://pmc.ncbi.nlm.nih.gov/articles/PMC12880911
+- Large language model diagnostic assistance for physicians in a lower-middle-income country: a randomized controlled trial | https://www.nature.com/articles/s44360-025-00007-8
+- How AI is used in FDA-authorized medical devices: a taxonomy across 1,016 authorizations | https://www.nature.com/articles/s41746-025-01800-1
+- AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting | https://www.nature.com/articles/s41598-025-97652-6
+- From Chalkboards to Chatbots: Evaluating the Impact of Generative AI on Learning Outcomes in Nigeria | https://openknowledge.worldbank.org/entities/publication/15e1ff08-15ae-4f7a-b2a8-d146e6c113ee
+- A systematic review and meta-analysis of the effectiveness of Generative Artificial Intelligence (GenAI) on students' motivation and engagement | https://www.sciencedirect.com/science/article/pii/S2666920X25000955
+- Open LLM Leaderboard (archived) and its evaluation-results datasets | https://huggingface.co/datasets/open-llm-leaderboard/results
+- Artificial Analysis - independent model intelligence, price and latency index | https://artificialanalysis.ai/
+- HELM - Holistic Evaluation of Language Models (open framework and leaderboards) | https://crfm.stanford.edu/helm/classic/latest/
+- LMSYS-Chat-1M dataset + Chatbot Arena (LMArena) leaderboard | https://huggingface.co/datasets/lmsys/lmsys-chat-1m
+- AI and Democratic Values Index (CAIDP Index) | https://www.caidp.org/reports/caidp-index-2026
+- Digital Policy Alert - activity tracker for digital and AI policy across jurisdictions | https://digitalpolicyalert.org/
+- UNESCO AI Readiness Assessment Methodology (RAM) and the Global AI Ethics and Governance Observatory | https://www.unesco.org/ethics-ai/en/ram
+- AIAAIC Repository - AI, Algorithmic and Automation Incidents and Controversies | https://www.aiaaic.org/aiaaic-repository
+- Deepfake-Eval-2024 - multi-modal in-the-wild deepfake detection benchmark | https://huggingface.co/datasets/nuriachandra/Deepfake-Eval-2024
+- O*NET occupational database (O*NET 31.0) - task, emerging-task and technology-skills files used for AI-exposure research | https://www.onetcenter.org/database.html
+- Online Labour Index (OLI) - open index of online freelance labour supply and demand | https://ilabour.oii.ox.ac.uk/online-labour-index/
+- ENTSO-E Transparency Platform - European electricity generation, load, transmission and balancing data | https://www.entsoe.eu/data/transparency-platform/
+- U.S. EIA Hourly Electric Grid Monitor (Form EIA-930 data) | https://www.eia.gov/electricity/gridmonitor/
+- Electricity Maps data portal - historical carbon intensity and grid-mix signals per zone | https://www.electricitymaps.com/data-portal
+- Singapore Energy Statistics (EMA) - electricity demand and supply data tables for a dense data-centre market | https://ema.gov.sg/resources/singapore-energy-statistics
+- USPTO Artificial Intelligence Patent Dataset (AIPD 2023) | https://www.uspto.gov/ip-policy/economic-research/research-datasets/artificial-intelligence-patent-dataset
+- AI Index underlying data and charts (Stanford HAI) | https://hai.stanford.edu/ai-index
+- Speedtest by Ookla Global Fixed and Mobile Network Performance Maps (Open Data Program) | https://registry.opendata.aws/speedtest-global-performance
+- ASEANstats Data Portal - regional social, economic and trade statistics for ASEAN member states | https://data.aseanstats.org/
+- RIA ICT Access and Usage Survey (After Access series) - household/individual microdata for African countries | https://microdata.worldbank.org/catalog/3508
+- APJII Survei Penetrasi Internet Indonesia - annual Indonesia internet penetration survey archive | https://survei.apjii.or.id/
+- IndicVoices - open speech dataset for 22 scheduled Indian languages | https://huggingface.co/datasets/ai4bharat/IndicVoices
+- Venture capital investments in artificial intelligence through 2025 | https://www.oecd.org/en/publications/venture-capital-investments-in-artificial-intelligence-through-2025_a13752f5-en.html
+- Government as Venture Capitalists in AI | https://www.nber.org/papers/w32701
+- Financing the AI Buildout | https://www.nber.org/papers/w35865
+- What unprecedented AI capex means for markets and investors | https://www.jpmorgan.com/insights/global-research/artificial-intelligence/ai-capex
+- World Trade Report 2025: Making trade and AI work together to the benefit of all | https://www.wto.org/english/res_e/publications_e/wtr25_e.htm
+- Through the looking glass: artificial intelligence, international trade, and economic growth in the long run | https://www.wto.org/english/res_e/reser_e/ersd202509_e.htm
+- Artificial Intelligence and International Trade in Services: Evidence from the United States | https://thedocs.worldbank.org/en/doc/0c3320b04832ac7407cd0fba03949383-0050062026/original/AI-and-services-trade-draft-July2026.pdf
+- Fairwork US Ratings 2025: When AI Eats the Manager | https://fairwork.oii.ox.ac.uk/en/fw/publications/fairwork-us-ratings-2025
+- The Algorithmic Human Manager: AI, Apps, and Workers in the Indian Gig Economy | https://cerai.iitm.ac.in/docs/Gig-Economy-Report-Final.pdf
+- Exposure to Artificial Intelligence and Occupational Mobility: A Cross-Country Analysis | https://economia.lse.ac.uk/articles/10.31389/eco.451
+- Interactions of Artificial Intelligence with India's Labour Market: Devising an AI-for-Labour Model using the Productivity, Inclusivity, and Entrepreneurship Framework | https://icrier.org/pdf/Interactions-of-Artificial-Intelligence-with-India-s-Labour-Market.pdf
+- South Asia Development Update, October 2025: Jobs, AI, and Trade — Chapter 2: Artificial Intelligence, Real Impact: Labor Market Implications of AI Adoption in South Asia | https://openknowledge.worldbank.org/entities/publication/94725cf6-f681-42c9-acc7-63a076e0fc2b
+- Adoption of artificial intelligence in Spanish firms: an initial analysis based on the Banco de España Business Activity Survey | https://ideas.repec.org/a/bde/journl/y2025i02n06.html
+- Artificial intelligence in UK businesses: 2023 to 2026 | https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026
+- Artificial intelligence adoption and productivity in Canadian firms | https://www150.statcan.gc.ca/n1/pub/36-28-0001/2026004/article/00002-eng.htm
+- AI adoption in America: Who, what, and where | https://digitaleconomy.stanford.edu/publication/ai-adoption-in-america/
+- Singapore Digital Economy Report 2024/2025 (state of AI adoption chapter) | https://www.imda.gov.sg/assets/e77d879a-6b39-4de4-b024-5e0c6da0eff3.pdf
+- Economic Growth under Transformative AI | https://www.nber.org/papers/w31815
+- We Won't be Missed: Work and Growth in the AGI World | https://campuspress.yale.edu/pascualrestrepo/files/2025/10/AGI_v4.pdf
+- Miracle or Myth? Assessing the macroeconomic productivity gains from Artificial Intelligence | https://www.oecd.org/en/publications/miracle-or-myth-assessing-the-macroeconomic-productivity-gains-from-artificial-intelligence_b524a072-en.html
+- AI innovation and the labor share in European regions | https://ideas.repec.org/a/eee/eecrev/v177y2025ics0014292125000935.html
+- The Rise of Industrial AI in America: Microfoundations of the Productivity J-curve(s) | https://www2.census.gov/library/working-papers/2025/adrm/ces/CES-WP-25-27.pdf
+- Resolução No. 23.732, de 27 de fevereiro de 2024 (amendments to Res.-TSE No. 23.610/2019 on electoral propaganda: AI, deepfakes and internet-platform duties) | https://www.tse.jus.br/legislacao/compilada/res/2024/resolucao-no-23-732-de-27-de-fevereiro-de-2024
+- Guidelines for providers of VLOPs and VLOSEs on the mitigation of systemic risks for electoral processes | https://digital-strategy.ec.europa.eu/en/library/guidelines-providers-vlops-and-vloses-mitigation-systemic-risks-electoral-processes
+- Election Commission of India advisory directing political parties, candidates and campaigners to label AI-generated and synthetic campaign content | https://indiaai.gov.in/article/election-commission-of-india-embraces-ai-ethics-in-campaigning-advisory-on-labelling-ai-generated-content
+- Altered Video of President Biden - Meta Oversight Board decision and recommendations on manipulated media policy | https://www.oversightboard.com/decision/fb-gw8by1y3
+- Surat Edaran Menteri Komunikasi dan Informatika Nomor 9 Tahun 2023 tentang Etika Kecerdasan Artifisial (Ministerial Circular No. 9 of 2023 on Artificial Intelligence Ethics) | https://jdih.komdigi.go.id/produk_hukum/view/id/883/t/surat+edaran+menteri+komunikasi+dan+informatika+nomor+9+tahun+2023
+- Opinion 28/2024 on certain data protection aspects related to the processing of personal data in the context of AI models | https://www.edpb.europa.eu/news/edpb-opinion-on-ai-models-gdpr-principles-support-responsible-ai_en
+- PIPC penalty surcharge and administrative fine on Meta Platforms for unlawful processing of sensitive personal data (KRW 21.6232 billion) | https://pipc.go.kr/eng/user/ltn/new/noticeDetail.do?bbsId=BBSMSTR_000000000001&nttId=2698
+- Medida Preventiva: ANPD determination suspending Meta's use of personal data for generative AI training in Brazil (Voto No. 11/2024/DIR-MW/CD; Despacho Decisório No. 20/2024/PR/ANPD) | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-determina-suspensao-cautelar-do-tratamento-de-dados-pessoais-para-treinamento-da-ia-da-meta
+- Kenya High Court determination on Worldcoin's biometric data collection (enforcement of the Data Protection Act, 2019) | https://cipit.strathmore.edu/kenya-high-courts-worldcoin-determination-upholding-consent-accountability-and-data-sovereignty-in-biometric-data-processing
+- Toolkit for Responsible AI Innovation in Law Enforcement | https://www.interpol.int/en/How-we-work/Innovation/Artificial-Intelligence-Toolkit
+- Smart Justice? Making Sense of the Rise of Algorithm-Based Pre-trial Risk Assessment in Criminal Justice Through 'Legal Models' | https://doi.org/10.1007/s44206-025-00194-7
+- Moffatt v. Air Canada, 2024 BCCRT 149 (tribunal liability for AI chatbot misinformation) | https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html
+- SB 53 - Transparency in Frontier Artificial Intelligence Act (TFAIA), signed by Governor Newsom | https://www.gov.ca.gov/2025/09/29/governor-newsom-signs-sb-53-advancing-californias-world-leading-artificial-intelligence-industry/
+- Veto message for SB 1047, Safe and Secure Innovation for Frontier Artificial Intelligence Models Act | https://www.gov.ca.gov/wp-content/uploads/2024/09/SB-1047-Veto-Message.pdf
+- SB 24-205 - Consumer Protections for Artificial Intelligence (Colorado AI Act) | https://leg.colorado.gov/bills/sb24-205
+- Bill C-27, Digital Charter Implementation Act, 2022 (including the Artificial Intelligence and Data Act, AIDA) - LEGISinfo legislative record | https://www.parl.ca/legisinfo/en/bill/44-1/c-27
+- Measures for Labeling of AI-Generated Synthetic Content (人工智能生成合成内容标识办法) | https://www.chinalawtranslate.com/en/ai-labeling
+- Digital Omnibus on AI - Regulation (EU) 2026/1744 of 8 July 2026 amending Regulation (EU) 2024/1689 (AI Act) | https://artificialintelligenceact.eu/ai-act-explorer/digital-omnibus/
+- Artificial Intelligence (AI) Guidance for Judicial Office Holders | https://www.judiciary.uk/wp-content/uploads/2025/10/Artificial-Intelligence-AI-Guidance-for-Judicial-Office-Holders-2.pdf
+- Large Legal Fictions: Profiling Legal Hallucinations in Large Language Models | https://arxiv.org/abs/2401.01301
+- NAIC Model Bulletin: Use of Artificial Intelligence Systems by Insurers | https://content.naic.org/sites/default/files/cmte-h-big-data-artificial-intelligence-wg-ai-model-bulletin.pdf.pdf
+- Opinion on Artificial Intelligence Governance and Risk Management in the insurance sector | https://www.eiopa.europa.eu/publications/opinion-artificial-intelligence-governance-and-risk-management_en
+- Beyond Chinchilla-Optimal: Accounting for Inference in Language Model Scaling Laws | https://arxiv.org/abs/2401.00448
+- Scaling Laws with Vocabulary: Larger Models Deserve Larger Vocabularies | https://arxiv.org/abs/2407.13623
+- Scaling Laws for Precision | https://arxiv.org/abs/2411.04330
+- LIMA: Less Is More for Alignment | https://arxiv.org/abs/2305.11206
+- Secrets of RLHF in Large Language Models Part I: PPO | https://arxiv.org/abs/2307.04964
+- Towards Monosemanticity: Decomposing Language Models With Dictionary Learning | https://transformer-circuits.pub/2023/monosemantic-features/index.html
+- Representation Engineering: A Top-Down Approach to AI Transparency | https://arxiv.org/abs/2310.01405
+- Finding Neurons in a Haystack: Case Studies with Sparse Probing | https://arxiv.org/abs/2305.01610
+- Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting | https://arxiv.org/abs/2305.04388
+- OpenAI o1 System Card | https://openai.com/index/openai-o1-system-card/
+- Chain-of-Thought Reasoning Without Prompting | https://arxiv.org/abs/2402.10200
+- The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity | https://arxiv.org/abs/2506.06941
+- Lost in the Middle: How Language Models Use Long Contexts | https://arxiv.org/abs/2307.03172
+- Retrieval-Augmented Generation for Large Language Models: A Survey | https://arxiv.org/abs/2312.10997
+- Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context | https://arxiv.org/abs/2403.05530
+- SeamlessM4T: Massively Multilingual & Multimodal Machine Translation | https://arxiv.org/abs/2308.11596
+- InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks | https://arxiv.org/abs/2312.14238
+- Benchmark Data Contamination of Large Language Models: A Survey | https://arxiv.org/abs/2406.04244
+- Detecting Pretraining Data from Large Language Models | https://arxiv.org/abs/2310.16789
+- What's In My Big Data? | https://arxiv.org/abs/2310.20707
+- A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions | https://arxiv.org/abs/2311.05232
+- Detecting hallucinations in large language models using semantic entropy | https://www.nature.com/articles/s41586-024-07421-0
+- All-Island Resource Adequacy Assessment 2025-2034 | https://www.eirgrid.ie/news/new-eirgrid-analysis-examines-balance-between-electricity-demand-and-supply-ireland-over-10
+- Capaciteitskaart (national grid capacity map) - waar is er nog ruimte op het elektriciteitsnet | https://www.netbeheernederland.nl/netcapaciteit-en-flexibiliteit/capaciteitskaart
+- The 11th Basic Plan for Supply and Demand of Power (2024-2038), confirmed 21 February 2025 | https://www.shinkim.com/eng/media/newsletter/2763
+- 2050年度までの全国の長期電力需要想定 報告書 (Long-term national electricity demand outlook to FY2050) | https://www.occto.or.jp/assets/iinkai/shorai_jukyu/2025/files/shoraijukyu_houkokusyo_04_01.pdf
+- Philippine Energy Plan 2023-2050 | https://climate-laws.org/document/philippine-energy-plan-2023-2050_04d6
+- Decision No. 768/QD-TTg approving the adjustment of the National Power Development Plan VIII (PDP8) for 2021-2030, vision to 2050 | https://vepg.vn/wp-content/uploads/2025/06/768_QD-TTg_658055.pdf
+- Thailand Board of Investment approves seven new data centre and data hosting projects (first board meeting of 2026) | https://www.boi.go.th/index.php?page=press_releases_detail&topic_id=138444&_module=news&language=en
+- Komdigi fokus selesaikan standar pusat data berkelanjutan Indonesia (Komdigi focuses on completing Indonesia's sustainable data centre standard) | https://www.postel.go.id/berita-komdigi-fokus-selesaikan-standar-pusat-data-berkelanjutan-indonesia-27-6541
+- Taiwan's Data Centers Still Use Less Than 1% of the Island's Electricity. So Why Is the Grid Already Under Strain? | https://www.twreporter.org/a/data-center-electricity-demand-english
+- Federal Government unveils National Digital Cloud Policy to drive investment, digital sovereignty and government transformation | https://fmcide.gov.ng/federal-government-unveils-national-digital-cloud-policy-to-drive-investment-digital-sovereignty-and-government-transformation
+- Konza Cloud Expansion and Smart City Facilities - Feasibility Study Report, Executive Summary (Annex I to Addendum II) | https://konza.go.ke/wp-content/uploads/2026/04/6.-Annex-I-to-Addendum-II-Feasibility-study-Report-Nov-2025-EXECUTIVE-SUMMARY-Rev.pdf
+- La huella que dejan las nubes (The footprint the clouds leave behind) | https://oxfam.mx/boletin-la-huella-que-dejan-las-nubes
+- World's first tropical climate data centre testbed opens (Singapore Tropical Data Centre Testbed, STDCT) | https://news.nus.edu.sg/worlds-first-tropical-climate-data-centre-testbed
+- Green Data Centre Roadmap: Charting green growth for data centres in Singapore | https://www.imda.gov.sg/how-we-can-help/green-dc-roadmap
+- The Intersection of Data Center Development, Water Availability, and Environmental Justice in California | https://www.next10.org/publications/data-centers-water-environmental-justice
+- Life-Cycle Emissions of AI Hardware: A Cradle-To-Grave Approach and Generational Trends | https://arxiv.org/abs/2502.01671
+- E-waste challenges of generative artificial intelligence | https://www.nature.com/articles/s43588-024-00712-6
+- Data Centre Energy Use: Critical Review of Models and Results | https://www.iea-4e.org/edna/publications/data-centre-energy-use-critical-review-of-models-and-results
+- Preliminary Analysis of Nuclear-Powered Data Center Scenarios | https://sai.inl.gov/report/preliminary-analysis-of-nuclear-powered-data-center-scenarios
+- Data center waste heat for district heating networks: A review | https://www.sciencedirect.com/science/article/pii/S1364032125005362
+- ITU DataHub - free access to the World Telecommunication/ICT Indicators data | https://datahub.itu.int/
+- African Undersea Cables - a free, community-updated map and ownership matrix of Africa's submarine fibre systems | https://manypossibilities.net/african-undersea-cables/
+- Report on Digital Transformation in Higher Education in Southeast Asia | https://unesdoc.unesco.org/ark:/48223/pf0000395325
+- AI in Southeast Asia: The Role of Teachers - Insights from teachers across the region about their role and what matters to them in the age of AI | https://docs.edtechhub.org/lib/XWRW9BUJ
+- Foregrounding Artist Opinions: A Survey Study on Transparency, Ownership, and Fairness in AI Generative Art | https://ojs.aaai.org/index.php/AIES/article/view/31691
+- GDC 2025 State of the Game Industry | https://reg.gdconf.com/state-of-game-industry-2025
+- European Language Industry Survey 2025 (ELIS 2025): Trends, expectations and concerns of the European language industry | https://elis-survey.org/wp-content/uploads/2025/03/ELIS-2025_Report.pdf
+- AI and the Future of Illustration (AOI AI survey results) | https://theaoi.com/news/ai-and-the-future-of-illustration
+- UNESCO Women for Ethical AI: Outlook Study on Artificial Intelligence and Gender | https://unesdoc.unesco.org/ark:/48223/pf0000391719
+- The Adoption of ChatGPT (published version: 'The unequal adoption of ChatGPT exacerbates existing inequalities', PNAS 121(49)) | https://www.pnas.org/doi/10.1073/pnas.2414972121
+- Closing the Transparency Gap: Disability-Inclusive and Ethical AI in Public Services | https://g3ict.org/publication/closing-the-transparency-gap-disability-inclusive-and-ethical-ai-in-public-services
+- "I look at it as the king of knowledge": How Blind People Use and Understand Generative AI Tools | https://maitraye.github.io/files/papers/BLV_GenAI_ASSETS24.pdf
+- Māori Data Governance Model (Version 1) | https://www.kahuiraraunga.io/maoridatagovernance
+- Solving Failure Modes in the Creation of Trustworthy Language Technologies | https://aclanthology.org/2024.sigul-1.39.pdf
+- Children and Parents: Media Use and Attitudes Report 2025 (Children's Media Literacy Report 2025) | https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/media-literacy-research/children/childrens-media-use-and-attitudes-report-2025/childrens-media-literacy-report-2025.pdf
+- Me, Myself and AI: Understanding and Safeguarding Children's Use of AI Chatbots | https://www.internetmatters.org/wp-content/uploads/2025/07/Me-Myself-AI-Report.pdf
+- Islamic Ethics and AI: An Evaluation of Existing Approaches to AI using Trusteeship Ethics | https://link.springer.com/article/10.1007/s13347-025-00922-4
+- How India Uses AI: 1 in 2 Indian internet users are already using AI platforms | https://www.localcircles.com/a/press/page/india-ai-survey
+- AI 관련 인식조사를 통한 입법정책 연구 (Legislative Policy Research through an AI-Related Public Perception Survey) | https://www.klri.re.kr/kor/publication/2260/view.do
+- The State of Consumer AI in Vietnam 2025 | https://www.decisionlab.co/the-state-of-consumer-ai-in-vietnam-2025
+- Southeast Asia AI at Work study: SEA workers fear AI over-dependence more than job loss | https://mili.eu/press/milieu-insight-study-reveals-sea-workers-fear-ai-over-dependence-more-than-job-loss
+- AI Tracking Center: Tracking AI-Enabled Misinformation (AI Content Farm tracker) | https://www.newsguardtech.com/special-reports/ai-tracking-center
