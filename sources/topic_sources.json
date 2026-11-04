@@ -1,10 +1,10 @@
 {
  "built": "2026-11-04",
  "counts": {
-  "records_total": 386,
-  "records_mapped": 386,
-  "topic_record_links": 973,
-  "read_mapped": 816,
+  "records_total": 390,
+  "records_mapped": 390,
+  "topic_record_links": 987,
+  "read_mapped": 830,
   "indexed_only_mapped": 157,
   "topics_total": 38,
   "topics_with_records": 38,
@@ -85,6 +85,14 @@
     "tier": "V",
     "tierLabel": "verified/read at origin (not full text)",
     "inst": "MIT; Meta AI; Carnegie Mellon University"
+   },
+   {
+    "id": "carlini-extracting-training-data-gpt2-2021",
+    "title": "Extracting Training Data from Large Language Models",
+    "url": "https://arxiv.org/abs/2012.07805",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "USENIX Security 2021"
    },
    {
     "id": "speculative-decoding-2023",
@@ -321,6 +329,14 @@
     "inst": "arXiv"
    },
    {
+    "id": "us-copyright-ai-training-2025",
+    "title": "Copyright and Artificial Intelligence, Part 3: Generative AI Training",
+    "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United States Copyright Office"
+   },
+   {
     "id": "bender-data-statements-2018",
     "title": "Data Statements for Natural Language Processing: Toward Mitigating System Bias and Enabling Better Science",
     "url": "https://www.mitpressjournals.org/doi/pdf/10.1162/tacl_a_00041",
@@ -369,6 +385,22 @@
     "inst": "arXiv"
    },
    {
+    "id": "carlini-extracting-training-data-gpt2-2021",
+    "title": "Extracting Training Data from Large Language Models",
+    "url": "https://arxiv.org/abs/2012.07805",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "USENIX Security 2021"
+   },
+   {
+    "id": "japan-general-understanding-ai-copyright-2024",
+    "title": "General Understanding on AI and Copyright in Japan: Overview",
+    "url": "https://www.bunka.go.jp/english/policy/copyright/pdf/94055801_01.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Agency for Cultural Affairs, Government of Japan"
+   },
+   {
     "id": "schuhmann-laion5b-2022",
     "title": "LAION-5B: An open large-scale dataset for training next generation image-text models",
     "url": "https://arxiv.org/abs/2210.08402?context=cs.LG",
@@ -391,6 +423,14 @@
     "tier": "V",
     "tierLabel": "verified/read at origin (not full text)",
     "inst": "OurResearch"
+   },
+   {
+    "id": "uk-copyright-ai-report-2026",
+    "title": "Report on Copyright and Artificial Intelligence",
+    "url": "https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Science, Innovation and Technology"
    },
    {
     "id": "sealion-seald-dataset",
@@ -2683,6 +2723,38 @@
     "tier": "F",
     "tierLabel": "full or partial text read",
     "inst": "U.S. Copyright Office (Library of Congress — official regulator)"
+   },
+   {
+    "id": "us-copyright-ai-training-2025",
+    "title": "Copyright and Artificial Intelligence, Part 3: Generative AI Training",
+    "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United States Copyright Office"
+   },
+   {
+    "id": "carlini-extracting-training-data-gpt2-2021",
+    "title": "Extracting Training Data from Large Language Models",
+    "url": "https://arxiv.org/abs/2012.07805",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "USENIX Security 2021"
+   },
+   {
+    "id": "japan-general-understanding-ai-copyright-2024",
+    "title": "General Understanding on AI and Copyright in Japan: Overview",
+    "url": "https://www.bunka.go.jp/english/policy/copyright/pdf/94055801_01.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Agency for Cultural Affairs, Government of Japan"
+   },
+   {
+    "id": "uk-copyright-ai-report-2026",
+    "title": "Report on Copyright and Artificial Intelligence",
+    "url": "https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Science, Innovation and Technology"
    }
   ],
   "economics/investment": [
@@ -4439,6 +4511,14 @@
     "inst": "Journal of Experimental Psychology: General"
    },
    {
+    "id": "carlini-extracting-training-data-gpt2-2021",
+    "title": "Extracting Training Data from Large Language Models",
+    "url": "https://arxiv.org/abs/2012.07805",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "USENIX Security 2021"
+   },
+   {
     "id": "ieee-7000-2021",
     "title": "IEEE 7000-2021: Standard Model Process for Addressing Ethical Concerns During System Design",
     "url": "https://standards.ieee.org/ieee/7000/6781/",
@@ -4777,6 +4857,14 @@
     "inst": "Policy Sciences (peer-reviewed research note)"
    },
    {
+    "id": "us-copyright-ai-training-2025",
+    "title": "Copyright and Artificial Intelligence, Part 3: Generative AI Training",
+    "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "United States Copyright Office"
+   },
+   {
     "id": "coe-ai-convention-2024",
     "title": "Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225)",
     "url": "https://rm.coe.int/1680afae3c",
@@ -4903,6 +4991,14 @@
     "tier": "V",
     "tierLabel": "verified/read at origin (not full text)",
     "inst": "GSMA"
+   },
+   {
+    "id": "japan-general-understanding-ai-copyright-2024",
+    "title": "General Understanding on AI and Copyright in Japan: Overview",
+    "url": "https://www.bunka.go.jp/english/policy/copyright/pdf/94055801_01.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Agency for Cultural Affairs, Government of Japan"
    },
    {
     "id": "ec-gia-2024",
@@ -5079,6 +5175,14 @@
     "tier": "V",
     "tierLabel": "verified/read at origin (not full text)",
     "inst": "European Union (EUR-Lex)"
+   },
+   {
+    "id": "uk-copyright-ai-report-2026",
+    "title": "Report on Copyright and Artificial Intelligence",
+    "url": "https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "UK Department for Science, Innovation and Technology"
    },
    {
     "id": "colorado-sb26-189",
@@ -6797,6 +6901,14 @@
     "tier": "V",
     "tierLabel": "verified/read at origin (not full text)",
     "inst": "Congressional Research Service (US Congress)"
+   },
+   {
+    "id": "japan-general-understanding-ai-copyright-2024",
+    "title": "General Understanding on AI and Copyright in Japan: Overview",
+    "url": "https://www.bunka.go.jp/english/policy/copyright/pdf/94055801_01.pdf",
+    "tier": "V",
+    "tierLabel": "verified/read at origin (not full text)",
+    "inst": "Agency for Cultural Affairs, Government of Japan"
    },
    {
     "id": "us-joint-statement-bias-2023",

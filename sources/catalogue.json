@@ -5053,9 +5053,61 @@
    "access": "open site",
    "verification": "SITE read in full on a date not verified (original note said 4 Nov 2024). METHOD: platforms rated against five principles — 'Fair Pay… Fair Conditions… Fair Contracts… Fair Management… Fair Representation' — 'Scores out of 10, with two points available under each of the five principles', from published thresholds and evidence gathered per platform. FINDING (verified): 2025 reports exist for Argentina, Brazil, Colombia, Ecuador, Paraguay and Uruguay. Country-level scores were NOT on the page read (earlier search coverage claimed '3/10 Ecuador, 2/10 Chile' — UNVERIFIED; Chile/Mexico not in the current list). LIMITS: ratings measure platform practices, not worker outcomes; score tables unread; the project is advocacy-oriented by design.",
    "relevance": "Independent, methodical measurement of gig-platform working conditions across Latin America — the labour-conditions counterpart to the region's AI adoption indexes."
+  },
+  {
+   "id": "us-copyright-ai-training-2025",
+   "title": "Copyright and Artificial Intelligence, Part 3: Generative AI Training",
+   "authors": "United States Copyright Office",
+   "date": "2025-05-09",
+   "institution": "United States Copyright Office",
+   "type": "government report, pre-publication version",
+   "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf",
+   "galaxy_topics": "politics/copyright, how/data, governance/rules",
+   "access": "open PDF",
+   "verification": "Selected passages verified at origin. Selected introduction, fair-use analysis (p. 73), licensing recommendations (p. 106), and conclusion inspected 4 Nov 2026; entire 107-page report not read. The Office says fair-use factors depend on case-specific facts and recommends allowing the licensing market to develop while considering targeted action if failures emerge. Government policy analysis, not a court ruling; pre-publication version.",
+   "relevance": "Explains competing arguments over using copyrighted works to train generative AI, including fair use and licensing."
+  },
+  {
+   "id": "uk-copyright-ai-report-2026",
+   "title": "Report on Copyright and Artificial Intelligence",
+   "authors": "UK Department for Science, Innovation and Technology",
+   "date": "2026-03-18",
+   "institution": "UK Department for Science, Innovation and Technology",
+   "type": "government policy report",
+   "url": "https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence",
+   "galaxy_topics": "politics/copyright, how/data, governance/rules",
+   "access": "open government webpage",
+   "verification": "Selected passages verified at origin. Overview and selected international comparison passages inspected 4 Nov 2026; full report not read. Report describes consultation options on copyright and AI training and compares international approaches. A report describing options is not itself a law adopting them; scope and legal status may change.",
+   "relevance": "Shows policy choices and trade-offs in the UK debate about AI training and copyright."
+  },
+  {
+   "id": "carlini-extracting-training-data-gpt2-2021",
+   "title": "Extracting Training Data from Large Language Models",
+   "authors": "Nicholas Carlini, Florian Tramèr, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee and others",
+   "date": "2021",
+   "institution": "USENIX Security 2021",
+   "type": "peer-reviewed research paper",
+   "url": "https://arxiv.org/abs/2012.07805",
+   "galaxy_topics": "politics/copyright, how/data, how/models, society/trust",
+   "access": "open paper",
+   "verification": "Selected passages verified at origin. Abstract and conclusion inspected 4 Nov 2026; full paper and appendices not read. Researchers queried GPT-2 and recovered hundreds of verbatim sequences from training data. This demonstration is limited to the tested model and attack; it does not establish copyright infringement or reproduction rates for other systems.",
+   "relevance": "Demonstrates that a language model can reproduce training examples, raising questions about data provenance and use."
+  },
+  {
+   "id": "japan-general-understanding-ai-copyright-2024",
+   "title": "General Understanding on AI and Copyright in Japan: Overview",
+   "authors": "Japan Copyright Office, Agency for Cultural Affairs",
+   "date": "2024-05",
+   "institution": "Agency for Cultural Affairs, Government of Japan",
+   "type": "government overview of expert subcommittee interpretation",
+   "url": "https://www.bunka.go.jp/english/policy/copyright/pdf/94055801_01.pdf",
+   "galaxy_topics": "politics/copyright, how/data, governance/rules, politics/national",
+   "access": "open English-language PDF overview",
+   "verification": "Selected passages verified at origin. Overview pp. 1–6 and section on copyrightability inspected 4 Nov 2026; full underlying Japanese document not read. Separates training, output infringement and copyrightability; describes Article 30-4 with non-enjoyment-purpose and other conditions. It explicitly describes the overview as nonbinding and not a definite legal assessment of a specific technology. Do not treat it as blanket permission for all training.",
+   "relevance": "Adds a Japanese perspective on how copyright questions differ across model training and generated output."
   }
  ],
  "counts": {
-  "total": 363
+  "total": 390
  }
 }
