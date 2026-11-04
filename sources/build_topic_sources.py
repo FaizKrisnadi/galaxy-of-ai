@@ -37,7 +37,7 @@ for r in cat["records"]:
         if tid in by_topic:
             by_topic[tid].append({"id": r["id"], "title": r["title"], "url": r["url"],
                                   "tier": tier_key, "tierLabel": tier_label,
-                                  "inst": r["institution"]})
+                                  "inst": r["institution"], "date": r.get("date", "")})
             mapped_records += 1
             if tier_key in ("F", "V", "O"): read_mapped += 1
 
