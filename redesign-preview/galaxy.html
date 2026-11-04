@@ -463,6 +463,7 @@ body:has(#collapse-btn:not([hidden])) #map-key{top:54px!important}
       <button class="jbtn" data-journey="request">Behind an AI answer</button>
       <button class="jbtn" data-journey="jobs">AI and work</button>
       <button class="jbtn" data-journey="power">Who shapes AI?</button>
+      <button class="jbtn" data-journey="data">Where does AI’s data come from?</button>
     </details>
     <button class="jbtn" id="future-start" hidden>Take the AI test <span aria-hidden="true">↗</span><small>See how you view AI</small></button>
     <button class="jbtn" id="surprise-topic">Surprise me <span aria-hidden="true">↗</span></button>
@@ -1535,6 +1536,20 @@ function endPan(e){
 }
 stagewrap.addEventListener("pointerup", endPan);
 stagewrap.addEventListener("pointercancel", endPan);
+// Empty space outside the map viewport should behave like empty space inside it.
+let outerTap = null;
+document.addEventListener('pointerdown', e => {
+  if (stagewrap.contains(e.target) || e.button !== 0 || e.target.closest('button,a,input,textarea,select,details,summary,#card,#jpanel,#connection-detail,.guide,#explore-mode,#map-key')) return;
+  outerTap = {id:e.pointerId, x:e.clientX, y:e.clientY};
+});
+document.addEventListener('pointerup', e => {
+  if (!outerTap || outerTap.id !== e.pointerId) return;
+  const tap = Math.hypot(e.clientX-outerTap.x,e.clientY-outerTap.y) < 5;
+  outerTap = null;
+  if (tap && Date.now() >= suppressMapClickUntil) { exitJourney(); collapse(); hideCard(); }
+});
+document.addEventListener('pointercancel', () => { outerTap = null; });
+
 stagewrap.addEventListener('click', e => { if (Date.now() < suppressMapClickUntil) { e.preventDefault(); e.stopPropagation(); } }, true);
 stagewrap.addEventListener('wheel', e => {
   if (!e.ctrlKey && !e.metaKey) return;
@@ -1611,6 +1626,13 @@ const JOURNEYS = [
     {t:"politics/international", say:"AI crosses borders, but governance takes place through many institutions and national approaches.", source:"https://oecd.ai/en/dashboards/international", label:"OECD: International AI policies"}
   ]}
 ];
+
+JOURNEYS.push({id:"data", title:"Where does AI’s data come from?", note:"Training data varies by model; legal treatment depends on jurisdiction and context.", steps:[
+  {t:"how/data", say:"Models learn patterns from training data. What goes into a particular model depends on its developer and the sources they use.", source:"https://arxiv.org/abs/2012.07805", label:"Research: extracting training examples"},
+  {t:"how/models", say:"A model may reproduce material from its training data. One study demonstrated this by querying GPT-2; that result alone does not establish how every model behaves.", source:"https://arxiv.org/abs/2012.07805", label:"Carlini and colleagues: GPT-2 study"},
+  {t:"politics/copyright", say:"Using copyrighted works to train AI raises legal questions. The US Copyright Office describes fair-use analysis as fact-dependent.", source:"https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf", label:"US Copyright Office: AI training"},
+  {t:"politics/national", say:"Different countries approach the questions differently. Japan’s cultural agency distinguishes training, infringement and copyrightability; its overview is not a binding decision in an individual case.", source:"https://www.bunka.go.jp/english/policy/copyright/pdf/94055801_01.pdf", label:"Japan: AI and copyright overview"}
+]});
 
 const jpanel = document.getElementById("jpanel");
 let journey = null;
