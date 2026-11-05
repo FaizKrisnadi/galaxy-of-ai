@@ -96,7 +96,10 @@ def main(pattern):
                 print(f"   invalid (url not http): {c['title'][:60]}")
                 stats["invalid"] += 1
                 continue
-            topics = [t.strip() for t in c["galaxy_topics"].split(",") if t.strip()]
+            gt = c["galaxy_topics"]
+            if isinstance(gt, list):
+                gt = ", ".join(str(t) for t in gt)
+            topics = [t.strip() for t in gt.split(",") if t.strip()]
             bad = [t for t in topics if t not in VALID_TOPICS]
             if bad:
                 stats["bad_topic"].append((c["title"][:50], bad))
